@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+
+# Python (for local ringperm-gp16 workspaces if created inside the repo)
+.venv/
+__pycache__/
+*.pyc
+
+# Secrets — never commit
+.env
