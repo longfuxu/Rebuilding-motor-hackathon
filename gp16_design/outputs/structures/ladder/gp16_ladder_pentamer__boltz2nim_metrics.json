@@ -1,0 +1,22 @@
+{
+  "confidence_scores": [
+    0.4101371765136719
+  ],
+  "ptm_scores": [
+    0.2670411169528961
+  ],
+  "iptm_scores": [
+    0.0
+  ],
+  "complex_plddt_scores": [
+    0.445911169052124
+  ],
+  "complex_pde_scores": [
+    4.088681697845459
+  ],
+  "name": "pentamer",
+  "len_aa": 1795,
+  "wall_s": 69.0,
+  "predictor": "boltz2-nim",
+  "msa": "single-seq (screen)"
+}

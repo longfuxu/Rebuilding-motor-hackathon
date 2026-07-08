@@ -1,0 +1,22 @@
+{
+  "confidence_scores": [
+    0.46021780371665955
+  ],
+  "ptm_scores": [
+    0.3042364716529846
+  ],
+  "iptm_scores": [
+    0.0
+  ],
+  "complex_plddt_scores": [
+    0.49921315908432007
+  ],
+  "complex_pde_scores": [
+    3.1334404945373535
+  ],
+  "name": "trimer",
+  "len_aa": 1061,
+  "wall_s": 27.6,
+  "predictor": "boltz2-nim",
+  "msa": "single-seq (screen)"
+}

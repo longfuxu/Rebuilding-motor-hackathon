@@ -1,0 +1,22 @@
+{
+  "confidence_scores": [
+    0.41014084219932556
+  ],
+  "ptm_scores": [
+    0.2648065686225891
+  ],
+  "iptm_scores": [
+    0.0
+  ],
+  "complex_plddt_scores": [
+    0.4464744031429291
+  ],
+  "complex_pde_scores": [
+    3.989356517791748
+  ],
+  "name": "tetramer",
+  "len_aa": 1428,
+  "wall_s": 32.2,
+  "predictor": "boltz2-nim",
+  "msa": "single-seq (screen)"
+}
