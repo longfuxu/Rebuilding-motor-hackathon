@@ -1,0 +1,6 @@
+timestamp,phase,job,predictor,gpu,est_cost_usd,actual_cost_usd,cumulative_usd,note
+2026-07-08T00:29:21,P1,native_ring screen,Boltz-2,A100-80GB,0.203,0.203,0.203,assembly gate
+2026-07-08T00:48:13,P2,B1 screen L24/L32/L40,Boltz-2,A100-80GB,0.946,0.946,1.149,"3 linker variants, 1 seed"
+2026-07-08T01:52:26,P3/7-Boltz,ensemble Boltz 3seed x3constructs,Boltz-2,A100-80GB,1.928,1.928,3.077,native+B1_L32+B1_L40
+2026-07-08T02:30:00,P3/7-Chai,ensemble Chai 2seed x3constructs,Chai-1,A100-80GB,6.063,6.063,9.14,native+B1_L32+B1_L40
+2026-07-08T02:33:07,FINAL,phase8 writeup (free),none,CPU,0.0,0.0,9.14,total GPU $9.14; reserve consumed by Chai overrun; Phases 3b/4/7-extra budget-skipped

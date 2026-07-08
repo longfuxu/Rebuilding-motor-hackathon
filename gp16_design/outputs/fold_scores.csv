@@ -1,0 +1,6 @@
+construct,predictor,module_core_RMSD_A,Ndomain_RMSD_A,Cdomain_RMSD_A,interface_contacts,R146_trans_min_A,core_pLDDT,linker_pLDDT,complex_pLDDT,ptm
+gp16_CP280_2mer,Boltz-2,13.69,3.12,19.56,176,60.35,76.3,33.7,72.3,0.411
+gp16_CP280_2mer,Chai-1,15.77,2.38,18.68,118,56.59,71.6,39.2,,0.458
+gp16_nativefus_2mer,Boltz-2,6.14,2.62,7.93,82,5.38,74.6,26.6,72.5,0.474
+gp16_nativefus_2mer,Chai-1,13.29,2.3,14.54,46,3.97,73.4,42.2,,0.553
+gp16_native_dimer(POS),Chai-1,8.28,,,61,2.89,,,,0.657

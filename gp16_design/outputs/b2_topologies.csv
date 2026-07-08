@@ -1,0 +1,17 @@
+n_seats,seatset,order,total_CN_span_A,severs_unit,note
+2,AB,B-A,55.0,False,native-order fusion; joins only adjacent seats
+2,AE,A-E,66.1,False,native-order fusion; joins only adjacent seats
+2,BC,C-B,56.0,False,native-order fusion; joins only adjacent seats
+2,CD,D-C,54.5,False,native-order fusion; joins only adjacent seats
+2,DE,E-D,54.0,False,native-order fusion; joins only adjacent seats
+3,ABC,C-B-A,111.0,False,native-order fusion; joins only adjacent seats
+3,ABE,B-A-E,121.1,False,native-order fusion; joins only adjacent seats
+3,ADE,A-E-D,120.2,False,native-order fusion; joins only adjacent seats
+3,BCD,D-C-B,110.4,False,native-order fusion; joins only adjacent seats
+3,CDE,E-D-C,108.5,False,native-order fusion; joins only adjacent seats
+4,ABCD,D-C-B-A,165.4,False,native-order fusion; joins only adjacent seats
+4,ABCE,C-B-A-E,177.1,False,native-order fusion; joins only adjacent seats
+4,ABDE,B-A-E-D,175.2,False,native-order fusion; joins only adjacent seats
+4,ACDE,A-E-D-C,174.6,False,native-order fusion; joins only adjacent seats
+4,BCDE,E-D-C-B,164.5,False,native-order fusion; joins only adjacent seats
+5,ABCDE,E-D-C-B-A,219.5,False,native-order fusion; joins only adjacent seats

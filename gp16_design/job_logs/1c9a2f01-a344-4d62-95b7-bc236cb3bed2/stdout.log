@@ -1,0 +1,15 @@
+[hb] 1783493209
+RUN gp16_CP228_2mer 677
+CMD boltz predict w_gp16_CP228_2mer/gp16_CP228_2mer.fasta --out_dir w_gp16_CP228_2mer --use_msa_server --output_format pdb --recycling_steps 3 --sampling_steps 200 --diffusion_samples 1 --override --write_full_pae
+[hb] 1783493239
+[hb] 1783493269
+[hb] 1783493299
+[hb] 1783493329
+gp16_CP228_2mer rc 0
+RUN gp16_nativeorder_2mer 684
+CMD boltz predict w_gp16_nativeorder_2mer/gp16_nativeorder_2mer.fasta --out_dir w_gp16_nativeorder_2mer --use_msa_server --output_format pdb --recycling_steps 3 --sampling_steps 200 --diffusion_samples 1 --override --write_full_pae
+[hb] 1783493359
+[hb] 1783493389
+[hb] 1783493419
+gp16_nativeorder_2mer rc 0
+STAGE C DONE ['gp16_CP228_2mer', 'gp16_nativeorder_2mer']

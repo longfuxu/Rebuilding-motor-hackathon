@@ -1,0 +1,13 @@
+construct_id,family,cp_site,n_subunits,internal_gs_units,inter_gs_units,module_len,total_len,order
+gp16_CP297_2mer,CP-ordered,297,2,5,2,352,714,P1..P2
+gp16_CP280_2mer,CP-ordered,280,2,5,3,352,719,P1..P2
+gp16_nativefus_2mer,native-fusion-baseline,none(native),2,0,6,327,684,native-fusion
+gp16_CP297_3mer,CP-ordered,297,3,5,2,352,1076,P1..P3
+gp16_CP280_3mer,CP-ordered,280,3,5,3,352,1086,P1..P3
+gp16_nativefus_3mer,native-fusion-baseline,none(native),3,0,6,327,1041,native-fusion
+gp16_CP297_4mer,CP-ordered,297,4,5,2,352,1438,P1..P4
+gp16_CP280_4mer,CP-ordered,280,4,5,3,352,1453,P1..P4
+gp16_nativefus_4mer,native-fusion-baseline,none(native),4,0,6,327,1398,native-fusion
+gp16_CP297_5mer,CP-ordered,297,5,5,2,352,1800,P1..P5
+gp16_CP280_5mer,CP-ordered,280,5,5,3,352,1820,P1..P5
+gp16_nativefus_5mer,native-fusion-baseline,none(native),5,0,6,327,1755,native-fusion

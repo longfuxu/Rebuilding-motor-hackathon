@@ -1,0 +1,15 @@
+{
+  "gp16_domain_packing": "inter-subunit",
+  "A_Cdomain_contacts": {
+    "intra_A_Ndomain": 3,
+    "neighbor_B_Cdomain": 25,
+    "neighbor_E_Cdomain": 19
+  },
+  "A_Ndomain_contacts": {
+    "intra_A_Cdomain": 3,
+    "neighbor_B_Ndomain": 30,
+    "neighbor_E_Ndomain": 27
+  },
+  "native_monomer_Cdomain_float_A": 9.9,
+  "implication": "Both N- and C-domain positions are held by neighboring subunits, forming inter-subunit N-domain and C-domain rings. A single subunit (monomer) cannot recover the native inter-domain arrangement. Position-addressability designs MUST be evaluated in >=dimer context. This is why the cycle-1 native-order 2-mer reformed R146 while monomers do not, and it directly motivates the dimer-first (B1) strategy."
+}

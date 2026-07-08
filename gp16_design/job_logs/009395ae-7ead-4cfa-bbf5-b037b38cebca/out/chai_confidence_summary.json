@@ -1,0 +1,23 @@
+{
+  "gp16_CP280_2mer": {
+    "aggregate_score": 0.09160491079092026,
+    "ptm": 0.4580245614051819,
+    "iptm": 0.0,
+    "per_chain_ptm": 0.4580245614051819,
+    "per_chain_pair_iptm": 0.4580245614051819
+  },
+  "gp16_nativefus_2mer": {
+    "aggregate_score": 0.11052825301885605,
+    "ptm": 0.5526412725448608,
+    "iptm": 0.0,
+    "per_chain_ptm": 0.5526412725448608,
+    "per_chain_pair_iptm": 0.5526412725448608
+  },
+  "gp16_native_dimer": {
+    "aggregate_score": 0.5260788798332214,
+    "ptm": 0.6566545367240906,
+    "iptm": 0.49343496561050415,
+    "per_chain_ptm": 0.7510437369346619,
+    "per_chain_pair_iptm": 0.6203451752662659
+  }
+}

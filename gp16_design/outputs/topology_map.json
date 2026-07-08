@@ -1,0 +1,185 @@
+{
+  "structure": {
+    "pdb": "7JQQ",
+    "method": "cryo-EM",
+    "resolution_A": 4.1,
+    "title": "The bacteriophage Phi-29 viral genome packaging motor assembly",
+    "state": "helical / lock-washer (ATP-loaded, opening); NOT the hypothesized resting planar ring",
+    "composition": {
+      "gp16_protein": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "dsDNA": [
+        "F",
+        "G"
+      ],
+      "pRNA_pentamer": [
+        "K",
+        "L",
+        "M",
+        "N",
+        "O"
+      ],
+      "nucleotide": "AGS (ATP-gamma-S)",
+      "metal": "MG"
+    },
+    "uniprot": "P11014",
+    "seq_len": 332,
+    "modeled_residues": "4-330 (no gaps)",
+    "numbering": "matches UniProt exactly"
+  },
+  "ring_geometry": {
+    "symmetry_axis": "dsDNA helical axis (PCA of DNA phosphates)",
+    "angular_order_around_axis": [
+      "E",
+      "D",
+      "C",
+      "B",
+      "A"
+    ],
+    "axial_staircase_A": {
+      "E": 9.5,
+      "D": 0.0,
+      "C": 2.7,
+      "B": 4.6,
+      "A": 6.8
+    },
+    "nucleotide_occupancy": {
+      "A": "ATPgS+Mg",
+      "B": "ATPgS+Mg",
+      "C": "ATPgS+Mg",
+      "D": "apo",
+      "E": "apo"
+    },
+    "special_interface": "A(C)->E(N) seam (66 \u00c5 in helical state) \u2014 boundary between ATPgS-block (A,B,C) and apo-block (D,E)"
+  },
+  "functional_residues": {
+    "walker_A_Ploop": [
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "catalytic_lysine": 30,
+    "walker_B": [
+      115,
+      116,
+      117,
+      118,
+      119
+    ],
+    "catalytic_DE": [
+      118,
+      119
+    ],
+    "arginine_finger_trans": 146,
+    "trans_loop": [
+      104,
+      105,
+      106,
+      107,
+      108,
+      109
+    ],
+    "atp_pocket": [
+      6,
+      7,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      35,
+      68,
+      72,
+      118
+    ],
+    "dna_channel_contacts": [
+      55,
+      56,
+      82,
+      83,
+      98,
+      99,
+      128,
+      130,
+      292,
+      293,
+      330
+    ],
+    "prna_contacts": [
+      10,
+      13,
+      14,
+      15,
+      16,
+      17,
+      37,
+      41,
+      148,
+      149,
+      152,
+      237,
+      239,
+      268,
+      269,
+      270,
+      271,
+      272,
+      273
+    ]
+  },
+  "termini_environment": {
+    "N_term_res4": {
+      "min_dist_DNA_A": 36.0,
+      "min_dist_pRNA_A": 15.7,
+      "min_dist_ATP_A": 10.7
+    },
+    "C_term_res330": {
+      "min_dist_DNA_A": 6.2,
+      "min_dist_pRNA_A": 29.5,
+      "min_dist_ATP_A": 42.2,
+      "note": "native C-terminus is a DNA-channel contact -> naive fusion fouls translocation channel"
+    }
+  },
+  "fusion_geometry": {
+    "native_headtotail_helical": {
+      "mean_A": 57.1,
+      "max_A": 66.1,
+      "per_edge": {
+        "E->D": 54.0,
+        "D->C": 54.5,
+        "C->B": 56.0,
+        "B->A": 55.0,
+        "A->E": 66.1
+      }
+    },
+    "native_headtotail_planar": {
+      "mean_A": 52.9,
+      "max_A": 52.9,
+      "uniform": true
+    },
+    "cut297": {
+      "planar_A": 18.5,
+      "helical_max_A": 24.7,
+      "stroke_A": 6.2
+    },
+    "cut280": {
+      "planar_A": 24.0,
+      "helical_max_A": 27.0,
+      "stroke_A": 3.0
+    }
+  },
+  "design_principle": "Size each inter-subunit linker for the HELICAL (open) maximum plus flexible excess, so it is compliant (not load-bearing) in the PLANAR resting state and does not splint the planar<->lock-washer stroke."
+}

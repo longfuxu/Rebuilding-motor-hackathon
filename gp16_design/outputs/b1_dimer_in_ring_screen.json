@@ -1,0 +1,65 @@
+{
+  "B1_L24_in_ring": {
+    "seat_m1_rmsd": 5.17,
+    "seat_m2_rmsd": 5.22,
+    "chains": [
+      "A",
+      "C",
+      "D",
+      "E"
+    ],
+    "R146_m1": [
+      6.06,
+      "m2"
+    ],
+    "R146_m2": [
+      5.17,
+      "D"
+    ],
+    "A-C_contacts": 0,
+    "A-D_contacts": 78,
+    "A-E_contacts": 75
+  },
+  "B1_L32_in_ring": {
+    "seat_m1_rmsd": 4.66,
+    "seat_m2_rmsd": 4.69,
+    "chains": [
+      "A",
+      "C",
+      "D",
+      "E"
+    ],
+    "R146_m1": [
+      6.27,
+      "m2"
+    ],
+    "R146_m2": [
+      5.95,
+      "C"
+    ],
+    "A-C_contacts": 84,
+    "A-D_contacts": 103,
+    "A-E_contacts": 0
+  },
+  "B1_L40_in_ring": {
+    "seat_m1_rmsd": 4.77,
+    "seat_m2_rmsd": 4.74,
+    "chains": [
+      "A",
+      "C",
+      "D",
+      "E"
+    ],
+    "R146_m1": [
+      5.53,
+      "m2"
+    ],
+    "R146_m2": [
+      5.98,
+      "C"
+    ],
+    "A-C_contacts": 101,
+    "A-D_contacts": 104,
+    "A-E_contacts": 3
+  }
+}

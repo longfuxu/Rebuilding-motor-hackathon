@@ -1,0 +1,40 @@
+{
+  "gp16_CP280_2mer": {
+    "confidence_score": 0.6603528261184692,
+    "ptm": 0.4113590717315674,
+    "iptm": 0.0,
+    "ligand_iptm": 0.0,
+    "protein_iptm": 0.0,
+    "complex_plddt": 0.7226012349128723,
+    "complex_iplddt": 0.7226012349128723,
+    "complex_pde": 1.871971845626831,
+    "complex_ipde": 0.0,
+    "chains_ptm": {
+      "0": 0.4113590717315674
+    },
+    "pair_chains_iptm": {
+      "0": {
+        "0": 0.4113590717315674
+      }
+    }
+  },
+  "gp16_nativefus_2mer": {
+    "confidence_score": 0.6746712923049927,
+    "ptm": 0.4738301932811737,
+    "iptm": 0.0,
+    "ligand_iptm": 0.0,
+    "protein_iptm": 0.0,
+    "complex_plddt": 0.7248815298080444,
+    "complex_iplddt": 0.7248815298080444,
+    "complex_pde": 1.454971194267273,
+    "complex_ipde": 0.0,
+    "chains_ptm": {
+      "0": 0.4738301932811737
+    },
+    "pair_chains_iptm": {
+      "0": {
+        "0": 0.4738301932811737
+      }
+    }
+  }
+}

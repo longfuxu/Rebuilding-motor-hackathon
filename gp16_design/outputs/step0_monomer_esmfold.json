@@ -1,0 +1,16 @@
+{
+  "construct": "gp16_CP280_monomer",
+  "length": 332,
+  "predictor": "ESMFold (public api.esmatlas.com, single-sequence)",
+  "mean_pLDDT_0to1": 0.797,
+  "core_pLDDT": 0.803,
+  "linker_pLDDT": 0.39,
+  "frac_core_pLDDT_gt0.7": 0.73,
+  "global_core_RMSD_vs_native_A": 25.38,
+  "segment_RMSD": {
+    "part1_res280_330": 4.9,
+    "part2_res4_279": 5.65
+  },
+  "part1_displacement_after_part2_superposition_A": 68.4,
+  "interpretation": "Domains fold locally but ESMFold (no MSA) does not recover the native inter-domain arrangement of the permuted monomer; linker is the low-confidence region. Proceed to MSA-based predictors (Boltz-2/OpenFold3) for a trustworthy call."
+}

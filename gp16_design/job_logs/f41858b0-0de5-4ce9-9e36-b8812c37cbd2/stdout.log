@@ -1,0 +1,7 @@
+RUN gp16_CP280_2mer ['A'] lens [719]
+gp16_CP280_2mer boltz rc 0
+RUN gp16_nativefus_2mer ['A'] lens [684]
+gp16_nativefus_2mer boltz rc 0
+RUN gp16_native_dimer ['A', 'B'] lens [332, 332]
+gp16_native_dimer boltz rc 0
+BOLTZ DONE ['gp16_CP280_2mer', 'gp16_nativefus_2mer']

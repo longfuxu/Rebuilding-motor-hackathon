@@ -1,0 +1,29 @@
+[hb]1783493618
+[hb]1783493649
+[hb]1783493679
+[hb]1783493709
+[hb]1783493739
+[hb]1783493769
+[hb]1783493799
+[hb]1783493829
+Score=0.1099, writing output to chai_42/pred/pred.model_idx_0.cif
+Score=0.1019, writing output to chai_42/pred/pred.model_idx_1.cif
+[hb]1783493859
+Score=0.1080, writing output to chai_42/pred/pred.model_idx_2.cif
+Score=0.1035, writing output to chai_42/pred/pred.model_idx_3.cif
+Score=0.1061, writing output to chai_42/pred/pred.model_idx_4.cif
+chai seed 42 ok
+[hb]1783493889
+[hb]1783493919
+[hb]1783493949
+[hb]1783493979
+[hb]1783494009
+[hb]1783494039
+[hb]1783494069
+Score=0.0968, writing output to chai_7/pred/pred.model_idx_0.cif
+Score=0.0936, writing output to chai_7/pred/pred.model_idx_1.cif
+Score=0.1072, writing output to chai_7/pred/pred.model_idx_2.cif
+Score=0.1025, writing output to chai_7/pred/pred.model_idx_3.cif
+Score=0.0949, writing output to chai_7/pred/pred.model_idx_4.cif
+chai seed 7 ok
+CHAI D DONE

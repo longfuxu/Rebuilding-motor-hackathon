@@ -1,0 +1,16 @@
+{
+  "boltz": {
+    "job_id": "f41858b0-0de5-4ce9-9e36-b8812c37cbd2",
+    "status": "success",
+    "wall_s": 668,
+    "gpu": "A100-80GB",
+    "sandbox": "sb-Q8GV3h2ojtTDPCPemXpzYg"
+  },
+  "chai": {
+    "job_id": "009395ae-7ead-4cfa-bbf5-b037b38cebca",
+    "status": "success",
+    "wall_s": 870,
+    "gpu": "A100-80GB",
+    "sandbox": "sb-OzydINxXZR1DPZs6BGD7ES"
+  }
+}

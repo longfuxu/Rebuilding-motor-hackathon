@@ -1,0 +1,235 @@
+[hb]1783497017
+[hb]1783497048
+[hb]1783497084
+[hb]1783497114
+[hb]1783497144
+[hb]1783497174
+[hb]1783497204
+[hb]1783497234
+[hb]1783497264
+[hb]1783497294
+[hb]1783497324
+[hb]1783497354
+[hb]1783497384
+[hb]1783497414
+[hb]1783497444
+[hb]1783497474
+[hb]1783497504
+[hb]1783497534
+[hb]1783497564
+[hb]1783497594
+[hb]1783497624
+[hb]1783497654
+[hb]1783497684
+[hb]1783497714
+[hb]1783497744
+[hb]1783497774
+[hb]1783497804
+[hb]1783497834
+[hb]1783497864
+[hb]1783497894
+[hb]1783497924
+[hb]1783497954
+Score=0.7205, writing output to c_native_ring_s42/pred/pred.model_idx_0.cif
+[hb]1783497984
+Score=0.7222, writing output to c_native_ring_s42/pred/pred.model_idx_1.cif
+Score=0.7187, writing output to c_native_ring_s42/pred/pred.model_idx_2.cif
+[hb]1783498014
+Score=0.7176, writing output to c_native_ring_s42/pred/pred.model_idx_3.cif
+Score=0.7175, writing output to c_native_ring_s42/pred/pred.model_idx_4.cif
+native_ring seed 42 ok
+[hb]1783498044
+[hb]1783498078
+[hb]1783498108
+[hb]1783498138
+[hb]1783498168
+[hb]1783498198
+[hb]1783498228
+[hb]1783498258
+[hb]1783498288
+[hb]1783498318
+[hb]1783498348
+[hb]1783498378
+[hb]1783498408
+[hb]1783498438
+[hb]1783498468
+[hb]1783498498
+[hb]1783498528
+[hb]1783498558
+[hb]1783498588
+[hb]1783498618
+[hb]1783498648
+[hb]1783498678
+[hb]1783498708
+[hb]1783498738
+[hb]1783498768
+[hb]1783498798
+[hb]1783498828
+[hb]1783498858
+[hb]1783498888
+[hb]1783498918
+[hb]1783498948
+Score=0.7265, writing output to c_native_ring_s7/pred/pred.model_idx_0.cif
+[hb]1783498978
+Score=0.7249, writing output to c_native_ring_s7/pred/pred.model_idx_1.cif
+Score=0.7249, writing output to c_native_ring_s7/pred/pred.model_idx_2.cif
+[hb]1783499008
+Score=0.7216, writing output to c_native_ring_s7/pred/pred.model_idx_3.cif
+Score=0.7272, writing output to c_native_ring_s7/pred/pred.model_idx_4.cif
+native_ring seed 7 ok
+[hb]1783499038
+[hb]1783499069
+[hb]1783499099
+[hb]1783499129
+[hb]1783499159
+[hb]1783499189
+[hb]1783499219
+[hb]1783499249
+[hb]1783499279
+[hb]1783499309
+[hb]1783499339
+[hb]1783499369
+[hb]1783499399
+[hb]1783499429
+[hb]1783499459
+[hb]1783499489
+[hb]1783499519
+[hb]1783499549
+[hb]1783499579
+[hb]1783499609
+[hb]1783499639
+[hb]1783499669
+[hb]1783499699
+[hb]1783499729
+[hb]1783499759
+[hb]1783499789
+[hb]1783499819
+[hb]1783499849
+[hb]1783499879
+[hb]1783499909
+[hb]1783499939
+Score=0.3817, writing output to c_B1_L32_in_ring_s42/pred/pred.model_idx_0.cif
+Score=-99.6044, writing output to c_B1_L32_in_ring_s42/pred/pred.model_idx_1.cif
+[hb]1783499969
+Score=0.4238, writing output to c_B1_L32_in_ring_s42/pred/pred.model_idx_2.cif
+Score=-99.5848, writing output to c_B1_L32_in_ring_s42/pred/pred.model_idx_3.cif
+[hb]1783499999
+Score=0.4275, writing output to c_B1_L32_in_ring_s42/pred/pred.model_idx_4.cif
+B1_L32_in_ring seed 42 ok
+[hb]1783500029
+[hb]1783500059
+[hb]1783500089
+[hb]1783500119
+[hb]1783500149
+[hb]1783500179
+[hb]1783500209
+[hb]1783500239
+[hb]1783500269
+[hb]1783500299
+[hb]1783500329
+[hb]1783500359
+[hb]1783500389
+[hb]1783500419
+[hb]1783500449
+[hb]1783500479
+[hb]1783500509
+[hb]1783500539
+[hb]1783500569
+[hb]1783500599
+[hb]1783500629
+[hb]1783500659
+[hb]1783500689
+[hb]1783500719
+[hb]1783500749
+[hb]1783500779
+[hb]1783500809
+[hb]1783500839
+[hb]1783500869
+[hb]1783500899
+[hb]1783500929
+Score=0.5137, writing output to c_B1_L32_in_ring_s7/pred/pred.model_idx_0.cif
+Score=0.3649, writing output to c_B1_L32_in_ring_s7/pred/pred.model_idx_1.cif
+[hb]1783500959
+Score=-99.5451, writing output to c_B1_L32_in_ring_s7/pred/pred.model_idx_2.cif
+Score=0.4608, writing output to c_B1_L32_in_ring_s7/pred/pred.model_idx_3.cif
+[hb]1783500989
+Score=0.3734, writing output to c_B1_L32_in_ring_s7/pred/pred.model_idx_4.cif
+B1_L32_in_ring seed 7 ok
+[hb]1783501033
+[hb]1783501063
+[hb]1783501093
+[hb]1783501123
+[hb]1783501153
+[hb]1783501183
+[hb]1783501213
+[hb]1783501243
+[hb]1783501273
+[hb]1783501303
+[hb]1783501333
+[hb]1783501363
+[hb]1783501393
+[hb]1783501423
+[hb]1783501453
+[hb]1783501483
+[hb]1783501513
+[hb]1783501543
+[hb]1783501573
+[hb]1783501603
+[hb]1783501633
+[hb]1783501663
+[hb]1783501693
+[hb]1783501723
+[hb]1783501753
+[hb]1783501783
+[hb]1783501813
+[hb]1783501843
+[hb]1783501873
+[hb]1783501903
+Score=0.5106, writing output to c_B1_L40_in_ring_s42/pred/pred.model_idx_0.cif
+Score=0.4405, writing output to c_B1_L40_in_ring_s42/pred/pred.model_idx_1.cif
+[hb]1783501933
+Score=0.5096, writing output to c_B1_L40_in_ring_s42/pred/pred.model_idx_2.cif
+Score=-99.5423, writing output to c_B1_L40_in_ring_s42/pred/pred.model_idx_3.cif
+[hb]1783501963
+Score=0.5128, writing output to c_B1_L40_in_ring_s42/pred/pred.model_idx_4.cif
+B1_L40_in_ring seed 42 ok
+[hb]1783501993
+[hb]1783502027
+[hb]1783502057
+[hb]1783502087
+[hb]1783502117
+[hb]1783502147
+[hb]1783502177
+[hb]1783502207
+[hb]1783502237
+[hb]1783502267
+[hb]1783502297
+[hb]1783502327
+[hb]1783502357
+[hb]1783502387
+[hb]1783502417
+[hb]1783502447
+[hb]1783502477
+[hb]1783502507
+[hb]1783502537
+[hb]1783502567
+[hb]1783502597
+[hb]1783502627
+[hb]1783502657
+[hb]1783502687
+[hb]1783502717
+[hb]1783502747
+[hb]1783502777
+[hb]1783502807
+[hb]1783502837
+[hb]1783502867
+[hb]1783502897
+Score=0.4610, writing output to c_B1_L40_in_ring_s7/pred/pred.model_idx_0.cif
+Score=-99.5466, writing output to c_B1_L40_in_ring_s7/pred/pred.model_idx_1.cif
+[hb]1783502927
+Score=0.4574, writing output to c_B1_L40_in_ring_s7/pred/pred.model_idx_2.cif
+Score=0.4585, writing output to c_B1_L40_in_ring_s7/pred/pred.model_idx_3.cif
+[hb]1783502957
+Score=0.3546, writing output to c_B1_L40_in_ring_s7/pred/pred.model_idx_4.cif
+B1_L40_in_ring seed 7 ok
+CHAI RING DONE

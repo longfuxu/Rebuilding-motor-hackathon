@@ -1,0 +1,10 @@
+[hb]1783495524
+RUN native_ring seed 1 chains ['A', 'B', 'C', 'D', 'E']
+CMD boltz predict w_native_ring_s1/native_ring.fasta --out_dir w_native_ring_s1 --use_msa_server --output_format pdb --recycling_steps 3 --sampling_steps 200 --diffusion_samples 1 --seed 1 --override --write_full_pae
+[hb]1783495554
+[hb]1783495584
+[hb]1783495614
+[hb]1783495644
+[hb]1783495674
+[hb]1783495704
+JOB DONE ['native_ring_s1']

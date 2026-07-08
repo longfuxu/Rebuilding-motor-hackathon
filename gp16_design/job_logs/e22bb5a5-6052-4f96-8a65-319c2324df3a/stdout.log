@@ -1,0 +1,27 @@
+[heartbeat] alive t=1783492718
+CMD: boltz predict nat/native.fasta --out_dir nat --use_msa_server --output_format pdb --recycling_steps 3 --sampling_steps 200 --diffusion_samples 1 --override --write_full_pae
+[heartbeat] alive t=1783492748
+[heartbeat] alive t=1783492778
+native fold rc 0
+a3m found: ['nat/boltz_results_native/msa/native_unpaired_tmp_env/uniref.a3m', 'nat/boltz_results_native/msa/native_unpaired_tmp_env/bfd.mgnify30.metaeuk30.smag30.a3m']
+MSA records: 212 | query match len: 332
+RUN CP228_monomer cut=228 (cached MSA depth 212, reduced settings)
+CMD: boltz predict work_CP228_monomer/CP228_monomer.fasta --out_dir work_CP228_monomer --output_format pdb --recycling_steps 1 --sampling_steps 50 --diffusion_samples 1 --override
+[heartbeat] alive t=1783492808
+[heartbeat] alive t=1783492838
+CP228_monomer rc 0
+RUN CP233_monomer cut=233 (cached MSA depth 212, reduced settings)
+CMD: boltz predict work_CP233_monomer/CP233_monomer.fasta --out_dir work_CP233_monomer --output_format pdb --recycling_steps 1 --sampling_steps 50 --diffusion_samples 1 --override
+[heartbeat] alive t=1783492868
+CP233_monomer rc 0
+RUN CP217_monomer cut=217 (cached MSA depth 212, reduced settings)
+CMD: boltz predict work_CP217_monomer/CP217_monomer.fasta --out_dir work_CP217_monomer --output_format pdb --recycling_steps 1 --sampling_steps 50 --diffusion_samples 1 --override
+[heartbeat] alive t=1783492898
+[heartbeat] alive t=1783492928
+CP217_monomer rc 0
+RUN CP205_monomer cut=205 (cached MSA depth 212, reduced settings)
+CMD: boltz predict work_CP205_monomer/CP205_monomer.fasta --out_dir work_CP205_monomer --output_format pdb --recycling_steps 1 --sampling_steps 50 --diffusion_samples 1 --override
+[heartbeat] alive t=1783492958
+[heartbeat] alive t=1783492988
+CP205_monomer rc 0
+STAGE B DONE ['native_monomer', 'CP228_monomer', 'CP233_monomer', 'CP217_monomer', 'CP205_monomer']

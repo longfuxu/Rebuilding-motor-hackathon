@@ -1,0 +1,22 @@
+RUN gp16_CP280_2mer ['A']
+Score=0.0916, writing output to work_gp16_CP280_2mer/pred/pred.model_idx_0.cif
+Score=0.0914, writing output to work_gp16_CP280_2mer/pred/pred.model_idx_1.cif
+Score=0.0895, writing output to work_gp16_CP280_2mer/pred/pred.model_idx_2.cif
+Score=0.1028, writing output to work_gp16_CP280_2mer/pred/pred.model_idx_3.cif
+Score=0.1042, writing output to work_gp16_CP280_2mer/pred/pred.model_idx_4.cif
+CHAI OK gp16_CP280_2mer
+RUN gp16_nativefus_2mer ['A']
+Score=0.1105, writing output to work_gp16_nativefus_2mer/pred/pred.model_idx_0.cif
+Score=0.1015, writing output to work_gp16_nativefus_2mer/pred/pred.model_idx_1.cif
+Score=0.1071, writing output to work_gp16_nativefus_2mer/pred/pred.model_idx_2.cif
+Score=0.0957, writing output to work_gp16_nativefus_2mer/pred/pred.model_idx_3.cif
+Score=0.1049, writing output to work_gp16_nativefus_2mer/pred/pred.model_idx_4.cif
+CHAI OK gp16_nativefus_2mer
+RUN gp16_native_dimer ['A', 'B']
+Score=0.5261, writing output to work_gp16_native_dimer/pred/pred.model_idx_0.cif
+Score=0.5273, writing output to work_gp16_native_dimer/pred/pred.model_idx_1.cif
+Score=0.5258, writing output to work_gp16_native_dimer/pred/pred.model_idx_2.cif
+Score=0.5256, writing output to work_gp16_native_dimer/pred/pred.model_idx_3.cif
+Score=0.5291, writing output to work_gp16_native_dimer/pred/pred.model_idx_4.cif
+CHAI OK gp16_native_dimer
+CHAI DONE ['gp16_CP280_2mer', 'gp16_nativefus_2mer', 'gp16_native_dimer']

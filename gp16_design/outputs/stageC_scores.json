@@ -1,0 +1,18 @@
+{
+  "gp16_nativeorder_2mer": {
+    "m1_core": 8.24,
+    "m2_core": 8.32,
+    "interface_contacts": 25,
+    "R146_trans_min": 53.81,
+    "core_pLDDT": 78.3,
+    "link_pLDDT": 30.3
+  },
+  "gp16_CP228_2mer": {
+    "m1_core": 22.49,
+    "m2_core": 23.01,
+    "interface_contacts": 249,
+    "R146_trans_min": 33.37,
+    "core_pLDDT": 75.2,
+    "link_pLDDT": 29.3
+  }
+}

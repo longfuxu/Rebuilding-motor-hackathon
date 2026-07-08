@@ -1,0 +1,38 @@
+[hb]1783495902
+RUN B1_L24_in_ring seed 1 chains ['A', 'C', 'D', 'E']
+CMD boltz predict w_B1_L24_in_ring_s1/B1_L24_in_ring.fasta --out_dir w_B1_L24_in_ring_s1 --use_msa_server --output_format pdb --recycling_steps 3 --sampling_steps 200 --diffusion_samples 1 --seed 1 --override --write_full_pae
+[hb]1783495932
+[hb]1783495962
+[hb]1783495992
+[hb]1783496022
+[hb]1783496052
+[hb]1783496082
+[hb]1783496112
+[hb]1783496142
+[hb]1783496172
+[hb]1783496202
+RUN B1_L32_in_ring seed 1 chains ['A', 'C', 'D', 'E']
+CMD boltz predict w_B1_L32_in_ring_s1/B1_L32_in_ring.fasta --out_dir w_B1_L32_in_ring_s1 --use_msa_server --output_format pdb --recycling_steps 3 --sampling_steps 200 --diffusion_samples 1 --seed 1 --override --write_full_pae
+[hb]1783496232
+[hb]1783496262
+[hb]1783496292
+[hb]1783496322
+[hb]1783496352
+[hb]1783496382
+[hb]1783496412
+[hb]1783496442
+[hb]1783496472
+[hb]1783496502
+[hb]1783496532
+[hb]1783496562
+RUN B1_L40_in_ring seed 1 chains ['A', 'C', 'D', 'E']
+CMD boltz predict w_B1_L40_in_ring_s1/B1_L40_in_ring.fasta --out_dir w_B1_L40_in_ring_s1 --use_msa_server --output_format pdb --recycling_steps 3 --sampling_steps 200 --diffusion_samples 1 --seed 1 --override --write_full_pae
+[hb]1783496592
+[hb]1783496622
+[hb]1783496652
+[hb]1783496682
+[hb]1783496712
+[hb]1783496742
+[hb]1783496772
+[hb]1783496802
+JOB DONE ['B1_L24_in_ring_s1', 'B1_L32_in_ring_s1', 'B1_L40_in_ring_s1']

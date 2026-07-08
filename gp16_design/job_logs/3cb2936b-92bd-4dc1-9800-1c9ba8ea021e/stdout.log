@@ -1,0 +1,83 @@
+[hb]1783496994
+RUN native_ring seed 1 chains ['A', 'B', 'C', 'D', 'E']
+CMD boltz predict w_native_ring_s1/native_ring.fasta --out_dir w_native_ring_s1 --use_msa_server --output_format pdb --recycling_steps 3 --sampling_steps 200 --diffusion_samples 1 --seed 1 --override --write_full_pae
+[hb]1783497024
+[hb]1783497054
+[hb]1783497084
+[hb]1783497114
+[hb]1783497144
+[hb]1783497174
+[hb]1783497204
+RUN native_ring seed 2 chains ['A', 'B', 'C', 'D', 'E']
+CMD boltz predict w_native_ring_s2/native_ring.fasta --out_dir w_native_ring_s2 --use_msa_server --output_format pdb --recycling_steps 3 --sampling_steps 200 --diffusion_samples 1 --seed 2 --override --write_full_pae
+[hb]1783497234
+[hb]1783497264
+[hb]1783497294
+[hb]1783497324
+[hb]1783497354
+[hb]1783497384
+RUN native_ring seed 3 chains ['A', 'B', 'C', 'D', 'E']
+CMD boltz predict w_native_ring_s3/native_ring.fasta --out_dir w_native_ring_s3 --use_msa_server --output_format pdb --recycling_steps 3 --sampling_steps 200 --diffusion_samples 1 --seed 3 --override --write_full_pae
+[hb]1783497414
+[hb]1783497444
+[hb]1783497474
+[hb]1783497504
+[hb]1783497534
+[hb]1783497564
+[hb]1783497594
+RUN B1_L32_in_ring seed 1 chains ['A', 'C', 'D', 'E']
+CMD boltz predict w_B1_L32_in_ring_s1/B1_L32_in_ring.fasta --out_dir w_B1_L32_in_ring_s1 --use_msa_server --output_format pdb --recycling_steps 3 --sampling_steps 200 --diffusion_samples 1 --seed 1 --override --write_full_pae
+[hb]1783497624
+[hb]1783497654
+[hb]1783497684
+[hb]1783497714
+[hb]1783497744
+[hb]1783497774
+[hb]1783497804
+RUN B1_L32_in_ring seed 2 chains ['A', 'C', 'D', 'E']
+CMD boltz predict w_B1_L32_in_ring_s2/B1_L32_in_ring.fasta --out_dir w_B1_L32_in_ring_s2 --use_msa_server --output_format pdb --recycling_steps 3 --sampling_steps 200 --diffusion_samples 1 --seed 2 --override --write_full_pae
+[hb]1783497834
+[hb]1783497864
+[hb]1783497894
+[hb]1783497924
+[hb]1783497954
+[hb]1783497984
+[hb]1783498014
+RUN B1_L32_in_ring seed 3 chains ['A', 'C', 'D', 'E']
+CMD boltz predict w_B1_L32_in_ring_s3/B1_L32_in_ring.fasta --out_dir w_B1_L32_in_ring_s3 --use_msa_server --output_format pdb --recycling_steps 3 --sampling_steps 200 --diffusion_samples 1 --seed 3 --override --write_full_pae
+[hb]1783498044
+[hb]1783498074
+[hb]1783498104
+[hb]1783498134
+[hb]1783498164
+[hb]1783498194
+[hb]1783498224
+RUN B1_L40_in_ring seed 1 chains ['A', 'C', 'D', 'E']
+CMD boltz predict w_B1_L40_in_ring_s1/B1_L40_in_ring.fasta --out_dir w_B1_L40_in_ring_s1 --use_msa_server --output_format pdb --recycling_steps 3 --sampling_steps 200 --diffusion_samples 1 --seed 1 --override --write_full_pae
+[hb]1783498254
+[hb]1783498284
+[hb]1783498314
+[hb]1783498344
+[hb]1783498374
+[hb]1783498404
+[hb]1783498434
+RUN B1_L40_in_ring seed 2 chains ['A', 'C', 'D', 'E']
+CMD boltz predict w_B1_L40_in_ring_s2/B1_L40_in_ring.fasta --out_dir w_B1_L40_in_ring_s2 --use_msa_server --output_format pdb --recycling_steps 3 --sampling_steps 200 --diffusion_samples 1 --seed 2 --override --write_full_pae
+[hb]1783498464
+[hb]1783498494
+[hb]1783498524
+[hb]1783498554
+[hb]1783498584
+[hb]1783498614
+[hb]1783498644
+RUN B1_L40_in_ring seed 3 chains ['A', 'C', 'D', 'E']
+CMD boltz predict w_B1_L40_in_ring_s3/B1_L40_in_ring.fasta --out_dir w_B1_L40_in_ring_s3 --use_msa_server --output_format pdb --recycling_steps 3 --sampling_steps 200 --diffusion_samples 1 --seed 3 --override --write_full_pae
+[hb]1783498674
+[hb]1783498704
+[hb]1783498734
+[hb]1783498764
+[hb]1783498794
+[hb]1783498824
+[hb]1783498854
+[hb]1783498884
+JOB DONE ['native_ring_s1', 'native_ring_s2', 'native_ring_s3', 'B1_L32_in_ring_s1', 'B1_L32_in_ring_s2', 'B1_L32_in_ring_s3', 'B1_L40_in_ring_s1', 'B1_L40_in_ring_s2', 'B1_L40_in_ring_s3']
