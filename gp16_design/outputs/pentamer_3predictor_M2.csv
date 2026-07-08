@@ -1,0 +1,16 @@
+predictor,model,global_pTM,donor,acceptor,R146_min_A,engaged,nearest_partner,scrambled,M2_designed
+Boltz-2,msa,0.48,A1,A2,5.14,True,A2,False,5/5
+Boltz-2,msa,0.48,A2,A3,5.51,True,A3,False,5/5
+Boltz-2,msa,0.48,A3,A4,4.93,True,A4,False,5/5
+Boltz-2,msa,0.48,A4,A5,5.53,True,A5,False,5/5
+Boltz-2,msa,0.48,A5,A1,5.27,True,A1,False,5/5
+OpenFold3,msa,0.58,A1,A2,52.94,False,A3,True,2/5
+OpenFold3,msa,0.58,A2,A3,52.88,False,A5,True,2/5
+OpenFold3,msa,0.58,A3,A4,4.98,True,A4,False,2/5
+OpenFold3,msa,0.58,A4,A5,32.45,False,A2,True,2/5
+OpenFold3,msa,0.58,A5,A1,5.02,True,A1,False,2/5
+AlphaFold3,model_0,0.51,A1,A2,7.65,True,A2,False,1/5
+AlphaFold3,model_0,0.51,A2,A3,55.87,False,A5,True,1/5
+AlphaFold3,model_0,0.51,A3,A4,53.99,False,A1,True,1/5
+AlphaFold3,model_0,0.51,A4,A5,54.46,False,A3,True,1/5
+AlphaFold3,model_0,0.51,A5,A1,55.47,False,A4,True,1/5
