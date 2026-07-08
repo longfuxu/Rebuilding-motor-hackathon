@@ -106,6 +106,40 @@ def min_dist(A, B):
     return float(np.sqrt(((A[:, None, :] - B[None, :, :]) ** 2).sum(-1)).min())
 
 
+def ca_centroid(sub):
+    P = [xyz for atomlist in sub.values() for an, xyz, b in atomlist if an == "CA"]
+    return np.mean(P, axis=0) if P else None
+
+
+def ring_geometry(centroids, designed_order):
+    """M1 — ring-closure geometry from the per-subunit CA centroids (in designed order).
+
+    Returns radius, radius_CV (spread of centroid-to-centre distances; ~0 = on a circle),
+    planarity_rms (out-of-plane RMS), compact_ring (centroids lie on a circle), and
+    sequential_consistent (the angular order around the ring == the designed cyclic order,
+    i.e. designed neighbours are also spatial neighbours — False = a scrambled register).
+    """
+    C = np.array(centroids); k = len(C)
+    center = C.mean(axis=0); X = C - center
+    _, _, Vt = np.linalg.svd(X)
+    normal = Vt[2]
+    oop = X @ normal
+    planarity_rms = float(np.sqrt((oop ** 2).mean()))
+    inplane = X - np.outer(oop, normal)
+    radii = np.linalg.norm(inplane, axis=1)
+    radius = float(radii.mean())
+    radius_cv = float(radii.std() / radii.mean()) if radii.mean() > 0 else float("nan")
+    ang = np.arctan2(inplane @ Vt[1], inplane @ Vt[0])
+    order = list(np.argsort(ang))                       # subunit indices sorted by angle
+    seq_consistent = None
+    if designed_order:                                  # only meaningful when copies are in designed order
+        diffs = [(order[(i + 1) % k] - order[i]) % k for i in range(k)]
+        seq_consistent = all(d in (1, k - 1) for d in diffs)
+    compact = radius_cv < 0.35
+    return dict(radius=radius, radius_cv=radius_cv, planarity_rms=planarity_rms,
+                compact_ring=compact, sequential_consistent=seq_consistent)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("structure")
@@ -140,6 +174,7 @@ def main():
     print(f"# {args.structure}   subunits: {labels}")
     print(f"{'donor':>7} {'->':>2} {'acceptor':>8} {'R146_min_A':>11} {'engaged':>8} {'iface_pLDDT':>12}  note")
     engaged_n = 0
+    iface_plddts = []
     for i, d in enumerate(labels):
         if copies:
             # DESIGNED sequential ring neighbour (covalent order), cyclic donor -> next.
@@ -158,8 +193,23 @@ def main():
             continue
         eng = dist < ENGAGED_A
         engaged_n += eng
+        if not (np.isnan(plddt)):
+            iface_plddts.append(plddt)
         print(f"{d:>7} {'->':>2} {a:>8} {dist:>11.2f} {str(eng):>8} {plddt:>12.1f}  {note}")
     print(f"# M2: {engaged_n}/{n} DESIGNED interfaces engaged (<{ENGAGED_A} A)  ->  pass = >=4/5 for a pentamer")
+
+    # M1 — ring-closure geometry
+    centroids = [ca_centroid(subs[d]) for d in labels]
+    if all(c is not None for c in centroids):
+        g = ring_geometry(centroids, designed_order=bool(copies))
+        sc = g["sequential_consistent"]
+        sc_txt = "n/a (needs designed copies)" if sc is None else (
+            "YES (designed order == spatial order)" if sc else "NO -> SCRAMBLED register")
+        print(f"# M1: radius {g['radius']:.1f} A | radius_CV {g['radius_cv']:.2f} | planarity_rms "
+              f"{g['planarity_rms']:.1f} A | compact_ring {g['compact_ring']} | sequential_consistent: {sc_txt}")
+    # M4 — per-interface confidence roll-up
+    if iface_plddts:
+        print(f"# M4: designed-interface pLDDT mean {np.mean(iface_plddts):.1f} / min {np.min(iface_plddts):.1f}")
 
 
 if __name__ == "__main__":
