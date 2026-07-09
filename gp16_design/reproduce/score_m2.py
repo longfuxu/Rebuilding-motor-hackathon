@@ -146,6 +146,11 @@ def main():
     ap.add_argument("--copies", default="", help='e.g. "A:1-327,A:368-694,..." residue spans within a chain')
     ap.add_argument("--copy_start_res", type=int, default=1,
                     help="gp16 residue number of each copy's first residue (4 for a res4-330 core)")
+    ap.add_argument("--r146_incopy", type=int, default=None,
+                    help="1-based position of R146 WITHIN a copy (for circular-permutation constructs; "
+                         "use with --copy_start_res 1). Overrides the default gp16-numbering lookup.")
+    ap.add_argument("--walker_incopy", default=None,
+                    help="'lo-hi' 1-based positions of Walker-A within a copy (CP constructs).")
     args = ap.parse_args()
 
     copies = None
@@ -159,8 +164,13 @@ def main():
     subs = subunit_index(atoms, copies, args.copy_start_res)
     labels = list(subs)
 
-    walker_res = [o + 1 for o in WALKER_OFFSETS]        # 24..31 (1-based within copy)
-    r146_res = R146_OFFSET + 1                           # 146
+    if args.r146_incopy is not None:                    # circular-permutation mode: explicit within-copy positions
+        r146_res = args.r146_incopy
+        lo, hi = (int(x) for x in args.walker_incopy.split("-"))
+        walker_res = list(range(lo, hi + 1))
+    else:                                                # default: gp16 numbering (R146=146, Walker-A=24-31)
+        walker_res = [o + 1 for o in WALKER_OFFSETS]
+        r146_res = R146_OFFSET + 1
     n = len(labels)
 
     def r146_to(donor, acceptor):
