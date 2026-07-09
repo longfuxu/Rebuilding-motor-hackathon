@@ -47,18 +47,30 @@ copies threaded in the wrong order.
 4. **B1 (multi-chain covalent dimer + 3 WT) remains the safest robust addressable construct** — it avoids
    the single-chain tandem-threading ambiguity entirely. Worth an AF3 check to make it three-predictor-clean.
 
-## Ligand-state run — native ring + 5 ATP + 5 Mg (a clean win)
+## Ligand-state run — native ring + 5 ATP + 5 Mg (CORRECTED — an unreliable prediction, not a win)
 
-AF3 native ring with ATP+Mg loaded at all 5 sites → **all 5 R146 arginine fingers engage tightly and
-symmetrically: 3.14–3.23 Å, interface pLDDT ~81** (vs the apo predicted ring's symmetric ~6.6 Å).
+**Retraction of an earlier over-claim.** I first reported this as "ATP tightens the fingers, resolves the
+7JQQ caveat." That was wrong — I only measured the R146→neighbour distance, not the ring's open/closed
+(planar vs helical) geometry. Measuring the actual ring geometry:
 
-- **ATP tightens every finger** from the apo ~6.6 Å to ~3.2 Å — the arginine finger senses the neighbour's
-  nucleotide (consistent with the ClpX central-coupler mechanism, Sosa et al. 2026).
-- **Symmetric, not a lock-washer:** a *fully-loaded* ring (all 5 ATP) is symmetric. This **resolves the
-  7JQQ mixed-occupancy caveat**: 7JQQ's asymmetry (tight at some interfaces, open seam) comes from *partial*
-  ATP occupancy; fully-loaded = symmetric tight, apo = symmetric loose.
+| state | R146 | radius | planarity_rms | ring shape |
+|---|---|---|---|---|
+| apo (Boltz, **no template**) | ~6.6 Å symmetric | 26.9 Å | **0.05 Å** | closed **planar** |
+| ATP/Mg (AF3, **template ON**) | ~3.2 Å symmetric | 27.9 Å | **0.01 Å** | closed **planar** |
 
-This is the ligand-state (nucleotide) validation depth, and it is clean.
+**Both are flat, symmetric, closed rings** — the ATP run did **not** produce the open/helical (lock-washer)
+state expected for the ATP-bound motor (the state captured experimentally by 7JQQ). The only change AF3 made
+was tightening the fingers within a still-closed planar ring. Why AF3 is unreliable here:
+1. **The ATP job used `useStructureTemplate: true`** → biased toward a closed symmetric template.
+2. **More fundamentally, Boltz/OF3/AF3 give a single static structure and do not model the ATP-driven
+   allosteric planar↔helical transition** — they dock ATP into whatever ring they already build.
+
+**Honest conclusion:** the ligand-state / switch-position conformational question is **beyond what these
+structure predictors can answer**. The experimental answer already exists — **7JQQ is the ATP-analog-bound
+helical/asymmetric state**. The predictors failing to reproduce it is a *predictor limitation*, not biology.
+Correct note on apo: the apo ring IS closed planar (planarity 0.05 Å) — the ~6.6 Å is just the loosely-engaged
+finger distance in the closed state, **not** an open ring. Verifying on AF3 would require `useStructureTemplate:
+false` and an apo/ADP/ATP comparison, but expect the predictors to still fail to open the ring.
 
 Structures: `outputs/structures/af3_sweep/{L20,L25,L30,L34,L36,L50,native_ring_ATP_Mg}/` (5 models + confidences
 each; 29 MB PAE full_data left in ~/Downloads). Cross-checked by three predictors, not validated; apo except the ATP/Mg run.
