@@ -1,0 +1,46 @@
+{
+ "sal_L50_0_d0": {
+  "ok": true,
+  "ring_aa": 1835,
+  "dt": 59.1,
+  "plddt": [
+   0.45256954431533813
+  ],
+  "M2": "# M2: 0/5 DESIGNED interfaces engaged (<8.0 A)  ->  pass = >=4/5 for a pentamer",
+  "M1": "# M1: radius 27.4 A | radius_CV 0.07 | planarity_rms 2.0 A | compact_ring True | sequential_consistent: YES (designed order == spatial order)",
+  "full": "# /Users/longfu/.claude/jobs/48b7a543/tmp/tiled_ring_out/sal_L50_0_d0_ring.cif   subunits: ['A1', 'A2', 'A3', 'A4', 'A5']\n  donor -> acceptor  R146_min_A  engaged  iface_pLDDT  note\n     A1 ->       A2       57.06    False         49.1  nearest=A5@5.3(scrambled)\n     A2 ->       A3       52.45    False         49.2  nearest=A1@3.9(scrambled)\n     A3 ->       A4       54.25    False         49.3  nearest=A2@4.1(scrambled)\n     A4 ->       A5       55.04    False         50.1  nearest=A3@4.9(scrambled)\n     A5 ->       A1       49.35    False         50.7  nearest=A4@5.1(scrambled)\n# M2: 0/5 DESIGNED interfaces engaged (<8.0 A)  ->  pass = >=4/5 for a pentamer\n# M1: radius 27.4 A | radius_CV 0.07 | planarity_rms 2.0 A | compact_ring True | sequential_consistent: YES (designed order == spatial order)\n# M4: designed-interface pLDDT mean 49.7 / min 49.1\n"
+ },
+ "sal_L50_0_d1": {
+  "ok": true,
+  "ring_aa": 1835,
+  "dt": 62.4,
+  "plddt": [
+   0.4472953677177429
+  ],
+  "M2": "# M2: 0/5 DESIGNED interfaces engaged (<8.0 A)  ->  pass = >=4/5 for a pentamer",
+  "M1": "# M1: radius 30.3 A | radius_CV 0.03 | planarity_rms 0.4 A | compact_ring True | sequential_consistent: YES (designed order == spatial order)",
+  "full": "# /Users/longfu/.claude/jobs/48b7a543/tmp/tiled_ring_out/sal_L50_0_d1_ring.cif   subunits: ['A1', 'A2', 'A3', 'A4', 'A5']\n  donor -> acceptor  R146_min_A  engaged  iface_pLDDT  note\n     A1 ->       A2       56.37    False         47.5  nearest=A5@9.8(scrambled)\n     A2 ->       A3       56.29    False         47.1  nearest=A1@11.1(scrambled)\n     A3 ->       A4       53.96    False         47.3  nearest=A2@9.2(scrambled)\n     A4 ->       A5       57.42    False         48.3  nearest=A3@12.0(scrambled)\n     A5 ->       A1       54.79    False         47.3  nearest=A4@9.7(scrambled)\n# M2: 0/5 DESIGNED interfaces engaged (<8.0 A)  ->  pass = >=4/5 for a pentamer\n# M1: radius 30.3 A | radius_CV 0.03 | planarity_rms 0.4 A | compact_ring True | sequential_consistent: YES (designed order == spatial order)\n# M4: designed-interface pLDDT mean 47.5 / min 47.1\n"
+ },
+ "sal_L50_0_d2": {
+  "ok": true,
+  "ring_aa": 1835,
+  "dt": 63.1,
+  "plddt": [
+   0.4750308692455292
+  ],
+  "M2": "# M2: 0/5 DESIGNED interfaces engaged (<8.0 A)  ->  pass = >=4/5 for a pentamer",
+  "M1": "# M1: radius 29.6 A | radius_CV 0.02 | planarity_rms 0.5 A | compact_ring True | sequential_consistent: YES (designed order == spatial order)",
+  "full": "# /Users/longfu/.claude/jobs/48b7a543/tmp/tiled_ring_out/sal_L50_0_d2_ring.cif   subunits: ['A1', 'A2', 'A3', 'A4', 'A5']\n  donor -> acceptor  R146_min_A  engaged  iface_pLDDT  note\n     A1 ->       A2       41.47    False         51.1  \n     A2 ->       A3       41.47    False         50.6  \n     A3 ->       A4       40.07    False         50.3  \n     A4 ->       A5       40.87    False         51.2  \n     A5 ->       A1       40.40    False         51.2  \n# M2: 0/5 DESIGNED interfaces engaged (<8.0 A)  ->  pass = >=4/5 for a pentamer\n# M1: radius 29.6 A | radius_CV 0.02 | planarity_rms 0.5 A | compact_ring True | sequential_consistent: YES (designed order == spatial order)\n# M4: designed-interface pLDDT mean 50.9 / min 50.3\n"
+ },
+ "sal_L50_0_d3": {
+  "ok": true,
+  "ring_aa": 1835,
+  "dt": 63.0,
+  "plddt": [
+   0.4410891532897949
+  ],
+  "M2": "# M2: 0/5 DESIGNED interfaces engaged (<8.0 A)  ->  pass = >=4/5 for a pentamer",
+  "M1": "# M1: radius 26.7 A | radius_CV 0.21 | planarity_rms 6.0 A | compact_ring True | sequential_consistent: YES (designed order == spatial order)",
+  "full": "# /Users/longfu/.claude/jobs/48b7a543/tmp/tiled_ring_out/sal_L50_0_d3_ring.cif   subunits: ['A1', 'A2', 'A3', 'A4', 'A5']\n  donor -> acceptor  R146_min_A  engaged  iface_pLDDT  note\n     A1 ->       A2       28.41    False         47.2  \n     A2 ->       A3       29.29    False         47.7  \n     A3 ->       A4       24.57    False         46.7  \n     A4 ->       A5       58.88    False         47.6  nearest=A3@39.6(scrambled)\n     A5 ->       A1       21.86    False         48.5  \n# M2: 0/5 DESIGNED interfaces engaged (<8.0 A)  ->  pass = >=4/5 for a pentamer\n# M1: radius 26.7 A | radius_CV 0.21 | planarity_rms 6.0 A | compact_ring True | sequential_consistent: YES (designed order == spatial order)\n# M4: designed-interface pLDDT mean 47.5 / min 46.7\n"
+ }
+}

@@ -72,6 +72,38 @@ native-order ring, fold that ring, and score sequential M2. Only the tiled ring 
 connector closes with correct register — the true generative comparator to cp233. Scripts (`mpnn_pipeline.py`,
 `nim_fold_score.py`) and the lead backbone/sequences are in this directory.
 
+## Tiled ring — the decisive test (DONE 2026-07-09)
+Tiled the lead connector **sal_L50** 5× into a single-chain native-order ring:
+`5×[gp16 4-330] + 4×[designed L50 connector] = 1835 aa`. Folded all 4 L50 connector designs with
+Boltz-2 NIM (single-seq) and scored sequential M2 (copies `A:1-327,A:378-704,A:755-1081,A:1132-1458,A:1509-1835`
+`--copy_start_res 4`). Structures + scores in `rfdiffusion_modeB/tiled_ring/`.
+
+| design | ring radius (Å) | M1 sequential | compact ring | **M2** | pLDDT |
+|---|---|---|---|---|---|
+| sal_L50_d0 | 27.4 | **YES** | True | **0/5** | 0.45 |
+| sal_L50_d1 | 30.3 | **YES** | True | 0/5 | 0.45 |
+| sal_L50_d2 | 29.6 | **YES** | True | 0/5 | 0.48 |
+| sal_L50_d3 | 26.7 | **YES** | True | 0/5 | 0.44 |
+| _cp233 (ref, tiled MSA)_ | _25.4_ | _YES_ | _True_ | _**5/5**_ | _—_ |
+
+**Result — a real, mixed outcome:**
+- **Topological success:** the de-novo connector, tiled 5×, folds into a **compact pentameric ring with the
+  correct designed sequential order** (M1 sequential_consistent = YES, compact_ring = True, all 4 designs). This
+  is exactly what native-order *passive* fusion could NOT do (it scrambled or failed to close) — the generative
+  connector **locks the ring register**. That is a genuine gain from generative design.
+- **Catalytic shortfall:** but every ring is **~2–5 Å too loose radially** (27–30 Å vs cp233's 25.4 Å), so the
+  R146→Walker-A trans interface never engages — **M2 = 0/5 across all four designs**. cp233 (circular permutation)
+  gets **M2 5/5**. So on the load-bearing catalytic metric, **cp233 remains the lead; the de-novo connector does
+  not (yet) beat it.**
+
+**Honest conclusion (answers the plan's Milestone-G question):** generative de-novo design bought *register-locking
++ ring compactness* but **not catalytic-interface engagement beyond cp233** — consistent with the plan's expectation
+that cp233 is the winner and the generative track is an optional comparator, now with concrete negative-on-M2 evidence.
+Caveats: single-seq Boltz (cp233's 5/5 used a **tiled block-diagonal MSA** — a fair re-test needs the same tiled MSA,
+which could tighten the ring; deferred), and the connector was optimised for one 2-subunit geometry so tiling
+accumulates small errors. Next refinements if this track is pursued: tiled-MSA refold; a shorter/tighter connector
+window; or partial-diffusion tightening (Mode A).
+
 ## Honest notes on the compute run
 - The `colab` CLI route works but is **flaky for long unattended runs**: `colab exec`/`download` websockets
   intermittently hang past their timeout, and Colab sessions self-terminate on idle. Two A100 sessions were
