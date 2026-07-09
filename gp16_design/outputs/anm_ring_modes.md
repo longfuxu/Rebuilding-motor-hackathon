@@ -1,22 +1,40 @@
-# Elastic-network normal-mode analysis (NMA) of the gp16 ring
+# Elastic-network normal-mode analysis (NMA) of the gp16 ring + overlap with the real transition
 
-**Tool:** Anisotropic Network Model (ANM) — springs between CA atoms within 13 Å; diagonalize; the
-lowest-frequency (softest) modes are the ring's cheapest collective motions. Run on the apo closed-planar
-native ring (Boltz), 1660 CA. Code: `reproduce/anm.py` (numpy/scipy, ~seconds, free).
+**Tool:** Anisotropic Network Model (ANM) — springs between CA within 13 Å; diagonalize; the softest modes
+are the ring's cheapest collective motions. Run on the apo closed-planar native ring (Boltz), 1635 CA (res 4–330).
+Code: `reproduce/anm.py`; overlap `reproduce/overlap.py` (numpy/scipy, seconds, free).
 
-**Result:** the two softest non-trivial modes (7, 8) — the ring's very lowest-energy motions — are
-**out-of-plane / helical** (helical fraction 0.88, 0.90); modes 10, 11 are strongly helical too (≈1.00).
-Radial "breathing" appears only at higher modes (12, 15).
+## Raw modes (character of the softest motions)
+The two softest non-trivial modes (7, 8) are **out-of-plane / helical** (helical fraction 0.88, 0.90).
+**But this alone is weak evidence** — out-of-plane bending is the softest motion of *any* flat ring (a drumhead),
+so "softest mode is out-of-plane" is partly generic, not gp16-specific.
 
-**Interpretation:** the **planar → helical (lock-washer) opening lies along a soft (low-energy) direction**
-of the ring. This is consistent with the motor cycling planar↔helical, and with the idea that ATP does not
-force a high-energy new conformation — it **biases the ring along a pre-existing soft mode**.
+## The rigorous test — overlap of the soft modes with the ACTUAL apo→7JQQ(helical) transition
+Aligned the apo ring to the experimental helical state 7JQQ (best cyclic chain assignment; ring RMSD **6.6 Å** —
+they genuinely differ = the planar↔helical change). Projected that difference vector onto the ANM modes:
 
-**Honest caveat:** out-of-plane bending is *generically* the softest motion of any flat ring-shaped object
-(like a drumhead), so this is **suggestive, not proof** of a gp16-specific designed opening. The rigorous
-next step is to compute the **overlap** between these low modes and the actual apo→7JQQ(helical) difference
-vector — high overlap would show the observed transition IS a soft mode. (Needs 7JQQ coordinates aligned.)
+| softest modes used | cumulative overlap | fraction of the transition captured |
+|---|---|---|
+| 2 | 0.11 | **1%** |
+| 5 | 0.44 | 19% |
+| 10 | 0.57 | 33% |
+| 20 | 0.64 | **41%** |
 
-**Why this is the right tool:** the static structure predictors (AF3/Boltz/OF3) gave a closed ring for ATP
-and can't show the opening; plain all-atom MD can't reach the transition timescale; NMA directly reads the
-intrinsic soft collective motions. For the actual dynamics of the transition, coarse-grained MD is next.
+Best single mode = mode 10 (overlap 0.33); no single mode dominates. (Random overlap for 20 modes in this space
+≈ 0.06 ≈ 0.4%, so 0.64 is a strong enrichment.)
+
+## Honest conclusion (this corrects the raw-NMA first impression)
+- The **very softest modes are NOT the transition** (softest 2 capture only 1%) — they are the generic flat-ring bending.
+- The **planar→helical opening IS enriched in the low-energy modes** (~41% captured by the 20 softest, vs ~0.4%
+  random) but is **moderately collective, not a single clean soft mode**.
+- So: the transition lies **partly along the ring's low-energy collective directions** (the ring is *somewhat*
+  predisposed to open), but it is not "one soft mode = the opening."
+- **Caveat:** the apo structure is a *prediction*, so part of the unexplained 59% is apo-prediction-vs-cryoEM
+  noise (not real high-frequency motion) — the true functional-transition overlap is likely somewhat higher.
+
+## Why this tool, and what's next
+Static predictors (AF3/Boltz/OF3) give a closed ring for ATP and cannot show the opening; plain all-atom MD
+cannot reach the transition timescale; NMA reads the intrinsic soft directions and (with the overlap) *quantifies*
+how soft the real transition is — free, minutes. For the actual dynamics/path/barrier of the transition, the
+next rung is a **Cα structure-based (Gō) dual-basin model** (apo + 7JQQ as the two minima) on GPU (~1 h) — see
+the MD escalation ladder in HANDOFF.
