@@ -25,15 +25,16 @@ _最后更新: 2026-07-09_
 **单序列(single-seq)结构预测无法评估这类大单链环**——连已验证的 gp16 cp233 在 single-seq Boltz 下都掉到 **M2 0/5**(tiled MSA 下是 5/5)。所以任何用 single-seq 折的大环 M2 都不可信,**必须用 tiled MSA**。single-seq 只能当"能不能折成环"的粗筛。
 
 ## 5. 正在进行 / 刚完成
-- **MD(物理独立验证,Task 4)——正在 L4 上跑**(A100 缺货)。OpenMM 隐式溶剂 (OBC2, OpenCL 平台),对比 apo / 7JQQ / cp233 设计的 Cα-RMSD + 环呼吸半径随时间。脚本 `outputs/rho_generative/../` 见 §7。**⚠ 要产出动画见 §6。**
+- **✅ MD(物理独立验证,Task 4)——已完成(2026-07-09)**。OpenMM 隐式溶剂 (GBSA-OBC2, OpenCL 平台),对比 apo / 7JQQ-helical / cp233 设计。**结论:cp233 设计像天然 apo 一样保持闭合+对称(radius_CV 0.009、界面接触 584→657 反而收紧),不开环不塌陷——明显不同于 7JQQ 上 ATP 的螺旋态(卡 3/5、seam 持续)→ 设计通过了独立于结构预测器的物理稳定性检验**。产出:`md/openmm_validation/`(RESULTS.md/METHODS.md/figs/CSVs/code)。Caveats:隐式溶剂 + 短单轨迹(1–3 ns,A100 会 ~20–30min 自终止;判据在共享 0–1 ns 窗内已解析)。显式 TIP3P 需 CUDA OpenMM,列为 Phase-2。
+- **Rho 生成式 RFdiffusion——Claude Code 正在 Colab 跑**(motif res175-414,连接件 30-52,跨 46Å gap);出 backbone 后交 tiled-MSA 折叠(§7.2)。
 - **Rho 三方法 fold(single-seq,confounded)**:直连 0/6、CP330 0/6、CP390 0/6 —— 全被 single-seq 压平(见 §4),**不能区分方法**。设计已建好(`outputs/rho_generative/`)。
+- **CS 三 session 已镜像进 repo**:`cs_sessions/`(reports/leads/scores;341M 原始 fold 模型 git-ignore,存本地)。下一步 CS 任务见 `NEXT_CS_TASKS_v2.md`。
 - **独立干实验(非预测器)已做**:ATP 位点几何、ENM 开闭、ESM naturalness——三个正交信号都支持 cp233(`outputs/INDEPENDENT_VALIDATION.md`)。
 
 ## 6. ⚠ 待办:MD 动画(用户要求,给未来 agent)
-**要求:MD 跑完后,把三条轨迹(A_apo / B_7jqq / C_cp233-design)各做成一个动画/movie,用于 tracing + 报告。**
-- 需要的文件:每个体系的轨迹 `mdout/<X>/<X>.dcd` + 起始拓扑 `mdout/<X>/<X>_start.pdb`。
-- ⚠ 当前 MD orchestrator(`md_orchestrator2.py`)默认只抓分析 JSON,**没抓 DCD**——要产动画必须在会话 stop 前把 DCD 也下下来(改 capture 那行的 tar 加 `mdout/*/*.dcd`,或单独 `colab download`)。
-- 做法:下载 DCD+start.pdb 后,用 nglview / VMD / PyMOL / mdtraj 渲染;或转 GIF/MP4。对比动画:设计环是否像天然一样稳定,还是塌陷/开环。
+**要求:把三条轨迹(A_apo / B_7jqq / C_cp233-design)各做成动画/movie,用于 tracing + 报告。**
+- **⚠ 现状(2026-07-09):MD 已跑完并得出物理结论,但 DCD 全轨迹没保存**——`md/openmm_validation/results/<X>/` 只有 `<X>_start.pdb` + `<X>_final.pdb` + timeseries CSV,没有 `.dcd`。所以**真正的轨迹动画还产不出来**。
+- 两条路:(a) **start→final 形变 morph**(用现有 start/final PDB,PyMOL `morph`,便宜、无 GPU,能直观展示"闭合→仍闭合"稳定);(b) **重跑一遍 MD 并保存 DCD**(在 `md/openmm_validation/code/md_driver.py` 里加 `DCDReporter`,每 ~10ps 存一帧),再 nglview/VMD/PyMOL 渲染 GIF/MP4。物理判据已定,动画属"报告可视化",优先级次于 §7。
 
 ## 7. 下一步(open)
 1. **AF3**(用户跑):`AF3_SEQUENCES_TODO.txt` 里 11 条(5 条 cp233_NOVEL de-novo + 4 条 RFdiffusion 铺环 + cp285/cp297)。跑完交回 score_m2。
