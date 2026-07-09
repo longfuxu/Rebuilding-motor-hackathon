@@ -14,12 +14,12 @@ import numpy as np
 try:
     import modal
     app = modal.App("gp16-gomodel-dualbasin")
-    image = modal.Image.debian_slim().pip_install("openmm==8.1.1", "numpy")
+    image = modal.Image.debian_slim(python_version="3.11").pip_install("openmm", "numpy")
     GPU = "H100"
 except Exception:                       # allow local import / syntax check without modal installed
     modal = None
 
-def _simulate(Xa, Xj, bonds, contacts, n, eps=2.5, T=300.0, n_steps=5_000_000, report=10000):
+def _simulate(Xa, Xj, bonds, contacts, n, eps=2.5, temp=300.0, n_steps=5_000_000, report=10000):
     import openmm as mm, openmm.unit as u, numpy as np
     N = len(Xa)
     sysm = mm.System()
@@ -45,7 +45,7 @@ def _simulate(Xa, Xj, bonds, contacts, n, eps=2.5, T=300.0, n_steps=5_000_000, r
     for i, j in bonds: ev.addExclusion(int(i), int(j))
     for i, j, ra, rj in contacts: ev.addExclusion(int(i), int(j))
     sysm.addForce(ev)
-    integ = mm.LangevinMiddleIntegrator(T * u.kelvin, 1.0 / u.picosecond, 0.010 * u.picosecond)
+    integ = mm.LangevinMiddleIntegrator(temp * u.kelvin, 1.0 / u.picosecond, 0.010 * u.picosecond)
     try:    plat = mm.Platform.getPlatformByName("CUDA")
     except Exception: plat = mm.Platform.getPlatformByName("Reference")
     ctx = mm.Context(sysm, integ, plat)
@@ -66,13 +66,13 @@ def _simulate(Xa, Xj, bonds, contacts, n, eps=2.5, T=300.0, n_steps=5_000_000, r
 
 if modal is not None:
     @app.function(gpu=GPU, image=image, timeout=3600)
-    def run(Xa, Xj, bonds, contacts, n, eps, T, n_steps):
-        return _simulate(Xa, Xj, bonds, contacts, n, eps, T, n_steps)
+    def run(Xa, Xj, bonds, contacts, n, eps, temp, n_steps):
+        return _simulate(Xa, Xj, bonds, contacts, n, eps, temp, n_steps)
 
     @app.local_entrypoint()
-    def main(eps: float = 2.5, T: float = 300.0, n_steps: int = 5_000_000):
+    def main(eps: float = 2.5, temp: float = 300.0, n_steps: int = 5_000_000):
         d = np.load("gp16_design/md/gomodel_inputs.npz")
-        res = run.remote(d["Xa"], d["Xj"], d["bonds"], d["contacts"], int(d["n"]), eps, T, n_steps)
+        res = run.remote(d["Xa"], d["Xj"], d["bonds"], d["contacts"], int(d["n"]), eps, temp, n_steps)
         np.savez("gp16_design/md/gomodel_out.npz", traj=res)
         print("opening (out-of-plane, nm) vs step — apo->helical if it rises and RMSD-to-7JQQ falls:")
         for s, oop, ra, rj in res[::max(1, len(res)//20)]:
