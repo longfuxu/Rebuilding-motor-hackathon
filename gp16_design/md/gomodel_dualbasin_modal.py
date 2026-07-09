@@ -4,8 +4,13 @@ Two energy basins: apo (closed planar) and 7JQQ (3-ATP helical intermediate). Si
 sample the planar<->helical opening that static predictors can't produce and all-atom MD can't reach.
 
 Prep (already done, local): md/gomodel_inputs.npz  (Xa, Xj in nm; backbone bonds; dual-basin contacts).
-Run:   modal run gp16_design/md/gomodel_dualbasin_modal.py          # after `modal token new`
-Output: md/gomodel_out.npz (opening + RMSD-to-basins timeseries) — inspect locally.
+Run (FOREGROUND only): modal run gp16_design/md/gomodel_dualbasin_modal.py   # token saved in ~/.modal.toml
+  IMPORTANT: run in the FOREGROUND (do NOT launch as a detached/background shell job). This uses a synchronous
+  .remote()/.map() call, which Modal CANCELS once the client stops polling (a background job drops polling) — that
+  is exactly what happened on 2026-07-08 (call cancelled). For true background use, refactor run/sweep to .spawn()
+  and poll the FunctionCall id later. Smoke test (`--n-steps 20000`) validated the pipeline end-to-end on GPU.
+Output: md/gomodel_out.npz / gomodel_sweep.npz — inspect locally. STATUS: pipeline works; a real opening trajectory
+  still needs an eps/temp scan (`modal run … --n-steps 1000000`, foreground) to find the regime that crosses basins.
 
 STATUS: v1, syntax-checked locally (no OpenMM here). Tunables that likely need a sweep on first run:
 eps (contact depth), T (temperature), and the run length. Start weak-ish so the ring can cross between basins.
@@ -66,14 +71,31 @@ def _simulate(Xa, Xj, bonds, contacts, n, eps=2.5, temp=300.0, n_steps=5_000_000
 
 if modal is not None:
     @app.function(gpu=GPU, image=image, timeout=3600)
+    def sweep(Xa, Xj, bonds, contacts, n, combos, n_steps):
+        return {c: _simulate(Xa, Xj, bonds, contacts, n, c[0], c[1], n_steps) for c in combos}
+
+    @app.function(gpu=GPU, image=image, timeout=3600)
     def run(Xa, Xj, bonds, contacts, n, eps, temp, n_steps):
         return _simulate(Xa, Xj, bonds, contacts, n, eps, temp, n_steps)
 
     @app.local_entrypoint()
-    def main(eps: float = 2.5, temp: float = 300.0, n_steps: int = 5_000_000):
+    def main(n_steps: int = 1_000_000, eps: float = 0.0, temp: float = 0.0):
         d = np.load("gp16_design/md/gomodel_inputs.npz")
-        res = run.remote(d["Xa"], d["Xj"], d["bonds"], d["contacts"], int(d["n"]), eps, temp, n_steps)
-        np.savez("gp16_design/md/gomodel_out.npz", traj=res)
-        print("opening (out-of-plane, nm) vs step — apo->helical if it rises and RMSD-to-7JQQ falls:")
-        for s, oop, ra, rj in res[::max(1, len(res)//20)]:
-            print(f"  step {int(s):>8}: opening {oop:.2f}  rmsd_apo {ra:.2f}  rmsd_7jqq {rj:.2f}")
+        args = (d["Xa"], d["Xj"], d["bonds"], d["contacts"], int(d["n"]))
+        if eps > 0:                                   # single production run at a chosen (eps,temp)
+            tr = run.remote(*args, eps, temp, n_steps)
+            np.savez("gp16_design/md/gomodel_out.npz", traj=tr, eps=eps, temp=temp)
+            print(f"# production eps={eps} temp={temp} n_steps={n_steps}")
+            print("  step      opening  rmsd_apo  rmsd_7jqq   (want opening UP, rmsd_7jqq DOWN = apo->helical)")
+            for s, o, ra, rj in tr[::max(1, len(tr)//25)]:
+                print(f"  {int(s):>8}  {o:8.2f}  {ra:8.2f}  {rj:9.2f}")
+        else:                                          # eps/temp scan
+            combos = [(2.0, 300.0), (2.0, 450.0), (5.0, 300.0), (5.0, 450.0), (10.0, 450.0), (10.0, 700.0)]
+            res = sweep.remote(*args, combos, n_steps)
+            np.savez("gp16_design/md/gomodel_sweep.npz",
+                     **{f"eps{c[0]}_T{c[1]}": tr for c, tr in res.items()})
+            print(f"# eps/temp scan, {n_steps} steps each. start->end. want opening UP and rmsd_7jqq DOWN (apo->helical):")
+            print(f"  {'eps':>5} {'temp':>5} | {'opening':>14} | {'rmsd_apo':>13} | {'rmsd_7jqq':>15} | toward7jqq")
+            for c, tr in res.items():
+                o0, oe = tr[0][1], tr[-1][1]; ra0, ra = tr[0][2], tr[-1][2]; rj0, rj = tr[0][3], tr[-1][3]
+                print(f"  {c[0]:>5} {c[1]:>5} | {o0:5.1f} -> {oe:5.1f} | {ra0:4.1f} -> {ra:4.1f} | {rj0:5.1f} -> {rj:5.1f} | {rj0-rj:+5.1f}")
