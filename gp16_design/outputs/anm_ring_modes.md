@@ -9,9 +9,12 @@ The two softest non-trivial modes (7, 8) are **out-of-plane / helical** (helical
 **But this alone is weak evidence** — out-of-plane bending is the softest motion of *any* flat ring (a drumhead),
 so "softest mode is out-of-plane" is partly generic, not gp16-specific.
 
-## The rigorous test — overlap of the soft modes with the ACTUAL apo→7JQQ(helical) transition
-Aligned the apo ring to the experimental helical state 7JQQ (best cyclic chain assignment; ring RMSD **6.6 Å** —
-they genuinely differ = the planar↔helical change). Projected that difference vector onto the ANM modes:
+## The rigorous test — overlap of the soft modes with the ACTUAL apo→7JQQ transition
+**Note (owner's model):** 7JQQ is NOT the fully-open state — it is a **3-ATP-analog + 2-apo partial-occupancy
+intermediate**. The ring opens *progressively* with ATP occupancy (0→5 ATP), closing back via ADP; there is a
+continuum of states, not two. So this overlap is apo(0 ATP) → 3-ATP intermediate, a partial opening.
+Aligned the apo ring to 7JQQ (best cyclic chain assignment; ring RMSD **6.6 Å**). Projected that difference vector
+onto the ANM modes:
 
 | softest modes used | cumulative overlap | fraction of the transition captured |
 |---|---|---|
