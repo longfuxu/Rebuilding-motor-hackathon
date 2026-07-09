@@ -52,5 +52,7 @@ _最后更新: 2026-07-09_
 - 运维坑:memory `colab-cli-overnight-gotchas`(exec/download hang→本地 python 硬超时;STOP 会话省额度;MD 用 OpenCL 平台非 CUDA)。
 
 ## 9. 运维现状
+
+- **GCP GPU(可靠替代 Colab,已配好 2026-07-09):** 项目 `longfu-protein-gpu`,billing=`0161E2-E9BA4A-8F5A6A`(Google Gemeni 信用额度账户,~$45/月,**必须用它,不产生自费**),$40 预算告警。GPU 配额已批:GPUS_ALL_REGIONS=1、L4/T4 us-central1=1。gcloud 在 `~/google-cloud-sdk/bin/gcloud`(全路径),已登录。**守则:Spot GPU + 用完立刻 delete VM**(idle 烧额度)。细节见 system memory `gcp-gpu-account`。下一步 GPU 活(Rho RFdiffusion / tiled-MSA / MD)可搬到这里,比 Colab 稳。
 - Colab 会话:MD 在 `mdrun2`(L4)。**跑完必 stop**(idle A100 ~11–13 units/h)。A100 目前缺货,MD/RFdiffusion 用 L4/T4 回退。
 - 无 git remote(本地 commit)。commit 作者=longfuxu,无 AI 署名(硬性)。
