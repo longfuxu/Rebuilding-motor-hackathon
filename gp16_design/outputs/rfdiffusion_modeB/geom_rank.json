@@ -1,0 +1,42 @@
+[
+  {
+    "name": "sal_L50_0.pdb",
+    "N": 704,
+    "clen": 50,
+    "rg_con": 22.4,
+    "rg_per": 0.448,
+    "min_clash": 3.76,
+    "iface_CA": 6.96,
+    "helix_frac": 0.49
+  },
+  {
+    "name": "sal_L44_0.pdb",
+    "N": 698,
+    "clen": 44,
+    "rg_con": 23.7,
+    "rg_per": 0.539,
+    "min_clash": 3.75,
+    "iface_CA": 6.95,
+    "helix_frac": 0.27
+  },
+  {
+    "name": "sal_L38_0.pdb",
+    "N": 692,
+    "clen": 38,
+    "rg_con": 22.7,
+    "rg_per": 0.597,
+    "min_clash": 3.69,
+    "iface_CA": 6.97,
+    "helix_frac": 0.31
+  },
+  {
+    "name": "sal_L32_0.pdb",
+    "N": 686,
+    "clen": 32,
+    "rg_con": 22.7,
+    "rg_per": 0.711,
+    "min_clash": 3.74,
+    "iface_CA": 6.95,
+    "helix_frac": 0.0
+  }
+]

@@ -1,0 +1,54 @@
+{
+  "sal_L32": {
+    "contig": "A4-330/32-32/B4-330",
+    "num_designs": 1,
+    "partial_T": "auto",
+    "started": 6.6,
+    "ok": true,
+    "contigs": [
+      "A4-330/32-32/B4-330"
+    ],
+    "copies": 1,
+    "n_pdbs": 1,
+    "elapsed": 323.0
+  },
+  "sal_L38": {
+    "contig": "A4-330/38-38/B4-330",
+    "num_designs": 1,
+    "partial_T": "auto",
+    "started": 323.0,
+    "ok": true,
+    "contigs": [
+      "A4-330/38-38/B4-330"
+    ],
+    "copies": 1,
+    "n_pdbs": 1,
+    "elapsed": 629.6
+  },
+  "sal_L44": {
+    "contig": "A4-330/44-44/B4-330",
+    "num_designs": 1,
+    "partial_T": "auto",
+    "started": 629.6,
+    "ok": true,
+    "contigs": [
+      "A4-330/44-44/B4-330"
+    ],
+    "copies": 1,
+    "n_pdbs": 1,
+    "elapsed": 941.1
+  },
+  "sal_L50": {
+    "contig": "A4-330/50-50/B4-330",
+    "num_designs": 1,
+    "partial_T": "auto",
+    "started": 941.1,
+    "ok": true,
+    "contigs": [
+      "A4-330/50-50/B4-330"
+    ],
+    "copies": 1,
+    "n_pdbs": 1,
+    "elapsed": 1257.6
+  }
+}
