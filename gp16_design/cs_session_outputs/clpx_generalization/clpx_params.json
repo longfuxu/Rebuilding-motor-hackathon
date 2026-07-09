@@ -1,0 +1,59 @@
+{
+  "arginine_finger": 307,
+  "walker_A": [
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128
+  ],
+  "walker_A_K": 125,
+  "walker_B": [
+    180,
+    181,
+    182,
+    183,
+    184,
+    185
+  ],
+  "walker_B_E": 185,
+  "box_II": [
+    78,
+    79
+  ],
+  "sensor_II": 370,
+  "sensor_I_like": 303,
+  "guanidinium_atoms": [
+    "NE",
+    "CZ",
+    "NH1",
+    "NH2"
+  ],
+  "engaged_threshold_A": 8.0,
+  "n_copies": 6,
+  "m2_floor": 5,
+  "clpxdN_span": [
+    62,
+    424
+  ],
+  "ref_functional_hexamer": "6PP5",
+  "ref_6pp5_trans_dists": [
+    9.13,
+    5.51,
+    5.49,
+    5.44,
+    5.85,
+    5.29
+  ],
+  "ref_6pp5_engaged_5of6": true,
+  "sources": {
+    "R307_argfinger_R370_sensorII_K125_E185": "eLife 52774 (Fei 2020), PMC9871882 review",
+    "single_chain_precedent": "Covalently-linked single-chain ClpX pseudohexamer concept (Martin/Baker/Sauer lineage); exact PMID not independently verified in-session - treat as motivating precedent, not a checked citation.",
+    "hinge_linker_bad": "Bell, Baker, Sauer 2018 Biochemistry (PMID 30418765; linker deletion compromises closed ring)"
+  }
+}

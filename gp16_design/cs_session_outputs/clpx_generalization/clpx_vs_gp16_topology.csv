@@ -1,0 +1,20 @@
+axis,ClpX (this work),gp16 (prior CS work)
+Motor / family,"E. coli ClpX, AAA+ HslU/ClpX unfoldase","phi29 gp16, ASCE ATPase (packaging motor)"
+Functional structure,6PP5 substrate-bound hexamer (cryo-EM 3.98 Å),7JQQ genome-packaging assembly (cryo-EM 4.1 Å)
+Oligomer state,hexamer (6 subunits),pentamer (5 subunits)
+UniProt / length,P0A6H1 / 424 aa,P11014 / 332 aa
+Single-chain span,ClpXΔN res ~62-424 (Zn-domain deleted),res 4-330 (full ATPase)
+Trans arginine finger,R307,R146
+Walker-A cat. Lys,K125,K30
+Walker-B cat. Glu,E185,E118/E119
+M2 coupler metric,"trans R307→neighbor Walker-A, <8 Å","trans R146→neighbor Walker-A, <8 Å"
+M2 closure floor,"≥5/6 (native = 5/6, ADP seam)",≥4/5 (native has a seam)
+Substrate in channel,peptide (protein translocation),dsDNA (genome packaging)
+Native C-terminus location,"res414, 62-65 Å OFF the pore (outer rim)","res330, 6.2 Å from dsDNA — a DNA-channel CONTACT"
+Native N-terminus location,"res62, 47-49 Å off the pore","res4, 36 Å from DNA / 15.7 Å from pRNA"
+Direct C→N fusion gap,"~20 Å (19-23 Å), off-channel",53-66 Å (helical) / 53 Å (planar)
+Does direct fusion foul channel?,NO — termini peripheral,YES — C-term res330 sits in the DNA channel
+Circular-permutation alternative,strictly worse (54.7 Å internal join; short cuts fall in pore),"cut297/cut280 → gap drops to 18-24 Å, off DNA channel"
+OPTIMAL TOPOLOGY,DIRECT C→N head-to-tail fusion,CIRCULAR PERMUTATION (cut ~297)
+Why,native termini already off-channel + short gap + near-WT single-chain precedent,native C-term fouls DNA channel; CP relocates the join off-channel and shortens the gap
+Framework verdict,"validated: good 6/6, R307A/R307E lesions 0/6",validated: fold-in-context M1-M4 design framework

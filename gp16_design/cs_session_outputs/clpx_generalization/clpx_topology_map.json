@@ -1,0 +1,178 @@
+{
+  "structure": {
+    "pdb": "6PP5",
+    "method": "cryo-EM",
+    "resolution_A": 3.98,
+    "title": "Substrate-bound E. coli ClpXP (ClpX\u0394N hexamer + substrate peptide)",
+    "state": "substrate-engaged spiral / lock-washer (5\u00d7ATP\u03b3S-loaded + 1\u00d7ADP seam); functional translocation state",
+    "composition": {
+      "clpx_protein": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "substrate_peptide": [
+        "S"
+      ],
+      "nucleotide": "AGS (ATP-gamma-S) \u00d75 + ADP \u00d71 (seam subunit F)",
+      "metal": "MG"
+    },
+    "uniprot": "P0A6H1",
+    "seq_len": 424,
+    "modeled_residues": "~62-414 per subunit (ClpX\u0394N; N-terminal Zn-binding domain res 1-61 deleted/unmodeled)",
+    "numbering": "matches UniProt P0A6H1 exactly (full-length numbering)"
+  },
+  "ring_geometry": {
+    "oligomer": "hexamer",
+    "symmetry_axis": "substrate-peptide translocation axis (PCA of threaded substrate chain S)",
+    "angular_order_around_axis": [
+      "C",
+      "D",
+      "E",
+      "F",
+      "A",
+      "B"
+    ],
+    "nucleotide_occupancy": {
+      "A": "AGS+Mg",
+      "B": "AGS+Mg",
+      "C": "AGS+Mg",
+      "D": "AGS+Mg",
+      "E": "AGS+Mg",
+      "F": "ADP"
+    },
+    "seam_subunit": "F (ADP-bound) \u2014 the disengaged spiral seam, source of the native 5/6 coupler engagement",
+    "special_interface": "F->A / A->F seam: ADP subunit F breaks the sequential trans arginine-finger chain, giving native 5/6 engagement"
+  },
+  "functional_residues": {
+    "_numbering": "UniProt P0A6H1 full-length; ClpX\u0394N construct = these minus offset (res62 = construct pos 1)",
+    "walker_A_Ploop": [
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128
+    ],
+    "catalytic_lysine": 125,
+    "walker_B": [
+      184,
+      185
+    ],
+    "catalytic_DE": [
+      184,
+      185
+    ],
+    "box_II": [
+      78,
+      79
+    ],
+    "arginine_finger_trans": 307,
+    "sensor_II": 370,
+    "note": "R307 is the TRANS arginine finger supplied by the adjacent subunit into its neighbor's ATP site \u2014 the direct ClpX analog of gp16's R146. E185 is the Walker-B catalytic glutamate (E185Q = classic dead-hydrolysis mutant)."
+  },
+  "termini_environment": {
+    "N_term_res62": {
+      "min_dist_substrate_A": 46.9,
+      "min_dist_pore_axis_A": 48.9,
+      "note": "peripheral; N-terminus sits on the outer rim, ~47-49 \u00c5 off the translocation pore"
+    },
+    "C_term_res414": {
+      "min_dist_substrate_A": 62.3,
+      "min_dist_pore_axis_A": 64.8,
+      "note": "peripheral; native C-terminus is on the OUTER surface, ~62-65 \u00c5 off the pore \u2014 a direct C->N fusion does NOT approach the substrate channel (opposite of gp16, whose C-term res330 is a 6.2 \u00c5 DNA-channel contact)"
+    }
+  },
+  "fusion_geometry": {
+    "direct_CtoN_forward": {
+      "mean_A": 20.8,
+      "max_A": 22.7,
+      "min_A": 19.0,
+      "per_edge_A": {
+        "C->D": 22.0,
+        "D->E": 22.7,
+        "E->F": 20.3,
+        "F->A": 19.0,
+        "A->B": 21.2,
+        "B->C": 19.7
+      },
+      "note": "native C-term(i) -> next-subunit N-term(i+1) through-space gap around the ring; ~20 \u00c5, short and bridgeable by a genetically encoded flexible tether, off-channel"
+    },
+    "direct_CtoN_reverse": {
+      "mean_A": 96.3,
+      "note": "wrong ring sense \u2014 96 \u00c5, not usable"
+    },
+    "circular_permutation": {
+      "intra_subunit_native_NtoC_A": 54.7,
+      "note": "a CP would internally join native N(62)/C(414) \u2014 54.7 \u00c5 apart \u2014 and open new termini at a surface loop; this is LONGER and gains nothing because the native termini are already off-channel",
+      "cut_site_scan": [
+        {
+          "cut_k": 130,
+          "axis_dist_A": 34.1,
+          "mean_CN_gap_A": 37.9,
+          "min_terminus_to_pore_axis_A": 34.1,
+          "fouls_channel": false
+        },
+        {
+          "cut_k": 150,
+          "axis_dist_A": 11.2,
+          "mean_CN_gap_A": 10.7,
+          "min_terminus_to_pore_axis_A": 10.7,
+          "fouls_channel": true
+        },
+        {
+          "cut_k": 200,
+          "axis_dist_A": 4.8,
+          "mean_CN_gap_A": 14.1,
+          "min_terminus_to_pore_axis_A": 4.8,
+          "fouls_channel": true
+        },
+        {
+          "cut_k": 265,
+          "axis_dist_A": 29.3,
+          "mean_CN_gap_A": 32.2,
+          "min_terminus_to_pore_axis_A": 26.6,
+          "fouls_channel": false
+        },
+        {
+          "cut_k": 300,
+          "axis_dist_A": 21.2,
+          "mean_CN_gap_A": 21.7,
+          "min_terminus_to_pore_axis_A": 20.2,
+          "fouls_channel": false
+        },
+        {
+          "cut_k": 340,
+          "axis_dist_A": 47.0,
+          "mean_CN_gap_A": 52.5,
+          "min_terminus_to_pore_axis_A": 47.0,
+          "fouls_channel": false
+        },
+        {
+          "cut_k": 380,
+          "axis_dist_A": 47.5,
+          "mean_CN_gap_A": 51.0,
+          "min_terminus_to_pore_axis_A": 46.1,
+          "fouls_channel": false
+        }
+      ]
+    }
+  },
+  "optimal_topology": {
+    "choice": "direct N-to-C (head-to-tail) fusion",
+    "rationale": [
+      "Native termini are peripheral: C-term res414 is 62-65 \u00c5 off the substrate pore, N-term res62 is 47-49 \u00c5 off it \u2014 a direct fusion never enters the translocation channel.",
+      "Direct C(i)->N(i+1) gap is only ~20 \u00c5 (19-23 \u00c5), short enough for a genetically encoded flexible linker.",
+      "Circular permutation is strictly worse: it must bridge 54.7 \u00c5 internally and its only short-gap cut sites (~11-14 \u00c5) sit 5-11 \u00c5 from the pore axis, i.e. inside the substrate channel.",
+      "Known-good single-chain ClpX\u0394N precedent: covalently tethered pseudohexamers (Martin/Baker/Sauer lineage) built by direct genetic linkage degrade substrate at near-WT rates."
+    ]
+  },
+  "design_principle": "ClpX's native termini already sit on the outer rim, off the axial translocation channel, and the head-to-tail gap is only ~20 \u00c5 \u2014 so the optimal single-chain topology is a DIRECT flexible C->N fusion. Circular permutation (gp16's solution) is unnecessary and geometrically inferior here because ClpX's C-terminus, unlike gp16's DNA-channel-contacting res330, does not foul the functional pore."
+}
