@@ -1,0 +1,17 @@
+FINDING: The open/switch position is NOT a fixed geometric seat.
+- Incomplete arcs (dimer/trimer): open interface = the free seam (53-58A) by necessity — the arc physically cannot close.
+- Tetramer: ring nearly closes; the most-open interface RELOCATES OFF the seam to an internal covalent junction (1->2, 8.3A, marginal).
+- Pentamer: FULLY closed (5/5 engaged, 4.9-5.5A); most-open interface (5.5A) is within noise — NO distinguished switch.
+- Native apo ring: symmetric (~6.6A all round) — NO single open switch.
+=> In the apo/planar state the openness is symmetric once the ring closes; the switch is not pinned to one position by the covalent-junction layout. Consistent with 'positionable geometric seat', NOT a fixed functional switch. Cross-checked by Boltz-2; apo, no pRNA/DNA/ATP.
+
+CROSS-PREDICTOR CHECK (pentamer, best rung), Boltz-2 vs OpenFold3, SAME tiled MSA:
+- Boltz-2: 5/5 interfaces engaged (4.9-5.5A) -> full ring closes.
+- OpenFold3: 2/5 engaged (3->4=4.98A, 5->1=5.02A); 1->2/2->3/4->5 open (33-53A) -> PARTIAL closure.
+- Agreement: 2/5 interfaces; global conf comparable (Boltz pTM 0.48/pLDDT 68; OF3 pTM 0.58/pLDDT 77).
+HONEST READ: whether the single-chain pentamer reforms ALL interfaces is PREDICTOR-DEPENDENT. Boltz-2 says
+yes; OpenFold3 says only ~half. This is genuine uncertainty at the tandem-fusion ring closure, NOT hidden.
+ROBUST ACROSS BOTH: the open interfaces are SCATTERED (not fixed at the copy1-copyN seam) -> the switch/open
+position is not pinned to one geometric seat. Both predictors agree the openness is not seam-locked.
+CONTRAST with the multi-chain B1 dimer-in-ring (cycle 3): there BOTH predictors agreed 15/15 & 47/50. The
+single-chain tandem fusion is LESS robustly closed than the covalent-dimer-in-ring. apo; no pRNA/DNA/ATP.

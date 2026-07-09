@@ -1,0 +1,24 @@
+THREE-PREDICTOR TIE-BREAKER — single-chain pentamer L40 = (GGGGS)x8 (independently scored here by sequential M2):
+| predictor  | global pTM | M2 designed-sequential | topology |
+| Boltz-2    | 0.46-0.48  | 5/5 (4/5 seeds)        | designed cyclic ring closes |
+| OpenFold3  | 0.58       | 2/5                    | compact but SCRAMBLED |
+| AlphaFold3 | 0.49-0.51  | 1/5 (UNANIMOUS 5/5 models) | compact but SCRAMBLED |
+
+AF3 (user-run, 5 models, seed 1, own MSA; scored HERE independently) buries every copy's R146 ~7.5A against
+the WRONG partner (copy2->nearest5, copy3->nearest1, ...) while the DESIGNED sequential partner sits 54-56A
+away. Identical failure register across all 5 AF3 models.
+
+CONSENSUS: 2 of 3 independent predictors (OpenFold3 + AlphaFold3) REJECT the L40 single-chain designed ring;
+AF3 is unanimous. Boltz-2 is the lone optimist. Two consequences:
+1. METRIC DISCIPLINE hardened: all three predictors sit at global pTM 0.46-0.58 -- a band that cannot tell
+   the correct ring (Boltz) from the scrambled ones (OF3, AF3). AF3 even reports has_clash 0.0,
+   fraction_disordered 0.09 -- it 'looks' clean. ONLY interface-resolved designed-sequential M2 separates them.
+2. It VINDICATES the linker fix: the L40 scramble is a real, reproducible failure mode (2 predictors), and
+   shortening to L30-L34 fixes it under BOTH NIM predictors (OF3 5/5 at L30 and L34). The OF3 scramble
+   boundary is bracketed: robust <=L34, scrambled >=L40 (L36 OF3 vote unavailable -- NIM endpoint conn resets).
+
+NOTE on escalation: the user's memo reads this as firing the RFdiffusion/ProteinMPNN generative-escalation
+trigger for the L40 passive-GS-linker chain. That is correct FOR L40. But the linker sweep shows a simpler
+fix already works -- L30/L34 close under both NIM predictors WITHOUT redesign. AF3 was only run on L40, so
+the strongest open question is: does AF3 also un-scramble at L30/L34? That is the single most valuable next
+fold (user-run AF3 on the L30 winner). Cross-checked by three predictors, not validated; apo; geometric seat.

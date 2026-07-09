@@ -1,0 +1,15 @@
+donor_copy,acceptor_copy,kind,R146_A,iface_contacts,linker_pLDDT,rung,n_copies,construct_pTM,construct_pLDDT,R146_engaged
+1,2,covalent-linked,6.9,59,26.4,dimer,2,0.601,0.716,True
+2,1,seam(copyN-copy1),53.02,59,,dimer,2,0.601,0.716,False
+1,2,covalent-linked,6.46,70,29.1,trimer,3,0.491,0.703,True
+2,3,covalent-linked,6.66,79,29.3,trimer,3,0.491,0.703,True
+3,1,seam(copyN-copy1),58.1,0,,trimer,3,0.491,0.703,False
+1,2,covalent-linked,8.3,70,29.2,tetramer,4,0.41,0.683,False
+2,3,covalent-linked,7.29,64,29.2,tetramer,4,0.41,0.683,True
+3,4,covalent-linked,6.91,65,29.1,tetramer,4,0.41,0.683,True
+4,1,seam(copyN-copy1),6.59,63,,tetramer,4,0.41,0.683,True
+1,2,covalent-linked,5.14,74,29.1,pentamer,5,0.482,0.682,True
+2,3,covalent-linked,5.51,79,28.3,pentamer,5,0.482,0.682,True
+3,4,covalent-linked,4.93,78,28.3,pentamer,5,0.482,0.682,True
+4,5,covalent-linked,5.53,75,28.7,pentamer,5,0.482,0.682,True
+5,1,seam(copyN-copy1),5.27,78,,pentamer,5,0.482,0.682,True

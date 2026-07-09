@@ -1,0 +1,16 @@
+predictor,model,iface,R146,core,R146_reformed
+Boltz-2,0,59,70.1,7.3,False
+Boltz-2,1,40,84.8,7.3,False
+Boltz-2,2,19,87.2,8.1,False
+Boltz-2,3,35,69.3,9.3,False
+Boltz-2,4,33,85.2,8.3,False
+Chai-1,seed42__model_idx_0,43,3.9,12.6,True
+Chai-1,seed42__model_idx_1,47,4.2,11.0,True
+Chai-1,seed42__model_idx_2,59,4.3,13.1,True
+Chai-1,seed42__model_idx_3,56,2.6,11.3,True
+Chai-1,seed42__model_idx_4,100,4.4,10.1,True
+Chai-1,seed7__model_idx_0,57,28.2,12.3,False
+Chai-1,seed7__model_idx_1,149,32.0,12.5,False
+Chai-1,seed7__model_idx_2,57,4.0,13.5,True
+Chai-1,seed7__model_idx_3,48,4.1,12.3,True
+Chai-1,seed7__model_idx_4,54,37.8,11.0,False

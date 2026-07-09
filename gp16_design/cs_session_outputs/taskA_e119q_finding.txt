@@ -1,0 +1,8 @@
+TASK A — E119Q assembly tolerance on B1 (M2 sequential/nearest-partner, apo, cross-checked):
+- B1_L40_WT:       Boltz 5/5 (3/3 seeds), OpenFold3 5/5. Baseline assembles.
+- B1_L40_E119Q_m1: Boltz 5/5 (3/3 seeds), OpenFold3 5/5. Dead seat (Walker-B E119Q on tethered module-1)
+  does NOT disrupt assembly; dead-module R146 still engages (3.9-4.7A).
+- untethered_E119Q control: Boltz 5/5 (3/3 seeds). Dead position present, assembly intact.
+VERDICT: The addressable seat TOLERATES the catalytically-dead E119Q under BOTH predictors — opposite of
+the single-chain pentamer (OF3 scrambled 2/5). B1 remains the robust position-addressable construct, and a
+single seat can be catalytically inactivated without collapsing the ring. Cross-checked, not validated; apo.

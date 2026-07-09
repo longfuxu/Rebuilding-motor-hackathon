@@ -1,0 +1,13 @@
+L30 WINNER — mechanism / switch-position analysis (ported from L40 to the robust construct):
+- L30 (robust): all 5 sequential interfaces engaged in ALL 6 folds (5 Boltz seeds + OF3); per-interface
+  R146 mean 5.9-6.2 A; inter-interface spread only 0.33 A. The ring is SYMMETRIC — no interface is
+  distinguished, NO opening is pinned to one seat.
+- Native apo ring reference (cycle 3): symmetric too, 6.5-6.7 A, spread 0.2 A. L30 REPRODUCES the native
+  apo symmetry — the designed single chain closes into the same symmetric resting geometry.
+- Contrast L40 (scrambled): OF3 designed-sequential distances [53.0, 52.9, 5.0, 32.4, 5.0] A — every designed
+  interface open because the chain threaded into a wrong-partner register.
+INTERPRETATION: the robust L30 single-chain pentamer forms a SYMMETRIC apo ring with no pinned opening,
+matching the native apo reference and the planar-resting hypothesis. The 'switch'/open position is NOT a
+fixed geometric seat in the resting state — consistent with the cycle-3 finding. The linker fix (<=34 aa)
+converts the scrambled-register failure into the correct symmetric ring. Cross-checked (Boltz+OF3), not
+validated; apo; geometric seat.

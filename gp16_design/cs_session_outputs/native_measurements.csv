@@ -1,0 +1,6 @@
+subunit,angle_deg,axial_height_A,nucleotide,N_term_res,C_term_res,intrachain_N_C_dist_A
+A,360.0,6.8,ATPgS+Mg,4,330,52.5
+B,284.2,4.6,ATPgS+Mg,4,330,49.6
+C,213.8,2.7,ATPgS+Mg,4,330,50.7
+D,147.5,0.0,apo,4,330,48.8
+E,76.5,9.5,apo,4,330,66.1

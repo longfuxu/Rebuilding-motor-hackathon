@@ -1,0 +1,5 @@
+rung,pTM_singleseq,pTM_msa,pLDDT_singleseq,pLDDT_msa
+dimer,,0.601,,0.716
+trimer,0.304,0.491,0.499,0.703
+tetramer,0.265,0.41,0.446,0.683
+pentamer,0.267,0.482,0.446,0.682

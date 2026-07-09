@@ -1,0 +1,6 @@
+monomer,cut,Ndom_rmsd,Cdom_rmsd,Cdom_disp_afterN,mean_pLDDT,PASS,gate_valid_for_gp16,note
+native_monomer,,2.62,7.79,,81.5,ref,False,"gp16 C-domain is inter-subunit-packed (A_Cdom: B=25,E=19 contacts vs 3 intra); monomer cannot reform it. N-domain native in all (2.6-3.2A). Re-test in dimer."
+CP228_monomer,228.0,2.7,17.49,59.0,79.3,False,False,"gp16 C-domain is inter-subunit-packed (A_Cdom: B=25,E=19 contacts vs 3 intra); monomer cannot reform it. N-domain native in all (2.6-3.2A). Re-test in dimer."
+CP233_monomer,233.0,2.6,18.43,57.0,79.8,False,False,"gp16 C-domain is inter-subunit-packed (A_Cdom: B=25,E=19 contacts vs 3 intra); monomer cannot reform it. N-domain native in all (2.6-3.2A). Re-test in dimer."
+CP217_monomer,217.0,2.74,13.12,54.9,79.1,False,False,"gp16 C-domain is inter-subunit-packed (A_Cdom: B=25,E=19 contacts vs 3 intra); monomer cannot reform it. N-domain native in all (2.6-3.2A). Re-test in dimer."
+CP205_monomer,205.0,3.16,14.97,52.5,79.2,False,False,"gp16 C-domain is inter-subunit-packed (A_Cdom: B=25,E=19 contacts vs 3 intra); monomer cannot reform it. N-domain native in all (2.6-3.2A). Re-test in dimer."

@@ -1,0 +1,32 @@
+CP STAGE 2 — CP pentamers in ring context (sequential M2, Boltz 3 seeds + OpenFold3, pass = both predictors >=4/5):
+
+site  inter  Boltz(seeds close)  OF3   cross-predictor
+217   10/15/20   1/3, 0/3, 1/3    5/5   FAIL (Boltz seed-variable)
+228   10/15/20   1/3, 0/3, 1/3    5/5   FAIL (Boltz seed-variable)
+233   10         3/3              5/5   *** PASS ***
+233   15         2/3              5/5   *** PASS ***
+233   20         3/3              5/5   *** PASS ***
+
+WINNER: cp233 (cut at res 233) closes the CP ring under BOTH predictors at all 3 inter-linker lengths.
+cp233_int15_inter10 is tightest (Boltz 3/3 seeds 5/5, OpenFold3 5/5, 0 scrambled) -- closes like B1.
+
+KEY OBSERVATION: OpenFold3 closes the CP ring 5/5 on ALL 9 constructs -- the OPPOSITE of the N-C direct-fusion
+single chain, where OF3 scrambled at every linker length. The circular permutation moves each subunit's termini
+to the hinge/folding-unit boundary, shortening the inter-subunit junction so the chain cannot thread into a
+wrong-partner register. This is direct cross-predictor evidence that CP fixes the failure mode that killed the
+direct fusion. Boltz is seed-variable at sites 217/228 (the junction geometry there is less constrained) but
+robust at 233.
+
+STORYLINE: N-C direct fusion (failed, AF3) -> circular permutation (THIS: cp233 closes cross-predictor) -- the
+escalation succeeded at the CP rung; diffusion NOT needed. Best CP design cp233_int15_inter10 -> hand to AF3.
+Compare to B1_L40_E119Q (covalent-dimer route) and pentamer-L30 (short-linker direct route, Boltz+OF3 only).
+Cross-checked (Boltz+OF3), not validated; apo; geometric seat.
+
+M1 (ring-closure geometry) — added per task spec (M2 + M1):
+All 9 CP pentamers form a geometrically CLOSED ring under both predictors (every sequential subunit interface
+has 60-185 CA-CA contacts <8 A, no gap; M1_ring_closed=True for all). This is why M1 alone does NOT discriminate
+— a compact closed ring can still thread R146 to the WRONG neighbour. The discriminating metric is M2
+(designed-sequential R146): M1 passes everywhere, M2 passes only where the chain also engages the CORRECT
+partner. cp233 is the winner because it passes BOTH M1 (closed) and M2 (correct-partner, both predictors 5/5).
+Sites 217/228 are M1-closed but M2 Boltz-seed-variable (ring closes, but R146 partner assignment wobbles across
+seeds). Full M1 per-interface contacts: cp_stage2_M1_closure.csv.

@@ -1,0 +1,4 @@
+CP STAGE 1 — CP monomers recover a native-like gp16 fold. All 3 sites pass. Best internal linker per site:
+cp228 int10 (N2.80/C2.30), cp217 int20 (N2.57/C2.25), cp233 int20 (N2.46/C4.57). All 9: N 2.5-3.6, C 2.2-7.8 A
+to native; domains in native arrangement, not fragmented (opposite of N-C direct fusion). R146->own WalkerA ~25.5A
+= correct trans-finger orientation. Gate PASS all 3 -> Stage 2. Cross-checked (Boltz); apo.

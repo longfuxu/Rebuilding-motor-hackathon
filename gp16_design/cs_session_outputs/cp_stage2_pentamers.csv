@@ -1,0 +1,10 @@
+construct,site,inter,boltz_close,boltz_med,of3_close,of3_med,cross_pred_pass,M1_boltz_closed,M1_boltz_mincontacts,M1_of3_closed,M1_of3_mincontacts
+cp217_int15_inter10,217,10,1/3,0.0,1/1,5.0,False,True,153,True,165
+cp217_int15_inter15,217,15,0/3,0.0,1/1,5.0,False,True,77,True,176
+cp217_int15_inter20,217,20,1/3,0.0,1/1,5.0,False,True,77,True,172
+cp228_int15_inter10,228,10,1/3,3.0,1/1,5.0,False,True,102,True,62
+cp228_int15_inter15,228,15,0/3,0.0,1/1,5.0,False,True,64,True,62
+cp228_int15_inter20,228,20,1/3,0.0,1/1,5.0,False,True,92,True,67
+cp233_int15_inter10,233,10,3/3,5.0,1/1,5.0,True,True,105,True,94
+cp233_int15_inter15,233,15,2/3,5.0,1/1,5.0,True,True,69,True,92
+cp233_int15_inter20,233,20,3/3,5.0,1/1,5.0,True,True,105,True,93
