@@ -1,0 +1,7 @@
+construct,class,argfinger,predictor,M2_engaged,M2_total,sequential,radius_cv,verdict_closed,expectation
+6PP5 (native cryo-EM),ground truth,ARG,cryo-EM,5,6,YES,,"YES (5/6, native seam)",anchor
+good,good,ARG,OpenFold3,6,6,YES,0.003,YES,WT R307 — expected GOOD
+bad_dead_coupler,bad,ALA,OpenFold3,0,6,YES,0.003,NO,R307A dead coupler — expected BAD
+bad_r307e,bad,GLU,OpenFold3,0,6,YES,0.002,NO,R307E charge-reversal coupler — expected BAD
+bad_iface_break,bad,ARG,OpenFold3,6,6,YES,0.003,YES,6 trans-interface hydrophobics→Asp — expected BAD
+bad_broken_register,bad,ARG,OpenFold3,6,6,YES,0.004,YES,1-aa tether cut copy3→4 — expected BAD

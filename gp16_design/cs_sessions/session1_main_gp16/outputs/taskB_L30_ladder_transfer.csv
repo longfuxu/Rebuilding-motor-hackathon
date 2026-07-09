@@ -1,0 +1,7 @@
+construct,predictor,sample,n,engaged_seq,scrambled,ptm
+trimer_L30,boltz2,s0,3,0,0,0.355
+trimer_L30,boltz2,s1,3,0,0,0.386
+trimer_L30,openfold3,of3,3,0,2,0.589
+tetramer_L30,boltz2,s0,4,4,0,0.411
+tetramer_L30,boltz2,s1,4,4,0,0.412
+tetramer_L30,openfold3,of3,4,0,1,0.447

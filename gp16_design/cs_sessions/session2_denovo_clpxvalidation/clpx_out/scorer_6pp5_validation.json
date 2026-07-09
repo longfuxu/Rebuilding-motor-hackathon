@@ -1,0 +1,40 @@
+{
+  "structure": "6PP5",
+  "m2_engaged": 5,
+  "m2_total": 6,
+  "sequential": true,
+  "trans_dists": [
+    [
+      "F",
+      "E",
+      5.29
+    ],
+    [
+      "E",
+      "D",
+      5.85
+    ],
+    [
+      "D",
+      "C",
+      5.44
+    ],
+    [
+      "C",
+      "B",
+      5.49
+    ],
+    [
+      "B",
+      "A",
+      5.51
+    ],
+    [
+      "A",
+      "F",
+      9.13
+    ]
+  ],
+  "threshold": 8.0,
+  "note": "functional substrate-bound ClpXdN hexamer; 5/6 engaged validates scorer + floor"
+}

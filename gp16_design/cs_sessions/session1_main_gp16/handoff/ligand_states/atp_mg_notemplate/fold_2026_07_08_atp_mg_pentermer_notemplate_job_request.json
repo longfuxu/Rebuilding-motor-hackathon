@@ -1,0 +1,30 @@
+[{
+ "name": "2026-07-08_ATP_Mg_Pentermer-notemplate",
+ "modelSeeds": [
+  "1"
+ ],
+ "sequences": [
+  {
+   "proteinChain": {
+    "sequence": "MDKSLFYNPQKMLSYDRILNFVIGARGIGKSYAMKVYPINRFIKYGEQFIYVRRYKPELAKVSNYFNDVAQEFPDHELVVKGRRFYIDGKLAGWAIPLSVWQSEKSNAYPNVSTIVFDEFIREKDNSNYIPNEVSALLNLMDTVFRNRERVRCICLSNAVSVVNPYFLFFNLVPDVNKRFNVYDDALIEIPDSLDFSSERRKTRFGRLIDGTEYGEMSLDNQFIGDSQVFIEKRSKDSKFVFSIVYNGFTLGVWVDVNQGLMYIDTAHDPSTKNVYTLTTDDLNENMMLITNYKNNYHLRKLASAFMNGYLRFDNQVIRNIAYELFRKMRIQ",
+    "count": 5,
+    "useStructureTemplate": false
+   }
+  },
+  {
+   "ligand": {
+    "ligand": "CCD_ATP",
+    "count": 5
+   }
+  },
+  {
+   "ion": {
+    "ion": "MG",
+    "count": 5
+   }
+  }
+ ],
+ "dialect": "alphafoldserver",
+ "version": 3
+}
+]

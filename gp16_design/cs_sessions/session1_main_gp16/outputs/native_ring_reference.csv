@@ -1,0 +1,11 @@
+source,predictor,seed,donor,acceptor,R146_min_A,engaged
+predicted_apo_ring,Boltz-2,1,A,B,6.57,True
+predicted_apo_ring,Boltz-2,1,B,C,6.62,True
+predicted_apo_ring,Boltz-2,1,C,D,6.53,True
+predicted_apo_ring,Boltz-2,1,D,E,6.64,True
+predicted_apo_ring,Boltz-2,1,E,A,6.69,True
+7JQQ_helical_deposited,cryoEM,,A,E,15.51,False
+7JQQ_helical_deposited,cryoEM,,B,A,3.17,True
+7JQQ_helical_deposited,cryoEM,,C,B,2.81,True
+7JQQ_helical_deposited,cryoEM,,D,C,5.79,True
+7JQQ_helical_deposited,cryoEM,,E,D,25.46,False

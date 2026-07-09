@@ -1,0 +1,286 @@
+{
+ "note": "Circular-permutation constructs. Each CP subunit = [res P+1..330] + INTERNAL linker(330->4) + [res 4..P]. R146 (res146) and Walker-A (res24-31) sit in the res4..P half. Positions below are 1-based WITHIN a CP subunit.",
+ "monomers": {
+  "cp228_int10_monomer": {
+   "site": 228,
+   "internal_linker": 10,
+   "len": 337,
+   "part1_res": "229-330",
+   "part2_res": "4-228",
+   "R146_in_subunit": 255,
+   "WalkerA_in_subunit": [
+    133,
+    140
+   ]
+  },
+  "cp228_int15_monomer": {
+   "site": 228,
+   "internal_linker": 15,
+   "len": 342,
+   "part1_res": "229-330",
+   "part2_res": "4-228",
+   "R146_in_subunit": 260,
+   "WalkerA_in_subunit": [
+    138,
+    145
+   ]
+  },
+  "cp228_int20_monomer": {
+   "site": 228,
+   "internal_linker": 20,
+   "len": 347,
+   "part1_res": "229-330",
+   "part2_res": "4-228",
+   "R146_in_subunit": 265,
+   "WalkerA_in_subunit": [
+    143,
+    150
+   ]
+  },
+  "cp233_int10_monomer": {
+   "site": 233,
+   "internal_linker": 10,
+   "len": 337,
+   "part1_res": "234-330",
+   "part2_res": "4-233",
+   "R146_in_subunit": 250,
+   "WalkerA_in_subunit": [
+    128,
+    135
+   ]
+  },
+  "cp233_int15_monomer": {
+   "site": 233,
+   "internal_linker": 15,
+   "len": 342,
+   "part1_res": "234-330",
+   "part2_res": "4-233",
+   "R146_in_subunit": 255,
+   "WalkerA_in_subunit": [
+    133,
+    140
+   ]
+  },
+  "cp233_int20_monomer": {
+   "site": 233,
+   "internal_linker": 20,
+   "len": 347,
+   "part1_res": "234-330",
+   "part2_res": "4-233",
+   "R146_in_subunit": 260,
+   "WalkerA_in_subunit": [
+    138,
+    145
+   ]
+  },
+  "cp217_int10_monomer": {
+   "site": 217,
+   "internal_linker": 10,
+   "len": 337,
+   "part1_res": "218-330",
+   "part2_res": "4-217",
+   "R146_in_subunit": 266,
+   "WalkerA_in_subunit": [
+    144,
+    151
+   ]
+  },
+  "cp217_int15_monomer": {
+   "site": 217,
+   "internal_linker": 15,
+   "len": 342,
+   "part1_res": "218-330",
+   "part2_res": "4-217",
+   "R146_in_subunit": 271,
+   "WalkerA_in_subunit": [
+    149,
+    156
+   ]
+  },
+  "cp217_int20_monomer": {
+   "site": 217,
+   "internal_linker": 20,
+   "len": 347,
+   "part1_res": "218-330",
+   "part2_res": "4-217",
+   "R146_in_subunit": 276,
+   "WalkerA_in_subunit": [
+    154,
+    161
+   ]
+  }
+ },
+ "pentamers": {
+  "cp228_int15_inter10_pentamer": {
+   "site": 228,
+   "internal_linker": 15,
+   "inter_linker": 10,
+   "len": 1750,
+   "cp_subunit_len": 342,
+   "copy_starts": [
+    1,
+    353,
+    705,
+    1057,
+    1409
+   ],
+   "R146_in_copy": 260,
+   "WalkerA_in_copy": [
+    138,
+    145
+   ]
+  },
+  "cp228_int15_inter15_pentamer": {
+   "site": 228,
+   "internal_linker": 15,
+   "inter_linker": 15,
+   "len": 1770,
+   "cp_subunit_len": 342,
+   "copy_starts": [
+    1,
+    358,
+    715,
+    1072,
+    1429
+   ],
+   "R146_in_copy": 260,
+   "WalkerA_in_copy": [
+    138,
+    145
+   ]
+  },
+  "cp228_int15_inter20_pentamer": {
+   "site": 228,
+   "internal_linker": 15,
+   "inter_linker": 20,
+   "len": 1790,
+   "cp_subunit_len": 342,
+   "copy_starts": [
+    1,
+    363,
+    725,
+    1087,
+    1449
+   ],
+   "R146_in_copy": 260,
+   "WalkerA_in_copy": [
+    138,
+    145
+   ]
+  },
+  "cp233_int15_inter10_pentamer": {
+   "site": 233,
+   "internal_linker": 15,
+   "inter_linker": 10,
+   "len": 1750,
+   "cp_subunit_len": 342,
+   "copy_starts": [
+    1,
+    353,
+    705,
+    1057,
+    1409
+   ],
+   "R146_in_copy": 255,
+   "WalkerA_in_copy": [
+    133,
+    140
+   ]
+  },
+  "cp233_int15_inter15_pentamer": {
+   "site": 233,
+   "internal_linker": 15,
+   "inter_linker": 15,
+   "len": 1770,
+   "cp_subunit_len": 342,
+   "copy_starts": [
+    1,
+    358,
+    715,
+    1072,
+    1429
+   ],
+   "R146_in_copy": 255,
+   "WalkerA_in_copy": [
+    133,
+    140
+   ]
+  },
+  "cp233_int15_inter20_pentamer": {
+   "site": 233,
+   "internal_linker": 15,
+   "inter_linker": 20,
+   "len": 1790,
+   "cp_subunit_len": 342,
+   "copy_starts": [
+    1,
+    363,
+    725,
+    1087,
+    1449
+   ],
+   "R146_in_copy": 255,
+   "WalkerA_in_copy": [
+    133,
+    140
+   ]
+  },
+  "cp217_int15_inter10_pentamer": {
+   "site": 217,
+   "internal_linker": 15,
+   "inter_linker": 10,
+   "len": 1750,
+   "cp_subunit_len": 342,
+   "copy_starts": [
+    1,
+    353,
+    705,
+    1057,
+    1409
+   ],
+   "R146_in_copy": 271,
+   "WalkerA_in_copy": [
+    149,
+    156
+   ]
+  },
+  "cp217_int15_inter15_pentamer": {
+   "site": 217,
+   "internal_linker": 15,
+   "inter_linker": 15,
+   "len": 1770,
+   "cp_subunit_len": 342,
+   "copy_starts": [
+    1,
+    358,
+    715,
+    1072,
+    1429
+   ],
+   "R146_in_copy": 271,
+   "WalkerA_in_copy": [
+    149,
+    156
+   ]
+  },
+  "cp217_int15_inter20_pentamer": {
+   "site": 217,
+   "internal_linker": 15,
+   "inter_linker": 20,
+   "len": 1790,
+   "cp_subunit_len": 342,
+   "copy_starts": [
+    1,
+    363,
+    725,
+    1087,
+    1449
+   ],
+   "R146_in_copy": 271,
+   "WalkerA_in_copy": [
+    149,
+    156
+   ]
+  }
+ }
+}

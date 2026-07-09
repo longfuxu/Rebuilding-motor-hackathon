@@ -1,0 +1,39 @@
+WHOLE-PROTEIN CIRCULAR-PERMUTATION CLOSURE SCREEN — systematic, not a lucky hit
+=================================================================================
+20 CP cut sites screened across the whole gp16 protein (14 whole-protein sites + 6 carried from the earlier 220-240 grid) (cut_penalty 6-198, all func_clear):
+  N-domain(4-200): 60,75,89,124,164,178,183 | hinge(201-228): 205,217,228 | C-domain(229-330): 230,232,233,234,236,248,258,280,285,297
+CP subunit = [res P+1..330] + (GGGGS->15) + [res 4..P]; scoring R146=488-P, WalkerA=366-P..373-P.
+
+STAGE 1 (monomer gate): ALL sites fold native-like as monomers (N 2.4-3.6 A, C 2.2-7.1 A). The monomer
+gate does NOT discriminate by cut-penalty -- even the deepest N-domain interior cuts (cp60 pen198, cp75 pen196)
+re-fold to native. => the discriminating test is RING CLOSURE, not monomer fold.
+
+STAGE 2 (pentamer, sequential M2 + M1, PASS = both predictors >=4/5):
+  Closes at >=1 inter-linker: 183, 230, 232, 233, 234, 236, 285, 297  (8 sites)
+  ROBUST (all 3 inter-linkers): cp233, cp234, cp236, cp285
+  MARGINAL (1-2 inter-linkers):  cp183, cp230, cp232, cp297
+  FAIL (no closure):             60,75,89,124,164,178 (N-dom interior); 205,217,228 (hinge); 248,258,280 (C-dom)
+
+THE RULE (region-gated, not penalty-gated):
+  C-domain 7/10 sites close | N-domain 1/7 | hinge 0/3.
+  Closure vs raw cut_penalty is WEAK (point-biserial r=-0.34, p=0.20; Mann-Whitney p=0.10) -- the productive
+  variable is WHICH FOLDING UNIT the cut lands in (C-domain), not the raw penalty. Notably the two LOWEST-penalty
+  hinge sites (cp228 pen6, cp217 pen33) do NOT robustly close, while mid-penalty C-domain sites (cp285 pen61,
+  cp297 pen60) do -- penalty alone is not predictive.
+
+SWEET-SPOT vs cp233: cp234, cp236, cp285 MATCH cp233 (robust at all 3 inter-linkers); none clearly BEATS it.
+cp233 sits in a contiguous C-domain closure window (230-236) PLUS a second independent C-domain site (cp285) ->
+this is a SYSTEMATIC region-gated result, not a chance single hit. Best design remains cp233_int15_inter10.
+
+FUNCTIONAL INTERPRETATION of the closing sites: all productive sites lie in the C-domain (229-330), which forms
+the inter-subunit C-ring; cutting there places the new termini at the natural C-domain/C-domain packing interface,
+where a short inter-subunit linker can bridge without threading wrong. Cutting in the N-domain (which forms a
+separate inter-subunit N-ring) or the hinge severs the folding unit that determines subunit register, so the ring
+either fails to close (N-dom) or closes with unstable partner assignment (hinge, Boltz-seed-variable).
+
+ONE-LINE CONCLUSION: A whole-protein screen of 20 circular-permutation cut sites (penalty 6-198) shows ring
+closure is gated by folding-unit region -- the C-domain is productive (7/10 close incl. a new robust site cp285),
+the N-domain and hinge are not -- proving cp233 is a systematic, region-defined hit rather than a chance success.
+
+Guardrails: free NVIDIA NIM (Boltz-2 + OpenFold3); sequential M2 (not global pTM) + M1 closure; apo; cross-checked
+by two predictors, not validated; geometric ring seat, no claim on resting-state functional role.

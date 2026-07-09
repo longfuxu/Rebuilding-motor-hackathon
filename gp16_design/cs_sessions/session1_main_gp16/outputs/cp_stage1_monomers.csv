@@ -1,0 +1,10 @@
+name,site,int,Ndom_RMSD,Cdom_RMSD,domain_worst,ptm,R146_Walker_cis,monomer_pass
+cp228_int10_monomer,228,10,2.8,2.3,2.8,0.653,25.49,True
+cp228_int15_monomer,228,15,3.07,2.27,3.07,0.599,25.61,True
+cp228_int20_monomer,228,20,3.58,3.59,3.59,0.615,25.73,True
+cp233_int10_monomer,233,10,2.97,6.75,6.75,0.659,25.62,True
+cp233_int15_monomer,233,15,2.9,7.78,7.78,0.681,25.67,True
+cp233_int20_monomer,233,20,2.46,4.57,4.57,0.651,25.55,True
+cp217_int10_monomer,217,10,3.49,3.61,3.61,0.627,25.46,True
+cp217_int15_monomer,217,15,2.8,4.99,4.99,0.623,25.76,True
+cp217_int20_monomer,217,20,2.57,2.25,2.57,0.61,25.84,True

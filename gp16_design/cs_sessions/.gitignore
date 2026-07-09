@@ -1,0 +1,4 @@
+# Raw fold-model bulk (341M of reproducible Boltz/OF3/AF3 .cif models from the CP screen).
+# Kept on LOCAL DISK (this path) for reference, but NOT versioned — git holds the reports,
+# score tables, figures, and the definitive cp233 lead structures (handoff/cp233_af3/).
+session1_main_gp16/outputs/structures/

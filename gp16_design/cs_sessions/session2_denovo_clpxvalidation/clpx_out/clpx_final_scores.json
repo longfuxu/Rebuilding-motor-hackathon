@@ -1,0 +1,87 @@
+{
+  "good": {
+    "m2_engaged": 6,
+    "m2_total": 6,
+    "m2_direction": "i-1",
+    "m2_dists": [
+      6.28,
+      6.2,
+      6.41,
+      6.54,
+      6.25,
+      6.49
+    ],
+    "argfinger_resname": "ARG",
+    "radius_cv": 0.003,
+    "compact_ring": true,
+    "sequential_consistent": true
+  },
+  "bad_dead_coupler": {
+    "m2_engaged": 0,
+    "m2_total": 6,
+    "m2_direction": "i+1",
+    "m2_dists": [
+      44.95,
+      45.01,
+      45.28,
+      45.11,
+      45.04,
+      45.13
+    ],
+    "argfinger_resname": "ALA",
+    "radius_cv": 0.003,
+    "compact_ring": true,
+    "sequential_consistent": true
+  },
+  "bad_r307e": {
+    "m2_engaged": 0,
+    "m2_total": 6,
+    "m2_direction": "i+1",
+    "m2_dists": [
+      47.33,
+      47.36,
+      47.54,
+      47.5,
+      47.47,
+      47.39
+    ],
+    "argfinger_resname": "GLU",
+    "radius_cv": 0.002,
+    "compact_ring": true,
+    "sequential_consistent": true
+  },
+  "bad_iface_break": {
+    "m2_engaged": 6,
+    "m2_total": 6,
+    "m2_direction": "i-1",
+    "m2_dists": [
+      6.57,
+      6.64,
+      6.91,
+      7.01,
+      6.71,
+      6.93
+    ],
+    "argfinger_resname": "ARG",
+    "radius_cv": 0.003,
+    "compact_ring": true,
+    "sequential_consistent": true
+  },
+  "bad_broken_register": {
+    "m2_engaged": 6,
+    "m2_total": 6,
+    "m2_direction": "i-1",
+    "m2_dists": [
+      6.32,
+      6.17,
+      6.45,
+      6.53,
+      6.25,
+      6.37
+    ],
+    "argfinger_resname": "ARG",
+    "radius_cv": 0.004,
+    "compact_ring": true,
+    "sequential_consistent": true
+  }
+}

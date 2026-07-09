@@ -1,0 +1,35 @@
+GENETICALLY ADDRESSABLE DEAD-SEAT — single-chain cp233_int15_inter10 (definitive lead, 1750 aa)
+================================================================================================
+Chassis: cp233_int15_inter10; 5 copies at A:1-342/353-694/705-1046/1057-1398/1409-1750;
+per-seat E119Q (Walker-B catalytic Glu->Gln): seat1@228 seat2@580 seat3@932 seat4@1284 seat5@1636.
+Scored: sequential M2 (each copy R146 -> its DESIGNED next copy Walker-A, <8A) + M1 ring closure;
+PASS = both predictors >=4/5. Free NIM (Boltz-2 3 seeds + OpenFold3), apo, cross-checked.
+
+1) SINGLE + MULTI DEAD-SEAT (E119Q) — ALL TOLERATED, RING STAYS CLOSED:
+   WT           : Boltz 3/3, OF3 5/5, M2 PASS, M1 YES
+   E119Q {3}    : Boltz 2/3, OF3 5/5, M2 PASS, M1 YES  (single dead seat, ring center)
+   E119Q {1}    : Boltz 3/3, OF3 5/5, M2 PASS, M1 YES
+   E119Q {1,3}  : Boltz 2/3, OF3 5/5, M2 PASS, M1 YES
+   E119Q {1,3,5}: Boltz 3/3, OF3 5/5, M2 PASS, M1 YES
+   E119Q {all 5}: Boltz 2/3, OF3 5/5, M2 PASS, M1 YES  (every seat dead, ring STILL closes)
+   => the catalytically-dead Walker-B mutation is TOLERATED at defined seats, up to all 5.
+      A single gene encodes a ring whose catalytic seats are inactivated at CHOSEN positions.
+
+2) NO PROGRESSIVE GEOMETRIC COLLAPSE: median R146 stays 5.0-6.3 A independent of dead-seat count
+   (0->5); M1 ring-closure = 100% throughout. E119Q abolishes catalysis, not the geometric seat
+   (consistent with the earlier B1_L40_E119Q dead-seat result). The progressive-opening model is
+   about ATP-loading dynamics, not a static consequence of removing the catalytic glutamate.
+
+3) POSITION CONTROL (R146A @ seat 3, remove the trans arginine finger): interface 3->4 becomes
+   UNMEASURABLE (no guanidinium atoms — the residue is now Ala), while the other 4 interfaces stay
+   engaged (~5.6 A). M2 LOCALIZES to exactly the interface that was edited, nowhere else = direct
+   evidence that the scoring resolves WHICH catalytic interface was altered = positional control.
+
+CONCLUSION: On the definitive single-chain lead, Walker-B E119Q is tolerated at any chosen seat
+(single or multi, up to all 5) with the ring remaining closed under both predictors, and the R146A
+control proves the readout localizes to the edited interface — a genetically addressable, position-
+controlled ring of inactivation seats (the project's core single-chain deliverable), with zero
+generative design. Guardrails: sequential M2 not global pTM; apo; geometric seat, no resting-state
+functional-role claim; cross-checked by two predictors, not validated.
+
+NEXT: send WT / E119Q{3} / E119Q{all 5} to AlphaFold3 as the decisive third predictor.

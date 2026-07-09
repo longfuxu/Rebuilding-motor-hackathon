@@ -1,0 +1,42 @@
+[
+  {
+    "pool": "cp233_CONS",
+    "n": 12,
+    "identity_min": 71.7,
+    "identity_max": 73.2,
+    "identity_med": 72.7,
+    "boltz_close": 9,
+    "of3_close": 5,
+    "PASS_both": 4
+  },
+  {
+    "pool": "cp233_NOVEL",
+    "n": 12,
+    "identity_min": 52.4,
+    "identity_max": 54.7,
+    "identity_med": 53.9,
+    "boltz_close": 10,
+    "of3_close": 12,
+    "PASS_both": 10
+  },
+  {
+    "pool": "native_CONS",
+    "n": 12,
+    "identity_min": 71.6,
+    "identity_max": 74.9,
+    "identity_med": 73.4,
+    "boltz_close": 3,
+    "of3_close": 3,
+    "PASS_both": 0
+  },
+  {
+    "pool": "native_NOVEL",
+    "n": 12,
+    "identity_min": 52.6,
+    "identity_max": 58.4,
+    "identity_med": 57.5,
+    "boltz_close": 4,
+    "of3_close": 3,
+    "PASS_both": 1
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "dimer": {
+    "n_subunits": 2,
+    "total_len": 694,
+    "core_len": 327,
+    "linker": "(GGGGS)x8",
+    "note": "copy1-copyN interface = single non-covalent seam"
+  },
+  "trimer": {
+    "n_subunits": 3,
+    "total_len": 1061,
+    "core_len": 327,
+    "linker": "(GGGGS)x8",
+    "note": "copy1-copyN interface = single non-covalent seam"
+  },
+  "tetramer": {
+    "n_subunits": 4,
+    "total_len": 1428,
+    "core_len": 327,
+    "linker": "(GGGGS)x8",
+    "note": "copy1-copyN interface = single non-covalent seam"
+  },
+  "pentamer": {
+    "n_subunits": 5,
+    "total_len": 1795,
+    "core_len": 327,
+    "linker": "(GGGGS)x8",
+    "note": "copy1-copyN interface = single non-covalent seam"
+  }
+}

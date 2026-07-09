@@ -1,0 +1,132 @@
+{
+  "graph": {
+    "units": [
+      "A_N",
+      "A_C",
+      "B_N",
+      "B_C",
+      "C_N",
+      "C_C",
+      "D_N",
+      "D_C",
+      "E_N",
+      "E_C"
+    ],
+    "edges": {
+      "A_N--A_C": 46,
+      "A_N--B_N": 30,
+      "A_N--E_N": 27,
+      "A_N--E_C": 31,
+      "A_C--B_N": 32,
+      "A_C--B_C": 25,
+      "A_C--E_C": 20,
+      "B_N--B_C": 41,
+      "B_N--C_N": 36,
+      "B_C--C_N": 30,
+      "B_C--C_C": 20,
+      "C_N--C_C": 53,
+      "C_N--D_N": 35,
+      "C_C--D_N": 20,
+      "C_C--D_C": 20,
+      "D_N--D_C": 43,
+      "D_N--E_N": 15,
+      "D_C--E_N": 19,
+      "D_C--E_C": 24,
+      "E_N--E_C": 17
+    }
+  },
+  "ring_seat_order_angular": [
+    "E",
+    "D",
+    "C",
+    "B",
+    "A"
+  ],
+  "adjacent_seat_pairs": [
+    [
+      "E",
+      "D"
+    ],
+    [
+      "D",
+      "C"
+    ],
+    [
+      "C",
+      "B"
+    ],
+    [
+      "B",
+      "A"
+    ],
+    [
+      "A",
+      "E"
+    ]
+  ],
+  "special_open_interface": "A-E (66.1 \u00c5 C->N span; ATP-block/apo-block boundary in 7JQQ helical state)",
+  "design_rule": {
+    "R1_never_sever_a_folding_unit": "cut only at the N/C hinge (res ~201-228) or chain termini; cut-penalty must be low (<~33 severed long-range contacts). Cycle-1 cut@280 (penalty 66, inside C-domain) violated this.",
+    "R2_join_only_spatially_adjacent_seats": "a covalent junction may connect seat_i C-terminus to seat_{i+1} N-terminus only if the two seats are ring-adjacent; the A-E seam costs 66 \u00c5 and should be the free (non-covalent) break.",
+    "R3_interface_is_>=3-subunit": "each seat's N- and C-domains are held by BOTH flanking neighbors (N-N ring + C-C ring + cross A_C-B_N contacts). A covalent unit must therefore be scored embedded in the full ring, never in isolation (cycle-2 monomer floats 9.9 \u00c5; 2-mer under-determines interface).",
+    "score": "total_linker_span + broken_inter_subunit_contacts (both minimized)"
+  },
+  "top_topologies": [
+    {
+      "n_seats": 2,
+      "seatset": "DE",
+      "order": "E-D",
+      "total_CN_span_A": 54.0,
+      "severs_unit": false,
+      "note": "native-order fusion; joins only adjacent seats"
+    },
+    {
+      "n_seats": 2,
+      "seatset": "CD",
+      "order": "D-C",
+      "total_CN_span_A": 54.5,
+      "severs_unit": false,
+      "note": "native-order fusion; joins only adjacent seats"
+    },
+    {
+      "n_seats": 3,
+      "seatset": "CDE",
+      "order": "E-D-C",
+      "total_CN_span_A": 108.5,
+      "severs_unit": false,
+      "note": "native-order fusion; joins only adjacent seats"
+    },
+    {
+      "n_seats": 3,
+      "seatset": "BCD",
+      "order": "D-C-B",
+      "total_CN_span_A": 110.4,
+      "severs_unit": false,
+      "note": "native-order fusion; joins only adjacent seats"
+    },
+    {
+      "n_seats": 4,
+      "seatset": "BCDE",
+      "order": "E-D-C-B",
+      "total_CN_span_A": 164.5,
+      "severs_unit": false,
+      "note": "native-order fusion; joins only adjacent seats"
+    },
+    {
+      "n_seats": 4,
+      "seatset": "ABCD",
+      "order": "D-C-B-A",
+      "total_CN_span_A": 165.4,
+      "severs_unit": false,
+      "note": "native-order fusion; joins only adjacent seats"
+    },
+    {
+      "n_seats": 5,
+      "seatset": "ABCDE",
+      "order": "E-D-C-B-A",
+      "total_CN_span_A": 219.5,
+      "severs_unit": false,
+      "note": "native-order fusion; joins only adjacent seats"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+ "core_len": 327,
+ "linker": "(GGGGS)x6 = 30 aa native-order tether",
+ "note": "Cut-splice pivot: partition the pentamer into 2-3 covalent pieces (all positions defined). R146=copy-pos143, WalkerA=21-28 (copy_start_res=4). Fold all chains of a scheme together; score every subunit's R146 vs its DESIGNED neighbour (covalent within a piece, co-assembly at seams).",
+ "schemes": {
+  "sA_trimer_plus_dimer": {
+   "desc": "2 groups (3+2): trimer seats1-2-3 + dimer seats4-5; 2 free seams (3->4, 5->1)",
+   "chains": {
+    "trimer_s123": 1041,
+    "dimer_s45": 684
+   }
+  },
+  "sB_dimer_dimer_monomer": {
+   "desc": "3 groups (2+2+1): dimer s1-2 + dimer s3-4 + monomer s5; 3 free seams",
+   "chains": {
+    "dimer_s12": 684,
+    "dimer_s34": 684,
+    "monomer_s5": 327
+   }
+  }
+ }
+}

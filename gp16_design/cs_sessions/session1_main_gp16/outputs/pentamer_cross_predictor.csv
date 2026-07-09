@@ -1,0 +1,6 @@
+interface,kind,boltz_R146,of3_R146,both_engaged,agree
+1->2,covalent-linked,5.14,52.94,False,False
+2->3,covalent-linked,5.51,52.88,False,False
+3->4,covalent-linked,4.93,4.98,True,True
+4->5,covalent-linked,5.53,32.45,False,False
+5->1,seam(copyN-copy1),5.27,5.02,True,True

@@ -1,0 +1,18 @@
+stageA_rank,cp_cut_site,cut_penalty,folding_unit,domain_boundary,func_clear,helical_max_A,stroke_A,pass_stageA,reject_reason,stageB_tier
+1,228,6,hinge(201-228),True,True,38.8,7.6,True,,1.0
+2,233,13,C-domain(229-330),True,True,44.9,7.6,True,,1.0
+3,217,33,hinge(201-228),False,True,43.4,6.2,False,cut-penalty 33 (median 70); severs long-range contacts within hinge(201-228); not a folding-unit boundary,2.0
+4,205,34,hinge(201-228),False,True,57.1,5.3,False,cut-penalty 34 (median 70); severs long-range contacts within hinge(201-228); not a folding-unit boundary,2.0
+5,297,60,C-domain(229-330),False,True,24.7,6.2,False,cut-penalty 60 (median 70); severs long-range contacts within C-domain(229-330); not a folding-unit boundary,
+6,285,61,C-domain(229-330),False,True,39.2,3.5,False,cut-penalty 61 (median 70); severs long-range contacts within C-domain(229-330); not a folding-unit boundary,
+7,183,63,N-domain(4-200),False,True,53.6,4.4,False,cut-penalty 63 (median 70); severs long-range contacts within N-domain(4-200); not a folding-unit boundary,
+8,169,65,N-domain(4-200),False,True,39.3,3.7,False,cut-penalty 65 (median 70); severs long-range contacts within N-domain(4-200); not a folding-unit boundary,
+9,280,66,C-domain(229-330),False,True,27.0,3.0,False,cut-penalty 66 (median 70); severs long-range contacts within C-domain(229-330); not a folding-unit boundary,
+10,164,69,N-domain(4-200),False,True,39.5,11.3,False,cut-penalty 69 (median 70); severs long-range contacts within N-domain(4-200); not a folding-unit boundary,
+11,178,69,N-domain(4-200),False,True,55.8,4.4,False,cut-penalty 69 (median 70); severs long-range contacts within N-domain(4-200); not a folding-unit boundary,
+12,258,76,C-domain(229-330),False,True,49.4,6.6,False,cut-penalty 76 (median 70); severs long-range contacts within C-domain(229-330); not a folding-unit boundary,
+13,248,78,C-domain(229-330),False,True,34.0,4.8,False,cut-penalty 78 (median 70); severs long-range contacts within C-domain(229-330); not a folding-unit boundary,
+14,124,149,N-domain(4-200),False,True,39.2,18.4,False,cut-penalty 149 (median 70); severs long-range contacts within N-domain(4-200); not a folding-unit boundary,
+15,89,175,N-domain(4-200),False,True,37.8,5.0,False,cut-penalty 175 (median 70); severs long-range contacts within N-domain(4-200); not a folding-unit boundary,
+16,75,196,N-domain(4-200),False,True,52.6,7.4,False,cut-penalty 196 (median 70); severs long-range contacts within N-domain(4-200); not a folding-unit boundary,
+17,60,198,N-domain(4-200),False,True,28.9,12.9,False,cut-penalty 198 (median 70); severs long-range contacts within N-domain(4-200); not a folding-unit boundary,

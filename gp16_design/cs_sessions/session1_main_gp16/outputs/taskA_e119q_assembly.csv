@@ -1,0 +1,12 @@
+construct,predictor,sample,seats_engaged,ptm
+B1_L40_WT,boltz2,boltz_s0_m0,5/5,0.434
+B1_L40_WT,boltz2,boltz_s1_m0,5/5,0.521
+B1_L40_WT,boltz2,boltz_s2_m0,5/5,0.559
+B1_L40_E119Q_m1,boltz2,boltz_s0_m0,5/5,0.556
+B1_L40_E119Q_m1,boltz2,boltz_s1_m0,5/5,0.583
+B1_L40_E119Q_m1,boltz2,boltz_s2_m0,5/5,0.57
+untethered_E119Q,boltz2,boltz_s0_m0,5/5,0.636
+untethered_E119Q,boltz2,boltz_s1_m0,5/5,0.601
+untethered_E119Q,boltz2,boltz_s2_m0,5/5,0.631
+B1_L40_WT,openfold3,of3,5/5,0.663
+B1_L40_E119Q_m1,openfold3,of3,5/5,0.654

@@ -1,0 +1,24 @@
+TASK B — single-chain pentamer linker sweep (sequential M2, cross-predictor; the Boltz<->OF3 divergence attack):
+linker      Boltz-2 (seeds close 5/5)   OpenFold3 (seq-engaged)   cross-predictor
+L30 (GGGGS)x6   5/5 seeds, 0 scrambled       5/5, 0 scrambled        *** BOTH CLOSE ***
+L40 (GGGGS)x8   4/5 seeds, 0 scrambled       2/5, 3 scrambled        diverge (OF3 scrambles)
+L50 (GGGGS)x10  3/3 seeds, 0 scrambled       1/5, 3 scrambled        diverge (OF3 scrambles)
+
+FINDING: L30 = (GGGGS)x6 is the CROSS-PREDICTOR-ROBUST single-chain pentamer. Shortening the internal
+linker from 40->30 aa removes the conformational slack that let OpenFold3 build a compact-but-topologically
+-SCRAMBLED ring (R146 buried against the WRONG partner). At 30 aa both predictors reform the correct
+sequential (copy k -> copy k+1) trans-R146 ring, 0 scrambled interfaces. Boltz-2 closes at all three lengths
+(the longer linkers give it enough freedom too, but with occasional seed collapse at L40); OF3 is the
+discriminating predictor and only un-scrambles at L30. OF3 returns one deterministic sample per request
+(seed_42), so its per-length call is its verdict.
+CONSEQUENCE: a cross-predictor-robust single-chain construct EXISTS -> the Task C generative-escalation
+trigger is NOT met. ProteinMPNN self-repair is not required to close the ring. Cross-checked, not validated; apo.
+
+TASK B (deepening) — does the L30 fix transfer to shorter rungs? NO, it is pentamer-specific:
+- pentamer_L30: Boltz 5/5 (5 seeds), OF3 5/5 -> BOTH close (the winner).
+- tetramer_L30: Boltz 4/4 sequential (2 seeds), OF3 0/4 (scrambled) -> still diverges.
+- trimer_L30:   Boltz 0/3, OF3 scrambled -> incomplete arc, does not close.
+INTERPRETATION: clean cross-predictor closure is specific to the COMPLETE pentameric ring at L30. The full
+5-copy closure supplies the geometric constraint that shorter arcs lack; only the closed pentamer both
+reforms the correct sequential ring AND has both predictors agree. Shorter linker alone is not sufficient
+below n=5. Cross-checked, not validated; apo.
