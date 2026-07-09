@@ -1,0 +1,42 @@
+{
+  "sal_L32_0": {
+    "N": 686,
+    "L": 32,
+    "n_designs": 4,
+    "cat_preserved": 0,
+    "connector_positions": [
+      328,
+      359
+    ]
+  },
+  "sal_L38_0": {
+    "N": 692,
+    "L": 38,
+    "n_designs": 4,
+    "cat_preserved": 0,
+    "connector_positions": [
+      328,
+      365
+    ]
+  },
+  "sal_L44_0": {
+    "N": 698,
+    "L": 44,
+    "n_designs": 4,
+    "cat_preserved": 0,
+    "connector_positions": [
+      328,
+      371
+    ]
+  },
+  "sal_L50_0": {
+    "N": 704,
+    "L": 50,
+    "n_designs": 4,
+    "cat_preserved": 0,
+    "connector_positions": [
+      328,
+      377
+    ]
+  }
+}

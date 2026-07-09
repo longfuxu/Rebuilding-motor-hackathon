@@ -1,0 +1,92 @@
+{
+ "sal_L32_0_d0": {
+  "N": 686,
+  "clen": 32,
+  "M2_dimer": "M2: 0/2 DESIGNED interfaces engaged (<8.0 A)",
+  "plddt": 0.488
+ },
+ "sal_L32_0_d2": {
+  "N": 686,
+  "clen": 32,
+  "M2_dimer": "M2: 0/2 DESIGNED interfaces engaged (<8.0 A)",
+  "plddt": 0.474
+ },
+ "sal_L32_0_d1": {
+  "N": 686,
+  "clen": 32,
+  "M2_dimer": "M2: 0/2 DESIGNED interfaces engaged (<8.0 A)",
+  "plddt": 0.479
+ },
+ "sal_L32_0_d3": {
+  "N": 686,
+  "clen": 32,
+  "M2_dimer": "M2: 0/2 DESIGNED interfaces engaged (<8.0 A)",
+  "plddt": 0.46
+ },
+ "sal_L38_0_d2": {
+  "N": 692,
+  "clen": 38,
+  "M2_dimer": "M2: 0/2 DESIGNED interfaces engaged (<8.0 A)",
+  "plddt": 0.527
+ },
+ "sal_L38_0_d3": {
+  "N": 692,
+  "clen": 38,
+  "M2_dimer": "M2: 0/2 DESIGNED interfaces engaged (<8.0 A)",
+  "plddt": 0.506
+ },
+ "sal_L44_0_d1": {
+  "N": 698,
+  "clen": 44,
+  "M2_dimer": "M2: 0/2 DESIGNED interfaces engaged (<8.0 A)",
+  "plddt": 0.447
+ },
+ "sal_L44_0_d2": {
+  "N": 698,
+  "clen": 44,
+  "M2_dimer": "M2: 0/2 DESIGNED interfaces engaged (<8.0 A)",
+  "plddt": 0.477
+ },
+ "sal_L44_0_d3": {
+  "N": 698,
+  "clen": 44,
+  "M2_dimer": "M2: 0/2 DESIGNED interfaces engaged (<8.0 A)",
+  "plddt": 0.481
+ },
+ "sal_L50_0_d0": {
+  "N": 704,
+  "clen": 50,
+  "M2_dimer": "M2: 0/2 DESIGNED interfaces engaged (<8.0 A)",
+  "plddt": 0.442
+ },
+ "sal_L38_0_d0": {
+  "N": 692,
+  "clen": 38,
+  "M2_dimer": "M2: 0/2 DESIGNED interfaces engaged (<8.0 A)",
+  "plddt": 0.483
+ },
+ "sal_L44_0_d0": {
+  "N": 698,
+  "clen": 44,
+  "M2_dimer": "M2: 0/2 DESIGNED interfaces engaged (<8.0 A)",
+  "plddt": 0.477
+ },
+ "sal_L50_0_d1": {
+  "N": 704,
+  "clen": 50,
+  "M2_dimer": "M2: 0/2 DESIGNED interfaces engaged (<8.0 A)",
+  "plddt": 0.454
+ },
+ "sal_L50_0_d2": {
+  "N": 704,
+  "clen": 50,
+  "M2_dimer": "M2: 0/2 DESIGNED interfaces engaged (<8.0 A)",
+  "plddt": 0.458
+ },
+ "sal_L50_0_d3": {
+  "N": 704,
+  "clen": 50,
+  "M2_dimer": "M2: 0/2 DESIGNED interfaces engaged (<8.0 A)",
+  "plddt": 0.482
+ }
+}

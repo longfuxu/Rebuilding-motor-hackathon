@@ -52,10 +52,25 @@ Caveat: these are backbone-only (poly-Gly) geometry metrics. They establish the 
 preserves the interface; they do NOT yet establish that a real sequence encodes it (that is the MPNN→fold→M2
 gate below). `helix-frac` is a crude Cα(i)–Cα(i+3) proxy, not DSSP.
 
-## Downstream (status)
-ProteinMPNN (freeze both subunits incl. Walker-A/B, R146, ATP pocket; design only the connector) → Boltz-2
-NIM fold → `score_m2` (M1 sequential-consistent + M2 ≥4/5). All scripts staged and the NIM path is verified
-(key works, folds in ~3 s). See the HANDOFF for exactly where to resume.
+## Downstream — ProteinMPNN + Boltz-2 fold (DONE 2026-07-09)
+**ProteinMPNN (local, soluble v_48_020, T=0.1):** threaded the native gp16 sequence onto each backbone's
+motif, then designed **only the connector** with the entire motif (both subunits, incl. Walker-A/B, R146,
+ATP pocket) frozen. Verified: catalytic residues R146/K30/E119 native in both subunits of every design,
+motif byte-identical to native, connector fully redesigned. 16 designs (4/backbone) in
+`mpnn_designs/connector_designs.fasta`.
+
+**Boltz-2 NIM fold + `score_m2` (15 designs folded):** every design folds (pLDDT 0.44–0.53) but the isolated
+**A→connector→B dimer gives M2 = 0/2** across all connector lengths and designs (`mpnn_designs/dimer_fold_score.json`).
+
+**This is expected, not a failure of the connector.** The project already established (HANDOFF §5, B1 work)
+that **the trans interface is a ≥3-subunit property** — even the *native-sequence* isolated 2-mer does not
+reform it (Boltz 0/5); it needs both neighbours. So an isolated A-connector-B **dimer is the wrong test unit**
+for M2. The dimer fold confirms the designed connector sequences are foldable; it cannot report the trans-interface metric.
+
+**Correct next test (deferred, ~1700 aa like cp233):** tile the lead connector (sal_L50) 5× into a single-chain
+native-order ring, fold that ring, and score sequential M2. Only the tiled ring can show whether the de-novo
+connector closes with correct register — the true generative comparator to cp233. Scripts (`mpnn_pipeline.py`,
+`nim_fold_score.py`) and the lead backbone/sequences are in this directory.
 
 ## Honest notes on the compute run
 - The `colab` CLI route works but is **flaky for long unattended runs**: `colab exec`/`download` websockets
