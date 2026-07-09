@@ -9,8 +9,10 @@ Run (FOREGROUND only): modal run gp16_design/md/gomodel_dualbasin_modal.py   # t
   .remote()/.map() call, which Modal CANCELS once the client stops polling (a background job drops polling) — that
   is exactly what happened on 2026-07-08 (call cancelled). For true background use, refactor run/sweep to .spawn()
   and poll the FunctionCall id later. Smoke test (`--n-steps 20000`) validated the pipeline end-to-end on GPU.
-Output: md/gomodel_out.npz / gomodel_sweep.npz — inspect locally. STATUS: pipeline works; a real opening trajectory
-  still needs an eps/temp scan (`modal run … --n-steps 1000000`, foreground) to find the regime that crosses basins.
+Output: md/gomodel_out.npz / gomodel_sweep.npz — inspect locally. STATUS: pipeline works (smoke test 20k steps OK),
+  but the 6×1M-step scan HIT THE 3600s FUNCTION TIMEOUT — this Cα model (15,231 dual-basin contacts + a 15k-exclusion
+  excluded-volume force) is SLOW, not cheap. Before a real run, OPTIMIZE: single (eps,temp), <=200-500k steps, and
+  drop/cheapen the excluded-volume CustomNonbondedForce (or coarsen the contact set / raise the contact cutoff filter).
 
 STATUS: v1, syntax-checked locally (no OpenMM here). Tunables that likely need a sweep on first run:
 eps (contact depth), T (temperature), and the run length. Start weak-ish so the ring can cross between basins.
