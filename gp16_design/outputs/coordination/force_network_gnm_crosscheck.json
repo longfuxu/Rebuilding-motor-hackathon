@@ -1,0 +1,142 @@
+{
+  "design": {
+    "kind": "design",
+    "corr_source": "gnm",
+    "n_edges": 10287,
+    "len_ATP_Y129": 4.1627,
+    "len_Y129_DNA": 1.4417,
+    "len_ATP_Y129_DNA": 5.6044,
+    "len_ATP_DNA_direct": 3.9632,
+    "Y129_node_betweenness": 0.00954,
+    "WalkerA_node_betweenness": 0.00452,
+    "conduit_robustness_frac_increase": 0.0146,
+    "example_path_sub0_natres": [
+      24,
+      157,
+      120,
+      129,
+      130
+    ],
+    "example_path_dna_target": 130,
+    "top_rigidify_residues": [
+      [
+        307,
+        0.07028
+      ],
+      [
+        226,
+        0.06576
+      ],
+      [
+        100,
+        0.06066
+      ],
+      [
+        58,
+        0.05861
+      ],
+      [
+        125,
+        0.05517
+      ],
+      [
+        96,
+        0.04865
+      ],
+      [
+        293,
+        0.0466
+      ],
+      [
+        303,
+        0.04531
+      ],
+      [
+        290,
+        0.0452
+      ],
+      [
+        54,
+        0.04309
+      ],
+      [
+        163,
+        0.04205
+      ],
+      [
+        278,
+        0.03893
+      ]
+    ]
+  },
+  "native": {
+    "kind": "native",
+    "corr_source": "gnm",
+    "n_edges": 10328,
+    "len_ATP_Y129": 4.1497,
+    "len_Y129_DNA": 1.4108,
+    "len_ATP_Y129_DNA": 5.5605,
+    "len_ATP_DNA_direct": 4.0037,
+    "Y129_node_betweenness": 0.00579,
+    "WalkerA_node_betweenness": 0.00461,
+    "conduit_robustness_frac_increase": 0.0146,
+    "example_path_sub0_natres": [
+      25,
+      159,
+      121,
+      129,
+      130
+    ],
+    "example_path_dna_target": 130,
+    "top_rigidify_residues": [
+      [
+        226,
+        0.07758
+      ],
+      [
+        307,
+        0.05942
+      ],
+      [
+        96,
+        0.05786
+      ],
+      [
+        283,
+        0.0486
+      ],
+      [
+        278,
+        0.04627
+      ],
+      [
+        125,
+        0.04502
+      ],
+      [
+        59,
+        0.04258
+      ],
+      [
+        293,
+        0.04249
+      ],
+      [
+        163,
+        0.04163
+      ],
+      [
+        54,
+        0.0409
+      ],
+      [
+        229,
+        0.03971
+      ],
+      [
+        61,
+        0.0396
+      ]
+    ]
+  }
+}

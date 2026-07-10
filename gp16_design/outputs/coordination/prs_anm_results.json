@@ -1,0 +1,115 @@
+{
+  "design": {
+    "kind": "design",
+    "N": 1635,
+    "anm_cutoff": 15.0,
+    "gnm_cutoff": 10.0,
+    "ring_order": [
+      2,
+      1,
+      0,
+      4,
+      3
+    ],
+    "functional_neighbor": {
+      "0": [
+        1,
+        12.16
+      ],
+      "1": [
+        2,
+        12.0
+      ],
+      "2": [
+        3,
+        12.26
+      ],
+      "3": [
+        4,
+        12.33
+      ],
+      "4": [
+        0,
+        11.95
+      ]
+    },
+    "prs_ATP_intra_self": 0.14887,
+    "prs_ATP_NN_coupling": 0.00295,
+    "prs_ATP_NN_over_intra": 0.0198,
+    "prs_ATP_funcfinger_coupling": 0.00296,
+    "prs_decay_by_ringdist": {
+      "1": 0.00295,
+      "2": 0.001588
+    },
+    "prs_inter_subunit_all": 0.002225,
+    "prs_intra_subunit_all": 0.008847,
+    "prs_inter_over_intra_all": 0.2515,
+    "gnm_ATP_NN_crosscorr": 0.01901,
+    "gnm_inter_subunit_all": -0.01957,
+    "seconds": 23.1
+  },
+  "native": {
+    "kind": "native",
+    "N": 1635,
+    "anm_cutoff": 15.0,
+    "gnm_cutoff": 10.0,
+    "ring_order": [
+      3,
+      2,
+      1,
+      0,
+      4
+    ],
+    "functional_neighbor": {
+      "0": [
+        1,
+        10.35
+      ],
+      "1": [
+        2,
+        10.33
+      ],
+      "2": [
+        3,
+        10.44
+      ],
+      "3": [
+        4,
+        10.38
+      ],
+      "4": [
+        0,
+        10.39
+      ]
+    },
+    "prs_ATP_intra_self": 0.1442,
+    "prs_ATP_NN_coupling": 0.00165,
+    "prs_ATP_NN_over_intra": 0.0115,
+    "prs_ATP_funcfinger_coupling": 0.00165,
+    "prs_decay_by_ringdist": {
+      "1": 0.001654,
+      "2": 0.000697
+    },
+    "prs_inter_subunit_all": 0.001562,
+    "prs_intra_subunit_all": 0.00638,
+    "prs_inter_over_intra_all": 0.2449,
+    "gnm_ATP_NN_crosscorr": 0.0285,
+    "gnm_inter_subunit_all": -0.01849,
+    "seconds": 30.5
+  },
+  "comparison": {
+    "prs_ATP_NN_coupling_design_over_native": 1.788,
+    "prs_ATP_NN_over_intra_design_vs_native": [
+      0.0198,
+      0.0115
+    ],
+    "prs_inter_over_intra_all_design_vs_native": [
+      0.2515,
+      0.2449
+    ],
+    "gnm_ATP_NN_crosscorr_design_vs_native": [
+      0.01901,
+      0.0285
+    ]
+  }
+}

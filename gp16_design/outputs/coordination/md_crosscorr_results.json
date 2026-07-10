@@ -1,0 +1,46 @@
+{
+  "design": {
+    "kind": "design",
+    "n_frames": 80,
+    "N": 1635,
+    "dccm_inter_all_mean": -0.02666,
+    "dccm_inter_all_absmean": 0.12378,
+    "dccm_intra_all_absmean": 0.21176,
+    "dccm_NN_subunit_mean": -0.02442,
+    "dccm_NN_subunit_absmean": 0.13047,
+    "dccm_NN_ATPsite_mean": -0.01559,
+    "dccm_NN_ATPsite_absmean": 0.09141,
+    "dccm_inter_over_intra_abs": 0.5845
+  },
+  "native": {
+    "kind": "native",
+    "n_frames": 80,
+    "N": 1635,
+    "dccm_inter_all_mean": -0.01885,
+    "dccm_inter_all_absmean": 0.11064,
+    "dccm_intra_all_absmean": 0.19531,
+    "dccm_NN_subunit_mean": -0.00931,
+    "dccm_NN_subunit_absmean": 0.1196,
+    "dccm_NN_ATPsite_mean": 0.0271,
+    "dccm_NN_ATPsite_absmean": 0.1003,
+    "dccm_inter_over_intra_abs": 0.5665
+  },
+  "comparison": {
+    "dccm_NN_ATPsite_absmean_design_vs_native": [
+      0.09141,
+      0.1003
+    ],
+    "dccm_NN_subunit_absmean_design_vs_native": [
+      0.13047,
+      0.1196
+    ],
+    "dccm_inter_all_absmean_design_vs_native": [
+      0.12378,
+      0.11064
+    ],
+    "dccm_inter_over_intra_abs_design_vs_native": [
+      0.5845,
+      0.5665
+    ]
+  }
+}
