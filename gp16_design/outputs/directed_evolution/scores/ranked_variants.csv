@@ -1,0 +1,11 @@
+rank,name,muts,pass_all,G1_M1,G2_M2,G3_M5,G4_soft,power_score,coord_gain,force_gain,grip_gain,soft_retention,prs_ATP_NN_coupling,len_ATP_Y129_DNA,DNA_inward_total,breathing_top20,min_pore_radius,M5_pocket_rmsd_vs_wt,m2_engaged,Y129_betweenness_noisy,interSub_heavy_contacts_noisy,flag,beats_wt_coord,beats_wt_force,above_noise_coord,above_noise_force,rationale
+0,cp233_WT,(reference),ref,,,,,0.0,,,,1.0,0.002062,4.7686,80,0.7667,8.21,0.0,,0.020258,787.2,,,,,,
+1,de_M307W,M307W,True,True,True,True,True,0.7704,0.0635,0.0347,-0.025,0.9827,0.002193,4.6032,78,0.7534,11.06,0.278,5,0.012416,832.2,,True,True,False,True,M307W: bulky aromatic clasp rigidification
+2,de_M307F,M307F,True,True,True,True,True,0.7702,-0.0587,0.063,0.0,1.0197,0.001941,4.4681,80,0.7818,9.49,0.363,5,0.019264,626.6,,False,True,False,True,M307F: aromatic rigidification of Y129<->307 inter-subunit clasp
+3,de_I130F_M307W,I130F_M307W,True,True,True,True,True,0.5711,-0.1106,0.0372,0.0125,1.0627,0.001834,4.591,81,0.8148,10.25,0.322,5,0.014053,777.8,,False,True,True,True,I130F+M307W: aromatic clasp across C-domain inter-subunit interface
+4,de_L289P,L289P,True,True,True,True,True,0.2875,0.033,0.0255,-0.1,0.9979,0.00213,4.6469,72,0.7651,11.1,0.355,5,0.015694,888.2,,True,True,False,True,"L289P: proline backbone rigidification, buried C-domain core"
+5,de_L289W,L289W,True,True,True,True,True,-0.0276,-0.0228,0.0161,-0.1125,1.0127,0.002015,4.6916,71,0.7764,11.2,0.243,5,0.014674,787.2,,False,True,False,True,L289W: bulky aromatic core packing
+6,de_L289F,L289F,True,True,True,True,True,-0.2981,-0.0548,-0.0135,-0.0625,0.9923,0.001949,4.8331,75,0.7608,8.3,0.358,5,0.016122,764.2,,False,False,False,False,"L289F: aromatic core packing, buried C-domain"
+7,de_I130W,I130W,True,True,True,True,True,-0.459,-0.0175,-0.0316,0.0,0.8957,0.002026,4.9191,80,0.6867,8.32,0.448,5,0.015574,814.0,,False,False,False,True,I130W: bulky aromatic grip loop
+8,de_L289F_M307F,L289F_M307F,True,True,True,True,True,-0.7107,-0.1542,-0.038,0.0,0.9829,0.001744,4.9499,80,0.7536,8.06,0.278,5,0.022375,866.2,,False,False,True,True,L289F+M307F: C-domain aromatic zipper (buried core + clasp)
+9,de_I130F,I130F,True,True,True,True,True,-0.9037,-0.128,-0.0276,-0.0625,0.9576,0.001798,4.9003,75,0.7342,6.66,0.348,5,0.017168,795.0,,False,False,True,True,"I130F: aromatic in grip loop, packs vs neighbour 308"

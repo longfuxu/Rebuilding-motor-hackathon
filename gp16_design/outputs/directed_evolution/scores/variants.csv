@@ -1,0 +1,20 @@
+name,muts,n_mut,rationale,flag,seq_len
+cp233_WT,,0,wild-type reference,,1750
+cp233_WTrep,,0,wild-type reference (replicate for fold-noise floor),,1750
+de_L289P,L289P,1,"L289P: proline backbone rigidification, buried C-domain core",,1750
+de_L289F,L289F,1,"L289F: aromatic core packing, buried C-domain",,1750
+de_L289W,L289W,1,L289W: bulky aromatic core packing,,1750
+de_M307F,M307F,1,M307F: aromatic rigidification of Y129<->307 inter-subunit clasp,,1750
+de_M307W,M307W,1,M307W: bulky aromatic clasp rigidification,,1750
+de_M307Y,M307Y,1,M307Y: aromatic + H-bond clasp,,1750
+de_V100F,V100F,1,V100F: aromatic N-domain inter-subunit packing,,1750
+de_V100W,V100W,1,V100W: bulky aromatic N-domain packing,,1750
+de_N128F,N128F,1,"N128F: aromatic in grip loop, packs vs neighbour 307-310",,1750
+de_I130F,I130F,1,"I130F: aromatic in grip loop, packs vs neighbour 308",,1750
+de_I130W,I130W,1,I130W: bulky aromatic grip loop,,1750
+de_Y129F,Y129F,1,"Y129F: conservative aromatic, removes phenol OH (grip risk)",touches force/DNA residue Y129,1750
+de_Y129W,Y129W,1,Y129W: bulkier aromatic grip (grip/DNA risk),touches force/DNA residue Y129,1750
+de_I130F_M307W,I130F_M307W,2,I130F+M307W: aromatic clasp across C-domain inter-subunit interface,,1750
+de_N128F_M307F,N128F_M307F,2,"N128F+M307F: milder aromatic clasp, both partners",,1750
+de_L289F_M307F,L289F_M307F,2,L289F+M307F: C-domain aromatic zipper (buried core + clasp),,1750
+de_V100F_I130F,V100F_I130F,2,V100F+I130F: aromatic clamp flanking the Y129 grip machinery,,1750

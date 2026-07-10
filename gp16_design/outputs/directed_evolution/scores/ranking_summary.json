@@ -1,0 +1,278 @@
+{
+  "ranked": [
+    "de_M307W",
+    "de_M307F",
+    "de_I130F_M307W",
+    "de_L289P",
+    "de_L289W",
+    "de_L289F",
+    "de_I130W",
+    "de_L289F_M307F",
+    "de_I130F"
+  ],
+  "top3": [
+    "de_M307W",
+    "de_M307F",
+    "de_I130F_M307W"
+  ],
+  "noise": {
+    "coord": 0.06353055286129973,
+    "force": 0.014616449272323133,
+    "grip": 0.0625,
+    "soft": 0.008738750489109074
+  },
+  "wt": {
+    "coord": 0.002062,
+    "force": 4.7686,
+    "grip": 80,
+    "soft": 0.7667
+  },
+  "passers": [
+    "de_I130W",
+    "de_M307W",
+    "de_L289F",
+    "de_L289F_M307F",
+    "de_L289P",
+    "de_I130F",
+    "de_M307F",
+    "de_L289W",
+    "de_I130F_M307W"
+  ],
+  "weights": {
+    "coord": 0.3,
+    "force": 0.3,
+    "grip": 0.2,
+    "soft": 0.2
+  },
+  "thresholds": {
+    "POCKET_MAX": 2.0,
+    "SOFT_MIN": 0.85
+  },
+  "per_variant": {
+    "de_I130W": {
+      "power_score": -0.45903841225987146,
+      "gains": {
+        "coord": -0.017458777885548015,
+        "force": -0.0315606257601812,
+        "grip": 0.0,
+        "soft": -0.10434328942219911
+      },
+      "soft_ret": 0.8956567105778008,
+      "pocket": 0.448,
+      "gate": {
+        "G1_M1": true,
+        "G2_M2": true,
+        "G3_M5": true,
+        "G4_soft": true
+      },
+      "muts": "I130W",
+      "flag": "",
+      "metrics": {
+        "prs_ATP_NN_coupling": 0.002026,
+        "len_ATP_Y129_DNA": 4.9191,
+        "DNA_inward_total": 80,
+        "breathing_top20": 0.6867
+      }
+    },
+    "de_M307W": {
+      "power_score": 0.770381704500827,
+      "gains": {
+        "coord": 0.06353055286129973,
+        "force": 0.034685232563016394,
+        "grip": -0.025,
+        "soft": -0.017347071866440706
+      },
+      "soft_ret": 0.9826529281335593,
+      "pocket": 0.278,
+      "gate": {
+        "G1_M1": true,
+        "G2_M2": true,
+        "G3_M5": true,
+        "G4_soft": true
+      },
+      "muts": "M307W",
+      "flag": "",
+      "metrics": {
+        "prs_ATP_NN_coupling": 0.002193,
+        "len_ATP_Y129_DNA": 4.6032,
+        "DNA_inward_total": 78,
+        "breathing_top20": 0.7534
+      }
+    },
+    "de_L289F": {
+      "power_score": -0.29814465297146714,
+      "gains": {
+        "coord": -0.05480116391852572,
+        "force": -0.013525982468649033,
+        "grip": -0.0625,
+        "soft": -0.0076953175948871995
+      },
+      "soft_ret": 0.9923046824051128,
+      "pocket": 0.358,
+      "gate": {
+        "G1_M1": true,
+        "G2_M2": true,
+        "G3_M5": true,
+        "G4_soft": true
+      },
+      "muts": "L289F",
+      "flag": "",
+      "metrics": {
+        "prs_ATP_NN_coupling": 0.001949,
+        "len_ATP_Y129_DNA": 4.8331,
+        "DNA_inward_total": 75,
+        "breathing_top20": 0.7608
+      }
+    },
+    "de_L289F_M307F": {
+      "power_score": -0.7107368098342384,
+      "gains": {
+        "coord": -0.15421920465567407,
+        "force": -0.03801954452040436,
+        "grip": 0.0,
+        "soft": -0.017086213642885092
+      },
+      "soft_ret": 0.9829137863571149,
+      "pocket": 0.278,
+      "gate": {
+        "G1_M1": true,
+        "G2_M2": true,
+        "G3_M5": true,
+        "G4_soft": true
+      },
+      "muts": "L289F_M307F",
+      "flag": "",
+      "metrics": {
+        "prs_ATP_NN_coupling": 0.001744,
+        "len_ATP_Y129_DNA": 4.9499,
+        "DNA_inward_total": 80,
+        "breathing_top20": 0.7536
+      }
+    },
+    "de_L289P": {
+      "power_score": 0.2875176701593119,
+      "gains": {
+        "coord": 0.032977691561590645,
+        "force": 0.02552111730906358,
+        "grip": -0.1,
+        "soft": -0.0020868657884440403
+      },
+      "soft_ret": 0.9979131342115559,
+      "pocket": 0.355,
+      "gate": {
+        "G1_M1": true,
+        "G2_M2": true,
+        "G3_M5": true,
+        "G4_soft": true
+      },
+      "muts": "L289P",
+      "flag": "",
+      "metrics": {
+        "prs_ATP_NN_coupling": 0.00213,
+        "len_ATP_Y129_DNA": 4.6469,
+        "DNA_inward_total": 72,
+        "breathing_top20": 0.7651
+      }
+    },
+    "de_I130F": {
+      "power_score": -0.9037104612165336,
+      "gains": {
+        "coord": -0.12803103782735215,
+        "force": -0.027618168854590338,
+        "grip": -0.0625,
+        "soft": -0.04238946132776847
+      },
+      "soft_ret": 0.9576105386722316,
+      "pocket": 0.348,
+      "gate": {
+        "G1_M1": true,
+        "G2_M2": true,
+        "G3_M5": true,
+        "G4_soft": true
+      },
+      "muts": "I130F",
+      "flag": "",
+      "metrics": {
+        "prs_ATP_NN_coupling": 0.001798,
+        "len_ATP_Y129_DNA": 4.9003,
+        "DNA_inward_total": 75,
+        "breathing_top20": 0.7342
+      }
+    },
+    "de_M307F": {
+      "power_score": 0.7702232716783772,
+      "gains": {
+        "coord": -0.05868089233753638,
+        "force": 0.06301639894308611,
+        "grip": 0.0,
+        "soft": 0.019694795878440068
+      },
+      "soft_ret": 1.0196947958784401,
+      "pocket": 0.363,
+      "gate": {
+        "G1_M1": true,
+        "G2_M2": true,
+        "G3_M5": true,
+        "G4_soft": true
+      },
+      "muts": "M307F",
+      "flag": "",
+      "metrics": {
+        "prs_ATP_NN_coupling": 0.001941,
+        "len_ATP_Y129_DNA": 4.4681,
+        "DNA_inward_total": 80,
+        "breathing_top20": 0.7818
+      }
+    },
+    "de_L289W": {
+      "power_score": -0.027623526900644235,
+      "gains": {
+        "coord": -0.02279340446168776,
+        "force": 0.016147296900557807,
+        "grip": -0.1125,
+        "soft": 0.012651623842441543
+      },
+      "soft_ret": 1.0126516238424415,
+      "pocket": 0.243,
+      "gate": {
+        "G1_M1": true,
+        "G2_M2": true,
+        "G3_M5": true,
+        "G4_soft": true
+      },
+      "muts": "L289W",
+      "flag": "",
+      "metrics": {
+        "prs_ATP_NN_coupling": 0.002015,
+        "len_ATP_Y129_DNA": 4.6916,
+        "DNA_inward_total": 71,
+        "breathing_top20": 0.7764
+      }
+    },
+    "de_I130F_M307W": {
+      "power_score": 0.5711312168442391,
+      "gains": {
+        "coord": -0.11057225994180413,
+        "force": 0.03724363544855932,
+        "grip": 0.0125,
+        "soft": 0.06273640276509707
+      },
+      "soft_ret": 1.062736402765097,
+      "pocket": 0.322,
+      "gate": {
+        "G1_M1": true,
+        "G2_M2": true,
+        "G3_M5": true,
+        "G4_soft": true
+      },
+      "muts": "I130F_M307W",
+      "flag": "",
+      "metrics": {
+        "prs_ATP_NN_coupling": 0.001834,
+        "len_ATP_Y129_DNA": 4.591,
+        "DNA_inward_total": 81,
+        "breathing_top20": 0.8148
+      }
+    }
+  }
+}
