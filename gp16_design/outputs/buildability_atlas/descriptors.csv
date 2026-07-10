@@ -1,0 +1,14 @@
+name,family,pdb,oligo_nominal,n_modeled,ring_radius_A,motor_range,Nterm_to_axis_A,Cterm_to_axis_A,Nterm_rel_radius,Cterm_rel_radius,Cterm_to_axis_fullchain_A,Nterm_to_substrate_A,Cterm_to_substrate_A,direct_gap_A,direct_gap_max_A,direct_gap_fullchain_A,first_res,last_res,known_method,note
+gp16,ASCE packaging,7JQQ,5,5,29.1,full-modeled,47.7,14.0,1.64,0.48,14.0,35.4,4.0,57.1,66.1,57.1,4,330,CP,phi29 packaging motor; C-term res330 contacts dsDNA
+ClpX,AAA+ unfoldase,6PP5,6,6,33.4,full-modeled,50.6,66.8,1.51,2.0,66.8,46.1,61.4,23.5,26.0,23.5,63,414,direct,ClpXdN spiral; substrate peptide chain S
+gp17,ASCE terminase,3EZK,5,5,41.1,10-360,13.3,32.8,0.32,0.8,44.3,,,31.2,31.2,66.9,10,562,direct,"T4 terminase; CA-only; ATPase motor = res 10-360, nuclease 360-562 appended (dropped in the single-chain motor construct)"
+Rho,RecA RNA translocase,3ICE,6,6,37.0,175-414,28.4,41.4,0.77,1.12,38.3,20.9,49.9,46.1,46.8,65.9,1,415,,E. coli Rho closed ring + polyU RNA; motor = res 175-414 (N-terminal RNA-binding domain 1-130 dropped; matches the built rho_direct construct)
+FtsK,ASCE DNA translocase,6T8B,6,6,34.9,full-modeled,57.4,35.8,1.64,1.03,35.8,44.1,26.4,52.4,56.1,52.4,314,721,,P. aeruginosa FtsK motor (alpha/beta) + dsDNA
+spastin,AAA+ severing (meiotic clade),6P07,6,6,32.9,full-modeled,27.9,38.9,0.85,1.18,38.9,19.9,34.8,50.9,59.0,50.9,455,756,,Drosophila spastin AAA hexamer + substrate peptide
+katanin,AAA+ severing (meiotic clade),6UGD,6,6,34.3,full-modeled,30.6,39.1,0.89,1.14,39.1,22.0,35.3,44.7,49.1,44.7,156,472,,katanin p60 AAA hexamer + substrate peptide
+p97_VCP,AAA+ classic double-ring,5FTN,6,6,41.1,full-modeled,52.7,20.8,1.28,0.51,20.8,,,51.5,51.5,51.5,12,768,,"human p97; N-D1-D2, two stacked AAA rings"
+DnaB,RecA replicative helicase,4ESV,6,6,33.9,full-modeled,35.9,43.1,1.06,1.27,43.1,40.5,31.2,70.3,78.2,70.3,8,441,,Aquifex DnaB hexamer + ssDNA
+SV40_LTag,SF3 AAA+ helicase,1SVM,6,6,32.1,full-modeled,18.5,57.4,0.58,1.79,57.4,,,69.5,71.5,69.5,266,627,,SV40 large T antigen helicase domain hexamer
+HslU,AAA+ unfoldase,1DO0,6,6,34.0,full-modeled,46.0,38.9,1.35,1.14,38.9,,,32.2,32.5,32.2,2,443,,E. coli HslU hexamer (ClpX paralog)
+Vps4,AAA+ ESCRT,6BMF,6,5,32.6,full-modeled,25.2,37.9,0.77,1.16,37.9,18.1,38.4,51.8,75.6,51.8,112,437,,Vps4 spiral; 5 of 6 subunits ordered + substrate peptide
+T7_gp4,SF4 helicase,1E0J,6,6,33.9,full-modeled,42.1,23.6,1.24,0.7,23.6,,,51.3,53.8,51.3,262,549,,T7 gp4 helicase domain hexamer (2 models x 3 chains)

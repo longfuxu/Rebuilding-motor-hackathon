@@ -1,0 +1,20 @@
+{
+  "rho_direct_tiledMSA": {
+    "M1": "# M1: radius 29.4 A | radius_CV 0.02 | planarity_rms 0.5 A | compact_ring True | sequential_consistent: YES (designed order == spatial order)",
+    "M2": "# M2(ring): 6/6 arginine fingers engaged [designed(k->k+1)]  (forward 6/6, reverse 0/6)",
+    "M4": "# M4: designed-interface pLDDT mean 75.5 / min 74.3",
+    "construct_len": 1640,
+    "msa_depth": 11482,
+    "tiled_rows": 68893,
+    "wall_s": 62.0
+  },
+  "gp16_direct_tiledMSA": {
+    "M1": "# M1: radius 26.8 A | radius_CV 0.02 | planarity_rms 0.2 A | compact_ring True | sequential_consistent: YES (designed order == spatial order)",
+    "M2": "# M2(ring): 5/5 arginine fingers engaged [designed(k->k+1)]  (forward 5/5, reverse 0/5)",
+    "M4": "# M4: designed-interface pLDDT mean 68.1 / min 66.4",
+    "construct_len": 1835,
+    "msa_depth": 1167,
+    "tiled_rows": 5836,
+    "wall_s": 66.9
+  }
+}

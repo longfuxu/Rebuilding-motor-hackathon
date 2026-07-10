@@ -1,0 +1,33 @@
+{
+  "descriptors": [
+    "jams_channel (bool)",
+    "direct_gap_A (head-to-tail C->N gap, motor construct)"
+  ],
+  "rule": {
+    "if jams_channel": "CP",
+    "elif direct_gap_A <= 38.0": "direct",
+    "else": "diffusion (RFdiffusion connector)"
+  },
+  "thresholds": {
+    "GAP_DIRECT_A": 38.0,
+    "JAM_substrate_contact_A": 10.0,
+    "JAM_rel_radius": 0.5
+  },
+  "margin": {
+    "direct_max_gap": 32.2,
+    "diffusion_min_gap": 44.7
+  },
+  "decision_tree": "|--- direct_gap_A <= 38.45\n|   |--- class: direct\n|--- direct_gap_A >  38.45\n|   |--- jams_channel <= 0.50\n|   |   |--- class: diffusion\n|   |--- jams_channel >  0.50\n|   |   |--- class: CP\n",
+  "ground_truth_accuracy": "3/3",
+  "ground_truth_note": "GT = 3 multi-signal-validated anchors only; predicted method == method that closes.",
+  "counts": {
+    "CP": 1,
+    "direct": 3,
+    "diffusion": 9
+  },
+  "fold_observations": {
+    "Rho_direct": "Boltz tiled-MSA M2 6/6 (fwd6/rev0), M1 radius29.4 CV0.02 planar0.5, pLDDT75.5 -> ring closes",
+    "gp16_direct": "Boltz tiled-MSA M2 5/5 (fwd5/rev0), M1 radius26.8 CV0.02 planar0.2 -> ring ALSO closes, yet gp16-direct is the KNOWN-WRONG method (AF3 0/5; C-term contacts DNA 4A). => apo Boltz-tiled cannot adjudicate method choice; substrate-channel fouling is invisible to a protein-only fold."
+  },
+  "caveat": "diffusion class has 0 validated members; its one testable in-panel prediction (Rho) is unsupported. apo Boltz-tiled over-closes (gp16-direct 5/5) so it cannot rank methods -> the discriminating signal is the structure-derived substrate-fouling descriptor, cross-checked by AF3/MD/experiment, not a single apo fold."
+}

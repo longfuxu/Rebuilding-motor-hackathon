@@ -1,0 +1,14 @@
+name,family,pdb,oligo,ring_radius_A,motor,Cterm_to_axis_A,Cterm_rel_radius,Cterm_to_substrate_A,direct_gap_A,jams_channel,jam_reason,predicted_method,known_method,ground_truth
+gp16,ASCE packaging,7JQQ,5/5,29.1,full-modeled,14.0,0.48,4.0,57.1,True,C-term contacts substrate (4.0 A),CP,CP,closes: cp233 tiled-MSA 5/5 across 3 predictors + MD-stable + Rosetta; direct=AF3 0/5 scrambled
+ClpX,AAA+ unfoldase,6PP5,6/6,33.4,full-modeled,66.8,2.0,61.4,23.5,False,termini off-channel,direct,direct,closes: experimental: covalent single-chain ClpXdN pseudohexamer degrades at ~WT (Martin/Baker/Sauer 2005 Nature); retrospective good 6/6
+gp17,ASCE terminase,3EZK,5/5,41.1,10-360,32.8,0.8,,31.2,False,termini off-channel (no substrate modelled; foul-risk from geometry only),direct,direct,closes: direct fusion R245->E256 trans 5/5 tiled-MSA + single-seq 0/5 control
+Rho,RecA RNA translocase,3ICE,6/6,37.0,175-414,41.4,1.12,49.9,46.1,False,termini off-channel,diffusion,,
+FtsK,ASCE DNA translocase,6T8B,6/6,34.9,full-modeled,35.8,1.03,26.4,52.4,False,termini off-channel,diffusion,,
+spastin,AAA+ severing (meiotic clade),6P07,6/6,32.9,full-modeled,38.9,1.18,34.8,50.9,False,termini off-channel,diffusion,,
+katanin,AAA+ severing (meiotic clade),6UGD,6/6,34.3,full-modeled,39.1,1.14,35.3,44.7,False,termini off-channel,diffusion,,
+p97_VCP,AAA+ classic double-ring,5FTN,6/6,41.1,full-modeled,20.8,0.51,,51.5,False,termini off-channel (no substrate modelled; foul-risk from geometry only),diffusion,,
+DnaB,RecA replicative helicase,4ESV,6/6,33.9,full-modeled,43.1,1.27,31.2,70.3,False,termini off-channel,diffusion,,
+SV40_LTag,SF3 AAA+ helicase,1SVM,6/6,32.1,full-modeled,57.4,1.79,,69.5,False,termini off-channel (no substrate modelled; foul-risk from geometry only),diffusion,,
+HslU,AAA+ unfoldase,1DO0,6/6,34.0,full-modeled,38.9,1.14,,32.2,False,termini off-channel (no substrate modelled; foul-risk from geometry only),direct,,
+Vps4,AAA+ ESCRT,6BMF,5/6,32.6,full-modeled,37.9,1.16,38.4,51.8,False,termini off-channel,diffusion,,
+T7_gp4,SF4 helicase,1E0J,6/6,33.9,full-modeled,23.6,0.7,,51.3,False,termini off-channel (no substrate modelled; foul-risk from geometry only),diffusion,,
