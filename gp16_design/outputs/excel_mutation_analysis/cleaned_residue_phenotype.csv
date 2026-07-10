@@ -1,0 +1,50 @@
+residue,aa,interaction,axis,proxy_flagged,proxy_tags,n_mutants,mutants,best_pack,worst_pack,ala_frac,best_atp,worst_atp,tolerance_class,chem_note,insoluble,epistatic,predicted
+6,Phe,Active site cis,atp-active-site,False,,4,F6A;F6L;F6V;F6Y,1.0,0.2,,1.0,0.34,TOLERANT,chemistry-critical(only conservative sub tolerated),False,,"gate reside, affect Kd, Koff, kM"
+10,Gln,pRNA-NTD,grip,True,pRNA-contact,0,,,,,,,PREDICTED-ONLY,,False,,"Nucleotide exchange (Koff, Kon)"
+14,Ser,pRNA-NTD,grip,True,pRNA-contact,0,,,,,,,UNTESTED,,False,,
+16,Asp,pRNA-NTD,grip,True,pRNA-contact,0,,,,,,,UNTESTED,,False,,
+17,Arg,pRNA-NTD,grip,True,pRNA-contact,0,,,,,,,UNTESTED,,False,,
+25,Ala,Active site cis,atp-active-site,True,Walker-A,1,A25G,0.5,0.5,,,,PARTIAL,,False,,
+28,Ile,Active site cis,atp-active-site,True,Walker-A,1,I28G,0.0,0.0,,,,LETHAL,,False,,"Walker Blocker, affect Koff, Kon, potentially make disfulide mutant to lock in place, idione could work as competitve inhibitor?"
+32,Tyr,Active site cis,atp-active-site,False,,1,Y32V,0.0,0.0,,0.25,0.25,LETHAL,,False,,"Binding, Kd, Kon, Koff"
+41,Arg,pRNA-NTD,grip,True,pRNA-contact,0,,,,,,,PREDICTED-ONLY,,False,,Assembly
+53,R,glu switch,atp-active-site,False,,2,R53L;R53K,1.0,0.0,,1.0,0.0,TOLERANT,chemistry-critical(only conservative sub tolerated),False,,
+56,Lys,DNA-NTD,grip,True,DNA-contact,5,K56A;K56A;K56A;K56R;K56Q,1.0,1.0,1.0,1.0,0.9,TOLERANT,,False,,Reverse glutamate switch pathway (i.e. affects Kcat)?
+58,E,glu switch,atp-active-site,False,,1,E58A,0.2,0.2,0.2,1.0,1.0,SEVERE,,False,,
+61,Lys,DNA-NTD,atp-active-site,False,,0,,,,,,,UNTESTED,,False,,
+81,Lys,DNA-NTD,atp-active-site,False,,0,,,,,,,UNTESTED,,False,,
+83,Arg,DNA-NTD,grip,True,DNA-contact,2,R83A;R83K,,,,,,MADE-NO-DATA,,False,,
+84,Arg,DNA-NTD,atp-active-site,False,,0,,,,,,,UNTESTED,,False,,
+99,Ser,DNA-NTD,grip,True,DNA-contact,1,S99A,1.0,1.0,1.0,,,TOLERANT,,False,,MD predicted
+105,Lys,Active site: trans;First catalysis,atp-active-site,False,,2,K105A;K105R,0.0,0.0,0.0,0.25,0.128,SEVERE,,False,K105A[Q222A w/ K105A background]=0.0;K105A[Q222N w/ K105A background]=0.0;K105A[Q222K w/ K105A background]=0.0,Lysing finger (kcat)
+106,Ser,Active site: trans,atp-active-site,False,,2,S106A;S106T,0.0,0.0,0.0,0.08,0.05,LETHAL,,False,S106C[S106C and S106D - insoluble]=None;S106D[S106C and S106D - insoluble]=None,Chelates (kcat)
+124,Lys,DNA-NTD,atp-active-site,False,,0,,,,,,,UNTESTED,,False,,
+126,Asn,DNA-NTD,grip,True,DNA-contact,1,N126A,0.0,0.0,0.0,,,LETHAL,,False,,
+127,Ser,DNA-NTD,grip,True,DNA-contact,1,S127A,1.0,1.0,1.0,,,TOLERANT,,False,,MD predicted
+128,Asn,DNA-NTD,grip,True,DNA-contact,1,N128A,1.0,1.0,1.0,,,TOLERANT,,False,,
+129,Tyr,DNA-NTD,grip,True,DNA-contact;Y129-force,1,Y129A,0.2,0.2,0.2,,,SEVERE,,False,,MD predicted
+146,Arg,Active site: trans,atp-active-site,True,R146-transfinger,2,R146A;R146K,,,,,,PREDICTED-ONLY,,False,,Exchange residue
+148,Arg,Active site: trans;pRNA-NTD,grip,True,pRNA-contact,2,R148A;R148A,,,,,,MADE-NO-DATA,,False,,
+149,Glu,pRNA-NTD,grip,True,pRNA-contact,0,,,,,,,UNTESTED,,False,,
+150,Arg,Active site: trans;pRNA-NTD,grip,True,pRNA-contact,2,R150A;R150A,,,,,,MADE-NO-DATA,,False,,
+152,Arg,Active site: trans;pRNA-NTD,grip,True,pRNA-contact,2,R152K;R152A,,,0.4,0.4,0.4,PARTIAL,,False,,Arg antennae? Kon?
+157,Ser,First catalysis,atp-active-site,False,,1,S157A,0.4,0.4,0.4,,,PARTIAL,,False,,
+158,Asn,First catalysis,atp-active-site,False,,3,N158A;N158S;N158T,0.0,0.0,0.0,,,LETHAL,,False,,phosphate sensor - prolonged dwells?
+175,Asp,pRNA-NTD,grip,False,,0,,,,,,,PREDICTED-ONLY,,False,,Third contact only made at top of helix
+177,Asn,pRNA-NTD,grip,False,,0,,,,,,,PREDICTED-ONLY,,False,,Reducing maximum force
+178,Lys,pRNA-NTD,grip,False,,0,,,,,,,PREDICTED-ONLY,,False,,Not able to headful package
+222,Gln,First catalysis,atp-active-site,False,,3,Q222A;Q222N;Q222K,1.0,1.0,1.0,1.0,1.0,TOLERANT,,False,Q222A[Q222A w/ K105A background]=0.0;Q222N[Q222N w/ K105A background]=0.0;Q222K[Q222K w/ K105A background]=0.0,
+233,Lys,pRNA-CTD,grip,True,CP-site,2,K233A;K233R,1.0,1.0,1.0,,,TOLERANT,,False,K233A[K233A-R234A]=0.0,"MD predicted, make contact w/pRNA when CTD rotates in MD simulation, Longer dwells, not able to headful package"
+234,Arg,pRNA-CTD,grip,False,,2,R234A;R234K,0.0,0.0,0.0,,,LETHAL,,False,R234A[K233A-R234A]=0.0,
+236,Lys,pRNA-CTD,grip,False,,0,,,,,,,PREDICTED-ONLY,,False,,"Assembly, more slippage, longer/shorter dwell"
+239,Lys,pRNA-CTD,grip,True,pRNA-contact,0,,,,,,,UNTESTED,,False,,
+240,Phe,pRNA-CTD,grip,True,pRNA-contact,0,,,,,,,UNTESTED,,False,,
+254,Trp,pRNA-CTD,grip,True,pRNA-contact,0,,,,,,,UNTESTED,,False,,
+268,Asp,pRNA-CTD,grip,True,pRNA-contact,0,,,,,,,UNTESTED,,False,,
+294,Lys,DNA-CTD;Portal-CTD,grip,False,,1,K294A,0.0,0.0,0.0,,,LETHAL,,False,,"MD predicted, make contact w/portal when CTD rotates; Shorter dwells; more slippage"
+297,Tyr,Portal-CTD,grip,True,DNA-contact;CP-site,0,,,,,,,PREDICTED-ONLY,,False,,"Shorter dwells, more slippage, potential assembly defects"
+300,Arg,Portal-CTD,grip,False,,0,,,,,,,UNTESTED,,False,,
+301,Lys,Portal-CTD,grip,False,,0,,,,,,,UNTESTED,,False,,
+327,Arg,DNA-CTD,grip,False,,1,R327A,,,,,,MADE-NO-DATA,,False,,
+328,Lys,DNA-CTD,grip,False,,1,K328A,0.2,0.2,0.2,,,SEVERE,,False,,
+330,Arg,DNA-CTD;Portal-CTD,grip,True,DNA-contact,1,R330A,0.2,0.2,0.2,,,SEVERE,,False,,
