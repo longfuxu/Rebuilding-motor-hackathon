@@ -1,0 +1,625 @@
+{
+  "ranked": [
+    "de_M307W_K56F",
+    "de_M307W",
+    "de_M307W_Q222F",
+    "de_M307W_N128F",
+    "de_M307W_L289W",
+    "de_M307W_V100W",
+    "de_M307W_V100F",
+    "de_M307W_N128W",
+    "de_M307W_S99W",
+    "de_M307W_S127W",
+    "de_M307W_L289P",
+    "de_M307W_Q222W",
+    "de_M307W_S127F",
+    "de_M307W_L289F",
+    "de_M307W_S99F",
+    "de_M307W_I130F",
+    "de_M307W_K56W",
+    "de_M307W_I130W",
+    "de_M307W_S127Y"
+  ],
+  "top3": [
+    "de_M307W_K56F",
+    "de_M307W",
+    "de_M307W_Q222F"
+  ],
+  "noise": {
+    "coord": 0.06353055286129973,
+    "force": 0.014616449272323133,
+    "grip": 0.0625,
+    "soft": 0.008738750489109074
+  },
+  "wt": {
+    "coord": 0.002062,
+    "force": 4.7686,
+    "grip": 80,
+    "soft": 0.7667
+  },
+  "passers": [
+    "de_M307W_K56W",
+    "de_M307W_L289F",
+    "de_M307W_S99W",
+    "de_M307W_N128W",
+    "de_M307W",
+    "de_M307W_Q222F",
+    "de_M307W_S127W",
+    "de_M307W_V100F",
+    "de_M307W_L289W",
+    "de_M307W_K56F",
+    "de_M307W_L289P",
+    "de_M307W_N128F",
+    "de_M307W_S99F",
+    "de_M307W_S127F",
+    "de_M307W_I130F",
+    "de_M307W_V100W",
+    "de_M307W_Q222W"
+  ],
+  "weights": {
+    "coord": 0.3,
+    "force": 0.3,
+    "grip": 0.2,
+    "soft": 0.2
+  },
+  "thresholds": {
+    "POCKET_MAX": 2.0,
+    "SOFT_MIN": 0.85
+  },
+  "per_variant": {
+    "de_M307W_K56W": {
+      "power_score": -1.417928048073012,
+      "gains": {
+        "coord": -0.06401551891367602,
+        "force": -0.06410686574676003,
+        "grip": -0.0125,
+        "soft": -0.09416981870353468
+      },
+      "soft_ret": 0.9058301812964653,
+      "pocket": 0.592,
+      "gate": {
+        "G1_M1": true,
+        "G2_M2": true,
+        "G3_M5": true,
+        "G4_soft": true,
+        "G5_biochem": true
+      },
+      "severe_hit": [],
+      "tolerant_hit": [
+        56
+      ],
+      "muts": "M307W_K56W",
+      "flag": "",
+      "metrics": {
+        "prs_ATP_NN_coupling": 0.00193,
+        "len_ATP_Y129_DNA": 5.0743,
+        "DNA_inward_total": 79,
+        "breathing_top20": 0.6945
+      }
+    },
+    "de_M307W_L289F": {
+      "power_score": -0.4676414564602591,
+      "gains": {
+        "coord": -0.11154219204655672,
+        "force": 0.017929790714255878,
+        "grip": -0.05,
+        "soft": 0.008217034041998137
+      },
+      "soft_ret": 1.008217034041998,
+      "pocket": 0.342,
+      "gate": {
+        "G1_M1": true,
+        "G2_M2": true,
+        "G3_M5": true,
+        "G4_soft": true,
+        "G5_biochem": true
+      },
+      "severe_hit": [],
+      "tolerant_hit": [],
+      "muts": "M307W_L289F",
+      "flag": "",
+      "metrics": {
+        "prs_ATP_NN_coupling": 0.001832,
+        "len_ATP_Y129_DNA": 4.6831,
+        "DNA_inward_total": 76,
+        "breathing_top20": 0.773
+      }
+    },
+    "de_M307W_S99W": {
+      "power_score": -0.00906849129444863,
+      "gains": {
+        "coord": -0.038312318137730395,
+        "force": 0.011198255253114098,
+        "grip": 0.0,
+        "soft": -0.018260075648884846
+      },
+      "soft_ret": 0.9817399243511151,
+      "pocket": 0.537,
+      "gate": {
+        "G1_M1": true,
+        "G2_M2": true,
+        "G3_M5": true,
+        "G4_soft": true,
+        "G5_biochem": true
+      },
+      "severe_hit": [],
+      "tolerant_hit": [
+        99
+      ],
+      "muts": "M307W_S99W",
+      "flag": "",
+      "metrics": {
+        "prs_ATP_NN_coupling": 0.001983,
+        "len_ATP_Y129_DNA": 4.7152,
+        "DNA_inward_total": 80,
+        "breathing_top20": 0.7527
+      }
+    },
+    "de_M307W_N128W": {
+      "power_score": 0.08746156364718918,
+      "gains": {
+        "coord": -0.055286129970902015,
+        "force": 0.0009646437109424018,
+        "grip": 0.0,
+        "soft": 0.04017216642754655
+      },
+      "soft_ret": 1.0401721664275465,
+      "pocket": 0.353,
+      "gate": {
+        "G1_M1": true,
+        "G2_M2": true,
+        "G3_M5": true,
+        "G4_soft": true,
+        "G5_biochem": true
+      },
+      "severe_hit": [],
+      "tolerant_hit": [
+        128
+      ],
+      "muts": "M307W_N128W",
+      "flag": "",
+      "metrics": {
+        "prs_ATP_NN_coupling": 0.001948,
+        "len_ATP_Y129_DNA": 4.764,
+        "DNA_inward_total": 80,
+        "breathing_top20": 0.7975
+      }
+    },
+    "de_M307W": {
+      "power_score": 0.7732695510693401,
+      "gains": {
+        "coord": 0.06353055286129973,
+        "force": 0.034685232563016394,
+        "grip": -0.025,
+        "soft": -0.017347071866440706
+      },
+      "soft_ret": 0.9826529281335593,
+      "pocket": 0.542,
+      "gate": {
+        "G1_M1": true,
+        "G2_M2": true,
+        "G3_M5": true,
+        "G4_soft": true,
+        "G5_biochem": true
+      },
+      "severe_hit": [],
+      "tolerant_hit": [],
+      "muts": "M307W",
+      "flag": "background",
+      "metrics": {
+        "prs_ATP_NN_coupling": 0.002193,
+        "len_ATP_Y129_DNA": 4.6032,
+        "DNA_inward_total": 78,
+        "breathing_top20": 0.7534
+      }
+    },
+    "de_M307W_Q222F": {
+      "power_score": 0.6459110361201422,
+      "gains": {
+        "coord": 0.029097963142580095,
+        "force": 0.03353185421297663,
+        "grip": -0.0375,
+        "soft": 0.011477761836441787
+      },
+      "soft_ret": 1.011477761836442,
+      "pocket": 0.585,
+      "gate": {
+        "G1_M1": true,
+        "G2_M2": true,
+        "G3_M5": true,
+        "G4_soft": true,
+        "G5_biochem": true
+      },
+      "severe_hit": [],
+      "tolerant_hit": [
+        222
+      ],
+      "muts": "M307W_Q222F",
+      "flag": "",
+      "metrics": {
+        "prs_ATP_NN_coupling": 0.002122,
+        "len_ATP_Y129_DNA": 4.6087,
+        "DNA_inward_total": 77,
+        "breathing_top20": 0.7755
+      }
+    },
+    "de_M307W_I130W": {
+      "power_score": null,
+      "gains": {
+        "coord": 0.08777885548011648,
+        "force": 0.012183869479511908,
+        "grip": 0.0,
+        "soft": -0.5796269727403157
+      },
+      "soft_ret": 0.4203730272596843,
+      "pocket": 0.593,
+      "gate": {
+        "G1_M1": true,
+        "G2_M2": true,
+        "G3_M5": true,
+        "G4_soft": false,
+        "G5_biochem": true
+      },
+      "severe_hit": [],
+      "tolerant_hit": [],
+      "muts": "M307W_I130W",
+      "flag": "",
+      "metrics": {
+        "prs_ATP_NN_coupling": 0.002243,
+        "len_ATP_Y129_DNA": 4.7105,
+        "DNA_inward_total": 80,
+        "breathing_top20": 0.3223
+      }
+    },
+    "de_M307W_S127W": {
+      "power_score": -0.08941875393311159,
+      "gains": {
+        "coord": 0.017458777885548015,
+        "force": -0.05928364719204802,
+        "grip": 0.0625,
+        "soft": -0.009390896047998037
+      },
+      "soft_ret": 0.990609103952002,
+      "pocket": 0.369,
+      "gate": {
+        "G1_M1": true,
+        "G2_M2": true,
+        "G3_M5": true,
+        "G4_soft": true,
+        "G5_biochem": true
+      },
+      "severe_hit": [],
+      "tolerant_hit": [
+        127
+      ],
+      "muts": "M307W_S127W",
+      "flag": "",
+      "metrics": {
+        "prs_ATP_NN_coupling": 0.002098,
+        "len_ATP_Y129_DNA": 5.0513,
+        "DNA_inward_total": 85,
+        "breathing_top20": 0.7595
+      }
+    },
+    "de_M307W_V100F": {
+      "power_score": 0.13510859521946872,
+      "gains": {
+        "coord": 0.04073714839961196,
+        "force": 0.028163402256427574,
+        "grip": -0.1,
+        "soft": -0.03782444241554718
+      },
+      "soft_ret": 0.9621755575844528,
+      "pocket": 0.594,
+      "gate": {
+        "G1_M1": true,
+        "G2_M2": true,
+        "G3_M5": true,
+        "G4_soft": true,
+        "G5_biochem": true
+      },
+      "severe_hit": [],
+      "tolerant_hit": [],
+      "muts": "M307W_V100F",
+      "flag": "",
+      "metrics": {
+        "prs_ATP_NN_coupling": 0.002146,
+        "len_ATP_Y129_DNA": 4.6343,
+        "DNA_inward_total": 72,
+        "breathing_top20": 0.7377
+      }
+    },
+    "de_M307W_S127Y": {
+      "power_score": null,
+      "gains": {
+        "coord": -0.03394762366634344,
+        "force": -0.06268087069580164,
+        "grip": 0.0625,
+        "soft": -0.4308073562019043
+      },
+      "soft_ret": 0.5691926437980958,
+      "pocket": 0.358,
+      "gate": {
+        "G1_M1": true,
+        "G2_M2": true,
+        "G3_M5": true,
+        "G4_soft": false,
+        "G5_biochem": true
+      },
+      "severe_hit": [],
+      "tolerant_hit": [
+        127
+      ],
+      "muts": "M307W_S127Y",
+      "flag": "",
+      "metrics": {
+        "prs_ATP_NN_coupling": 0.001992,
+        "len_ATP_Y129_DNA": 5.0675,
+        "DNA_inward_total": 85,
+        "breathing_top20": 0.4364
+      }
+    },
+    "de_M307W_L289W": {
+      "power_score": 0.4266465286559064,
+      "gains": {
+        "coord": 0.05480116391852562,
+        "force": 0.01895734597156394,
+        "grip": -0.0625,
+        "soft": -0.011216903612886464
+      },
+      "soft_ret": 0.9887830963871136,
+      "pocket": 0.518,
+      "gate": {
+        "G1_M1": true,
+        "G2_M2": true,
+        "G3_M5": true,
+        "G4_soft": true,
+        "G5_biochem": true
+      },
+      "severe_hit": [],
+      "tolerant_hit": [],
+      "muts": "M307W_L289W",
+      "flag": "",
+      "metrics": {
+        "prs_ATP_NN_coupling": 0.002175,
+        "len_ATP_Y129_DNA": 4.6782,
+        "DNA_inward_total": 75,
+        "breathing_top20": 0.7581
+      }
+    },
+    "de_M307W_K56F": {
+      "power_score": 1.0558444182523967,
+      "gains": {
+        "coord": 0.0009699321047525857,
+        "force": 0.02996686658558068,
+        "grip": 0.0625,
+        "soft": 0.048910916916655764
+      },
+      "soft_ret": 1.0489109169166557,
+      "pocket": 0.501,
+      "gate": {
+        "G1_M1": true,
+        "G2_M2": true,
+        "G3_M5": true,
+        "G4_soft": true,
+        "G5_biochem": true
+      },
+      "severe_hit": [],
+      "tolerant_hit": [
+        56
+      ],
+      "muts": "M307W_K56F",
+      "flag": "",
+      "metrics": {
+        "prs_ATP_NN_coupling": 0.002064,
+        "len_ATP_Y129_DNA": 4.6257,
+        "DNA_inward_total": 85,
+        "breathing_top20": 0.8042
+      }
+    },
+    "de_M307W_L289P": {
+      "power_score": -0.26964893582940597,
+      "gains": {
+        "coord": -0.01163918525703208,
+        "force": -0.0016357002055109643,
+        "grip": -0.0625,
+        "soft": -0.023346811008217068
+      },
+      "soft_ret": 0.9766531889917829,
+      "pocket": 0.575,
+      "gate": {
+        "G1_M1": true,
+        "G2_M2": true,
+        "G3_M5": true,
+        "G4_soft": true,
+        "G5_biochem": true
+      },
+      "severe_hit": [],
+      "tolerant_hit": [],
+      "muts": "M307W_L289P",
+      "flag": "",
+      "metrics": {
+        "prs_ATP_NN_coupling": 0.002038,
+        "len_ATP_Y129_DNA": 4.7764,
+        "DNA_inward_total": 75,
+        "breathing_top20": 0.7488
+      }
+    },
+    "de_M307W_N128F": {
+      "power_score": 0.5349655933666989,
+      "gains": {
+        "coord": -0.03734238603297781,
+        "force": 0.010946609067650888,
+        "grip": 0.0125,
+        "soft": 0.07356201904265032
+      },
+      "soft_ret": 1.0735620190426503,
+      "pocket": 0.259,
+      "gate": {
+        "G1_M1": true,
+        "G2_M2": true,
+        "G3_M5": true,
+        "G4_soft": true,
+        "G5_biochem": true
+      },
+      "severe_hit": [],
+      "tolerant_hit": [
+        128
+      ],
+      "muts": "M307W_N128F",
+      "flag": "",
+      "metrics": {
+        "prs_ATP_NN_coupling": 0.001985,
+        "len_ATP_Y129_DNA": 4.7164,
+        "DNA_inward_total": 81,
+        "breathing_top20": 0.8231
+      }
+    },
+    "de_M307W_S99F": {
+      "power_score": -0.5631401799867006,
+      "gains": {
+        "coord": -0.03443258971871963,
+        "force": -0.015203623705070625,
+        "grip": -0.0625,
+        "soft": -0.024911960349550025
+      },
+      "soft_ret": 0.97508803965045,
+      "pocket": 0.55,
+      "gate": {
+        "G1_M1": true,
+        "G2_M2": true,
+        "G3_M5": true,
+        "G4_soft": true,
+        "G5_biochem": true
+      },
+      "severe_hit": [],
+      "tolerant_hit": [
+        99
+      ],
+      "muts": "M307W_S99F",
+      "flag": "",
+      "metrics": {
+        "prs_ATP_NN_coupling": 0.001991,
+        "len_ATP_Y129_DNA": 4.8411,
+        "DNA_inward_total": 75,
+        "breathing_top20": 0.7476
+      }
+    },
+    "de_M307W_S127F": {
+      "power_score": -0.2921035260892372,
+      "gains": {
+        "coord": -0.04510184287099913,
+        "force": -0.027681080400956185,
+        "grip": 0.0625,
+        "soft": -0.03652015129776969
+      },
+      "soft_ret": 0.9634798487022304,
+      "pocket": 0.7,
+      "gate": {
+        "G1_M1": true,
+        "G2_M2": true,
+        "G3_M5": true,
+        "G4_soft": true,
+        "G5_biochem": true
+      },
+      "severe_hit": [],
+      "tolerant_hit": [
+        127
+      ],
+      "muts": "M307W_S127F",
+      "flag": "",
+      "metrics": {
+        "prs_ATP_NN_coupling": 0.001969,
+        "len_ATP_Y129_DNA": 4.9006,
+        "DNA_inward_total": 85,
+        "breathing_top20": 0.7387
+      }
+    },
+    "de_M307W_I130F": {
+      "power_score": -0.6447419507299721,
+      "gains": {
+        "coord": -0.08147429679922404,
+        "force": -0.0021180220609821653,
+        "grip": -0.0625,
+        "soft": -0.01082561627755326
+      },
+      "soft_ret": 0.9891743837224467,
+      "pocket": 0.348,
+      "gate": {
+        "G1_M1": true,
+        "G2_M2": true,
+        "G3_M5": true,
+        "G4_soft": true,
+        "G5_biochem": true
+      },
+      "severe_hit": [],
+      "tolerant_hit": [],
+      "muts": "M307W_I130F",
+      "flag": "",
+      "metrics": {
+        "prs_ATP_NN_coupling": 0.001894,
+        "len_ATP_Y129_DNA": 4.7787,
+        "DNA_inward_total": 75,
+        "breathing_top20": 0.7584
+      }
+    },
+    "de_M307W_V100W": {
+      "power_score": 0.3674770863053313,
+      "gains": {
+        "coord": 0.010669253152279285,
+        "force": -0.007591326594807702,
+        "grip": 0.0,
+        "soft": 0.03221599060910388
+      },
+      "soft_ret": 1.032215990609104,
+      "pocket": 0.54,
+      "gate": {
+        "G1_M1": true,
+        "G2_M2": true,
+        "G3_M5": true,
+        "G4_soft": true,
+        "G5_biochem": true
+      },
+      "severe_hit": [],
+      "tolerant_hit": [],
+      "muts": "M307W_V100W",
+      "flag": "",
+      "metrics": {
+        "prs_ATP_NN_coupling": 0.002084,
+        "len_ATP_Y129_DNA": 4.8048,
+        "DNA_inward_total": 80,
+        "breathing_top20": 0.7914
+      }
+    },
+    "de_M307W_Q222W": {
+      "power_score": -0.27299303024032656,
+      "gains": {
+        "coord": -0.049466537342386076,
+        "force": -0.014113156901396525,
+        "grip": 0.0,
+        "soft": -0.0046954480239990186
+      },
+      "soft_ret": 0.995304551976001,
+      "pocket": 0.466,
+      "gate": {
+        "G1_M1": true,
+        "G2_M2": true,
+        "G3_M5": true,
+        "G4_soft": true,
+        "G5_biochem": true
+      },
+      "severe_hit": [],
+      "tolerant_hit": [
+        222
+      ],
+      "muts": "M307W_Q222W",
+      "flag": "",
+      "metrics": {
+        "prs_ATP_NN_coupling": 0.00196,
+        "len_ATP_Y129_DNA": 4.8359,
+        "DNA_inward_total": 80,
+        "breathing_top20": 0.7631
+      }
+    }
+  }
+}

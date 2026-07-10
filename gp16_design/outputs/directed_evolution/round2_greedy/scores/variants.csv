@@ -1,0 +1,24 @@
+name,muts,n_mut,rationale,flag,seq_len
+cp233_WT,,0,wild-type reference,,1750
+cp233_WTrep,,0,wild-type replicate (noise floor),,1750
+de_M307W,M307W,1,round-1 winner = the fixed BACKGROUND,background,1750
+de_M307W_K56F,M307W_K56F,2,M307W background + K56F (biochem-tolerant second site),,1750
+de_M307W_K56W,M307W_K56W,2,M307W background + K56W (biochem-tolerant second site),,1750
+de_M307W_S99F,M307W_S99F,2,M307W background + S99F (biochem-tolerant second site),,1750
+de_M307W_S99W,M307W_S99W,2,M307W background + S99W (biochem-tolerant second site),,1750
+de_M307W_V100F,M307W_V100F,2,M307W background + V100F (untested-rigidify second site),,1750
+de_M307W_V100W,M307W_V100W,2,M307W background + V100W (untested-rigidify second site),,1750
+de_M307W_S127F,M307W_S127F,2,M307W background + S127F (biochem-tolerant second site),,1750
+de_M307W_S127W,M307W_S127W,2,M307W background + S127W (biochem-tolerant second site),,1750
+de_M307W_S127Y,M307W_S127Y,2,M307W background + S127Y (biochem-tolerant second site),,1750
+de_M307W_N128F,M307W_N128F,2,M307W background + N128F (biochem-tolerant second site),,1750
+de_M307W_N128W,M307W_N128W,2,M307W background + N128W (biochem-tolerant second site),,1750
+de_M307W_I130F,M307W_I130F,2,M307W background + I130F (untested-rigidify second site),,1750
+de_M307W_I130W,M307W_I130W,2,M307W background + I130W (untested-rigidify second site),,1750
+de_M307W_Q222F,M307W_Q222F,2,M307W background + Q222F (biochem-tolerant second site),,1750
+de_M307W_Q222W,M307W_Q222W,2,M307W background + Q222W (biochem-tolerant second site),,1750
+de_M307W_K233F,M307W_K233F,2,M307W background + K233F (biochem-tolerant second site),,1750
+de_M307W_K233W,M307W_K233W,2,M307W background + K233W (biochem-tolerant second site),,1750
+de_M307W_L289P,M307W_L289P,2,M307W background + L289P (untested-rigidify second site),,1750
+de_M307W_L289F,M307W_L289F,2,M307W background + L289F (untested-rigidify second site),,1750
+de_M307W_L289W,M307W_L289W,2,M307W background + L289W (untested-rigidify second site),,1750
