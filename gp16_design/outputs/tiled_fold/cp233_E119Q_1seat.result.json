@@ -1,0 +1,43 @@
+{
+  "name": "cp233_E119Q_1seat",
+  "ok": true,
+  "wall_s": 54.6,
+  "metrics": {
+    "confidence_scores": [
+      0.6060201525688171
+    ],
+    "ptm_scores": [
+      0.37007638812065125
+    ],
+    "iptm_scores": [
+      0.0
+    ],
+    "complex_plddt_scores": [
+      0.6650060415267944
+    ],
+    "complex_pde_scores": [
+      1.973119854927063
+    ]
+  },
+  "M2": "# M2(ring): 5/5 arginine fingers engaged [mirror(k->k-1)]  (forward 0/5, reverse 5/5)",
+  "M1": "# M1: radius 26.5 A | radius_CV 0.01 | planarity_rms 0.3 A | compact_ring True | sequential_consistent: YES (designed order == spatial order)",
+  "M4": "# M4: designed-interface pLDDT mean 64.4 / min 63.2",
+  "score_full": "# /Users/longfu/Developer/claude-science-hackthon/.claude/worktrees/export-gp16-results/gp16_design/outputs/tiled_fold/cp233_E119Q_1seat.cif   subunits: ['A1', 'A2', 'A3', 'A4', 'A5']\n  donor -> acceptor  R146_min_A  engaged  iface_pLDDT  note\n     A1 ->       A2        5.89     True         64.5  \n     A2 ->       A3        5.77     True         64.4  \n     A3 ->       A4        5.86     True         64.7  \n     A4 ->       A5        6.24     True         63.2  \n     A5 ->       A1        5.58     True         65.0  \n# M2: 5/5 DESIGNED interfaces engaged (<8.0 A)  ->  pass = >=4/5 for a pentamer\n# M1: radius 26.5 A | radius_CV 0.01 | planarity_rms 0.3 A | compact_ring True | sequential_consistent: YES (designed order == spatial order)\n# M4: designed-interface pLDDT mean 64.4 / min 63.2\n",
+  "score_err": "",
+  "copies": "A:1-352,A:353-704,A:705-1056,A:1057-1408,A:1409-1750",
+  "r146_incopy": 255,
+  "walker_incopy": "133-140",
+  "monomer_len": 327,
+  "msa_depth": 1167,
+  "tiled_rows": 5836,
+  "construct_len": 1750,
+  "ring": {
+    "engaged": 5,
+    "n": 5,
+    "handedness": "mirror(k->k-1)",
+    "m2_forward": 0,
+    "m2_reverse": 5,
+    "score_forward": "# /Users/longfu/Developer/claude-science-hackthon/.claude/worktrees/export-gp16-results/gp16_design/outputs/tiled_fold/cp233_E119Q_1seat.cif   subunits: ['A1', 'A2', 'A3', 'A4', 'A5']\n  donor -> acceptor  R146_min_A  engaged  iface_pLDDT  note\n     A1 ->       A2       52.05    False         64.6  nearest=A5@5.6(scrambled)\n     A2 ->       A3       51.90    False         64.4  nearest=A1@6.2(scrambled)\n     A3 ->       A4       52.01    False         64.5  nearest=A2@5.9(scrambled)\n     A4 ->       A5       51.90    False         65.1  nearest=A3@5.8(scrambled)\n     A5 ->       A1       51.94    False         63.1  nearest=A4@5.9(scrambled)\n# M2: 0/5 DESIGNED interfaces engaged (<8.0 A)  ->  pass = >=4/5 for a pentamer\n# M1: radius 26.5 A | radius_CV 0.01 | planarity_rms 0.3 A | compact_ring True | sequential_consistent: YES (designed order == spatial order)\n# M4: designed-interface pLDDT mean 64.4 / min 63.1\n",
+    "score_reverse": "# /Users/longfu/Developer/claude-science-hackthon/.claude/worktrees/export-gp16-results/gp16_design/outputs/tiled_fold/cp233_E119Q_1seat.cif   subunits: ['A1', 'A2', 'A3', 'A4', 'A5']\n  donor -> acceptor  R146_min_A  engaged  iface_pLDDT  note\n     A1 ->       A2        5.89     True         64.5  \n     A2 ->       A3        5.77     True         64.4  \n     A3 ->       A4        5.86     True         64.7  \n     A4 ->       A5        6.24     True         63.2  \n     A5 ->       A1        5.58     True         65.0  \n# M2: 5/5 DESIGNED interfaces engaged (<8.0 A)  ->  pass = >=4/5 for a pentamer\n# M1: radius 26.5 A | radius_CV 0.01 | planarity_rms 0.3 A | compact_ring True | sequential_consistent: YES (designed order == spatial order)\n# M4: designed-interface pLDDT mean 64.4 / min 63.2\n"
+  }
+}

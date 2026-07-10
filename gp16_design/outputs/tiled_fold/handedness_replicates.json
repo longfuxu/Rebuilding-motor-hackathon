@@ -1,0 +1,48 @@
+{
+  "cp233_WT": [
+    {
+      "rep": 0,
+      "engaged": 5,
+      "hand": "designed(k->k+1)",
+      "fwd": 5,
+      "rev": 0
+    },
+    {
+      "rep": 1,
+      "engaged": 5,
+      "hand": "mirror(k->k-1)",
+      "fwd": 0,
+      "rev": 5
+    },
+    {
+      "rep": 2,
+      "engaged": 5,
+      "hand": "designed(k->k+1)",
+      "fwd": 5,
+      "rev": 0
+    }
+  ],
+  "cp233_E119Q_1seat": [
+    {
+      "rep": 0,
+      "engaged": 5,
+      "hand": "mirror(k->k-1)",
+      "fwd": 0,
+      "rev": 5
+    },
+    {
+      "rep": 1,
+      "engaged": 5,
+      "hand": "designed(k->k+1)",
+      "fwd": 5,
+      "rev": 0
+    },
+    {
+      "rep": 2,
+      "engaged": 5,
+      "hand": "designed(k->k+1)",
+      "fwd": 5,
+      "rev": 0
+    }
+  ]
+}
