@@ -1,0 +1,83 @@
+{
+  "system": "design",
+  "structure": "gp16_design/md/openmm_validation/inputs/C_design.cif",
+  "mean_dG_bind": -192.24498894263888,
+  "std_dG_bind": 14.127323645176737,
+  "rows": [
+    {
+      "dG_bind": -198.48925999319636,
+      "dE_MM": -898.5982102344278,
+      "dG_solv": 700.1089502412315,
+      "E_min_start": 53302.10871036633,
+      "E_min_final": -29483.884515335012,
+      "nres_A": 342,
+      "nres_B": 342,
+      "natom_cx": 10988,
+      "system": "design",
+      "donor": "A1",
+      "acceptor": "A2",
+      "R146_min_A": 7.32,
+      "seconds": 40.6
+    },
+    {
+      "dG_bind": -215.2212210194939,
+      "dE_MM": -935.9229865197976,
+      "dG_solv": 720.7017655003037,
+      "E_min_start": 33654.88902158098,
+      "E_min_final": -29504.11983413071,
+      "nres_A": 342,
+      "nres_B": 342,
+      "natom_cx": 10988,
+      "system": "design",
+      "donor": "A2",
+      "acceptor": "A3",
+      "R146_min_A": 7.31,
+      "seconds": 45.3
+    },
+    {
+      "dG_bind": -188.98795227083792,
+      "dE_MM": -831.1763923066846,
+      "dG_solv": 642.1884400358467,
+      "E_min_start": 43247.553068438065,
+      "E_min_final": -29414.216481329557,
+      "nres_A": 342,
+      "nres_B": 342,
+      "natom_cx": 10988,
+      "system": "design",
+      "donor": "A3",
+      "acceptor": "A4",
+      "R146_min_A": 7.44,
+      "seconds": 41.0
+    },
+    {
+      "dG_bind": -185.7188394374034,
+      "dE_MM": -861.5198169566193,
+      "dG_solv": 675.8009775192158,
+      "E_min_start": 32027.72346548005,
+      "E_min_final": -29386.463183442567,
+      "nres_A": 342,
+      "nres_B": 342,
+      "natom_cx": 10988,
+      "system": "design",
+      "donor": "A4",
+      "acceptor": "A5",
+      "R146_min_A": 7.59,
+      "seconds": 37.9
+    },
+    {
+      "dG_bind": -172.80767199226284,
+      "dE_MM": -845.3202188926934,
+      "dG_solv": 672.5125469004306,
+      "E_min_start": 40431.35907562058,
+      "E_min_final": -29414.21799732778,
+      "nres_A": 342,
+      "nres_B": 342,
+      "natom_cx": 10988,
+      "system": "design",
+      "donor": "A5",
+      "acceptor": "A1",
+      "R146_min_A": 7.32,
+      "seconds": 41.1
+    }
+  ]
+}

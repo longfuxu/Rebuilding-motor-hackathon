@@ -1,0 +1,83 @@
+{
+  "system": "native",
+  "structure": "gp16_design/md/openmm_validation/inputs/A_apo.pdb",
+  "mean_dG_bind": -174.32389895003834,
+  "std_dG_bind": 7.481724127217052,
+  "rows": [
+    {
+      "dG_bind": -170.89449466396763,
+      "dE_MM": -460.4307246424414,
+      "dG_solv": 289.5362299784738,
+      "E_min_start": 3539744.9215002838,
+      "E_min_final": -29587.458956979157,
+      "nres_A": 332,
+      "nres_B": 332,
+      "natom_cx": 10928,
+      "system": "native",
+      "donor": "A",
+      "acceptor": "B",
+      "R146_min_A": 6.57,
+      "seconds": 33.7
+    },
+    {
+      "dG_bind": -178.06536608948772,
+      "dE_MM": -490.5004267853801,
+      "dG_solv": 312.4350606958924,
+      "E_min_start": 19580599.138000254,
+      "E_min_final": -29556.164023170677,
+      "nres_A": 332,
+      "nres_B": 332,
+      "natom_cx": 10928,
+      "system": "native",
+      "donor": "B",
+      "acceptor": "C",
+      "R146_min_A": 6.62,
+      "seconds": 42.2
+    },
+    {
+      "dG_bind": -178.5716144858543,
+      "dE_MM": -480.6389858943021,
+      "dG_solv": 302.0673714084478,
+      "E_min_start": 4963891.724869651,
+      "E_min_final": -29630.566670539425,
+      "nres_A": 332,
+      "nres_B": 332,
+      "natom_cx": 10928,
+      "system": "native",
+      "donor": "C",
+      "acceptor": "D",
+      "R146_min_A": 6.53,
+      "seconds": 56.1
+    },
+    {
+      "dG_bind": -182.6666909780306,
+      "dE_MM": -537.6824592997364,
+      "dG_solv": 355.01576832170576,
+      "E_min_start": 91453047.74729991,
+      "E_min_final": -29608.34697463877,
+      "nres_A": 332,
+      "nres_B": 332,
+      "natom_cx": 10928,
+      "system": "native",
+      "donor": "D",
+      "acceptor": "E",
+      "R146_min_A": 6.64,
+      "seconds": 38.6
+    },
+    {
+      "dG_bind": -161.42132853285148,
+      "dE_MM": -456.154556934247,
+      "dG_solv": 294.73322840139554,
+      "E_min_start": 16950171.53336215,
+      "E_min_final": -29579.855713354416,
+      "nres_A": 332,
+      "nres_B": 332,
+      "natom_cx": 10928,
+      "system": "native",
+      "donor": "E",
+      "acceptor": "A",
+      "R146_min_A": 6.69,
+      "seconds": 47.9
+    }
+  ]
+}
