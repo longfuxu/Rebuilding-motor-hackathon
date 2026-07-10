@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rebuilding a Molecular Motor — gp16 single-chain ring</title>
+<style>
+  :root{
+    --ground:#0b0f14; --ground-2:#121a20; --panel:#0f161c;
+    --ink:#eef4f3; --ink-dim:#9fb2b0; --ink-faint:#67807d;
+    --accent:#37d3c5;         /* molecular teal */
+    --amber:#e6ab3a;          /* ATP gold */
+    --coral:#ec6a86;          /* R146 / special subunit */
+    --line:rgba(120,180,172,.16);
+    --card:#f6f8f7;
+    --font-display:"Helvetica Neue","Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    --font-mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    background:var(--ground); color:var(--ink);
+    font-family:var(--font-display);
+    overflow:hidden; -webkit-font-smoothing:antialiased;
+  }
+  .deck{position:fixed;inset:0}
+
+  /* subtle molecular grid backdrop */
+  .deck::before{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:
+      radial-gradient(1100px 620px at 82% -8%, rgba(55,211,197,.10), transparent 60%),
+      radial-gradient(900px 600px at 8% 112%, rgba(230,171,58,.06), transparent 60%);
+    z-index:0;
+  }
+
+  .slide{
+    position:absolute;inset:0;z-index:1;
+    display:none;flex-direction:column;
+    padding:clamp(28px,4.4vw,76px) clamp(34px,5.2vw,96px);
+    opacity:0;transition:opacity .42s ease;
+    overflow:hidden;                 /* figure clips instead of covering text */
+  }
+  .slide > .kicker, .slide > h1, .slide > h2, .slide > .chips, .slide > .foot{flex:0 0 auto}
+  .slide.active{display:flex;opacity:1}
+  @media (prefers-reduced-motion:reduce){.slide{transition:none}}
+
+  /* ---- header ---- */
+  .kicker{
+    font-family:var(--font-mono);font-size:clamp(11px,1.15vw,16px);
+    letter-spacing:.22em;text-transform:uppercase;color:var(--accent);
+    display:flex;align-items:center;gap:.7em;
+  }
+  .kicker::before{content:"";width:26px;height:2px;background:var(--accent);display:inline-block}
+  .kicker .dim{color:var(--ink-faint);letter-spacing:.18em}
+
+  h1{
+    font-size:clamp(30px,5.6vw,84px);line-height:1.02;font-weight:800;
+    letter-spacing:-.02em;text-wrap:balance;margin-top:.28em;
+  }
+  h2{
+    font-size:clamp(26px,3.9vw,58px);line-height:1.05;font-weight:800;
+    letter-spacing:-.018em;text-wrap:balance;margin-top:.3em;max-width:20ch;
+  }
+  .accent{color:var(--accent)} .amber{color:var(--amber)} .coral{color:var(--coral)}
+
+  .lead{font-size:clamp(16px,1.9vw,27px);color:var(--ink-dim);line-height:1.42;max-width:34ch;margin-top:.7em;font-weight:400}
+  .meta{margin-top:auto;font-size:clamp(13px,1.35vw,19px);color:var(--ink-dim)}
+  .meta strong{color:var(--ink);font-weight:600}
+
+  /* body region grows */
+  .body{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center;gap:clamp(14px,1.8vh,26px);margin-top:clamp(10px,1.6vh,22px)}
+  .body.top{justify-content:flex-start}
+
+  p.txt{font-size:clamp(15px,1.75vw,25px);line-height:1.5;color:var(--ink);max-width:44ch;font-weight:400}
+  p.txt .mut{color:var(--ink-dim)}
+  .pull{
+    border-left:3px solid var(--coral);padding:.15em 0 .15em 1em;
+    font-size:clamp(18px,2.4vw,34px);line-height:1.28;font-weight:600;letter-spacing:-.01em;max-width:26ch;text-wrap:balance;
+  }
+  .tag{
+    font-family:var(--font-mono);font-size:clamp(13px,1.5vw,22px);color:var(--amber);
+    letter-spacing:.02em;margin-top:.2em
+  }
+
+  /* figure card */
+  .figwrap{flex:1 1 0;min-height:0;overflow:hidden;display:flex;align-items:center;justify-content:center;margin-top:clamp(8px,1.4vh,18px)}
+  .figcard{
+    background:var(--card);border-radius:14px;padding:clamp(8px,1vw,16px);
+    max-width:100%;max-height:100%;display:flex;align-items:center;justify-content:center;
+    box-shadow:0 22px 60px -30px rgba(0,0,0,.85);border:1px solid rgba(255,255,255,.06);
+  }
+  .figcard img{max-width:100%;max-height:100%;object-fit:contain;display:block;border-radius:5px}
+
+  /* stat chips */
+  .chips{display:flex;flex-wrap:wrap;gap:clamp(8px,.85vw,14px);margin-top:clamp(12px,1.7vh,22px)}
+  .chip{
+    font-family:var(--font-mono);font-size:clamp(11px,1.15vw,17px);
+    background:var(--ground-2);border:1px solid var(--line);border-radius:9px;
+    padding:.5em .8em;color:var(--ink);display:flex;align-items:center;gap:.55em;
+    font-variant-numeric:tabular-nums;
+  }
+  .chip::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none}
+  .chip.amber::before{background:var(--amber)} .chip.coral::before{background:var(--coral)}
+
+  /* columns for text-heavy slides */
+  .cols{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(16px,2.2vw,40px);margin-top:clamp(10px,1.6vh,22px)}
+  .col h3{font-family:var(--font-mono);font-size:clamp(12px,1.2vw,17px);letter-spacing:.06em;color:var(--accent);text-transform:uppercase;margin-bottom:.5em}
+  .col p{font-size:clamp(14px,1.5vw,21px);line-height:1.46;color:var(--ink-dim)}
+  .col p b{color:var(--ink);font-weight:600}
+  ul.clean{list-style:none;display:flex;flex-direction:column;gap:clamp(9px,1.3vh,16px)}
+  ul.clean li{font-size:clamp(15px,1.65vw,24px);line-height:1.4;color:var(--ink);padding-left:1.3em;position:relative;max-width:46ch}
+  ul.clean li::before{content:"▸";position:absolute;left:0;color:var(--accent)}
+  ul.clean li .mut{color:var(--ink-dim)}
+
+  /* footer */
+  .foot{
+    display:flex;align-items:center;justify-content:space-between;
+    padding-top:clamp(12px,1.6vh,20px);margin-top:clamp(10px,1.4vh,16px);
+    border-top:1px solid var(--line);font-family:var(--font-mono);
+    font-size:clamp(10px,1vw,14px);color:var(--ink-faint);letter-spacing:.08em;
+  }
+  .foot .brand{color:var(--ink-dim)}
+  .foot .brand b{color:var(--accent);font-weight:600}
+  .caption{font-family:var(--font-mono);font-size:clamp(10px,1vw,14px);color:var(--ink-faint);margin-top:.7em;letter-spacing:.02em;text-align:center}
+
+  /* progress rail + counter */
+  .rail{position:fixed;left:0;bottom:0;height:3px;background:var(--accent);width:0;z-index:5;transition:width .42s ease;box-shadow:0 0 14px rgba(55,211,197,.6)}
+  .counter{position:fixed;right:clamp(16px,2vw,30px);bottom:clamp(12px,1.6vh,20px);z-index:5;font-family:var(--font-mono);font-size:clamp(11px,1.05vw,15px);color:var(--ink-faint);letter-spacing:.1em;font-variant-numeric:tabular-nums}
+  .hint{position:fixed;left:clamp(16px,2vw,30px);bottom:clamp(12px,1.6vh,20px);z-index:5;font-family:var(--font-mono);font-size:clamp(10px,.95vw,13px);color:var(--ink-faint);opacity:.7}
+
+  .num{font-variant-numeric:tabular-nums}
+  .fig-eyebrow{font-family:var(--font-mono);font-size:clamp(11px,1.1vw,16px);color:var(--ink-dim);margin-top:.35em}
+</style>
+</head>
+<body>
+<div class="deck" id="deck">
+
+  <!-- 1 · TITLE -->
+  <section class="slide active">
+    <div class="kicker">Built with Claude · Life Sciences <span class="dim">— Research track</span></div>
+    <div class="body">
+      <h1>Rebuilding a Molecular&nbsp;Motor <span class="accent">to Understand It</span></h1>
+      <p class="lead">A single-chain, genetically-addressable φ29&nbsp;gp16 DNA-packaging ring — designed and cross-validated end-to-end.</p>
+    </div>
+    <div class="meta"><strong>Longfu Xu</strong> · Bustamante Lab, UC Berkeley / HHMI</div>
+    <div class="foot"><span class="brand">Built with <b>Claude Science</b> + <b>Claude Code</b></span><span>gp16 · PDB 7JQQ · UniProt P11014</span></div>
+  </section>
+
+  <!-- 2 · PROBLEM -->
+  <section class="slide">
+    <div class="kicker">The problem</div>
+    <div class="body">
+      <h2>Nature's strongest motors are rings of <span class="amber">identical</span> parts.</h2>
+      <div class="cols">
+        <div class="col"><p class="txt">φ29 gp16 packs DNA at <b>~57 pN</b> as a homo-pentamer. Its deepest questions are <b>per-subunit</b>: which seat is the "special" regulatory subunit? Is ATP hydrolysis sequential or concerted?</p></div>
+        <div class="col"><div class="pull">In a ring of identical subunits you cannot put a defect at a <span class="coral">known</span> seat — every measurement averages over an unknown mixture.</div></div>
+      </div>
+    </div>
+    <div class="chips">
+      <div class="chip">5 identical subunits</div>
+      <div class="chip amber">4 workers + 1 "special" — Chistol 2012, Tafoya 2018</div>
+      <div class="chip coral">status quo = stochastic doping (seat unknown)</div>
+    </div>
+    <div class="foot"><span class="brand">Built with <b>Claude Science</b> + <b>Claude Code</b></span><span>the special-subunit problem</span></div>
+  </section>
+
+  <!-- 3 · THE MOVE -->
+  <section class="slide">
+    <div class="kicker">The move</div>
+    <div class="body">
+      <h2>Rebuild the ring as <span class="accent">one addressable chain.</span></h2>
+      <p class="txt">Fuse five protomers into a single gene: a mutation encoded in copy <b>k</b> lands at ring seat <b>k</b> — deterministically. The trick that made single-chain <b>ClpX</b> interpretable (Martin, Baker &amp; Sauer 2005). <span class="mut">Never reported for gp16.</span></p>
+      <div class="tag">Understanding by rebuilding — build it better than evolution did, and you've proven you understand it.</div>
+    </div>
+    <div class="foot"><span class="brand">Built with <b>Claude Science</b> + <b>Claude Code</b></span><span>single-chain, position-addressable</span></div>
+  </section>
+
+  <!-- 4 · LEAD IS REAL -->
+  <section class="slide">
+    <div class="kicker">Result · the lead is real</div>
+    <h2><span class="accent">cp233</span> — one 1,750-aa chain that folds into the native ring.</h2>
+    <div class="figwrap"><div class="figcard"><img src="figs/02_cp233_vs_native.png" alt="cp233 designed subunit and whole ring overlaid on native gp16"></div></div>
+    <div class="chips">
+      <div class="chip">3 predictors agree 5 / 5 — Boltz-2 · OpenFold3 · AlphaFold3</div>
+      <div class="chip">subunit RMSD 1.80 Å · TM 0.94</div>
+      <div class="chip amber">all 5 copies fall on the native ring</div>
+    </div>
+    <div class="foot"><span class="brand">Built with <b>Claude Science</b> + <b>Claude Code</b></span><span>tiled-MSA fold · steered by M1/M2, never pTM</span></div>
+  </section>
+
+  <!-- 5 · PHYSICS -->
+  <section class="slide">
+    <div class="kicker">Result · physics, not just predictors</div>
+    <h2>MD keeps the design closed — while the <span class="amber">ATP-bound native opens.</span></h2>
+    <div class="figwrap"><div class="figcard"><img src="figs/04_md_per_interface.png" alt="Per-interface MD traces: apo closed, 7JQQ opens, design stays closed"></div></div>
+    <div class="chips">
+      <div class="chip">apo ring stays closed</div>
+      <div class="chip amber">7JQQ ATP-helical opens 2 seams</div>
+      <div class="chip">design stays 5 / 5 engaged</div>
+      <div class="chip coral">interface energy −192 vs −174 kcal/mol (tighter than native)</div>
+    </div>
+    <div class="foot"><span class="brand">Built with <b>Claude Science</b> + <b>Claude Code</b></span><span>OpenMM GBSA · predictor-independent</span></div>
+  </section>
+
+  <!-- 6 · FUNCTION FILTER -->
+  <section class="slide">
+    <div class="kicker">Result · function is a stricter filter</div>
+    <h2>It threads DNA. Look-alikes that merely <span class="coral">"close"</span> don't.</h2>
+    <div class="figwrap"><div class="figcard"><img src="figs/03_cp233_threads_dna.png" alt="cp233 ring in the 7JQQ frame with dsDNA threading the pore"></div></div>
+    <div class="chips">
+      <div class="chip">cp233 channel 20.8 Å ≈ native 20.6 Å</div>
+      <div class="chip coral">cp285 (14 Å) &amp; cp297 (9 Å) close but can't thread</div>
+      <div class="chip amber">"closes the ring" ≠ "works as a motor"</div>
+    </div>
+    <div class="foot"><span class="brand">Built with <b>Claude Science</b> + <b>Claude Code</b></span><span>M3 · DNA-channel competence</span></div>
+  </section>
+
+  <!-- 7 · PAYOFF -->
+  <section class="slide">
+    <div class="kicker">The payoff · genetic addressability</div>
+    <h2>A catalytically-dead seat at a <span class="accent">chosen position.</span></h2>
+    <div class="figwrap"><div class="figcard"><img src="figs/01_deadseat_addressable.png" alt="E119Q dead-seat patterns keep the ring closed; R146A localizes the defect"></div></div>
+    <div class="chips">
+      <div class="chip">E119Q at 1 or all 5 seats → ring stays 5 / 5 closed</div>
+      <div class="chip amber">structurally-silent: Mg²⁺ not displaced (purely chemical KO)</div>
+      <div class="chip coral">R146A localizes the defect to the edited interface</div>
+    </div>
+    <div class="foot"><span class="brand">Built with <b>Claude Science</b> + <b>Claude Code</b></span><span>apo + ATP·Mg · cross-checked</span></div>
+  </section>
+
+  <!-- 8 · OUT-COUPLE (honest null) -->
+  <section class="slide">
+    <div class="kicker">Result · and an honest null</div>
+    <h2>On gp16 the design out-couples native — but it <span class="coral">doesn't generalize.</span></h2>
+    <div class="figwrap"><div class="figcard"><img src="figs/05_clpx_vs_gp16_coupling.png" alt="gp16 coupling 1.79x vs ClpX near parity"></div></div>
+    <div class="chips">
+      <div class="chip">gp16 coupling 1.79×</div>
+      <div class="chip">Y129 force hub 4.6× more central</div>
+      <div class="chip coral">ClpX ≈ parity — we report the null (comparison confounded)</div>
+    </div>
+    <div class="foot"><span class="brand">Built with <b>Claude Science</b> + <b>Claude Code</b></span><span>advantage is topological, not "covalency"</span></div>
+  </section>
+
+  <!-- 9 · GENERALIZES -->
+  <section class="slide">
+    <div class="kicker">The framework · it generalizes</div>
+    <h2>13 ring motors collapse to <span class="accent">one predictive build rule.</span></h2>
+    <div class="figwrap"><div class="figcard"><img src="figs/06_buildability_atlas.png" alt="Buildability atlas decision boundary across 13 ring ATPases"></div></div>
+    <div class="chips">
+      <div class="chip coral">terminus fouls the channel → circular permutation</div>
+      <div class="chip">otherwise → direct fusion (linker sized to the gap)</div>
+      <div class="chip amber">3 / 3 on method-validated anchors — gp16, ClpX, gp17</div>
+    </div>
+    <div class="foot"><span class="brand">Built with <b>Claude Science</b> + <b>Claude Code</b></span><span>from structure alone, predict the build</span></div>
+  </section>
+
+  <!-- 10 · VALIDATED ON KNOWN ANSWER -->
+  <section class="slide">
+    <div class="kicker">Credibility · validated on a known answer</div>
+    <h2>Run blind on ClpX, the framework catches the <span class="coral">dead couplers.</span></h2>
+    <div class="figwrap"><div class="figcard"><img src="figs/11_clpx_retro_validation.png" alt="ClpX retrospective validation: good WT 6/6, R307A/E 0/6"></div></div>
+    <div class="chips">
+      <div class="chip">good WT · 6 / 6 interfaces engaged</div>
+      <div class="chip coral">R307A / R307E · 0 / 6 (caught)</div>
+      <div class="chip amber">the M2 metric separates functional from non-functional</div>
+    </div>
+    <div class="foot"><span class="brand">Built with <b>Claude Science</b> + <b>Claude Code</b></span><span>retrospective external validation</span></div>
+  </section>
+
+  <!-- 11 · METHOD (cut-first) -->
+  <section class="slide">
+    <div class="kicker">Method · why it was hard</div>
+    <h2>A function-first metric hierarchy — <span class="coral">never global pTM.</span></h2>
+    <div class="figwrap"><div class="figcard"><img src="figs/10_msa_ladder.png" alt="MSA tiling roughly doubles pTM; pentamer cross-check"></div></div>
+    <div class="chips">
+      <div class="chip">M1 closed ring · M2 trans-R146 coupling · M3 DNA channel · M4 pRNA · M5 ATP pocket</div>
+      <div class="chip amber">MSA-tiling ≈ 2× pTM — made the 1,750-aa ring foldable at all</div>
+    </div>
+    <div class="foot"><span class="brand">Built with <b>Claude Science</b> + <b>Claude Code</b></span><span>steer by geometry, not confidence</span></div>
+  </section>
+
+  <!-- 12 · BIOLOGY IT TESTS (cut-first) -->
+  <section class="slide">
+    <div class="kicker">What it unlocks · follow-on program → follow-on</div>
+    <h2>Set the ATP pattern, read the force — <span class="amber">sequential vs concerted.</span></h2>
+    <div class="figwrap"><div class="figcard"><img src="figs/12_mechanism_atp_occupancy.png" alt="ATP-occupancy ring-opening mechanism that static predictors miss"></div></div>
+    <div class="chips">
+      <div class="chip">ring opening is progressive &amp; cooperative with ATP</div>
+      <div class="chip amber">which subunits fire sets the state — static predictors miss it</div>
+      <div class="chip coral">addressable ring + optical tweezers = the experiment</div>
+    </div>
+    <div class="foot"><span class="brand">Built with <b>Claude Science</b> + <b>Claude Code</b></span><span>the design → measurement bridge</span></div>
+  </section>
+
+  <!-- 13 · HOW WE USED CLAUDE -->
+  <section class="slide">
+    <div class="kicker">Built with Claude</div>
+    <h2>Claude as a <span class="accent">co-scientist</span>, not a wrapper.</h2>
+    <div class="body top">
+      <ul class="clean">
+        <li><b>Claude Code = orchestrator.</b> <span class="mut">Drove every GPU job (RFdiffusion, MD, NIM folding) through reliable hard-timeout harnesses; fanned out a dozen parallel agents.</span></li>
+        <li><b>A 19-sub-agent workflow.</b> <span class="mut">Score → adversarially verify → synthesize every AlphaFold3 fold.</span></li>
+        <li><b>Adversarial verification changed the science.</b> <span class="mut">It caught handedness false-negatives in M2, and surfaced the ClpX null and the pLDDT-trap honestly — instead of burying them.</span></li>
+        <li><b>Claude Science</b> <span class="mut">ran the systematic folding &amp; validation campaigns and rendered the structures.</span></li>
+      </ul>
+    </div>
+    <div class="chips">
+      <div class="chip">&lt; $10 total compute</div>
+      <div class="chip">128 commits · fully scripted</div>
+      <div class="chip amber">packaged as a reusable protein-design skill</div>
+    </div>
+    <div class="foot"><span class="brand">Built with <b>Claude Science</b> + <b>Claude Code</b></span><span>actor–critic, at scale</span></div>
+  </section>
+
+  <!-- 14 · CLOSE -->
+  <section class="slide">
+    <div class="kicker">The closed loop</div>
+    <div class="body">
+      <h1>Predict the build. Rank the coupling.<br><span class="accent">Design stronger. Then measure.</span></h1>
+      <p class="lead">Cross-checked, not yet wet-lab-validated — every prediction is a falsifiable hypothesis for single-molecule assays. That honesty is the point.</p>
+    </div>
+    <div class="meta"><strong>Longfu Xu</strong> · Bustamante Lab, UC Berkeley / HHMI &nbsp;·&nbsp; a designed motor we can both <span class="accent">predict</span> and <span class="amber">measure</span>.</div>
+    <div class="foot"><span class="brand">Built with <b>Claude Science</b> + <b>Claude Code</b></span><span>thank you</span></div>
+  </section>
+
+</div>
+
+<div class="rail" id="rail"></div>
+<div class="counter" id="counter">01 / 14</div>
+<div class="hint">← → / Space · F fullscreen</div>
+
+<script>
+  const slides = Array.from(document.querySelectorAll('.slide'));
+  const rail = document.getElementById('rail');
+  const counter = document.getElementById('counter');
+  let i = 0;
+  const pad = n => String(n).padStart(2,'0');
+  function show(n){
+    i = Math.max(0, Math.min(slides.length-1, n));
+    slides.forEach((s,k)=>s.classList.toggle('active', k===i));
+    rail.style.width = ((i+1)/slides.length*100) + '%';
+    counter.textContent = pad(i+1) + ' / ' + pad(slides.length);
+  }
+  function next(){ show(i+1); }
+  function prev(){ show(i-1); }
+  document.addEventListener('keydown', e=>{
+    if(['ArrowRight','ArrowDown',' ','PageDown'].includes(e.key)){ e.preventDefault(); next(); }
+    else if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key)){ e.preventDefault(); prev(); }
+    else if(e.key==='Home'){ show(0); }
+    else if(e.key==='End'){ show(slides.length-1); }
+    else if(e.key==='f'||e.key==='F'){
+      if(!document.fullscreenElement) document.documentElement.requestFullscreen?.();
+      else document.exitFullscreen?.();
+    }
+  });
+  document.getElementById('deck').addEventListener('click', e=>{
+    (e.clientX < window.innerWidth*0.28) ? prev() : next();
+  });
+  show(0);
+</script>
+</body>
+</html>
