@@ -1,0 +1,42 @@
+{
+  "name": "cp297_int10_inter20",
+  "ok": true,
+  "wall_s": 67.8,
+  "metrics": {
+    "confidence_scores": [
+      0.5980966687202454
+    ],
+    "ptm_scores": [
+      0.3903788924217224
+    ],
+    "iptm_scores": [
+      0.0
+    ],
+    "complex_plddt_scores": [
+      0.6500260829925537
+    ],
+    "complex_pde_scores": [
+      2.164977788925171
+    ]
+  },
+  "M2": "# M2(ring): 5/5 arginine fingers engaged [designed(k->k+1)]  (forward 5/5, reverse 0/5)",
+  "M1": "# M1: radius 24.9 A | radius_CV 0.03 | planarity_rms 0.3 A | compact_ring True | sequential_consistent: YES (designed order == spatial order)",
+  "M4": "# M4: designed-interface pLDDT mean 59.5 / min 57.3",
+  "ring": {
+    "engaged": 5,
+    "n": 5,
+    "handedness": "designed(k->k+1)",
+    "m2_forward": 5,
+    "m2_reverse": 0,
+    "score_forward": "# /Users/longfu/Developer/claude-science-hackthon/.claude/worktrees/export-gp16-results/gp16_design/outputs/cp_grid_screen/cp297_int10_inter20.cif   subunits: ['A1', 'A2', 'A3', 'A4', 'A5']\n  donor -> acceptor  R146_min_A  engaged  iface_pLDDT  note\n     A1 ->       A2        6.47     True         60.0  \n     A2 ->       A3        6.31     True         59.8  \n     A3 ->       A4        6.68     True         60.1  \n     A4 ->       A5        6.48     True         60.5  \n     A5 ->       A1        6.36     True         57.3  \n# M2: 5/5 DESIGNED interfaces engaged (<8.0 A)  ->  pass = >=4/5 for a pentamer\n# M1: radius 24.9 A | radius_CV 0.03 | planarity_rms 0.3 A | compact_ring True | sequential_consistent: YES (designed order == spatial order)\n# M4: designed-interface pLDDT mean 59.5 / min 57.3\n",
+    "score_reverse": "# /Users/longfu/Developer/claude-science-hackthon/.claude/worktrees/export-gp16-results/gp16_design/outputs/cp_grid_screen/cp297_int10_inter20.cif   subunits: ['A1', 'A2', 'A3', 'A4', 'A5']\n  donor -> acceptor  R146_min_A  engaged  iface_pLDDT  note\n     A1 ->       A2       50.54    False         60.1  nearest=A5@6.4(scrambled)\n     A2 ->       A3       50.26    False         59.9  nearest=A1@6.5(scrambled)\n     A3 ->       A4       50.44    False         59.8  nearest=A2@6.7(scrambled)\n     A4 ->       A5       50.53    False         57.3  nearest=A3@6.3(scrambled)\n     A5 ->       A1       50.32    False         60.6  nearest=A4@6.5(scrambled)\n# M2: 0/5 DESIGNED interfaces engaged (<8.0 A)  ->  pass = >=4/5 for a pentamer\n# M1: radius 24.9 A | radius_CV 0.03 | planarity_rms 0.3 A | compact_ring True | sequential_consistent: YES (designed order == spatial order)\n# M4: designed-interface pLDDT mean 59.5 / min 57.3\n"
+  },
+  "score_full": "# /Users/longfu/Developer/claude-science-hackthon/.claude/worktrees/export-gp16-results/gp16_design/outputs/cp_grid_screen/cp297_int10_inter20.cif   subunits: ['A1', 'A2', 'A3', 'A4', 'A5']\n  donor -> acceptor  R146_min_A  engaged  iface_pLDDT  note\n     A1 ->       A2        6.47     True         60.0  \n     A2 ->       A3        6.31     True         59.8  \n     A3 ->       A4        6.68     True         60.1  \n     A4 ->       A5        6.48     True         60.5  \n     A5 ->       A1        6.36     True         57.3  \n# M2: 5/5 DESIGNED interfaces engaged (<8.0 A)  ->  pass = >=4/5 for a pentamer\n# M1: radius 24.9 A | radius_CV 0.03 | planarity_rms 0.3 A | compact_ring True | sequential_consistent: YES (designed order == spatial order)\n# M4: designed-interface pLDDT mean 59.5 / min 57.3\n",
+  "copies": "A:1-357,A:358-714,A:715-1071,A:1072-1428,A:1429-1765",
+  "r146_incopy": 186,
+  "walker_incopy": "64-71",
+  "monomer_len": 327,
+  "msa_depth": 1167,
+  "tiled_rows": 5836,
+  "construct_len": 1765
+}
