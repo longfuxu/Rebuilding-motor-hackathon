@@ -1,0 +1,218 @@
+<style>
+  :root{
+    --bg:#f5f6f5; --bg2:#eceeed; --ink:#141a1c; --ink2:#3f4a4d; --muted:#6d7a7d;
+    --line:#d6dad8; --card:#ffffff;
+    --teal:#0d7d8a; --teal-deep:#0a5560; --green:#2f8f5b; --clay:#c0523f; --amber:#b8842e;
+    --hair: color-mix(in srgb, var(--teal) 22%, var(--line));
+    --serif: "Iowan Old Style","Charter",Georgia,"Times New Roman",serif;
+    --sans: -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+    --mono: ui-monospace,"SF Mono","Menlo","Roboto Mono",monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{ --bg:#0c1113; --bg2:#0f1618; --ink:#e8edec; --ink2:#b3c0c0; --muted:#7f8f8f;
+      --line:#243033; --card:#111a1c; --teal:#3ec1ce; --teal-deep:#8fe3ec; --green:#54c184; --clay:#e07a66; --amber:#d6ac5c;
+      --hair: color-mix(in srgb, var(--teal) 30%, var(--line)); }
+  }
+  :root[data-theme="light"]{ --bg:#f5f6f5; --bg2:#eceeed; --ink:#141a1c; --ink2:#3f4a4d; --muted:#6d7a7d; --line:#d6dad8; --card:#ffffff; --teal:#0d7d8a; --teal-deep:#0a5560; --green:#2f8f5b; --clay:#c0523f; --amber:#b8842e; --hair:color-mix(in srgb,var(--teal) 22%,var(--line)); }
+  :root[data-theme="dark"]{ --bg:#0c1113; --bg2:#0f1618; --ink:#e8edec; --ink2:#b3c0c0; --muted:#7f8f8f; --line:#243033; --card:#111a1c; --teal:#3ec1ce; --teal-deep:#8fe3ec; --green:#54c184; --clay:#e07a66; --amber:#d6ac5c; --hair:color-mix(in srgb,var(--teal) 30%,var(--line)); }
+
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.6;margin:0;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:820px;margin:0 auto;padding:0 24px}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;text-wrap:balance;line-height:1.15;letter-spacing:-.01em}
+  .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);margin:0 0 .6rem}
+  p{max-width:65ch}
+  a{color:var(--teal)}
+  .mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+  .num{font-family:var(--mono);font-variant-numeric:tabular-nums;color:var(--teal-deep);font-weight:600}
+
+  /* hero */
+  header.hero{background:linear-gradient(180deg,var(--bg2),var(--bg));border-bottom:1px solid var(--line);padding:64px 0 48px}
+  .hero h1{font-size:clamp(2.1rem,5.2vw,3.3rem);margin:.2rem 0 1rem}
+  .hero .q{font-size:1.18rem;color:var(--ink2);max-width:60ch}
+  .hero .ans{margin-top:1.4rem;padding:16px 20px;border-left:3px solid var(--teal);background:var(--card);border-radius:0 8px 8px 0}
+  .hero .ans strong{color:var(--teal-deep)}
+  .ringwrap{display:flex;justify-content:center;margin:8px 0 26px}
+  .kit{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+  .kit span{font-family:var(--mono);font-size:.72rem;border:1px solid var(--hair);border-radius:999px;padding:4px 11px;color:var(--ink2)}
+
+  section{padding:40px 0;border-bottom:1px solid var(--line)}
+  section h2{font-size:1.5rem;margin:.1rem 0 .3rem}
+  .lead{color:var(--muted);margin:.1rem 0 1.3rem;font-size:.96rem}
+
+  .grid{display:grid;gap:14px}
+  .g2{grid-template-columns:repeat(2,1fr)} .g3{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:640px){.g2,.g3{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px}
+  .card .big{font-family:var(--mono);font-size:1.7rem;font-weight:600;color:var(--teal-deep);font-variant-numeric:tabular-nums;line-height:1}
+  .card .lab{font-size:.82rem;color:var(--muted);margin-top:6px}
+
+  .ladder{display:flex;flex-direction:column;gap:0}
+  .rung{display:grid;grid-template-columns:56px 1fr;gap:14px;align-items:baseline;padding:12px 0;border-top:1px dashed var(--hair)}
+  .rung:first-child{border-top:none}
+  .rung .m{font-family:var(--mono);font-weight:600;color:var(--teal);font-size:1.05rem}
+  .rung b{font-family:var(--serif);font-weight:600}
+  .rung small{color:var(--muted)}
+
+  /* bar charts */
+  .bars{display:flex;flex-direction:column;gap:10px;margin-top:4px}
+  .bar{display:grid;grid-template-columns:132px 1fr 62px;gap:10px;align-items:center;font-size:.88rem}
+  .bar .track{height:22px;background:var(--bg2);border:1px solid var(--line);border-radius:6px;position:relative;overflow:hidden}
+  .bar .fill{height:100%;border-radius:5px}
+  .bar .v{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right;color:var(--ink2)}
+  .thresh{position:relative;height:0}
+  .thresh i{position:absolute;top:-134px;height:134px;border-left:2px dashed var(--clay);font-style:normal}
+  .chiprow{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{font-family:var(--mono);font-size:.76rem;padding:5px 11px;border-radius:6px;border:1px solid var(--hair);display:flex;gap:7px;align-items:center}
+  .dot{width:8px;height:8px;border-radius:50%}
+  .pass{color:var(--green)} .pass .dot{background:var(--green)}
+  .warn{color:var(--amber)} .warn .dot{background:var(--amber)}
+  .fail{color:var(--clay)} .fail .dot{background:var(--clay)}
+
+  .note{font-size:.85rem;color:var(--muted);border-left:2px solid var(--hair);padding-left:12px;margin-top:14px}
+  ul.tight{margin:.3rem 0;padding-left:1.1rem} ul.tight li{margin:.35rem 0}
+  footer{padding:40px 0 70px;color:var(--muted);font-size:.85rem}
+  .toggle{position:fixed;top:14px;right:14px;font-family:var(--mono);font-size:.72rem;background:var(--card);border:1px solid var(--line);color:var(--ink2);border-radius:999px;padding:6px 12px;cursor:pointer}
+  @media (prefers-reduced-motion:no-preference){ .fin{transition:width .9s cubic-bezier(.2,.7,.2,1)} }
+</style>
+
+<button class="toggle" onclick="var r=document.documentElement,d=r.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');r.setAttribute('data-theme',d==='dark'?'light':'dark')">◑ theme</button>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Hackathon · AI for Science · protein design + biophysics</p>
+    <h1>Understanding molecular motors by rebuilding them</h1>
+    <div class="ringwrap">
+      <svg width="150" height="150" viewBox="0 0 150 150" role="img" aria-label="Pentameric ring motor with a central DNA channel and trans arginine fingers">
+        <circle cx="75" cy="75" r="20" fill="none" stroke="var(--hair)" stroke-width="1.4"/>
+        <text x="75" y="79" text-anchor="middle" font-family="var(--mono)" font-size="9" fill="var(--muted)">DNA</text>
+        <g>
+          <!-- 5 subunits + fingers -->
+          <g fill="var(--card)" stroke="var(--teal)" stroke-width="1.6">
+            <circle cx="75" cy="30" r="15"/><circle cx="118" cy="61" r="15"/>
+            <circle cx="101" cy="112" r="15"/><circle cx="49" cy="112" r="15"/><circle cx="32" cy="61" r="15"/>
+          </g>
+          <g stroke="var(--amber)" stroke-width="2" fill="none" opacity=".9">
+            <path d="M88 34 q10 8 14 18"/><path d="M120 76 q1 13 -6 22"/>
+            <path d="M92 118 q-12 6 -23 2"/><path d="M40 108 q-8 -10 -8 -22"/><path d="M34 46 q7 -11 19 -14"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <p class="q">North star: <em>what are the design principles of a maximally powerful ring motor — and is a single covalent chain the answer, or the obstacle?</em> We attack it by rebuilding: reconstruct oligomeric ring ATPases as single, genetically-addressable chains, predict their mechanics, and try to make them <em>better than evolution's.</em></p>
+    <div class="ans">The answer, honestly: <strong>single-chain is not automatically the answer.</strong> It out-couples native for φ29 (an optimized circular permutation) but not for ClpX — so "maximally powerful" is a <strong>topological</strong> principle, and single-chain helps only when the topology is right. What we deliver is the <strong>closed loop</strong>: predict the build method, rank the coupling, and design incrementally stronger, single-molecule-testable motors.</div>
+    <div class="kit">
+      <span>fold-in-context</span><span>topology ladder</span><span>M1–M5 metrics</span><span>tiled-MSA folding</span><span>coupling proxies</span><span>directed evolution</span><span>Claude Code + Claude Science</span>
+    </div>
+  </div>
+</header>
+
+<section><div class="wrap">
+  <p class="eyebrow">The lead · cp233</p>
+  <h2>A single chain that is real, not just closed</h2>
+  <p class="lead">A circularly-permuted φ29 gp16 packaging ATPase, 1,750 aa, five copies in one chain.</p>
+  <div class="grid g3">
+    <div class="card"><div class="big">5/5 ×3</div><div class="lab">M1+M2 across Boltz-2, OpenFold3 & AlphaFold3 (tiled MSA)</div></div>
+    <div class="card"><div class="big">1.80 Å</div><div class="lab">subunit RMSD vs native apo · TM-score 0.94</div></div>
+    <div class="card"><div class="big">44 / 42 Å</div><div class="lab">design vs native ring diameter · 5/5 copies map on</div></div>
+  </div>
+  <p class="note">The only non-native density is the linker — not a broken fold. The addressable dead-seat E119Q (1 or all 5 seats, apo <em>and</em> with ATP·Mg) stays 5/5 on all three predictors: assembly-tolerant.</p>
+</div></section>
+
+<section><div class="wrap">
+  <p class="eyebrow">Judging · never global confidence</p>
+  <h2>A five-level metric hierarchy</h2>
+  <p class="lead">We steer by interface geometry, never pTM/pLDDT — the highest-confidence RFdiffusion ring had the <em>worst</em> M2.</p>
+  <div class="ladder">
+    <div class="rung"><span class="m">M1</span><div><b>A closed, in-order ring?</b> <small>— compact, sequential-consistent.</small></div></div>
+    <div class="rung"><span class="m">M2</span><div><b>Does each trans arginine finger reach the neighbour's ATP pocket?</b> <small>— &lt;8 Å, sequential, handedness-robust. The catalytic-coupling soul.</small></div></div>
+    <div class="rung"><span class="m">M3</span><div><b>Can dsDNA thread the channel?</b> <small>— grounded from the gp16+DNA+pRNA complex. The stricter, function-level filter.</small></div></div>
+    <div class="rung"><span class="m">M4</span><div><b>Is the pRNA-binding surface preserved?</b> <small>— 29 grounded contacts.</small></div></div>
+    <div class="rung"><span class="m">M5</span><div><b>Is the ATP pocket intact?</b> <small>— Walker-A/B + the full catalytic set.</small></div></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <p class="eyebrow">Credibility · five orthogonal signals</p>
+  <h2>Predictor-independent validation</h2>
+  <div class="chiprow" style="margin-bottom:14px">
+    <span class="chip pass"><i class="dot"></i>MD: stays closed like apo</span>
+    <span class="chip pass"><i class="dot"></i>MM-GBSA −192 vs −174 kcal/mol</span>
+    <span class="chip pass"><i class="dot"></i>ENM: native-like soft modes</span>
+    <span class="chip pass"><i class="dot"></i>ESM-2: linkers natural</span>
+    <span class="chip pass"><i class="dot"></i>ATP-pocket ≤0.7 Å</span>
+  </div>
+  <p class="eyebrow" style="margin-top:22px">Function is a stricter filter than assembly</p>
+  <h3 style="font-size:1.12rem;margin:.2rem 0 .8rem">M3 — does the channel admit dsDNA (~20 Å)?</h3>
+  <div class="bars">
+    <div class="bar"><span>native apo</span><div class="track"><div class="fill" style="width:96%;background:var(--green)"></div></div><span class="v">20.6 Å</span></div>
+    <div class="bar"><span>cp233 (lead)</span><div class="track"><div class="fill" style="width:97%;background:var(--teal)"></div></div><span class="v">20.8 Å</span></div>
+    <div class="bar"><span>cp285</span><div class="track"><div class="fill" style="width:66%;background:var(--clay)"></div></div><span class="v">14.2 Å</span></div>
+    <div class="bar"><span>cp297</span><div class="track"><div class="fill" style="width:43%;background:var(--clay)"></div></div><span class="v">9.3 Å</span></div>
+  </div>
+  <p class="note">cp285/cp297 <em>close the ring</em> (M2 pass) yet cannot thread DNA — their cut distorts the channel domain. <strong>"Closes" ≠ "works as a motor."</strong></p>
+</div></section>
+
+<section><div class="wrap">
+  <p class="eyebrow">The surprise · and the honest boundary</p>
+  <h2>A designed motor can out-couple native — but it's design-specific</h2>
+  <p class="lead">Inter-subunit coupling of the single chain vs native ring (perturbation-response, baseline 1.0×).</p>
+  <div class="bars">
+    <div class="bar"><span>gp16 · cp233</span><div class="track"><div class="fill" style="width:90%;background:var(--teal)"></div><div style="position:absolute;left:50%;top:0;height:100%;border-left:2px solid var(--muted)"></div></div><span class="v">1.79×</span></div>
+    <div class="bar"><span>ClpX · single-chain</span><div class="track"><div class="fill" style="width:51%;background:var(--amber)"></div><div style="position:absolute;left:50%;top:0;height:100%;border-left:2px solid var(--muted)"></div></div><span class="v">~1.0×</span></div>
+  </div>
+  <p class="note">gp16's single chain is <strong>more coordinated than native</strong> (Y129 is a 4.6× more central force hub — and the biochemistry independently shows Y129 is essential). ClpX does <strong>not</strong> generalize. So it is <strong>not</strong> a "covalency law" — nature's oligomer trades tighter coupling for self-assembly, evolvability, and the special-subunit regulation only an <em>addressable</em> single chain can dissect.</p>
+</div></section>
+
+<section><div class="wrap">
+  <p class="eyebrow">Transferability · 13 ring motors</p>
+  <h2>Buildability is set by topology — a two-branch rule</h2>
+  <p class="lead">Predict the build method from structure. Axis: adjacent-subunit C→N gap (Å).</p>
+  <svg viewBox="0 0 760 116" width="100%" role="img" aria-label="Decision line: fouls channel to CP, small gap to direct fusion, large gap to diffusion">
+    <line x1="30" y1="82" x2="730" y2="82" stroke="var(--line)" stroke-width="2"/>
+    <g font-family="var(--mono)" font-size="11" fill="var(--muted)">
+      <text x="30" y="102">0</text><text x="350" y="102">32 Å</text><text x="470" y="102">45 Å</text><text x="705" y="102">70 Å</text>
+    </g>
+    <rect x="30" y="70" width="330" height="10" rx="5" fill="var(--teal)" opacity=".85"/>
+    <rect x="360" y="70" width="110" height="10" rx="5" fill="var(--bg2)" stroke="var(--hair)"/>
+    <rect x="470" y="70" width="260" height="10" rx="5" fill="var(--amber)" opacity=".7"/>
+    <g font-family="var(--sans)" font-size="12" fill="var(--ink2)">
+      <text x="34" y="40" font-family="var(--serif)" font-size="14" fill="var(--teal)">terminus fouls channel → CP</text>
+      <text x="34" y="58">gp16 (φ29)</text>
+      <text x="150" y="58">· direct fusion → ClpX · gp17 · HslU</text>
+      <text x="392" y="58" fill="var(--muted)">empty band</text>
+      <text x="474" y="40" font-family="var(--serif)" font-size="14" fill="var(--amber)">RFdiffusion connector</text>
+      <text x="474" y="58" fill="var(--muted)">(untested regime — the overnight-run target)</text>
+    </g>
+  </svg>
+  <p class="note">3/3 on the method-validated anchors. Cautionary methods finding: an <em>apo</em> fold over-closes even the known-wrong construct — <strong>independently proving why M3 (channel context) is needed.</strong></p>
+</div></section>
+
+<section><div class="wrap">
+  <p class="eyebrow">Understanding by design · the crown</p>
+  <h2>An in-silico directed-evolution engine for a stronger motor</h2>
+  <p class="lead">propose → fold → gate (M1 ∧ M2 ∧ M5 ∧ soft-mode ∧ biochem) → proxy-score → rank.</p>
+  <div class="grid g3">
+    <div class="card"><div class="big" style="color:var(--green)">M307W</div><div class="lab">gate-clean candidate: rigidifies the Y129↔M307 clasp <em>around</em> the essential hub</div></div>
+    <div class="card"><div class="big">+3.5%</div><div class="lab">force-transmission proxy, above the fold-noise floor · soft mode intact</div></div>
+    <div class="card"><div class="big" style="color:var(--clay)">✗ Y129</div><div class="lab">lethal mutations correctly rejected by the biochem gate</div></div>
+  </div>
+  <p class="note">Honest: round-1 gains are modest; coordination is hard to move with single mutations. The deliverables are a <em>working engine</em> and two single-molecule-testable predictions (M307W, M307F) — with a 10–20-round overnight run and a stronger-motor experimental shortlist queued next.</p>
+</div></section>
+
+<section><div class="wrap">
+  <p class="eyebrow">Honest boundaries</p>
+  <h2>Limitations</h2>
+  <ul class="tight">
+    <li>Proxies <em>rank</em>, they don't give absolute force — single-molecule is ground truth.</li>
+    <li>Single-sequence prediction fails large rings (needs tiled MSA); pLDDT is a trap; covalent-ring M2 must be handedness-robust.</li>
+    <li>Apo folds are blind to channel fouling; the buildability rule rests on N≈3–4; the ClpX comparison is confounded; no wet-lab yet.</li>
+  </ul>
+  <p class="note">Every limitation points to the next step: computation issues a falsifiable prediction, single-molecule biophysics tests it.</p>
+</div></section>
+
+<footer><div class="wrap">
+  <p class="eyebrow">How we used Claude</p>
+  <p><strong>Claude Code</strong> orchestrated everything — driving GPU jobs (RFdiffusion, MD, NIM folding), running a <span class="mono">19-sub-agent scoring workflow</span> (score → adversarially verify → synthesize), and coordinating a dozen parallel agents (design, coupling, literature, directed evolution, buildability, biochem calibration). <strong>Claude Science</strong> ran the systematic folding campaigns. The biggest leverage: <strong>parallel fan-out with adversarial verification</strong> — every headline number was independently re-checked, and the honest negatives (the ClpX result, the pLDDT trap) were surfaced, not hidden.</p>
+  <p style="margin-top:18px;color:var(--muted)">Longfu Xu · <span class="mono">longfuxu</span> · full write-up, all figures & reproducible pipelines in the repository.</p>
+</div></footer>
