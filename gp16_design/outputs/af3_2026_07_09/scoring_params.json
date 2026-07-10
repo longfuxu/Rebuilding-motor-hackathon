@@ -1,0 +1,74 @@
+[
+ {
+  "fold": "fold_2026_07_09_cp233_novel_d2",
+  "nres": 1750,
+  "type": "cp233_novel(de-novo)",
+  "r146_incopy": 255,
+  "walker_incopy": "133-140",
+  "copies": "A:1-342,A:353-694,A:705-1046,A:1057-1398,A:1409-1750"
+ },
+ {
+  "fold": "fold_2026_07_09_cp233_novel_d3",
+  "nres": 1750,
+  "type": "cp233_novel(de-novo)",
+  "r146_incopy": 255,
+  "walker_incopy": "133-140",
+  "copies": "A:1-342,A:353-694,A:705-1046,A:1057-1398,A:1409-1750"
+ },
+ {
+  "fold": "fold_2026_07_09_cp233_novel_d5",
+  "nres": 1750,
+  "type": "cp233_novel(de-novo)",
+  "r146_incopy": 255,
+  "walker_incopy": "133-140",
+  "copies": "A:1-342,A:353-694,A:705-1046,A:1057-1398,A:1409-1750"
+ },
+ {
+  "fold": "fold_2026_07_09_cp233_novel_d7",
+  "nres": 1750,
+  "type": "cp233_novel(de-novo)",
+  "r146_incopy": 255,
+  "walker_incopy": "133-140",
+  "copies": "A:1-342,A:353-694,A:705-1046,A:1057-1398,A:1409-1750"
+ },
+ {
+  "fold": "fold_2026_07_09_cp233_novel_d8",
+  "nres": 1750,
+  "type": "cp233_novel(de-novo)",
+  "r146_incopy": 255,
+  "walker_incopy": "133-140",
+  "copies": "A:1-342,A:353-694,A:705-1046,A:1057-1398,A:1409-1750"
+ },
+ {
+  "fold": "fold_2026_07_09_cp285_int15_inter10",
+  "nres": 1750,
+  "type": "cp285_CP",
+  "r146_incopy": 203,
+  "walker_incopy": "81-88",
+  "copies": "A:1-342,A:353-694,A:705-1046,A:1057-1398,A:1409-1750"
+ },
+ {
+  "fold": "fold_2026_07_09_cp297_int15_inter10",
+  "nres": 1750,
+  "type": "cp297_CP",
+  "r146_incopy": 191,
+  "walker_incopy": "69-76",
+  "copies": "A:1-342,A:353-694,A:705-1046,A:1057-1398,A:1409-1750"
+ },
+ {
+  "fold": "fold_2026_07_09_rfdiff_ring_sal_l50_0_d0_1835aa",
+  "nres": 1835,
+  "type": "rfdiff_ring(ModeB)",
+  "r146_incopy": 143,
+  "walker_incopy": "21-28",
+  "copies": "A:1-367,A:368-734,A:735-1101,A:1102-1468,A:1469-1835"
+ },
+ {
+  "fold": "fold_2026_07_09_rfdiff_ring_sal_l50_0_d2_1835aa",
+  "nres": 1835,
+  "type": "rfdiff_ring(ModeB)",
+  "r146_incopy": 143,
+  "walker_incopy": "21-28",
+  "copies": "A:1-367,A:368-734,A:735-1101,A:1102-1468,A:1469-1835"
+ }
+]
