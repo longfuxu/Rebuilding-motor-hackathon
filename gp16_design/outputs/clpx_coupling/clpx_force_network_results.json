@@ -1,0 +1,182 @@
+{
+  "joint_common_n": 320,
+  "contact_cut": 9.0,
+  "edge_weight": "-log|C_GNM|  (NO MD -> GNM cross-correlation, gp16 no-MD path)",
+  "A_design": {
+    "kind": "design",
+    "N": 1920,
+    "n_edges": 13174,
+    "R307_argfinger_betweenness": 0.003268,
+    "R370_sensorII_betweenness": 0.006712,
+    "WalkerA_betweenness": 0.005914,
+    "pore_grip_betweenness": 0.002123,
+    "pore_grip_residues": [
+      155,
+      157,
+      202
+    ],
+    "len_ATP_to_pore": 4.2354,
+    "top_rigidify_residues": [
+      [
+        146,
+        0.09579
+      ],
+      [
+        221,
+        0.09537
+      ],
+      [
+        167,
+        0.06609
+      ],
+      [
+        176,
+        0.06169
+      ],
+      [
+        147,
+        0.0608
+      ],
+      [
+        207,
+        0.06046
+      ],
+      [
+        225,
+        0.05212
+      ],
+      [
+        222,
+        0.05179
+      ],
+      [
+        205,
+        0.05029
+      ],
+      [
+        121,
+        0.04907
+      ],
+      [
+        145,
+        0.03843
+      ],
+      [
+        238,
+        0.03591
+      ]
+    ]
+  },
+  "A_native": {
+    "kind": "native",
+    "N": 1920,
+    "n_edges": 11858,
+    "R307_argfinger_betweenness": 0.003817,
+    "R370_sensorII_betweenness": 0.005377,
+    "WalkerA_betweenness": 0.007314,
+    "pore_grip_betweenness": 0.006656,
+    "pore_grip_residues": [
+      155,
+      157,
+      202
+    ],
+    "len_ATP_to_pore": 4.4299,
+    "top_rigidify_residues": [
+      [
+        206,
+        0.06452
+      ],
+      [
+        301,
+        0.05278
+      ],
+      [
+        147,
+        0.05264
+      ],
+      [
+        189,
+        0.05167
+      ],
+      [
+        188,
+        0.0513
+      ],
+      [
+        146,
+        0.04829
+      ],
+      [
+        371,
+        0.03985
+      ],
+      [
+        121,
+        0.03626
+      ],
+      [
+        209,
+        0.03541
+      ],
+      [
+        300,
+        0.03393
+      ],
+      [
+        287,
+        0.03366
+      ],
+      [
+        213,
+        0.03294
+      ]
+    ]
+  },
+  "B_design": {
+    "kind": "design",
+    "N": 2100,
+    "Y153_betweenness": 0.002917,
+    "len_ATP_Y153_pore": 8.1422,
+    "subunits_with_intact_conduit": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "n_subunits_used": 6
+  },
+  "B_native": {
+    "kind": "native",
+    "N": 2052,
+    "Y153_betweenness": 0.002249,
+    "len_ATP_Y153_pore": 7.586,
+    "subunits_with_intact_conduit": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "n_subunits_used": 5
+  },
+  "comparison": {
+    "R307_argfinger_betweenness_design_vs_native": [
+      0.003268,
+      0.003817
+    ],
+    "R307_design_over_native": 0.856,
+    "pore_grip_betweenness_design_vs_native": [
+      0.002123,
+      0.006656
+    ],
+    "Y153_betweenness_design_vs_native": [
+      0.002917,
+      0.002249
+    ],
+    "Y153_design_over_native": 1.297,
+    "gp16_reference_Y129_betweenness_design_over_native_GNM": 1.65,
+    "note": "lower path length = stiffer transmission; higher betweenness = more central force-routing node. (B) native uses only seam-intact subunits (fewer nodes) -> Y153 comparison is directional, not node-matched."
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "joint_common_n": 320,
+  "joint_common_range": [
+    64,
+    413
+  ],
+  "design": {
+    "kind": "design",
+    "N": 1920,
+    "n_residues": 320,
+    "anm_cutoff": 15.0,
+    "gnm_cutoff": 10.0,
+    "ring_order": [
+      0,
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "functional_neighbor": {
+      "0": [
+        5,
+        10.45
+      ],
+      "1": [
+        0,
+        10.44
+      ],
+      "2": [
+        1,
+        10.6
+      ],
+      "3": [
+        2,
+        10.28
+      ],
+      "4": [
+        3,
+        10.48
+      ],
+      "5": [
+        4,
+        10.47
+      ]
+    },
+    "prs_ATP_intra_self": 0.139735,
+    "prs_ATP_NN_coupling": 0.004975,
+    "prs_ATP_NN_over_intra": 0.0356,
+    "prs_ATP_argfinger_coupling": 0.004909,
+    "prs_decay_by_ringdist": {
+      "1": 0.004975,
+      "2": 0.003258,
+      "3": 0.004766
+    },
+    "prs_ringdist_retention_2_over_1": 0.6549,
+    "prs_inter_subunit_all": 0.006815,
+    "prs_intra_subunit_all": 0.017918,
+    "prs_inter_over_intra_all": 0.38033,
+    "gnm_ATP_NN_crosscorr": 0.03635,
+    "gnm_inter_subunit_all": -0.02412,
+    "seconds": 14.4
+  },
+  "native": {
+    "kind": "native",
+    "N": 1920,
+    "n_residues": 320,
+    "anm_cutoff": 15.0,
+    "gnm_cutoff": 10.0,
+    "ring_order": [
+      4,
+      3,
+      2,
+      1,
+      0,
+      5
+    ],
+    "functional_neighbor": {
+      "0": [
+        5,
+        15.66
+      ],
+      "1": [
+        0,
+        9.64
+      ],
+      "2": [
+        1,
+        7.81
+      ],
+      "3": [
+        2,
+        7.81
+      ],
+      "4": [
+        3,
+        7.96
+      ],
+      "5": [
+        4,
+        9.86
+      ]
+    },
+    "prs_ATP_intra_self": 0.142756,
+    "prs_ATP_NN_coupling": 0.004588,
+    "prs_ATP_NN_over_intra": 0.03214,
+    "prs_ATP_argfinger_coupling": 0.004579,
+    "prs_decay_by_ringdist": {
+      "1": 0.004588,
+      "2": 0.003091,
+      "3": 0.003219
+    },
+    "prs_ringdist_retention_2_over_1": 0.6738,
+    "prs_inter_subunit_all": 0.012969,
+    "prs_intra_subunit_all": 0.02589,
+    "prs_inter_over_intra_all": 0.50094,
+    "gnm_ATP_NN_crosscorr": 0.03981,
+    "gnm_inter_subunit_all": -0.02455,
+    "seconds": 14.6
+  },
+  "comparison": {
+    "prs_ATP_NN_coupling_design_over_native": 1.084,
+    "prs_ATP_argfinger_coupling_design_over_native": 1.072,
+    "prs_ATP_NN_over_intra_design_vs_native": [
+      0.0356,
+      0.03214
+    ],
+    "prs_ringdist2_coupling_design_over_native": 1.054,
+    "prs_inter_over_intra_all_design_vs_native": [
+      0.38033,
+      0.50094
+    ],
+    "gnm_ATP_NN_crosscorr_design_vs_native": [
+      0.03635,
+      0.03981
+    ],
+    "gp16_reference_prs_ATP_NN_design_over_native": 1.788,
+    "prs_ATP_NN_coupling_design_over_native_by_ANMcutoff": {
+      "12A": 0.909,
+      "15A": 1.084,
+      "18A": 1.082,
+      "note": "primary ratio straddles 1.0 and flips sign with ANM cutoff -> at parity, unlike gp16's robust 1.79x"
+    }
+  }
+}
