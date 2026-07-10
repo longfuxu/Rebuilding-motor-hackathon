@@ -1,0 +1,52 @@
+{
+  "name": "E119Q_N3adj",
+  "ok": true,
+  "wall_s": 77.3,
+  "nrep": 3,
+  "engaged_values": [
+    5,
+    5,
+    5
+  ],
+  "engaged_max": 5,
+  "engaged_min": 5,
+  "engaged_mean": 5.0,
+  "best_rep": 0,
+  "best_engaged": 5,
+  "best_handedness": "designed(k->k+1)",
+  "best_radius_CV": "0.00",
+  "best_radius": "25.2",
+  "best_sequential": true,
+  "best_M1": "# M1: radius 25.2 A | radius_CV 0.00 | planarity_rms 0.2 A | compact_ring True | sequential_consistent: YES (designed order == spatial order)",
+  "best_score_full": "# /Users/longfu/Developer/claude-science-hackthon/.claude/worktrees/export-gp16-results/gp16_design/outputs/deadseat_gradient/E119Q_N3adj_rep0.cif   subunits: ['A1', 'A2', 'A3', 'A4', 'A5']\n  donor -> acceptor  R146_min_A  engaged  iface_pLDDT  note\n     A1 ->       A2        5.63     True         65.4  \n     A2 ->       A3        5.60     True         64.9  \n     A3 ->       A4        5.50     True         64.8  \n     A4 ->       A5        5.64     True         65.5  \n     A5 ->       A1        5.79     True         64.8  \n# M2: 5/5 DESIGNED interfaces engaged (<8.0 A)  ->  pass = >=4/5 for a pentamer\n# M1: radius 25.2 A | radius_CV 0.00 | planarity_rms 0.2 A | compact_ring True | sequential_consistent: YES (designed order == spatial order)\n# M4: designed-interface pLDDT mean 65.1 / min 64.8\n",
+  "replicates": [
+    {
+      "rep": 0,
+      "engaged": 5,
+      "handedness": "designed(k->k+1)",
+      "radius_CV": "0.00",
+      "sequential": true
+    },
+    {
+      "rep": 1,
+      "engaged": 5,
+      "handedness": "designed(k->k+1)",
+      "radius_CV": "0.00",
+      "sequential": true
+    },
+    {
+      "rep": 2,
+      "engaged": 5,
+      "handedness": "designed(k->k+1)",
+      "radius_CV": "0.01",
+      "sequential": true
+    }
+  ],
+  "copies": "A:1-352,A:353-704,A:705-1056,A:1057-1408,A:1409-1750",
+  "r146_incopy": 255,
+  "walker_incopy": "133-140",
+  "monomer_len": 327,
+  "msa_depth": 1167,
+  "tiled_rows": 5836,
+  "construct_len": 1750
+}

@@ -1,0 +1,52 @@
+{
+  "name": "R146A_N1",
+  "ok": true,
+  "wall_s": 70.7,
+  "nrep": 3,
+  "engaged_values": [
+    4,
+    4,
+    4
+  ],
+  "engaged_max": 4,
+  "engaged_min": 4,
+  "engaged_mean": 4.0,
+  "best_rep": 0,
+  "best_engaged": 4,
+  "best_handedness": "designed(k->k+1)",
+  "best_radius_CV": "0.00",
+  "best_radius": "25.9",
+  "best_sequential": true,
+  "best_M1": "# M1: radius 25.9 A | radius_CV 0.00 | planarity_rms 0.2 A | compact_ring True | sequential_consistent: YES (designed order == spatial order)",
+  "best_score_full": "# /Users/longfu/Developer/claude-science-hackthon/.claude/worktrees/export-gp16-results/gp16_design/outputs/deadseat_gradient/R146A_N1_rep0.cif   subunits: ['A1', 'A2', 'A3', 'A4', 'A5']\n  donor -> acceptor  R146_min_A  engaged  iface_pLDDT  note\n     A2 ->       A3        6.28     True         65.0  \n     A3 ->       A4        6.59     True         64.6  \n     A4 ->       A5        6.19     True         65.6  \n     A5 ->       A1        6.59     True         61.1  \n# M2: 4/5 DESIGNED interfaces engaged (<8.0 A)  ->  pass = >=4/5 for a pentamer\n# M1: radius 25.9 A | radius_CV 0.00 | planarity_rms 0.2 A | compact_ring True | sequential_consistent: YES (designed order == spatial order)\n# M4: designed-interface pLDDT mean 64.1 / min 61.1\n",
+  "replicates": [
+    {
+      "rep": 0,
+      "engaged": 4,
+      "handedness": "designed(k->k+1)",
+      "radius_CV": "0.00",
+      "sequential": true
+    },
+    {
+      "rep": 1,
+      "engaged": 4,
+      "handedness": "designed(k->k+1)",
+      "radius_CV": "0.00",
+      "sequential": true
+    },
+    {
+      "rep": 2,
+      "engaged": 4,
+      "handedness": "designed(k->k+1)",
+      "radius_CV": "0.00",
+      "sequential": true
+    }
+  ],
+  "copies": "A:1-352,A:353-704,A:705-1056,A:1057-1408,A:1409-1750",
+  "r146_incopy": 255,
+  "walker_incopy": "133-140",
+  "monomer_len": 327,
+  "msa_depth": 1167,
+  "tiled_rows": 5836,
+  "construct_len": 1750
+}

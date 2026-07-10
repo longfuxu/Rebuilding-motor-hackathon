@@ -1,0 +1,152 @@
+{
+  "R146A_N0": {
+    "series": "R146A",
+    "N": 0,
+    "arrangement": "none",
+    "seats": []
+  },
+  "R146A_N1": {
+    "series": "R146A",
+    "N": 1,
+    "arrangement": "single",
+    "seats": [
+      1
+    ]
+  },
+  "R146A_N2adj": {
+    "series": "R146A",
+    "N": 2,
+    "arrangement": "adj",
+    "seats": [
+      1,
+      2
+    ]
+  },
+  "R146A_N2spaced": {
+    "series": "R146A",
+    "N": 2,
+    "arrangement": "spaced",
+    "seats": [
+      1,
+      3
+    ]
+  },
+  "R146A_N3adj": {
+    "series": "R146A",
+    "N": 3,
+    "arrangement": "adj",
+    "seats": [
+      1,
+      2,
+      3
+    ]
+  },
+  "R146A_N3spaced": {
+    "series": "R146A",
+    "N": 3,
+    "arrangement": "spaced",
+    "seats": [
+      1,
+      3,
+      5
+    ]
+  },
+  "R146A_N4": {
+    "series": "R146A",
+    "N": 4,
+    "arrangement": "only1",
+    "seats": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "R146A_N5": {
+    "series": "R146A",
+    "N": 5,
+    "arrangement": "all",
+    "seats": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "E119Q_N0": {
+    "series": "E119Q",
+    "N": 0,
+    "arrangement": "none",
+    "seats": []
+  },
+  "E119Q_N1": {
+    "series": "E119Q",
+    "N": 1,
+    "arrangement": "single",
+    "seats": [
+      1
+    ]
+  },
+  "E119Q_N2adj": {
+    "series": "E119Q",
+    "N": 2,
+    "arrangement": "adj",
+    "seats": [
+      1,
+      2
+    ]
+  },
+  "E119Q_N2spaced": {
+    "series": "E119Q",
+    "N": 2,
+    "arrangement": "spaced",
+    "seats": [
+      1,
+      3
+    ]
+  },
+  "E119Q_N3adj": {
+    "series": "E119Q",
+    "N": 3,
+    "arrangement": "adj",
+    "seats": [
+      1,
+      2,
+      3
+    ]
+  },
+  "E119Q_N3spaced": {
+    "series": "E119Q",
+    "N": 3,
+    "arrangement": "spaced",
+    "seats": [
+      1,
+      3,
+      5
+    ]
+  },
+  "E119Q_N4": {
+    "series": "E119Q",
+    "N": 4,
+    "arrangement": "only1",
+    "seats": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "E119Q_N5": {
+    "series": "E119Q",
+    "N": 5,
+    "arrangement": "all",
+    "seats": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  }
+}
