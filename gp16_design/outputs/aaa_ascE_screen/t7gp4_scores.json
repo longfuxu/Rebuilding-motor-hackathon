@@ -7,8 +7,8 @@
     "handedness": "mirror(k->k-1)",
     "M1_seq_consistent": "YES",
     "M1_radius_A": "33.1",
-    "M2_pass": "PASS",
-    "note": "coupler closes (mirror winding \u2014 check chirality)"
+    "M2_pass": "FAIL",
+    "note": "coupler engaged but MIRROR winding (fails designed-handedness gate \u2014 not a clean close)"
   },
   {
     "protein": "T7_gp4",

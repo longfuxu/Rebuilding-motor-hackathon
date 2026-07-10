@@ -1,0 +1,42 @@
+{
+  "ctrl_rhosal_L30_40_0_d0_scramble": {
+    "variant": "scramble",
+    "winner": "rhosal_L30_40_0",
+    "boltz_M2": "0/6",
+    "boltz_M3": "flag",
+    "of3_M2": "6/6",
+    "of3_hand": "designed(k->k+1)",
+    "of3_R366dev": -1.6,
+    "verdict": "fail"
+  },
+  "ctrl_rhosal_L30_40_0_d0_gslinker": {
+    "variant": "gslinker",
+    "winner": "rhosal_L30_40_0",
+    "boltz_M2": "6/6",
+    "boltz_M3": "clean",
+    "of3_M2": "6/6",
+    "of3_hand": "designed(k->k+1)",
+    "of3_R366dev": -1.2,
+    "verdict": "CLOSES (Boltz+OF3, M3 clean)"
+  },
+  "ctrl_rhosal_L40_52_2_d0_scramble": {
+    "variant": "scramble",
+    "winner": "rhosal_L40_52_2",
+    "boltz_M2": "6/6",
+    "boltz_M3": "clean",
+    "of3_M2": "6/6",
+    "of3_hand": "designed(k->k+1)",
+    "of3_R366dev": -1.5,
+    "verdict": "CLOSES (Boltz+OF3, M3 clean)"
+  },
+  "ctrl_rhosal_L40_52_2_d0_gslinker": {
+    "variant": "gslinker",
+    "winner": "rhosal_L40_52_2",
+    "boltz_M2": "6/6",
+    "boltz_M3": "clean",
+    "of3_M2": "6/6",
+    "of3_hand": "designed(k->k+1)",
+    "of3_R366dev": -1.2,
+    "verdict": "CLOSES (Boltz+OF3, M3 clean)"
+  }
+}

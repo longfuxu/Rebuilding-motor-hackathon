@@ -1,0 +1,56 @@
+[
+  {
+    "winner": "rhosal_L30_40_0",
+    "connector": "designed (RFdiffusion+MPNN)",
+    "len": 32,
+    "boltz_M2": "6/6",
+    "boltz_M3": "clean",
+    "of3_M2": "6/6",
+    "verdict": "CLOSES (reference)"
+  },
+  {
+    "winner": "rhosal_L30_40_0",
+    "connector": "scramble",
+    "len": 32,
+    "boltz_M2": "0/6",
+    "boltz_M3": "flag",
+    "of3_M2": "6/6",
+    "verdict": "fail"
+  },
+  {
+    "winner": "rhosal_L30_40_0",
+    "connector": "gslinker",
+    "len": 32,
+    "boltz_M2": "6/6",
+    "boltz_M3": "clean",
+    "of3_M2": "6/6",
+    "verdict": "CLOSES (Boltz+OF3, M3 clean)"
+  },
+  {
+    "winner": "rhosal_L40_52_2",
+    "connector": "designed (RFdiffusion+MPNN)",
+    "len": 42,
+    "boltz_M2": "6/6",
+    "boltz_M3": "clean",
+    "of3_M2": "6/6",
+    "verdict": "CLOSES (reference)"
+  },
+  {
+    "winner": "rhosal_L40_52_2",
+    "connector": "scramble",
+    "len": 42,
+    "boltz_M2": "6/6",
+    "boltz_M3": "clean",
+    "of3_M2": "6/6",
+    "verdict": "CLOSES (Boltz+OF3, M3 clean)"
+  },
+  {
+    "winner": "rhosal_L40_52_2",
+    "connector": "gslinker",
+    "len": 42,
+    "boltz_M2": "6/6",
+    "boltz_M3": "clean",
+    "of3_M2": "6/6",
+    "verdict": "CLOSES (Boltz+OF3, M3 clean)"
+  }
+]

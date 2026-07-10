@@ -1,0 +1,7 @@
+winner,connector,len,boltz_M2,boltz_M3,of3_M2,verdict
+rhosal_L30_40_0,designed (RFdiffusion+MPNN),32,6/6,clean,6/6,CLOSES (reference)
+rhosal_L30_40_0,scramble,32,0/6,flag,6/6,fail
+rhosal_L30_40_0,gslinker,32,6/6,clean,6/6,"CLOSES (Boltz+OF3, M3 clean)"
+rhosal_L40_52_2,designed (RFdiffusion+MPNN),42,6/6,clean,6/6,CLOSES (reference)
+rhosal_L40_52_2,scramble,42,6/6,clean,6/6,"CLOSES (Boltz+OF3, M3 clean)"
+rhosal_L40_52_2,gslinker,42,6/6,clean,6/6,"CLOSES (Boltz+OF3, M3 clean)"

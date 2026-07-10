@@ -1,12 +1,12 @@
-protein,oligomer,method,fold_M1M2,M3_channel,cross_predictor,closes
-gp16,5,direct,M2 5/5 apo BUT known-bad also closes (channel-blind),FAIL (res330 fouls DNA channel 6.2A),-,NO (CP is the solution)
-gp16,5,CP,"cp233 M2 5/5 (cut res233, off-channel)","clean (pore open, functional res intact)",AF3 5/5 (3-predictor),YES (validated lead)
-gp16,5,RFdiffusion,salami M2 0/5 (arg fingers 22-57A off),-,AF3 0/5-2/5 (split),NO (documented negative)
-ClpX,6,direct,"optimal topology by geometry (gap ~20A, termini off-pore)",clean (termini peripheral),6-copy single chain >NIM ceiling (2378 aa),YES (geometry ruling)
-ClpX,6,CP,strictly worse (54.7A internal join),-,-,NO
-gp17,5,direct,known-good direct fusion,clean,-,YES (anchor)
-Rho,6,direct,M2 6/6 (tiled MSA),"clean (pore 7.0A, R366 native)",OF3 6/6 CONSISTENT,YES (cross-predictor confirmed)
-Rho,6,CP,cp390 M2 6/6 / cp330 0/6,cp390 FLAG (R366 displaced 20A inward),-,NO (M3 catches apo false-positive)
-Rho,6,RFdiffusion,4/6 backbones M2 6/6 (tiled MSA),"clean (pore 6.3-7.4A, functional res native)",OF3: 2/4 CONSISTENT 6/6,YES (rhosal_L30_40_0_d0 + L40_52_2_d0)
-T7_gp4,6,direct,"M2 6/6 (tiled MSA, mirror winding)",not scored (single-predictor),not run,YES (coupler closes; check chirality)
-T7_gp4,6,CP,cp490 M2 1/6,-,-,NO (coupler disrupted)
+protein,oligomer,method,fold_M1M2,M3_channel,cross_predictor,closes,evidence_tier
+gp16,5,direct,M2 5/5 apo BUT known-bad also closes (channel-blind),FAIL (res330 fouls DNA channel 6.2A),-,NO (CP is the solution),fail
+gp16,5,CP,"cp233 M2 5/5 (cut res233, off-channel)","clean (pore open, functional res intact)",AF3 5/5 (3-predictor),YES (validated lead),fold+2predictor
+gp16,5,RFdiffusion,salami M2 0/5 (arg fingers 22-57A off),-,AF3 0/5-2/5 (split),NO (documented negative),fail
+ClpX,6,direct,not folded here (6-copy 2378 aa > NIM ceiling),clean by geometry (termini off-pore),not folded,"YES (geometry ruling, prior)",prior/geometry
+ClpX,6,CP,strictly worse (54.7A internal join),-,-,NO,fail
+gp17,5,direct,"known-good direct fusion (prior anchor, not folded here)",-,-,YES (prior anchor),prior/geometry
+Rho,6,direct,M2 6/6 (tiled MSA),"clean (pore 7.0A, R366 native)",OF3 6/6 CONSISTENT,YES (cross-predictor confirmed),fold+2predictor
+Rho,6,CP,cp390 M2 6/6 / cp330 0/6,cp390 FLAG (R366 displaced 20A inward),-,NO (M3 catches apo false-positive),fail
+Rho,6,RFdiffusion,4/6 backbones M2 6/6 (tiled MSA),"clean (pore 6.3-7.4A, functional res native)",OF3: 2/4 CONSISTENT 6/6,YES (rhosal_L30_40_0_d0 + L40_52_2_d0),fold+2predictor
+T7_gp4,6,direct,M2 6/6 but MIRROR winding (fails designed-handedness gate),not scored,OF3 not run,NO (mirror winding — not a clean close),fail
+T7_gp4,6,CP,cp490 M2 1/6,-,-,NO (coupler disrupted),fail

@@ -51,7 +51,7 @@ is tractable on **Rho (1590–1650 aa)** and **T7 gp4 (1878 aa)**, plus the prio
 | *gp17* | pentamer | **direct** | known-good anchor. |
 | ClpX | hexamer | **direct** | geometry ruling (gap ~20 Å, termini off-pore; CP strictly worse). Full 6-copy chain exceeds NIM ceiling. |
 | **Rho** | hexamer | **direct** + **RFdiffusion** | direct M2 6/6, M3-clean, OF3-confirmed. Two generative rings also close on both predictors (§3). CP390 closes M2 but fails M3. |
-| **T7 gp4** | hexamer | **direct** | M2 6/6 (mirror winding — chirality to confirm); CP490 disrupts the coupler (1/6). |
+| **T7 gp4** | hexamer | **none clean** (direct mirror-wound) | direct M2 6/6 but **mirror winding** → fails the designed-handedness gate (same standard that disqualifies Rho L40_52_0); CP490 disrupts the coupler (1/6). |
 
 ### Rho three methods (`rho_3method_scores.csv`)
 - **direct** (6× motor res175-414 + (GGGGS)×8): Boltz M2 **6/6**, M1 compact/sequential, M3 clean
@@ -62,10 +62,15 @@ is tractable on **Rho (1590–1650 aa)** and **T7 gp4 (1878 aa)**, plus the prio
 - **CP330**: M2 0/6 — coupler not engaged. Fail.
 
 ### T7 gp4 (`t7gp4_scores.csv`) — a third topology class (SF4 helicase)
-- **direct** (6× helicase res262-549 + (GGGGS)×6): M2 **6/6**, compact sequential ring — the coupler
-  closes, matching the two-branch prediction (direct). Handedness is *mirror* (reverse winding); the
-  physiological chirality should be confirmed before build.
+- **direct** (6× helicase res262-549 + (GGGGS)×6): M2 **6/6** but **mirror winding** (reverse
+  k→k-1). Under the same designed-handedness gate applied to Rho (which disqualifies the mirror-wound
+  rhosal_L40_52_0), this does **not** count as a clean close — the coupler is engaged but the ring
+  assembled with opposite chirality. Not a confirmed closer.
 - **CP490**: M2 1/6 — the permutation breaks the interface. Fail.
+- **Net: no T7 gp4 single-chain topology cleanly closes under the handedness-robust gate in this run.**
+  The mirror-wound direct fold is suggestive (the coupler interface can form) but would need a
+  correct-handedness fold — e.g. seeding from the hexamer assembly or an alternative linker — before
+  it could be called a closer.
 
 ---
 
@@ -103,13 +108,36 @@ generative rings), i.e. they should be treated as unconfirmed.
 
 ---
 
+
+## 3b. Connector-necessity control (does the generative rung earn its keep?)
+
+`connector_control/` — for each winner the designed connector was replaced, at matched length, by
+(a) a composition-shuffled **scramble** and (b) a plain **(GS)ₙ flexible linker**; each re-folded on
+Boltz-2 + OpenFold3 with the Rho tiled MSA and re-scored M1/M2/M3.
+
+| winner | designed | (GS)ₙ linker | scramble |
+|---|---|---|---|
+| rhosal_L30_40_0 | closes (B+OF3) | **closes (B+OF3, M3 clean)** | fails (Boltz 0/6) |
+| rhosal_L40_52_2 | closes (B+OF3) | **closes (B+OF3, M3 clean)** | closes (B+OF3) |
+
+**Honest verdict: for Rho, the generative rung was NOT required.** A plain (GS)ₙ linker of the same
+length closes both winners across both predictors with the channel clean — direct-fusion-with-a-long-
+linker suffices, consistent with the two-branch rule already routing Rho to "direct". Closure is
+governed mainly by connector length/flexibility, not the specific designed sequence (the scramble
+closes in one case, fails in the other). The RFdiffusion connector is *a* valid solution but not a
+*necessary* one here; a generative-necessity claim would require a protein whose direct and CP
+topologies both genuinely fail (a true diffusion-only geometry), which Rho is not. See
+`connector_control/CONNECTOR_CONTROL_REPORT.md`.
+
 ## 4. Does the topology rule extend, or is it falsified?
 
 **Extends.** Across every folded system the closing method matched the two-branch prediction:
 - gp16 (only jammer) → CP closes, direct fails on the channel. ✓
-- gp17 / ClpX / Rho / T7 gp4 (peripheral C-termini) → direct closes. ✓
-- Rho additionally admits a generative solution; T7 gp4 (SF4 helicase, a third topology class beyond
-  the ASCE gp16/gp17 and RecA-like Rho) obeys the rule (direct closes, CP fails).
+- gp17 / ClpX / Rho (peripheral C-termini) → direct closes. ✓ (gp17/ClpX from prior/geometry; Rho folded + cross-predictor-confirmed here.)
+- Rho additionally admits a generative solution. T7 gp4 (SF4 helicase, a third topology class beyond
+  the ASCE gp16/gp17 and RecA-like Rho) is **consistent** with the rule (CP fails as predicted; direct
+  engages the coupler) but its direct fold came out **mirror-wound**, so it is not a confirmed clean
+  closer under the handedness gate — a partial, honest result rather than a validated extension.
 
 **The M3 gate is load-bearing.** Rho CP390 shows an apo M2 6/6 ring that the M3 channel gate rejects
 (R366 displaced 20 Å). Apo single-chain closure alone is not sufficient evidence of a functional ring —

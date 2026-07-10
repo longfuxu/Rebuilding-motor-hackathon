@@ -1,0 +1,38 @@
+{
+  "ctrl_rhosal_L30_40_0_d0_scramble": {
+    "boltz_M2": "0/6",
+    "boltz_hand": "designed(k->k+1)",
+    "M3a_pore": 12.8,
+    "R366_dev": 8.8,
+    "linker_radial": 12.8,
+    "in_lumen": true,
+    "M3": "flag"
+  },
+  "ctrl_rhosal_L30_40_0_d0_gslinker": {
+    "boltz_M2": "6/6",
+    "boltz_hand": "designed(k->k+1)",
+    "M3a_pore": 7.7,
+    "R366_dev": -0.6,
+    "linker_radial": 18.1,
+    "in_lumen": false,
+    "M3": "clean"
+  },
+  "ctrl_rhosal_L40_52_2_d0_scramble": {
+    "boltz_M2": "6/6",
+    "boltz_hand": "designed(k->k+1)",
+    "M3a_pore": 7.4,
+    "R366_dev": -0.5,
+    "linker_radial": 19.4,
+    "in_lumen": false,
+    "M3": "clean"
+  },
+  "ctrl_rhosal_L40_52_2_d0_gslinker": {
+    "boltz_M2": "6/6",
+    "boltz_hand": "designed(k->k+1)",
+    "M3a_pore": 7.3,
+    "R366_dev": -0.5,
+    "linker_radial": 18.8,
+    "in_lumen": false,
+    "M3": "clean"
+  }
+}

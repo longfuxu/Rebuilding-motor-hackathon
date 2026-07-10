@@ -1,0 +1,42 @@
+{
+  "name": "ctrl_rhosal_L30_40_0_d0_gslinker",
+  "ok": true,
+  "wall_s": 134.1,
+  "metrics": {
+    "confidence_scores": [
+      0.6615590453147888
+    ],
+    "ptm_scores": [
+      0.3807820975780487
+    ],
+    "iptm_scores": [
+      0.0
+    ],
+    "complex_plddt_scores": [
+      0.7317532896995544
+    ],
+    "complex_pde_scores": [
+      1.688287615776062
+    ]
+  },
+  "M2": "# M2(ring): 6/6 arginine fingers engaged [designed(k->k+1)]  (forward 6/6, reverse 0/6)",
+  "M1": "# M1: radius 28.8 A | radius_CV 0.02 | planarity_rms 0.3 A | compact_ring True | sequential_consistent: YES (designed order == spatial order)",
+  "M4": "# M4: designed-interface pLDDT mean 74.5 / min 73.6",
+  "ring": {
+    "engaged": 6,
+    "n": 6,
+    "handedness": "designed(k->k+1)",
+    "m2_forward": 6,
+    "m2_reverse": 0,
+    "score_forward": "# ../../outputs/aaa_ascE_screen/connector_control/ctrl_rhosal_L30_40_0_d0_gslinker.cif   subunits: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6']\n  donor -> acceptor  R146_min_A  engaged  iface_pLDDT  note\n     A1 ->       A2        3.67     True         76.3  \n     A2 ->       A3        3.68     True         74.1  \n     A3 ->       A4        3.53     True         73.8  \n     A4 ->       A5        3.61     True         73.6  \n     A5 ->       A6        3.57     True         74.8  \n     A6 ->       A1        3.94     True         74.3  \n# M2: 6/6 DESIGNED interfaces engaged (<8.0 A)  ->  pass = >=4/5 for a pentamer\n# M1: radius 28.8 A | radius_CV 0.02 | planarity_rms 0.3 A | compact_ring True | sequential_consistent: YES (designed order == spatial order)\n# M4: designed-interface pLDDT mean 74.5 / min 73.6\n",
+    "score_reverse": "# ../../outputs/aaa_ascE_screen/connector_control/ctrl_rhosal_L30_40_0_d0_gslinker.cif   subunits: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6']\n  donor -> acceptor  R146_min_A  engaged  iface_pLDDT  note\n     A1 ->       A2       40.32    False         73.9  nearest=A6@3.9(scrambled)\n     A2 ->       A3       40.18    False         73.8  nearest=A1@3.6(scrambled)\n     A3 ->       A4       40.36    False         74.0  nearest=A2@3.6(scrambled)\n     A4 ->       A5       40.23    False         74.9  nearest=A3@3.5(scrambled)\n     A5 ->       A6       40.38    False         74.1  nearest=A4@3.7(scrambled)\n     A6 ->       A1       40.57    False         76.2  nearest=A5@3.7(scrambled)\n# M2: 0/6 DESIGNED interfaces engaged (<8.0 A)  ->  pass = >=4/5 for a pentamer\n# M1: radius 28.8 A | radius_CV 0.02 | planarity_rms 0.3 A | compact_ring True | sequential_consistent: YES (designed order == spatial order)\n# M4: designed-interface pLDDT mean 74.5 / min 73.8\n"
+  },
+  "score_full": "# ../../outputs/aaa_ascE_screen/connector_control/ctrl_rhosal_L30_40_0_d0_gslinker.cif   subunits: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6']\n  donor -> acceptor  R146_min_A  engaged  iface_pLDDT  note\n     A1 ->       A2        3.67     True         76.3  \n     A2 ->       A3        3.68     True         74.1  \n     A3 ->       A4        3.53     True         73.8  \n     A4 ->       A5        3.61     True         73.6  \n     A5 ->       A6        3.57     True         74.8  \n     A6 ->       A1        3.94     True         74.3  \n# M2: 6/6 DESIGNED interfaces engaged (<8.0 A)  ->  pass = >=4/5 for a pentamer\n# M1: radius 28.8 A | radius_CV 0.02 | planarity_rms 0.3 A | compact_ring True | sequential_consistent: YES (designed order == spatial order)\n# M4: designed-interface pLDDT mean 74.5 / min 73.6\n",
+  "copies": "A:1-272,A:273-544,A:545-816,A:817-1088,A:1089-1360,A:1361-1600",
+  "r146_incopy": 192,
+  "walker_incopy": "5-12",
+  "monomer_len": 240,
+  "msa_depth": 11482,
+  "tiled_rows": 68893,
+  "construct_len": 1600
+}

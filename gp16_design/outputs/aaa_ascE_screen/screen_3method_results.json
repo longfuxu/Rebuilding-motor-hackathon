@@ -6,7 +6,8 @@
     "fold_M1M2": "M2 5/5 apo BUT known-bad also closes (channel-blind)",
     "M3_channel": "FAIL (res330 fouls DNA channel 6.2A)",
     "cross_predictor": "-",
-    "closes": "NO (CP is the solution)"
+    "closes": "NO (CP is the solution)",
+    "evidence_tier": "fail"
   },
   {
     "protein": "gp16",
@@ -15,7 +16,8 @@
     "fold_M1M2": "cp233 M2 5/5 (cut res233, off-channel)",
     "M3_channel": "clean (pore open, functional res intact)",
     "cross_predictor": "AF3 5/5 (3-predictor)",
-    "closes": "YES (validated lead)"
+    "closes": "YES (validated lead)",
+    "evidence_tier": "fold+2predictor"
   },
   {
     "protein": "gp16",
@@ -24,16 +26,18 @@
     "fold_M1M2": "salami M2 0/5 (arg fingers 22-57A off)",
     "M3_channel": "-",
     "cross_predictor": "AF3 0/5-2/5 (split)",
-    "closes": "NO (documented negative)"
+    "closes": "NO (documented negative)",
+    "evidence_tier": "fail"
   },
   {
     "protein": "ClpX",
     "oligomer": 6,
     "method": "direct",
-    "fold_M1M2": "optimal topology by geometry (gap ~20A, termini off-pore)",
-    "M3_channel": "clean (termini peripheral)",
-    "cross_predictor": "6-copy single chain >NIM ceiling (2378 aa)",
-    "closes": "YES (geometry ruling)"
+    "fold_M1M2": "not folded here (6-copy 2378 aa > NIM ceiling)",
+    "M3_channel": "clean by geometry (termini off-pore)",
+    "cross_predictor": "not folded",
+    "closes": "YES (geometry ruling, prior)",
+    "evidence_tier": "prior/geometry"
   },
   {
     "protein": "ClpX",
@@ -42,16 +46,18 @@
     "fold_M1M2": "strictly worse (54.7A internal join)",
     "M3_channel": "-",
     "cross_predictor": "-",
-    "closes": "NO"
+    "closes": "NO",
+    "evidence_tier": "fail"
   },
   {
     "protein": "gp17",
     "oligomer": 5,
     "method": "direct",
-    "fold_M1M2": "known-good direct fusion",
-    "M3_channel": "clean",
+    "fold_M1M2": "known-good direct fusion (prior anchor, not folded here)",
+    "M3_channel": "-",
     "cross_predictor": "-",
-    "closes": "YES (anchor)"
+    "closes": "YES (prior anchor)",
+    "evidence_tier": "prior/geometry"
   },
   {
     "protein": "Rho",
@@ -60,7 +66,8 @@
     "fold_M1M2": "M2 6/6 (tiled MSA)",
     "M3_channel": "clean (pore 7.0A, R366 native)",
     "cross_predictor": "OF3 6/6 CONSISTENT",
-    "closes": "YES (cross-predictor confirmed)"
+    "closes": "YES (cross-predictor confirmed)",
+    "evidence_tier": "fold+2predictor"
   },
   {
     "protein": "Rho",
@@ -69,7 +76,8 @@
     "fold_M1M2": "cp390 M2 6/6 / cp330 0/6",
     "M3_channel": "cp390 FLAG (R366 displaced 20A inward)",
     "cross_predictor": "-",
-    "closes": "NO (M3 catches apo false-positive)"
+    "closes": "NO (M3 catches apo false-positive)",
+    "evidence_tier": "fail"
   },
   {
     "protein": "Rho",
@@ -78,16 +86,18 @@
     "fold_M1M2": "4/6 backbones M2 6/6 (tiled MSA)",
     "M3_channel": "clean (pore 6.3-7.4A, functional res native)",
     "cross_predictor": "OF3: 2/4 CONSISTENT 6/6",
-    "closes": "YES (rhosal_L30_40_0_d0 + L40_52_2_d0)"
+    "closes": "YES (rhosal_L30_40_0_d0 + L40_52_2_d0)",
+    "evidence_tier": "fold+2predictor"
   },
   {
     "protein": "T7_gp4",
     "oligomer": 6,
     "method": "direct",
-    "fold_M1M2": "M2 6/6 (tiled MSA, mirror winding)",
-    "M3_channel": "not scored (single-predictor)",
-    "cross_predictor": "not run",
-    "closes": "YES (coupler closes; check chirality)"
+    "fold_M1M2": "M2 6/6 but MIRROR winding (fails designed-handedness gate)",
+    "M3_channel": "not scored",
+    "cross_predictor": "OF3 not run",
+    "closes": "NO (mirror winding \u2014 not a clean close)",
+    "evidence_tier": "fail"
   },
   {
     "protein": "T7_gp4",
@@ -96,6 +106,7 @@
     "fold_M1M2": "cp490 M2 1/6",
     "M3_channel": "-",
     "cross_predictor": "-",
-    "closes": "NO (coupler disrupted)"
+    "closes": "NO (coupler disrupted)",
+    "evidence_tier": "fail"
   }
 ]

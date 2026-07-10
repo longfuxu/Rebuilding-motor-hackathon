@@ -1,0 +1,26 @@
+{
+  "ctrl_rhosal_L30_40_0_d0_scramble": {
+    "orig_len": 32,
+    "variant": "scramble",
+    "connector": "FDEKIVELHVGPYFFKWIKSIEKLEEEVRFDE",
+    "ring_len": 1600
+  },
+  "ctrl_rhosal_L30_40_0_d0_gslinker": {
+    "orig_len": 32,
+    "variant": "gslinker",
+    "connector": "GSGSGSGSGSGSGSGSGSGSGSGSGSGSGSGS",
+    "ring_len": 1600
+  },
+  "ctrl_rhosal_L40_52_2_d0_scramble": {
+    "orig_len": 42,
+    "variant": "scramble",
+    "connector": "DALIIEKIIVKEPGDKGAWFFLETEFLYFKRKNGEGFNYPVV",
+    "ring_len": 1650
+  },
+  "ctrl_rhosal_L40_52_2_d0_gslinker": {
+    "orig_len": 42,
+    "variant": "gslinker",
+    "connector": "GSGSGSGSGSGSGSGSGSGSGSGSGSGSGSGSGSGSGSGSGS",
+    "ring_len": 1650
+  }
+}
