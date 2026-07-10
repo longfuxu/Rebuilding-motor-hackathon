@@ -14,3 +14,13 @@ The user ran the E119Q dead-seat series on AlphaFold3 (the 3rd independent predi
 **Result:** the genetically-addressable E119Q dead seat (1 or all 5 seats) keeps the ring fully closed and sequential — **5/5 across all three predictors (Boltz-2 tiled, OpenFold3, AlphaFold3) and both ligand states.** This is the assembly-tolerance leg of the addressability claim, now 3-predictor + ligand-confirmed.
 
 **Pending (agent died on an API error, re-run when stable):** the deeper *catalytic-locality* analysis — from the +ATP·Mg folds, per-seat Mg/attacking-water geometry to test whether E119Q locally disrupts catalysis *at its own seat* while neighbours stay intact (turning "assembly tolerance" into "position-specific catalytic knockout"). The folds are in `af3_2026_07_09/*_atp_mg/`.
+
+## Catalytic-locality (ATP·Mg folds, per-seat) — 2026-07-09
+AF3 placed **5 ATP + 5 Mg** (one per pocket) in both ligand folds. Per-seat distance from residue-119 side-chain (E: OE1/OE2; Q→OE1/NE2) to nearest Mg:
+
+| construct | dead seat(s) Q→Mg | wt seat(s) E→Mg |
+|---|---|---|
+| E119Q_1seat +ATP·Mg | copy1 (Q) **4.2 Å** | copies 2–5 (E) 4.3–4.4 Å |
+| E119Q_5seat +ATP·Mg | all (Q) **4.2 Å** | — |
+
+**Finding (honest, and a cleaner story):** E119Q does **NOT** structurally displace the Mg or the pocket — the ground-state geometry is essentially identical to WT (Δ ≤ 0.2 Å). So the addressable dead seat is a **structurally-silent, position-specific catalytic knockout**: it perturbs neither assembly (M2 5/5), nor the neighbours, nor the visible ATP·Mg pocket. The catalytic loss is **chemical** — E119 is the base that activates the lytic water; Q cannot — which a *static* structure predictor cannot capture. This is exactly what you want in an addressable perturbation (minimal structural side-effects); to *see* the catalytic effect requires QM/MM or the wet ATPase/single-molecule assay. It also revises our earlier hypothesis (we expected local Mg displacement) — honestly, there is none.
