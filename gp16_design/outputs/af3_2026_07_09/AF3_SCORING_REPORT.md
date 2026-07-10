@@ -109,3 +109,10 @@ interfaces print instead of crashing.
 - **RFdiffusion Mode-B de-novo rings do not close** on AF3 (0/5 and 2/5), consistent with
   single-sequence Boltz — they form geometrically compact rings (highest pLDDT of the set is
   the *worst* M2), but the subunit register is scrambled.
+
+---
+## RECONCILIATION (2026-07-09, after tiled_msa_fold results)
+Two corrections to the RFdiffusion verdict above, after cross-checking with the Boltz-2 tiled-MSA folds:
+1. **Copy span was wrong** here (uniform 367; true repeat is 377 = 327 domain + 50 linker). Re-scored with correct 377 landmarks + handedness-robust M2.
+2. **The RFdiffusion ring is PREDICTOR-SPLIT, not simply "does not close":** the identical 1835aa sequence folds to **5/5 clean ring under Boltz-2 + tiled MSA** but **2/5 scrambled (radius_CV 0.09) under AF3** — a genuine predictor disagreement (confirmed with matched correct scoring), NOT a scoring artifact. Contrast cp233 (all 3 predictors agree 5/5). So the generative rung yields a marginal, non-robust design.
+3. **Handedness caveat:** covalent-ring M2 must be read handedness-robust (both k→k+1 and k→k-1); mirror-wound folds otherwise misread as 0/5. The cp233_novel d7/d8 and cp285/cp297 verdicts here used direction-specific scoring — cp285/297 are corroborated 5/5 by Boltz-tiled too (robust); d7/d8 should be re-checked handedness-robust (may or may not flip).
