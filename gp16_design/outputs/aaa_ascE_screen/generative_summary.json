@@ -1,0 +1,19 @@
+{
+  "gp16_salami_modeB": {
+    "system": "gp16 (pentamer)",
+    "backbones": "sal_L32/L38/L44/L50 (4)",
+    "boltz_M2": "0/5 (arginine fingers 22-57A off, wrong-partner)",
+    "cross_predictor": "AF3 0/5-2/5 (predictor-split confirmed)",
+    "verdict": "DOCUMENTED NEGATIVE \u2014 connector-only diffusion cannot recover the pentamer coupler"
+  },
+  "rho_salami": {
+    "system": "Rho (hexamer)",
+    "backbones": "rhosal_L30_40_{0..4}, rhosal_L40_52_{0..4} (10)",
+    "mpnn": "ProteinMPNN v_48_020, connector-only design (motor motifs frozen), 4 seq/backbone",
+    "folded": "6 selected (L30_40_{0,1,2}_d0 + L40_52_{0,1,2}_d0), tiled-MSA Boltz-2",
+    "boltz_M2": "4/6 close (6/6 designed handedness): L30_40_{0,1,2}_d0, L40_52_2_d0",
+    "M3": "all 4 clean (pore 6.3-7.4A, K184/R366 native-like, connector radial 18.8-24.6A outside lumen)",
+    "cross_predictor_OF3": "2 CONSISTENT (L30_40_0_d0 6/6, L40_52_2_d0 6/6); 2 SPLIT (L30_40_1_d0 3/6, L30_40_2_d0 3/6)",
+    "verdict": "WINNER \u2014 2 generative rings close on Boltz+OF3, M3-clean: rhosal_L30_40_0_d0 + rhosal_L40_52_2_d0"
+  }
+}

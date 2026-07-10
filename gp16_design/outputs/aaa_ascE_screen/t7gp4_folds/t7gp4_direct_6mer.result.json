@@ -1,0 +1,42 @@
+{
+  "name": "t7gp4_direct_6mer",
+  "ok": true,
+  "wall_s": 75.5,
+  "metrics": {
+    "confidence_scores": [
+      0.7472773194313049
+    ],
+    "ptm_scores": [
+      0.6416029334068298
+    ],
+    "iptm_scores": [
+      0.0
+    ],
+    "complex_plddt_scores": [
+      0.7736958861351013
+    ],
+    "complex_pde_scores": [
+      1.0459566116333008
+    ]
+  },
+  "M2": "# M2(ring): 6/6 arginine fingers engaged [mirror(k->k-1)]  (forward 0/6, reverse 6/6)",
+  "M1": "# M1: radius 33.1 A | radius_CV 0.01 | planarity_rms 0.1 A | compact_ring True | sequential_consistent: YES (designed order == spatial order)",
+  "M4": "# M4: designed-interface pLDDT mean 87.3 / min 86.6",
+  "ring": {
+    "engaged": 6,
+    "n": 6,
+    "handedness": "mirror(k->k-1)",
+    "m2_forward": 0,
+    "m2_reverse": 6,
+    "score_forward": "# ../../outputs/aaa_ascE_screen/t7gp4_folds/t7gp4_direct_6mer.cif   subunits: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6']\n  donor -> acceptor  R146_min_A  engaged  iface_pLDDT  note\n     A1 ->       A2       45.68    False         87.9  nearest=A6@4.9(scrambled)\n     A2 ->       A3       45.75    False         87.0  nearest=A1@4.9(scrambled)\n     A3 ->       A4       45.69    False         86.7  nearest=A2@4.8(scrambled)\n     A4 ->       A5       45.60    False         86.7  nearest=A3@4.7(scrambled)\n     A5 ->       A6       45.83    False         87.1  nearest=A4@4.7(scrambled)\n     A6 ->       A1       45.88    False         88.3  nearest=A5@4.9(scrambled)\n# M2: 0/6 DESIGNED interfaces engaged (<8.0 A)  ->  pass = >=4/5 for a pentamer\n# M1: radius 33.1 A | radius_CV 0.01 | planarity_rms 0.1 A | compact_ring True | sequential_consistent: YES (designed order == spatial order)\n# M4: designed-interface pLDDT mean 87.3 / min 86.7\n",
+    "score_reverse": "# ../../outputs/aaa_ascE_screen/t7gp4_folds/t7gp4_direct_6mer.cif   subunits: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6']\n  donor -> acceptor  R146_min_A  engaged  iface_pLDDT  note\n     A1 ->       A2        4.86     True         86.6  \n     A2 ->       A3        4.70     True         86.6  \n     A3 ->       A4        4.74     True         86.8  \n     A4 ->       A5        4.77     True         87.7  \n     A5 ->       A6        4.90     True         88.6  \n     A6 ->       A1        4.86     True         87.4  \n# M2: 6/6 DESIGNED interfaces engaged (<8.0 A)  ->  pass = >=4/5 for a pentamer\n# M1: radius 33.1 A | radius_CV 0.01 | planarity_rms 0.1 A | compact_ring True | sequential_consistent: YES (designed order == spatial order)\n# M4: designed-interface pLDDT mean 87.3 / min 86.6\n"
+  },
+  "score_full": "# ../../outputs/aaa_ascE_screen/t7gp4_folds/t7gp4_direct_6mer.cif   subunits: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6']\n  donor -> acceptor  R146_min_A  engaged  iface_pLDDT  note\n     A1 ->       A2        4.86     True         86.6  \n     A2 ->       A3        4.70     True         86.6  \n     A3 ->       A4        4.74     True         86.8  \n     A4 ->       A5        4.77     True         87.7  \n     A5 ->       A6        4.90     True         88.6  \n     A6 ->       A1        4.86     True         87.4  \n# M2: 6/6 DESIGNED interfaces engaged (<8.0 A)  ->  pass = >=4/5 for a pentamer\n# M1: radius 33.1 A | radius_CV 0.01 | planarity_rms 0.1 A | compact_ring True | sequential_consistent: YES (designed order == spatial order)\n# M4: designed-interface pLDDT mean 87.3 / min 86.6\n",
+  "copies": "A:1-318,A:319-636,A:637-954,A:955-1272,A:1273-1590,A:1591-1878",
+  "r146_incopy": 261,
+  "walker_incopy": "57-64",
+  "monomer_len": 288,
+  "msa_depth": 1921,
+  "tiled_rows": 11527,
+  "construct_len": 1878
+}

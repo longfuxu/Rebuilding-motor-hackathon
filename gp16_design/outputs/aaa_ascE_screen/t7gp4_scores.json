@@ -1,0 +1,24 @@
+[
+  {
+    "protein": "T7_gp4",
+    "method": "direct",
+    "construct": "6x helicase(262-549)+(GGGGS)x6",
+    "M2": "6/6",
+    "handedness": "mirror(k->k-1)",
+    "M1_seq_consistent": "YES",
+    "M1_radius_A": "33.1",
+    "M2_pass": "PASS",
+    "note": "coupler closes (mirror winding \u2014 check chirality)"
+  },
+  {
+    "protein": "T7_gp4",
+    "method": "CP",
+    "construct": "circular permutation cut@490",
+    "M2": "1/6",
+    "handedness": "mirror(k->k-1)",
+    "M1_seq_consistent": "YES",
+    "M1_radius_A": "31.6",
+    "M2_pass": "FAIL",
+    "note": "coupler disrupted"
+  }
+]

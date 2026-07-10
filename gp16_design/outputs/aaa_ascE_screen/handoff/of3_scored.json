@@ -1,0 +1,27 @@
+{
+  "rhogen_rhosal_L30_40_1_d0": {
+    "OF3_M2": "3/6",
+    "OF3_handedness": "mirror(k->k-1)",
+    "OF3_consistent": false
+  },
+  "rho_direct_tiledMSA": {
+    "OF3_M2": "6/6",
+    "OF3_handedness": "designed(k->k+1)",
+    "OF3_consistent": true
+  },
+  "rhogen_rhosal_L30_40_0_d0": {
+    "OF3_M2": "6/6",
+    "OF3_handedness": "designed(k->k+1)",
+    "OF3_consistent": true
+  },
+  "rhogen_rhosal_L30_40_2_d0": {
+    "OF3_M2": "3/6",
+    "OF3_handedness": "mirror(k->k-1)",
+    "OF3_consistent": false
+  },
+  "rhogen_rhosal_L40_52_2_d0": {
+    "OF3_M2": "6/6",
+    "OF3_handedness": "designed(k->k+1)",
+    "OF3_consistent": true
+  }
+}

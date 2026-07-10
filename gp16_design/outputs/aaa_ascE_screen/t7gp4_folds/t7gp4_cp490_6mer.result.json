@@ -1,0 +1,42 @@
+{
+  "name": "t7gp4_cp490_6mer",
+  "ok": true,
+  "wall_s": 83.8,
+  "metrics": {
+    "confidence_scores": [
+      0.6942154169082642
+    ],
+    "ptm_scores": [
+      0.5755853652954102
+    ],
+    "iptm_scores": [
+      0.0
+    ],
+    "complex_plddt_scores": [
+      0.7238729000091553
+    ],
+    "complex_pde_scores": [
+      1.9360270500183105
+    ]
+  },
+  "M2": "# M2(ring): 1/6 arginine fingers engaged [mirror(k->k-1)]  (forward 0/6, reverse 1/6)",
+  "M1": "# M1: radius 31.6 A | radius_CV 0.01 | planarity_rms 0.2 A | compact_ring True | sequential_consistent: YES (designed order == spatial order)",
+  "M4": "# M4: designed-interface pLDDT mean 84.1 / min 84.1",
+  "ring": {
+    "engaged": 1,
+    "n": 6,
+    "handedness": "mirror(k->k-1)",
+    "m2_forward": 0,
+    "m2_reverse": 1,
+    "score_forward": "# ../../outputs/aaa_ascE_screen/t7gp4_folds/t7gp4_cp490_6mer.cif   subunits: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6']\n  donor -> acceptor  R146_min_A  engaged  iface_pLDDT  note\n     A1 ->       A2       43.08    False         85.4  nearest=A6@5.2(scrambled)\n# M2: 0/6 DESIGNED interfaces engaged (<8.0 A)  ->  pass = >=4/5 for a pentamer\n# M1: radius 31.6 A | radius_CV 0.01 | planarity_rms 0.2 A | compact_ring True | sequential_consistent: YES (designed order == spatial order)\n# M4: designed-interface pLDDT mean 85.4 / min 85.4\n",
+    "score_reverse": "# ../../outputs/aaa_ascE_screen/t7gp4_folds/t7gp4_cp490_6mer.cif   subunits: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6']\n  donor -> acceptor  R146_min_A  engaged  iface_pLDDT  note\n     A6 ->       A1        5.19     True         84.1  \n# M2: 1/6 DESIGNED interfaces engaged (<8.0 A)  ->  pass = >=4/5 for a pentamer\n# M1: radius 31.6 A | radius_CV 0.01 | planarity_rms 0.2 A | compact_ring True | sequential_consistent: YES (designed order == spatial order)\n# M4: designed-interface pLDDT mean 84.1 / min 84.1\n"
+  },
+  "score_full": "# ../../outputs/aaa_ascE_screen/t7gp4_folds/t7gp4_cp490_6mer.cif   subunits: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6']\n  donor -> acceptor  R146_min_A  engaged  iface_pLDDT  note\n     A6 ->       A1        5.19     True         84.1  \n# M2: 1/6 DESIGNED interfaces engaged (<8.0 A)  ->  pass = >=4/5 for a pentamer\n# M1: radius 31.6 A | radius_CV 0.01 | planarity_rms 0.2 A | compact_ring True | sequential_consistent: YES (designed order == spatial order)\n# M4: designed-interface pLDDT mean 84.1 / min 84.1\n",
+  "copies": "A:1-316,A:317-634,A:635-952,A:953-1270,A:1271-1588,A:1589-1898",
+  "r146_incopy": 33,
+  "walker_incopy": "137-144",
+  "monomer_len": 288,
+  "msa_depth": 1921,
+  "tiled_rows": 11527,
+  "construct_len": 1898
+}

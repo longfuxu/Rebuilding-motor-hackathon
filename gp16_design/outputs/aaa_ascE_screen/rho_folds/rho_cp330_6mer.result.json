@@ -1,0 +1,42 @@
+{
+  "name": "rho_cp330_6mer",
+  "ok": true,
+  "wall_s": 92.0,
+  "metrics": {
+    "confidence_scores": [
+      0.6373661756515503
+    ],
+    "ptm_scores": [
+      0.3289720118045807
+    ],
+    "iptm_scores": [
+      0.0
+    ],
+    "complex_plddt_scores": [
+      0.7144646644592285
+    ],
+    "complex_pde_scores": [
+      1.7679733037948608
+    ]
+  },
+  "M2": "# M2(ring): 0/6 arginine fingers engaged [designed(k->k+1)]  (forward 0/6, reverse 0/6)",
+  "M1": "# M1: radius 33.6 A | radius_CV 0.00 | planarity_rms 0.2 A | compact_ring True | sequential_consistent: YES (designed order == spatial order)",
+  "M4": "# M4: designed-interface pLDDT mean 73.8 / min 72.5",
+  "ring": {
+    "engaged": 0,
+    "n": 6,
+    "handedness": "designed(k->k+1)",
+    "m2_forward": 0,
+    "m2_reverse": 0,
+    "score_forward": "# ../../outputs/aaa_ascE_screen/rho_folds/rho_cp330_6mer.cif   subunits: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6']\n  donor -> acceptor  R146_min_A  engaged  iface_pLDDT  note\n     A1 ->       A2       57.48    False         75.3  nearest=A6@21.9(scrambled)\n     A2 ->       A3       57.35    False         74.3  nearest=A1@22.0(scrambled)\n     A3 ->       A4       57.75    False         73.9  nearest=A2@21.9(scrambled)\n     A4 ->       A5       57.38    False         73.3  nearest=A3@22.0(scrambled)\n     A5 ->       A6       57.47    False         73.2  nearest=A4@21.9(scrambled)\n     A6 ->       A1       57.91    False         72.5  nearest=A5@22.0(scrambled)\n# M2: 0/6 DESIGNED interfaces engaged (<8.0 A)  ->  pass = >=4/5 for a pentamer\n# M1: radius 33.6 A | radius_CV 0.00 | planarity_rms 0.2 A | compact_ring True | sequential_consistent: YES (designed order == spatial order)\n# M4: designed-interface pLDDT mean 73.8 / min 72.5\n",
+    "score_reverse": "# ../../outputs/aaa_ascE_screen/rho_folds/rho_cp330_6mer.cif   subunits: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6']\n  donor -> acceptor  R146_min_A  engaged  iface_pLDDT  note\n     A1 ->       A2       21.96    False         73.1  \n     A2 ->       A3       21.88    False         73.8  \n     A3 ->       A4       21.98    False         74.4  \n     A4 ->       A5       21.90    False         73.9  \n     A5 ->       A6       21.97    False         72.6  \n     A6 ->       A1       21.94    False         74.7  \n# M2: 0/6 DESIGNED interfaces engaged (<8.0 A)  ->  pass = >=4/5 for a pentamer\n# M1: radius 33.6 A | radius_CV 0.00 | planarity_rms 0.2 A | compact_ring True | sequential_consistent: YES (designed order == spatial order)\n# M4: designed-interface pLDDT mean 73.8 / min 72.6\n"
+  },
+  "score_full": "# ../../outputs/aaa_ascE_screen/rho_folds/rho_cp330_6mer.cif   subunits: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6']\n  donor -> acceptor  R146_min_A  engaged  iface_pLDDT  note\n     A1 ->       A2       57.48    False         75.3  nearest=A6@21.9(scrambled)\n     A2 ->       A3       57.35    False         74.3  nearest=A1@22.0(scrambled)\n     A3 ->       A4       57.75    False         73.9  nearest=A2@21.9(scrambled)\n     A4 ->       A5       57.38    False         73.3  nearest=A3@22.0(scrambled)\n     A5 ->       A6       57.47    False         73.2  nearest=A4@21.9(scrambled)\n     A6 ->       A1       57.91    False         72.5  nearest=A5@22.0(scrambled)\n# M2: 0/6 DESIGNED interfaces engaged (<8.0 A)  ->  pass = >=4/5 for a pentamer\n# M1: radius 33.6 A | radius_CV 0.00 | planarity_rms 0.2 A | compact_ring True | sequential_consistent: YES (designed order == spatial order)\n# M4: designed-interface pLDDT mean 73.8 / min 72.5\n",
+  "copies": "A:1-265,A:266-530,A:531-795,A:796-1060,A:1061-1325,A:1326-1580",
+  "r146_incopy": 36,
+  "walker_incopy": "104-111",
+  "monomer_len": 240,
+  "msa_depth": 11482,
+  "tiled_rows": 68893,
+  "construct_len": 1580
+}

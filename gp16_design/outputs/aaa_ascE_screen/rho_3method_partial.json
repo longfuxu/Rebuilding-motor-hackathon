@@ -1,0 +1,50 @@
+[
+  {
+    "protein": "Rho",
+    "method": "direct",
+    "construct": "N->C fusion (GGGGS)x8, res175-414",
+    "M2_engaged": "6/6",
+    "M2_handedness": "designed(k->k+1)",
+    "M2_pass": "PASS",
+    "M1_sequential": "YES",
+    "M1_radius_A": "29.5",
+    "M3a_pore_radius": 7.0,
+    "M3a_admits_ssRNA": true,
+    "M3b_K184_radial": 30.0,
+    "M3b_R366_radial": 33.5,
+    "M3b_R366_dev_from_native": 0.6,
+    "M3_verdict": "clean"
+  },
+  {
+    "protein": "Rho",
+    "method": "CP",
+    "construct": "circular permutation, cut native 390",
+    "M2_engaged": "6/6",
+    "M2_handedness": "designed(k->k+1)",
+    "M2_pass": "PASS",
+    "M1_sequential": "YES",
+    "M1_radius_A": "30.4",
+    "M3a_pore_radius": 7.6,
+    "M3a_admits_ssRNA": true,
+    "M3b_K184_radial": 39.3,
+    "M3b_R366_radial": 12.9,
+    "M3b_R366_dev_from_native": -20.0,
+    "M3_verdict": "flag"
+  },
+  {
+    "protein": "Rho",
+    "method": "CP",
+    "construct": "circular permutation, cut native 330",
+    "M2_engaged": "0/6",
+    "M2_handedness": "designed(k->k+1)",
+    "M2_pass": "FAIL",
+    "M1_sequential": "YES",
+    "M1_radius_A": "33.6",
+    "M3a_pore_radius": 10.2,
+    "M3a_admits_ssRNA": true,
+    "M3b_K184_radial": 34.5,
+    "M3b_R366_radial": 40.2,
+    "M3b_R366_dev_from_native": 7.3,
+    "M3_verdict": "clean"
+  }
+]

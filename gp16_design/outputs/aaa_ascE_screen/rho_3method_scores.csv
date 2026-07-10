@@ -1,0 +1,10 @@
+protein,method,construct,M2,handedness,M1_seq_consistent,M2_M1_pass,M3a_pore_A,M3a_admits_ssRNA,M3b_K184_radial,K184_dev,M3b_R366_radial,R366_dev,M3c_linker_radial,M3c_in_lumen,M3_verdict,overall,OF3_M2,OF3_handedness,cross_predictor,FINAL
+Rho,direct,6x motor(175-414)+(GGGGS)x8,6/6,designed(k->k+1),YES,PASS,7.0,True,30.0,1.4,33.5,0.6,,False,clean,CLOSES,6/6,designed(k->k+1),CONSISTENT,CLOSES (cross-predictor confirmed)
+Rho,CP,circular permutation cut@390,6/6,designed(k->k+1),YES,PASS,7.6,True,39.3,10.7,12.9,-20.0,,False,flag,M2-only,-,-,not run (M2-only or CP),M2-only (M3 flag)
+Rho,CP,circular permutation cut@330,0/6,designed(k->k+1),YES,FAIL,10.2,True,34.5,5.9,40.2,7.3,,False,clean,fail,-,-,not run (M2-only or CP),fail
+Rho,RFdiffusion,6x motor+5x designed connector(L32),6/6,designed(k->k+1),YES,PASS,6.8,True,30.6,2.0,34.0,1.1,23.2,False,clean,CLOSES,6/6,designed(k->k+1),CONSISTENT,CLOSES (cross-predictor confirmed)
+Rho,RFdiffusion,6x motor+5x designed connector(L32),6/6,designed(k->k+1),YES,PASS,7.4,True,28.7,0.1,33.0,0.1,18.8,False,clean,CLOSES,3/6,mirror(k->k-1),SPLIT,Boltz-only (predictor-split)
+Rho,RFdiffusion,6x motor+5x designed connector(L32),6/6,designed(k->k+1),YES,PASS,6.8,True,30.1,1.5,34.4,1.5,21.0,False,clean,CLOSES,3/6,mirror(k->k-1),SPLIT,Boltz-only (predictor-split)
+Rho,RFdiffusion,6x motor+5x designed connector(L42),6/6,mirror(k->k-1),YES,FAIL,6.6,True,29.9,1.3,33.0,0.1,21.0,False,clean,M2-only,-,-,not run (M2-only or CP),M2-only (M3 flag)
+Rho,RFdiffusion,6x motor+5x designed connector(L42),3/6,designed(k->k+1),NO,FAIL,7.4,True,28.4,-0.2,32.8,-0.1,17.3,False,clean,fail,-,-,not run (M2-only or CP),fail
+Rho,RFdiffusion,6x motor+5x designed connector(L42),6/6,designed(k->k+1),YES,PASS,6.3,True,30.8,2.2,34.1,1.2,24.6,False,clean,CLOSES,6/6,designed(k->k+1),CONSISTENT,CLOSES (cross-predictor confirmed)

@@ -1,0 +1,62 @@
+{
+  "rhosal_L30_40_0": {
+    "N": 492,
+    "Lc": 32,
+    "n_designs": 4,
+    "cat_ok": 0
+  },
+  "rhosal_L30_40_1": {
+    "N": 492,
+    "Lc": 32,
+    "n_designs": 4,
+    "cat_ok": 0
+  },
+  "rhosal_L30_40_2": {
+    "N": 492,
+    "Lc": 32,
+    "n_designs": 4,
+    "cat_ok": 0
+  },
+  "rhosal_L30_40_3": {
+    "N": 492,
+    "Lc": 32,
+    "n_designs": 4,
+    "cat_ok": 0
+  },
+  "rhosal_L30_40_4": {
+    "N": 492,
+    "Lc": 32,
+    "n_designs": 4,
+    "cat_ok": 0
+  },
+  "rhosal_L40_52_0": {
+    "N": 502,
+    "Lc": 42,
+    "n_designs": 4,
+    "cat_ok": 0
+  },
+  "rhosal_L40_52_1": {
+    "N": 502,
+    "Lc": 42,
+    "n_designs": 4,
+    "cat_ok": 0
+  },
+  "rhosal_L40_52_2": {
+    "N": 502,
+    "Lc": 42,
+    "n_designs": 4,
+    "cat_ok": 0
+  },
+  "rhosal_L40_52_3": {
+    "N": 502,
+    "Lc": 42,
+    "n_designs": 4,
+    "cat_ok": 0
+  },
+  "rhosal_L40_52_4": {
+    "N": 502,
+    "Lc": 42,
+    "n_designs": 4,
+    "cat_ok": 0
+  }
+}
