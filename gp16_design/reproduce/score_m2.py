@@ -193,7 +193,9 @@ def main():
             # diagnostic: is R146 actually nearest to a DIFFERENT subunit? (topology scramble)
             nearest = min(((r146_to(d, x)[0], x) for x in labels if x != d and r146_to(d, x)[0] is not None),
                           default=(None, None))
-            note = "" if nearest[1] == a else f"nearest={nearest[1]}@{nearest[0]:.1f}(scrambled)"
+            note = "" if nearest[1] == a else (
+                f"nearest={nearest[1]}@{nearest[0]:.1f}(scrambled)" if nearest[0] is not None
+                else "no R146-guan/Walker atoms")
         else:
             # separate chains (symmetric ring, no designed order): nearest neighbour defines adjacency.
             cand = [(r146_to(d, x)[0], x) for x in labels if x != d and r146_to(d, x)[0] is not None]
