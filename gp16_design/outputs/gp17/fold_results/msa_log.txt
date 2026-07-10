@@ -1,0 +1,5 @@
+submitting 360 aa to ColabFold MSA server (mode=env)...
+ticket rU9E60_h6aOi-U40xUJu-Jl5BadL8--PRlBcLA status PENDING
+status COMPLETE
+archive: ['uniref.a3m', 'pdb70.m8', 'bfd.mgnify30.metaeuk30.smag30.a3m', 'msa.sh']
+saved seqs/gp17_subunit.a3m  depth~741 records

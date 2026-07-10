@@ -1,0 +1,4 @@
+subunit MSA: query 360 aa, 740 homologs (740 full-length)
+tiled a3m: 256 homologs/block x5 blocks
+[gp17_directfusion_L20] 1880 aa | msa=tiled | payload 2.4 MB ...
+[gp17_directfusion_L20] OK 69s | conf=[0.697399377822876] ptm=[0.45826640725135803] plddt=[0.7571825981140137] -> fold_results/gp17_directfusion_L20.cif

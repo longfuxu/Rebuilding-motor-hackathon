@@ -1,0 +1,22 @@
+{
+  "confidence_scores": [
+    0.697399377822876
+  ],
+  "ptm_scores": [
+    0.45826640725135803
+  ],
+  "iptm_scores": [
+    0.0
+  ],
+  "complex_plddt_scores": [
+    0.7571825981140137
+  ],
+  "complex_pde_scores": [
+    1.0472197532653809
+  ],
+  "name": "gp17_directfusion_L20",
+  "len_aa": 1880,
+  "wall_s": 68.7,
+  "predictor": "boltz2-nim",
+  "msa": "tiled block-diagonal (colabfold)"
+}

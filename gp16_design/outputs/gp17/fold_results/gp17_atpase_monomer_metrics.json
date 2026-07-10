@@ -1,0 +1,22 @@
+{
+  "confidence_scores": [
+    0.9190608263015747
+  ],
+  "ptm_scores": [
+    0.9297749996185303
+  ],
+  "iptm_scores": [
+    0.0
+  ],
+  "complex_plddt_scores": [
+    0.9163822531700134
+  ],
+  "complex_pde_scores": [
+    0.4166865050792694
+  ],
+  "name": "gp17_atpase_monomer",
+  "len_aa": 360,
+  "wall_s": 4.9,
+  "predictor": "boltz2-nim",
+  "msa": "colabfold-msa (monomer control)"
+}

@@ -1,0 +1,56 @@
+{
+  "protein": "gp17 (T4 large terminase / large subunit of the terminase)",
+  "uniprot": "P17312",
+  "seq_len": 610,
+  "family": "ASCE dsDNA-packaging ATPase (viral large terminase); same functional family as phi29 gp16",
+  "structures": {
+    "assembled_ring": {
+      "pdb": "3EZK", "method": "cryo-EM pseudo-atomic (crystal fit into 34 A map)",
+      "resolution_A": 34.0, "composition": "pentamer, chains A-E (CA-only), res 10-562",
+      "title": "Bacteriophage T4 gp17 motor assembly based on crystal structures and cryo-EM reconstructions",
+      "state": "relaxed / assembled motor (no DNA modeled); channel axis = 5-fold symmetry axis"
+    },
+    "full_length_monomer": {"pdb": "3CPE", "method": "X-ray", "resolution_A": 2.8, "res": "10-562"},
+    "atpase_domain": {"pdb": "2O0H", "method": "X-ray", "resolution_A": 1.88, "res": "1-357", "ligand": "ATP"}
+  },
+  "oligomeric_state": "pentamer (5 gp17 on the dodecameric gp20 portal)",
+  "functional_residues": {
+    "walker_A_Ploop": [161, 162, 163, 164, 165, 166, 167],
+    "catalytic_lysine": 166,
+    "walker_B": [251, 252, 253, 254, 255, 256],
+    "catalytic_carboxylate_E": 256,
+    "walker_B_aspartate": 255,
+    "atpase_coupling_motif": [285, 286, 287],
+    "atp_binding_sites": [138, 143, 202],
+    "arginine_finger_trans": 245,
+    "arginine_finger_cis_walkerA_proximal": 162,
+    "arginine_finger_candidates_literature": [162, 245, 321, 406],
+    "note_finger": "Rao lab named 4 candidate arg-fingers (R162/R245/R321/R406). R321,R406 lie OUTSIDE the ATPase domain (portal-binding / nuclease). Within the ATPase ring: R162 is Walker-A-proximal (sits at 161-167) -> reads CIS; R245 reaches ACROSS the subunit interface to the neighbour's catalytic carboxylate E256 -> the de-facto TRANS arginine finger (measured 3.7-4.0 A to neighbour E256 in the independent native-ring fold, 5/5).",
+    "provenance": "UniProt P17312 features (Walker A 161-167, Walker B 251-256, active site E256, ATP binding 138/143/202, coupling 285-287) + 2O0H ATP contacts (Walker-A G165/K166/T167/T168, R202) + Rao-lab literature (E256 catalytic carboxylate PMID 12875841; arg-finger candidates). Not guessed."
+  },
+  "domains": {
+    "ssDNA_binding": [30, 94],
+    "ATPase_domain": [1, 360],
+    "portal_binding": [328, 352],
+    "nuclease_domain": [360, 559]
+  },
+  "topology_3ezk": {
+    "channel_axis": "5-fold symmetry axis (normal to plane of chain centroids); no DNA modeled",
+    "atpase_ring_radius_A": 47.2,
+    "N_terminus_res10_to_axis_A": 13.3,
+    "ATPase_C_terminus_res360_to_axis_A": 32.8,
+    "full_C_terminus_res562_to_axis_A": 44.3,
+    "walkerA_K166_to_axis_A": 44.6,
+    "arg_finger_R162_to_axis_A": 39.1,
+    "direct_CtoN_gap_ATPase_res360_to_res10_A": 34.0,
+    "direct_CtoN_gap_fulllength_res562_to_res10_A": 68.3,
+    "caveat": "3EZK is a CA-only 34 A pseudo-atomic model; distances are low-precision (report ~ +/- several A)."
+  },
+  "topology_verdict": {
+    "termini_vs_channel": "ATPase C-terminus (res360) is OFF the channel (32.8 A) - unlike gp16 whose C-term jams the DNA channel (6.2 A). N-terminus (res10) sits near the channel wall (13.3 A).",
+    "direct_CtoN_gap": "34 A for the ATPase-domain ring (between ClpX ~20 A and Rho ~41 A).",
+    "predicted_optimal_topology": "direct C->N fusion (C-term off-channel => a genetic fusion does not foul the DNA channel; 34 A gap bridgeable by a linker; predicted borderline due to gap length).",
+    "tested_result": "direct fusion (ATPase domain x5, 20-aa GS linker, tiled MSA) CLOSES: M1 sequential_consistent YES, compact planar ring (radius 32.7 A, radius_CV 0.01, planarity 0.2 A), trans arg-finger R245 -> neighbour active site 5/5 (R245->neighbour E256 4.5-5.2 A). Reproduces the independent native-ring geometry (native R245->nbr E256 3.7-4.0 A, radius 32.0 A). Single-seq control of the same construct: R245-trans 0/5, planarity 6.8 A (confounded).",
+    "topology_row": "gp17 (pentamer): termini peripheral-ish (ATPase C-term 32.8 A OFF-channel), direct C->N gap 34 A -> DIRECT FUSION (tested: closes, R245 trans-finger 5/5)."
+  }
+}

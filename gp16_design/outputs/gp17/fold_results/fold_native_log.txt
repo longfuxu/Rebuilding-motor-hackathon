@@ -1,0 +1,3 @@
+subunit MSA: query 360 aa, 740 homologs (740 full-length)
+[gp17_native_pentamer] 360 aa | msa=single-seq | payload 1.4 MB ...
+[gp17_native_pentamer] OK 58s | conf=[0.7680825591087341] ptm=[0.4285561144351959] plddt=[0.8861360549926758] -> fold_results/gp17_native_pentamer.cif

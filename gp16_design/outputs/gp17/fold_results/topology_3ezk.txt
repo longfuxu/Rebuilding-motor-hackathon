@@ -1,0 +1,16 @@
+# 3EZK chains: ['A', 'B', 'C', 'D', 'E']; modeled residues 10-562
+# ATPase-ring angular order (spatial neighbours): ['A', 'B', 'C', 'D', 'E']
+# ATPase-ring radius (centroid->axis): mean 47.2 A  (per-chain [47.2, 47.2, 47.2, 47.2, 47.2])
+
+## (1) TERMINI vs DNA-CHANNEL AXIS  (min over chains; radial dist to 5-fold axis)
+  N-terminus res10        :  13.3 A mean  (13.3-13.3)
+  ATPase C-terminus res360 :  32.8 A mean  (32.8-32.8)
+  full-length C-term res562:  44.3 A mean  (44.3-44.3)
+  Walker-A K166            :  44.6 A mean  (44.6-44.6)
+  arg-finger R162          :  39.1 A mean  (39.1-39.1)
+
+## (2) DIRECT C->N HEAD-TO-TAIL GAPS  (spatially adjacent chains, CA-CA)
+  ATPase C res360 -> next N res10: mean 34.0 A  (34-34)  per-iface ['A->B:34', 'B->C:34', 'C->D:34', 'D->E:34', 'E->A:34']
+  full C res562  -> next N res10: mean 68.3 A  (68-68)  per-iface ['A->B:68', 'B->C:68', 'C->D:68', 'D->E:68', 'E->A:68']
+
+# intra-subunit N(res10)..C(res360) span: mean 21.6 A

@@ -1,0 +1,10 @@
+# gp17_directfusion_L20_singleseq.cif  copies=['c1', 'c2', 'c3', 'c4', 'c5']
+   i  ->i+1 | transR162  eng |  cisR162 | transR245 |      nearestR162
+  c1     c2 |      23.1 False |      6.8 |      54.8 |         c5  c5@19.5!
+  c2     c3 |      23.1 False |      6.7 |      51.8 |         c3  
+  c3     c4 |      18.7 False |      6.7 |      53.9 |         c4  
+  c4     c5 |      23.6 False |      6.8 |      53.1 |         c3  c3@21.1!
+  c5     c1 |      17.5 False |      6.8 |      49.8 |         c1  
+# M2 (trans R162->neighbour WalkerA, <8.0A): 0/5 engaged  (floor 4/5)
+#    cis  R162->own WalkerA engaged: 5/5 ;  alt trans R245: 0/5
+# M1: radius 31.9 A | radius_CV 0.05 | planarity_rms 6.8 A | compact_ring True | sequential_consistent YES (designed==spatial order)

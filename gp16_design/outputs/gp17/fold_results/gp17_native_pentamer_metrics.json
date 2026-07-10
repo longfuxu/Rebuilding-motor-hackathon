@@ -1,0 +1,22 @@
+{
+  "confidence_scores": [
+    0.7680825591087341
+  ],
+  "ptm_scores": [
+    0.4285561144351959
+  ],
+  "iptm_scores": [
+    0.2958683371543884
+  ],
+  "complex_plddt_scores": [
+    0.8861360549926758
+  ],
+  "complex_pde_scores": [
+    1.289257526397705
+  ],
+  "name": "gp17_native_pentamer",
+  "len_aa": 360,
+  "wall_s": 58.2,
+  "predictor": "boltz2-nim",
+  "msa": "native 5-chain ref (per-chain MSA)"
+}

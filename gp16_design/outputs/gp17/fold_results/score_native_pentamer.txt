@@ -1,0 +1,8 @@
+# native gp17 apo homo-pentamer (5 chains, per-chain MSA); find spatial neighbour by nearest R245->WalkerA
+  A->B(nearest): R245->nbrWalkerA 5.5 | R245->nbrE256 3.8 | R162cis->K166 4.6 | R162->nbrWalkerA 27.9 A
+  B->C(nearest): R245->nbrWalkerA 4.9 | R245->nbrE256 3.8 | R162cis->K166 4.7 | R162->nbrWalkerA 27.9 A
+  C->D(nearest): R245->nbrWalkerA 5.0 | R245->nbrE256 3.9 | R162cis->K166 4.5 | R162->nbrWalkerA 27.8 A
+  D->E(nearest): R245->nbrWalkerA 4.9 | R245->nbrE256 3.7 | R162cis->K166 4.6 | R162->nbrWalkerA 27.9 A
+  E->A(nearest): R245->nbrWalkerA 5.2 | R245->nbrE256 4.0 | R162cis->K166 4.6 | R162->nbrWalkerA 28.0 A
+# native: R245 trans-engaged (<8A to nbr WalkerA) 5/5 ; R162 trans-engaged 0/5
+# native M1: radius 32.0 A | radius_CV 0.00 | planarity_rms 0.3 A | compact True

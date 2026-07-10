@@ -1,0 +1,3 @@
+subunit MSA: query 360 aa, 740 homologs (740 full-length)
+[gp17_directfusion_L20_singleseq] 1880 aa | msa=single-seq | payload 0.0 MB ...
+[gp17_directfusion_L20_singleseq] OK 61s | conf=[0.3662635087966919] ptm=[0.2675896883010864] plddt=[0.39093196392059326] -> fold_results/gp17_directfusion_L20_singleseq.cif

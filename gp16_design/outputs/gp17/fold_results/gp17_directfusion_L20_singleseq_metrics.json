@@ -1,0 +1,22 @@
+{
+  "confidence_scores": [
+    0.3662635087966919
+  ],
+  "ptm_scores": [
+    0.2675896883010864
+  ],
+  "iptm_scores": [
+    0.0
+  ],
+  "complex_plddt_scores": [
+    0.39093196392059326
+  ],
+  "complex_pde_scores": [
+    4.35014009475708
+  ],
+  "name": "gp17_directfusion_L20_singleseq",
+  "len_aa": 1880,
+  "wall_s": 61.3,
+  "predictor": "boltz2-nim",
+  "msa": "single-seq (control)"
+}
