@@ -8,7 +8,8 @@
 
 打分(已建,复用):`score = GATES(M1环 ∧ M2 handedness-robust ∧ M5 ATP口袋[含 E58/K105/S106/N158] ∧ soft-mode保留[防死砖] ∧ biochem[排除 SEVERE/LETHAL,见 outputs/excel_mutation_analysis/REPORT.md]) × power(coord-PRS + force-network Y129 + M3 grip + MM-GBSA界面能)`。
 
-每轮:(1) 从上一轮最优 + biochem-TOLERANT 位点(Phe6*/R53*/K56/S99/**S127**/**N128**/Q222/K233,*=保守)+ round-1/2 赢家(**M307W/M307F**、N128F、L289P)提出突变(单点+双点+三点);(2) 用 ESM-2 plausibility 过滤(避免 "holes",见 lit/insilico_directed_evolution_methods.md);(3) tiled-MSA 折 + gated 打分;(4) 选 top-k(贪心 + 保多样性)进下一轮;(5) 每 3–4 轮把当前 top-3 跑 MM-GBSA + 交叉预测器(AF3/OF3)核。
+**★ 方法 = GREEDY EPISTATIC ACCUMULATION(叠加/重合,不是独立单点)**:每一轮**固定上一轮的最佳变体为新背景**,然后在这个背景上**扫所有允许的"再加一个单点突变"**(background + X,X 遍历 biochem-TOLERANT + untested rigidify 集),折+打分,选出**在该背景上最好的 X**,把 background+X 作为下一轮的新背景,如此累积 10–20 轮。这才真正测 epistasis(两个突变合起来会不会更好),而独立单点 + 几个拍脑袋的双突变测不出来(round-2 的"doubles 不 stack"只测了 4 个,采样不足)。
+每轮:(1) background = 上一轮最优(round-1 best = **M307W**;起点也并行试 **S99W** 这条独立力位点线);候选 X = biochem-TOLERANT(Phe6*/R53*/K56/**S99**/**S127**/**N128**/Q222/K233,*=保守)+ untested rigidify(M307/L289/V100/I130/130/100);**严格排除 SEVERE/LETHAL**(Y129/E58/K105/K328/R330/I28/Y32/S106/N126/N158/R234/K294)。(2) ESM-2 plausibility 过滤(避免 "holes");(3) tiled-MSA 折 + gated 打分(GATES × power);(4) **选该背景上最优的 background+X 作为下一轮背景**(保 2–3 条平行谱系防局部最优,active-learning/UQ 选下一批);(5) 每 3–4 轮把当前最优跑 MM-GBSA + 交叉预测器(AF3/OF3)核。**收敛判据**:连续 2 轮 power 增益 < 噪声地板则停(报告"到几点突变时增益饱和")。
 **硬约束**:绝不动 Y129/E58/K105/K328/R330/I28/Y32/S106/N126/N158/R234/K294(biochem 致死);productive 位点是 Y129↔M307 clasp 的 **M307** + 旁边的 **S127/N128**(不是 Y129 本身)。
 **产出** `outputs/directed_evolution/overnight/`:每轮 ranked CSV + 收敛曲线(power vs round)+ **FINAL: 5–10 个变体的实验清单**(突变、预测的 coord/force 增益、过噪声地板否、soft-mode 保留、跨预测器一致否、MM-GBSA)+ 每个变体"为什么更强"的机制一句话。诚实报告增益幅度(round-1 单突变增益温和;看多点/多轮能否稳过噪声)。
 
