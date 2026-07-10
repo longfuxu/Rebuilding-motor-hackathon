@@ -1,0 +1,12 @@
+name,muts,n_mut,rationale,flag,seq_len
+cp233_WT,,0,wild-type reference,,1750
+cp233_WTrep,,0,wild-type reference (replicate for fold-noise floor),,1750
+de_S127F,S127F,1,S127F: aromatic rigidification adjacent to force hub Y129 (biochem-tolerant),,1750
+de_S127W,S127W,1,S127W: bulky aromatic adjacent to Y129 (biochem-tolerant),,1750
+de_S127Y,S127Y,1,S127Y: aromatic + H-bond adjacent to Y129 (biochem-tolerant),,1750
+de_S99F,S99F,1,S99F: aromatic N-domain rigidification (biochem-tolerant),,1750
+de_S99W,S99W,1,S99W: bulky aromatic N-domain (biochem-tolerant),,1750
+de_M307W_N128F,M307W_N128F,2,M307W+N128F: clasp aromatic + reciprocal grip-loop aromatic,,1750
+de_M307W_S127F,M307W_S127F,2,M307W+S127F: clasp aromatic + force-hub-adjacent aromatic,,1750
+de_M307F_S127F,M307F_S127F,2,M307F+S127F: milder clasp aromatic + force-hub-adjacent aromatic,,1750
+de_M307W_L289P,M307W_L289P,2,M307W+L289P: clasp aromatic + buried C-domain proline rigidification,,1750

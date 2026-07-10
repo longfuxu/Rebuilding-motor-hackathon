@@ -1,0 +1,178 @@
+[
+  {
+    "name": "de_S127F",
+    "muts": "S127F",
+    "esm_llr_sum": -0.682,
+    "esm_plausible": true,
+    "per_site": [
+      {
+        "res": 127,
+        "wt": "S",
+        "mut": "F",
+        "llr": -0.682,
+        "wt_logp": -2.639,
+        "mut_logp": -3.321
+      }
+    ]
+  },
+  {
+    "name": "de_S127W",
+    "muts": "S127W",
+    "esm_llr_sum": -2.102,
+    "esm_plausible": true,
+    "per_site": [
+      {
+        "res": 127,
+        "wt": "S",
+        "mut": "W",
+        "llr": -2.102,
+        "wt_logp": -2.639,
+        "mut_logp": -4.741
+      }
+    ]
+  },
+  {
+    "name": "de_S127Y",
+    "muts": "S127Y",
+    "esm_llr_sum": -0.554,
+    "esm_plausible": true,
+    "per_site": [
+      {
+        "res": 127,
+        "wt": "S",
+        "mut": "Y",
+        "llr": -0.554,
+        "wt_logp": -2.639,
+        "mut_logp": -3.193
+      }
+    ]
+  },
+  {
+    "name": "de_S99F",
+    "muts": "S99F",
+    "esm_llr_sum": -2.173,
+    "esm_plausible": true,
+    "per_site": [
+      {
+        "res": 99,
+        "wt": "S",
+        "mut": "F",
+        "llr": -2.173,
+        "wt_logp": -1.701,
+        "mut_logp": -3.874
+      }
+    ]
+  },
+  {
+    "name": "de_S99W",
+    "muts": "S99W",
+    "esm_llr_sum": -3.429,
+    "esm_plausible": true,
+    "per_site": [
+      {
+        "res": 99,
+        "wt": "S",
+        "mut": "W",
+        "llr": -3.429,
+        "wt_logp": -1.701,
+        "mut_logp": -5.13
+      }
+    ]
+  },
+  {
+    "name": "de_M307W_N128F",
+    "muts": "M307W_N128F",
+    "esm_llr_sum": -1.57,
+    "esm_plausible": true,
+    "per_site": [
+      {
+        "res": 307,
+        "wt": "M",
+        "mut": "W",
+        "llr": -1.046,
+        "wt_logp": -3.991,
+        "mut_logp": -5.037
+      },
+      {
+        "res": 128,
+        "wt": "N",
+        "mut": "F",
+        "llr": -0.524,
+        "wt_logp": -2.81,
+        "mut_logp": -3.334
+      }
+    ]
+  },
+  {
+    "name": "de_M307W_S127F",
+    "muts": "M307W_S127F",
+    "esm_llr_sum": -1.728,
+    "esm_plausible": true,
+    "per_site": [
+      {
+        "res": 307,
+        "wt": "M",
+        "mut": "W",
+        "llr": -1.046,
+        "wt_logp": -3.991,
+        "mut_logp": -5.037
+      },
+      {
+        "res": 127,
+        "wt": "S",
+        "mut": "F",
+        "llr": -0.682,
+        "wt_logp": -2.639,
+        "mut_logp": -3.321
+      }
+    ]
+  },
+  {
+    "name": "de_M307F_S127F",
+    "muts": "M307F_S127F",
+    "esm_llr_sum": 0.114,
+    "esm_plausible": true,
+    "per_site": [
+      {
+        "res": 307,
+        "wt": "M",
+        "mut": "F",
+        "llr": 0.795,
+        "wt_logp": -3.991,
+        "mut_logp": -3.195
+      },
+      {
+        "res": 127,
+        "wt": "S",
+        "mut": "F",
+        "llr": -0.682,
+        "wt_logp": -2.639,
+        "mut_logp": -3.321
+      }
+    ]
+  },
+  {
+    "name": "de_M307W_L289P",
+    "muts": "M307W_L289P",
+    "esm_llr_sum": -2.57,
+    "esm_plausible": true,
+    "per_site": [
+      {
+        "res": 307,
+        "wt": "M",
+        "mut": "W",
+        "llr": -1.046,
+        "wt_logp": -3.991,
+        "mut_logp": -5.037
+      },
+      {
+        "res": 289,
+        "wt": "L",
+        "mut": "P",
+        "llr": -1.524,
+        "wt_logp": -2.189,
+        "mut_logp": -3.713
+      }
+    ]
+  }
+]

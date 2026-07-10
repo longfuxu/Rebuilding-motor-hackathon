@@ -1,0 +1,83 @@
+{
+  "system": "cp233_WT",
+  "structure": "/Users/longfu/Developer/claude-science-hackthon/.claude/worktrees/export-gp16-results/gp16_design/outputs/directed_evolution/round2/folds/cp233_WT.cif",
+  "mean_dG_bind": -255.32137561133203,
+  "std_dG_bind": 6.847886866761834,
+  "rows": [
+    {
+      "dG_bind": -251.14772304557846,
+      "dE_MM": -683.9082082929181,
+      "dG_solv": 432.7604852473396,
+      "E_min_start": 106855937.86577451,
+      "E_min_final": -29654.70025443851,
+      "nres_A": 352,
+      "nres_B": 352,
+      "natom_cx": 11144,
+      "system": "cp233_WT",
+      "donor": "A1",
+      "acceptor": "A2",
+      "R146_min_A": 5.79,
+      "seconds": 42.2
+    },
+    {
+      "dG_bind": -264.0802722770468,
+      "dE_MM": -727.1156732712043,
+      "dG_solv": 463.0354009941575,
+      "E_min_start": 27765196293.449413,
+      "E_min_final": -29651.061467134787,
+      "nres_A": 352,
+      "nres_B": 352,
+      "natom_cx": 11144,
+      "system": "cp233_WT",
+      "donor": "A2",
+      "acceptor": "A3",
+      "R146_min_A": 5.73,
+      "seconds": 70.1
+    },
+    {
+      "dG_bind": -246.4669205864384,
+      "dE_MM": -752.6031449208931,
+      "dG_solv": 506.1362243344547,
+      "E_min_start": 3026192519.9829836,
+      "E_min_final": -29597.738760026325,
+      "nres_A": 352,
+      "nres_B": 352,
+      "natom_cx": 11144,
+      "system": "cp233_WT",
+      "donor": "A3",
+      "acceptor": "A4",
+      "R146_min_A": 6.01,
+      "seconds": 52.4
+    },
+    {
+      "dG_bind": -262.594836559746,
+      "dE_MM": -782.3266604519868,
+      "dG_solv": 519.7318238922408,
+      "E_min_start": 1182529.4127596053,
+      "E_min_final": -29533.979871344305,
+      "nres_A": 352,
+      "nres_B": 342,
+      "natom_cx": 11066,
+      "system": "cp233_WT",
+      "donor": "A4",
+      "acceptor": "A5",
+      "R146_min_A": 5.79,
+      "seconds": 48.0
+    },
+    {
+      "dG_bind": -252.31712558785057,
+      "dE_MM": -715.1283761823797,
+      "dG_solv": 462.81125059452916,
+      "E_min_start": 85071.0443889241,
+      "E_min_final": -29582.731731049236,
+      "nres_A": 342,
+      "nres_B": 352,
+      "natom_cx": 11066,
+      "system": "cp233_WT",
+      "donor": "A5",
+      "acceptor": "A1",
+      "R146_min_A": 5.88,
+      "seconds": 56.1
+    }
+  ]
+}
