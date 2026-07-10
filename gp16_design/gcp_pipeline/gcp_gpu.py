@@ -21,12 +21,13 @@ PROJECT = os.environ.get("GCP_PROJECT", "longfu-protein-gpu")
 VM = os.environ.get("GCP_VM", "protein-gpu")
 # GPU -> (machine type, accelerator, default zone). L4 = g2; A100 = a2; T4 = n1.
 GPUS = {
-    "l4":   ("g2-standard-8",  "type=nvidia-l4,count=1",          "us-central1-a"),
-    "a100": ("a2-highgpu-1g",  "type=nvidia-tesla-a100,count=1",  "us-central1-a"),
-    "t4":   ("n1-standard-8",  "type=nvidia-tesla-t4,count=1",     "us-central1-a"),
+    "l4":        ("g2-standard-8",  "type=nvidia-l4,count=1",          "us-central1-a"),
+    "a100":      ("a2-highgpu-1g",  "type=nvidia-tesla-a100,count=1",  "us-central1-a"),
+    "a100-80gb": ("a2-ultragpu-1g", "type=nvidia-a100-80gb,count=1",   "us-central1-a"),
+    "t4":        ("n1-standard-8",  "type=nvidia-tesla-t4,count=1",     "us-central1-a"),
 }
 # CUDA deep-learning image (has CUDA + conda). PyTorch installs per-recipe.
-IMAGE = ["--image-family=common-cu123-debian-11", "--image-project=deeplearning-platform-release"]
+IMAGE = ["--image-family=common-cu129-ubuntu-2204-nvidia-580", "--image-project=deeplearning-platform-release"]
 
 
 def run(cmd, timeout=None, check=True, quiet=False):
@@ -47,10 +48,11 @@ def zone_of(gpu):
 
 
 def vm_up(gpu, spot=True, keep_note=True):
-    mt, accel, zone = GPUS[gpu]
+    mt, accel, _z = GPUS[gpu]
+    zone = zone_of(gpu)  # respect GCP_ZONE override (capacity/stockout fallback across zones)
     args = ["compute", "instances", "create", VM, "--project", PROJECT, "--zone", zone,
             "--machine-type", mt, "--accelerator", accel, "--maintenance-policy", "TERMINATE",
-            "--boot-disk-size", "150GB", "--metadata", "install-nvidia-driver=True"] + IMAGE
+            "--boot-disk-size", "200GB", "--metadata", "install-nvidia-driver=True"] + IMAGE
     if spot:
         args += ["--provisioning-model=SPOT", "--instance-termination-action=DELETE"]
     print(f"creating {gpu.upper()} VM '{VM}' in {zone} (spot={spot}) — DELETE it when done to stop cost", flush=True)
@@ -118,6 +120,21 @@ RECIPES = {
         "install": "pip -q install boltz 2>/dev/null",
         # boltz predict with optional MSA (enables tiled-MSA folding, unlike single-seq NIM)
         "run": "cd ~/in && boltz predict {inp} --out_dir ~/out --use_msa_server {msa_arg}",
+    },
+    # BioEmu: sequence->equilibrium ensemble of a MONOMER. Pass a TILED a3m as {inp}
+    # (first row = query) so the concatenated single-chain repeats keep clean per-repeat
+    # co-evolution (default MMseqs2 mis-aligns them). Large rings need A100 memory.
+    # WORKING VERSION SET (verified 2026-07-10 on cu129 image): a clean venv + numpy<2
+    # + tensorflow-cpu==2.18.0 (MUST match the jax==0.4.35 era; TF 2.21 -> protobuf/abseil
+    # double-registration abort). For long sequences pass --batch_size_100 350 (else the
+    # auto batch_size = int(bs100*(100/L)^2) underflows to 0 -> "range() arg 3 must not be
+    # zero"). NOTE: long-running (~L^2); drive detached (nohup) + poll for >600 aa.
+    "bioemu": {
+        "install": ("sudo apt-get -qq install -y python3.10-venv >/dev/null 2>&1; "
+                    "python3 -m venv ~/be && ~/be/bin/pip -q install --upgrade pip && "
+                    "~/be/bin/pip -q install bioemu 'numpy<2' 'tensorflow-cpu==2.18.0'"),
+        "run": ("~/be/bin/python -m bioemu.sample --sequence ~/in/{inp} --num_samples {num} "
+                "--batch_size_100 350 --output_dir ~/out/bioemu"),
     },
 }
 
