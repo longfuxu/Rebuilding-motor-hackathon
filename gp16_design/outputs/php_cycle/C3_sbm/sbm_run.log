@@ -1,0 +1,67 @@
++ sudo apt-get -qq update
++ sudo apt-get -qq install -y python3.10-venv python3-pip
++ rm -rf /home/longfu/be
++ python3 -m venv /home/longfu/be
++ /home/longfu/be/bin/pip -q install --upgrade pip
++ tail -1
++ /home/longfu/be/bin/pip -q install openmm scipy numpy
++ tail -2
++ /home/longfu/be/bin/python -c 'import openmm,scipy;from openmm import Platform;print("openmm",openmm.__version__,[Platform.getPlatform(i).getName() for i in range(Platform.getNumPlatforms())])'
+openmm 8.5.2 ['Reference', 'CPU', 'OpenCL']
++ export SBM_DIR=/home/longfu/in
++ SBM_DIR=/home/longfu/in
+++ date -u
++ echo 'SBM_STEER_START Sat Jul 11 01:13:57 UTC 2026'
+SBM_STEER_START Sat Jul 11 01:13:57 UTC 2026
++ /home/longfu/be/bin/python /home/longfu/in/c3_sbm.py steer --steps 2000000
+system: 1635 beads, 8403 H-contacts
+platform OpenCL
+after min: E=-539 kJ/mol
+win  0 r0=4.30nm  QH_mean=0.504  per-sub={'A': 0.45, 'B': 0.48, 'C': 0.54, 'D': 0.52, 'E': 0.53}
+win  1 r0=4.20nm  QH_mean=0.571  per-sub={'A': 0.53, 'B': 0.52, 'C': 0.62, 'D': 0.59, 'E': 0.59}
+win  2 r0=4.10nm  QH_mean=0.588  per-sub={'A': 0.55, 'B': 0.55, 'C': 0.62, 'D': 0.6, 'E': 0.62}
+win  3 r0=4.00nm  QH_mean=0.598  per-sub={'A': 0.56, 'B': 0.55, 'C': 0.62, 'D': 0.62, 'E': 0.63}
+win  4 r0=3.90nm  QH_mean=0.606  per-sub={'A': 0.55, 'B': 0.57, 'C': 0.63, 'D': 0.63, 'E': 0.64}
+win  5 r0=3.80nm  QH_mean=0.604  per-sub={'A': 0.55, 'B': 0.56, 'C': 0.64, 'D': 0.63, 'E': 0.64}
+win  6 r0=3.70nm  QH_mean=0.615  per-sub={'A': 0.56, 'B': 0.56, 'C': 0.64, 'D': 0.64, 'E': 0.68}
+win  7 r0=3.60nm  QH_mean=0.614  per-sub={'A': 0.54, 'B': 0.56, 'C': 0.65, 'D': 0.64, 'E': 0.68}
+win  8 r0=3.50nm  QH_mean=0.615  per-sub={'A': 0.57, 'B': 0.57, 'C': 0.63, 'D': 0.64, 'E': 0.67}
+win  9 r0=3.40nm  QH_mean=0.625  per-sub={'A': 0.57, 'B': 0.58, 'C': 0.64, 'D': 0.65, 'E': 0.69}
+win 10 r0=3.30nm  QH_mean=0.638  per-sub={'A': 0.56, 'B': 0.6, 'C': 0.63, 'D': 0.67, 'E': 0.74}
+win 11 r0=3.20nm  QH_mean=0.641  per-sub={'A': 0.59, 'B': 0.59, 'C': 0.63, 'D': 0.66, 'E': 0.74}
+win 12 r0=3.10nm  QH_mean=0.64  per-sub={'A': 0.58, 'B': 0.59, 'C': 0.64, 'D': 0.66, 'E': 0.74}
+win 13 r0=3.00nm  QH_mean=0.642  per-sub={'A': 0.58, 'B': 0.57, 'C': 0.64, 'D': 0.67, 'E': 0.75}
+win 14 r0=2.90nm  QH_mean=0.641  per-sub={'A': 0.58, 'B': 0.58, 'C': 0.63, 'D': 0.67, 'E': 0.75}
+win 15 r0=2.80nm  QH_mean=0.645  per-sub={'A': 0.57, 'B': 0.59, 'C': 0.63, 'D': 0.68, 'E': 0.75}
+win 16 r0=2.70nm  QH_mean=0.643  per-sub={'A': 0.56, 'B': 0.58, 'C': 0.63, 'D': 0.68, 'E': 0.76}
+win 17 r0=2.60nm  QH_mean=0.652  per-sub={'A': 0.58, 'B': 0.59, 'C': 0.64, 'D': 0.69, 'E': 0.75}
+win 18 r0=2.50nm  QH_mean=0.638  per-sub={'A': 0.57, 'B': 0.57, 'C': 0.63, 'D': 0.68, 'E': 0.74}
+win 19 r0=2.40nm  QH_mean=0.654  per-sub={'A': 0.58, 'B': 0.6, 'C': 0.64, 'D': 0.68, 'E': 0.77}
+win 20 r0=2.30nm  QH_mean=0.642  per-sub={'A': 0.56, 'B': 0.6, 'C': 0.62, 'D': 0.67, 'E': 0.76}
+win 21 r0=2.20nm  QH_mean=0.661  per-sub={'A': 0.59, 'B': 0.6, 'C': 0.65, 'D': 0.69, 'E': 0.77}
+win 22 r0=2.10nm  QH_mean=0.647  per-sub={'A': 0.57, 'B': 0.57, 'C': 0.64, 'D': 0.69, 'E': 0.76}
+win 23 r0=2.00nm  QH_mean=0.645  per-sub={'A': 0.58, 'B': 0.57, 'C': 0.65, 'D': 0.68, 'E': 0.75}
+win 24 r0=1.90nm  QH_mean=0.651  per-sub={'A': 0.58, 'B': 0.58, 'C': 0.64, 'D': 0.68, 'E': 0.77}
+win 25 r0=1.80nm  QH_mean=0.648  per-sub={'A': 0.6, 'B': 0.58, 'C': 0.63, 'D': 0.68, 'E': 0.74}
+win 26 r0=1.70nm  QH_mean=0.645  per-sub={'A': 0.58, 'B': 0.58, 'C': 0.63, 'D': 0.68, 'E': 0.76}
+win 27 r0=1.60nm  QH_mean=0.652  per-sub={'A': 0.59, 'B': 0.6, 'C': 0.63, 'D': 0.68, 'E': 0.76}
+win 28 r0=1.50nm  QH_mean=0.658  per-sub={'A': 0.59, 'B': 0.62, 'C': 0.63, 'D': 0.69, 'E': 0.76}
+win 29 r0=1.40nm  QH_mean=0.66  per-sub={'A': 0.59, 'B': 0.63, 'C': 0.64, 'D': 0.68, 'E': 0.76}
+win 30 r0=1.30nm  QH_mean=0.663  per-sub={'A': 0.59, 'B': 0.62, 'C': 0.64, 'D': 0.7, 'E': 0.77}
+win 31 r0=1.20nm  QH_mean=0.66  per-sub={'A': 0.59, 'B': 0.63, 'C': 0.63, 'D': 0.7, 'E': 0.76}
+win 32 r0=1.10nm  QH_mean=0.665  per-sub={'A': 0.59, 'B': 0.64, 'C': 0.64, 'D': 0.71, 'E': 0.75}
+win 33 r0=1.00nm  QH_mean=0.667  per-sub={'A': 0.59, 'B': 0.63, 'C': 0.66, 'D': 0.7, 'E': 0.76}
+win 34 r0=0.90nm  QH_mean=0.665  per-sub={'A': 0.58, 'B': 0.64, 'C': 0.65, 'D': 0.7, 'E': 0.75}
+win 35 r0=0.80nm  QH_mean=0.667  per-sub={'A': 0.58, 'B': 0.63, 'C': 0.66, 'D': 0.71, 'E': 0.75}
+win 36 r0=0.70nm  QH_mean=0.675  per-sub={'A': 0.58, 'B': 0.64, 'C': 0.65, 'D': 0.71, 'E': 0.79}
+win 37 r0=0.60nm  QH_mean=0.676  per-sub={'A': 0.58, 'B': 0.64, 'C': 0.66, 'D': 0.71, 'E': 0.78}
+win 38 r0=0.50nm  QH_mean=0.68  per-sub={'A': 0.58, 'B': 0.66, 'C': 0.66, 'D': 0.72, 'E': 0.78}
+win 39 r0=0.40nm  QH_mean=0.686  per-sub={'A': 0.6, 'B': 0.66, 'C': 0.67, 'D': 0.71, 'E': 0.79}
+win 40 r0=0.30nm  QH_mean=0.678  per-sub={'A': 0.6, 'B': 0.65, 'C': 0.64, 'D': 0.72, 'E': 0.77}
+STEER DONE
+++ date -u
++ echo 'SBM_STEER_RC=0 Sat Jul 11 01:19:59 UTC 2026'
+SBM_STEER_RC=0 Sat Jul 11 01:19:59 UTC 2026
+++ date -u
++ echo 'SBM_ALLDONE Sat Jul 11 01:19:59 UTC 2026'
+SBM_ALLDONE Sat Jul 11 01:19:59 UTC 2026
