@@ -1,0 +1,200 @@
+<title>φ29 burst: four unequal power strokes?</title>
+<style>
+:root{
+ --bg:#0b0f14; --panel:#121924; --line:#22303f; --ink:#e8eef5; --dim:#8ea3b8;
+ --cyan:#37d3e0; --amber:#f2b13c; --seam:#e05a6b;
+ --s1:#e74c3c;--s2:#f39c12;--s3:#27ae60;--s4:#3a95e0;--s5:#a06cd5;
+ --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+ --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(1200px 600px at 72% -12%, #14202e 0%, var(--bg) 55%);
+ color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1000px;margin:0 auto;padding:34px 20px 70px}
+.eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);margin:0 0 10px}
+h1{font-size:29px;line-height:1.15;margin:0 0 10px;font-weight:660;letter-spacing:-.02em;text-wrap:balance}
+h1 .u{color:var(--amber)}
+.lead{color:var(--dim);max-width:66ch;margin:0 0 22px;font-size:15.5px;line-height:1.55}
+.lead b{color:var(--ink);font-weight:600}
+.stage{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:8px;box-shadow:0 24px 60px -34px #000}
+canvas{width:100%;height:auto;display:block;border-radius:10px}
+.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:14px 2px 0}
+button{font-family:var(--sans);font-size:13.5px;font-weight:600;color:var(--ink);background:#1a2634;
+ border:1px solid var(--line);border-radius:9px;padding:8px 14px;cursor:pointer;transition:.15s}
+button:hover{border-color:var(--cyan);color:#fff} button:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:9px;overflow:hidden}
+.seg button{border:0;border-radius:0}
+.seg button.on{background:var(--cyan);color:#04222a}
+.readout{font-family:var(--mono);font-size:12.5px;color:var(--dim);margin-left:auto;text-align:right;line-height:1.55}
+.readout b{color:var(--amber);font-variant-numeric:tabular-nums}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
+@media(max-width:720px){.grid{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.card h2{font-size:12px;font-family:var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--cyan);margin:0 0 12px;font-weight:600}
+.card p{margin:0 0 10px;color:var(--dim);font-size:14px;line-height:1.55} .card p b{color:var(--ink)}
+table{width:100%;border-collapse:collapse;font-size:13px;font-family:var(--mono)}
+td,th{padding:5px 6px;border-bottom:1px solid var(--line);text-align:right} th{color:var(--dim);font-weight:500}
+td:first-child,th:first-child{text-align:left}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:middle}
+.hl{color:var(--amber)} .note{font-size:12.5px;color:var(--dim);margin-top:16px;line-height:1.5;font-family:var(--mono)}
+</style>
+<div class="wrap">
+ <p class="eyebrow">φ29 gp16 packaging motor · dwell–burst cycle</p>
+ <h1>Four <span class="u">unequal</span> power strokes, not four identical 2.5-bp steps?</h1>
+ <p class="lead">The textbook burst is <b>4 × 2.5 bp</b>. But our lock-washer analysis says the helical staircase is <b>uneven</b> — one big seam (the special subunit) plus graded steps — so the four worker power strokes should be <b>different sizes that average 2.5 bp</b>. Toggle the two models and watch the DNA trace change. <b>3D-MINFLUX (per-subunit z) is what tells them apart.</b></p>
+
+ <div class="stage"><canvas id="c" width="1920" height="820" aria-label="animation of the gp16 dwell-burst cycle"></canvas></div>
+ <div class="controls">
+  <button id="play">⏸ Pause</button>
+  <span class="seg" role="group" aria-label="model">
+   <button id="mOurs" class="on">Our data — unequal</button>
+   <button id="mBook">Textbook — 4×2.5</button>
+  </span>
+  <button id="slow">◑ Slower</button>
+  <span class="readout">phase <b id="rPhase">dwell</b> · firing <b id="rFire">–</b><br>packaged <b id="rBp">0.0</b> bp · this burst <b id="rBurst">0.0</b></span>
+ </div>
+
+ <div class="grid">
+  <div class="card">
+   <h2>Where the unequal steps come from</h2>
+   <p>Per-subunit axial height in the helical staircase (our ENM, apo→7JQQ). The 5th subunit (<span class="hl">E, the seam</span>) doesn't translocate — it holds the regulatory contact. The four gaps between workers are the four (unequal) strokes.</p>
+   <table>
+    <tr><th>subunit</th><th>axial h (Å)</th><th>role</th><th>stroke (bp)*</th></tr>
+    <tr><td><span class="dot" style="background:var(--s1)"></span>A</td><td>−1.5</td><td>worker</td><td>2.8</td></tr>
+    <tr><td><span class="dot" style="background:var(--s2)"></span>B</td><td>−0.3</td><td>worker</td><td>1.4</td></tr>
+    <tr><td><span class="dot" style="background:var(--s3)"></span>C</td><td>+1.1</td><td>worker</td><td>1.7</td></tr>
+    <tr><td><span class="dot" style="background:var(--s4)"></span>D</td><td>+4.5</td><td>worker</td><td>4.1</td></tr>
+    <tr><td><span class="dot" style="background:var(--seam)"></span>E</td><td>−3.8</td><td><span class="hl">special / seam</span></td><td>—</td></tr>
+   </table>
+   <p class="note">*illustrative: stroke ∝ the staircase gap, normalized so the four sum to 10 bp. Not a rigorous bp calc (no DNA-coupled model yet).</p>
+  </div>
+  <div class="card">
+   <h2>What our data actually supports</h2>
+   <p><b>Uneven lock-washer.</b> One dominant seam (D–E, 8.3 Å) + graded steps (1.2–3.4 Å) — <b>not five symmetric hinges</b>.</p>
+   <p><b>Multi-mode (33%).</b> A rigid 5-fold screw gives equal steps; a soft <b>multi-mode</b> deformation gives <b>unequal</b> ones.</p>
+   <p><b>Step size isn't fixed.</b> Liu 2014 showed the motor changes step (10→8.9 bp) mid-task — 2.5 bp is the <b>average</b>, not every step.</p>
+   <p><b>The model predicts it.</b> P→H→P's own "position-dependent amplitude (0→35 Å)" <b>is</b> the statement that different subunits give different-sized strokes.</p>
+  </div>
+ </div>
+ <p class="note">Cartoon for intuition, grounded in our ENM staircase (<span class="hl">outputs/php_cycle/C2_enm</span>) + the Bustamante review. Falsifiable test: 3D-MINFLUX on one labeled gp16 subunit resolves whether the four strokes are equal or a graded, position-dependent set.</p>
+</div>
+<script>
+const cv=document.getElementById('c'), g=cv.getContext('2d');
+const C=getComputedStyle(document.documentElement), col=n=>C.getPropertyValue(n).trim();
+const SCOL=[col('--s1'),col('--s2'),col('--s3'),col('--s4'),col('--seam')];
+const NAME='ABCDE';
+const H=[-1.5,-0.3,1.1,4.5,-3.8];              // ring order A,B,C,D,E ; heights (Å)
+const OURS=[2.8,1.4,1.7,4.1], BOOK=[2.5,2.5,2.5,2.5];   // bp per worker stroke
+let steps=OURS, useOurs=true, playing=true, speed=1;
+const Td=2.2, Tb=1.9;                           // dwell / burst seconds
+let phase='dwell', tt=0, amp=0, fired=[0,0,0,0], fireIdx=-1, bp=0, burstBp=0;
+
+function cum(arr,k){let s=0;for(let i=0;i<k;i++)s+=arr[i];return s;}
+let last=performance.now();
+function loop(now){
+  const dt=Math.min(.05,(now-last)/1000)*speed; last=now;
+  if(playing){
+    tt+=dt;
+    if(phase==='dwell'){ amp=Math.min(1,tt/Td); if(tt>=Td){phase='burst';tt=0;fired=[0,0,0,0];fireIdx=-1;burstBp=0;} }
+    else{
+      const k=Math.min(4,Math.floor(tt/(Tb/4)));
+      for(let i=0;i<k;i++) if(!fired[i]){ fired[i]=1; fireIdx=i; burstBp+=steps[i]; bp+=steps[i]; }
+      amp=1;
+      if(tt>=Tb){ phase='dwell'; tt=0; amp=0; }
+    }
+  }
+  draw(); requestAnimationFrame(loop);
+}
+
+function draw(){
+  const W=cv.width,Hh=cv.height; g.clearRect(0,0,W,Hh);
+  const ringCx=W*0.255, ringCy=Hh*0.44, R=W*0.145;
+
+  // ---- DNA through the ring centre, sliding down by bp ----
+  g.save(); g.beginPath(); g.rect(ringCx-40, 34, 80, Hh-70); g.clip();
+  const slide=bp*15;
+  g.lineWidth=5;
+  for(const d of [1,0]){
+    g.beginPath();
+    for(let y=-24;y<=Hh+24;y+=5){ const ph=(y+slide)/32 + d*Math.PI, x=ringCx+Math.sin(ph)*19;
+      y<=-24?g.moveTo(x,y):g.lineTo(x,y); }
+    g.strokeStyle=d?'rgba(55,211,224,.4)':'rgba(55,211,224,.9)'; g.stroke();
+  }
+  g.strokeStyle='rgba(55,211,224,.28)'; g.lineWidth=2;
+  for(let y=-16;y<Hh;y+=16){ const ph=(y+slide)/32;
+    g.beginPath();g.moveTo(ringCx+Math.sin(ph)*19,y);g.lineTo(ringCx+Math.sin(ph+Math.PI)*19,y);g.stroke(); }
+  g.restore();
+  g.fillStyle=col('--dim'); g.font='600 21px '+col('--mono'); g.textAlign='center';
+  g.fillText('↓ DNA into capsid', ringCx, Hh-22);
+
+  // ---- 5-subunit ring as a tilted lock-washer ----
+  const hs=7.2, nodes=[];
+  for(let i=0;i<5;i++){
+    const a=-Math.PI/2 + i*2*Math.PI/5;
+    let h=H[i]*amp;
+    if(phase==='burst' && i<4 && fired[i]) h=0;     // fired workers collapse to planar
+    nodes.push({x:ringCx+Math.cos(a)*R, y:ringCy+Math.sin(a)*R*0.42 - h*hs, i});
+  }
+  for(let i=0;i<5;i++){ const A=nodes[i],B=nodes[(i+1)%5];
+    const seam=(A.i===3&&B.i===4)||(A.i===4&&B.i===3);
+    g.beginPath();g.moveTo(A.x,A.y);g.lineTo(B.x,B.y);
+    g.strokeStyle=seam?'rgba(224,90,107,.9)':'rgba(120,150,180,.32)'; g.lineWidth=seam?7:3; g.stroke(); }
+  for(const n of nodes){
+    const active=phase==='burst'&&fireIdx===n.i&&n.i<4, special=n.i===4, spent=n.i<4&&fired[n.i]&&phase==='burst';
+    if(active){ g.beginPath();g.arc(n.x,n.y,46,0,7);g.strokeStyle='rgba(242,177,60,.5)';g.lineWidth=3;g.stroke(); }
+    g.beginPath();g.arc(n.x,n.y,active?33:26,0,7); g.globalAlpha=spent?0.4:1; g.fillStyle=SCOL[n.i]; g.fill(); g.globalAlpha=1;
+    g.lineWidth=active?6:special?4:0; g.strokeStyle=active?col('--amber'):col('--seam'); if(active||special)g.stroke();
+    g.fillStyle='#04121a'; g.font='700 19px '+col('--sans'); g.textAlign='center'; g.textBaseline='middle';
+    g.fillText(NAME[n.i], n.x, n.y+1);
+  }
+  g.textBaseline='alphabetic';
+  g.fillStyle=phase==='dwell'?col('--cyan'):col('--amber'); g.font='700 21px '+col('--mono'); g.textAlign='center';
+  g.fillText(phase==='dwell'?'DWELL · ATP loads → helical staircase':'BURST · workers fire → DNA moves', ringCx, 44);
+  g.fillStyle=col('--seam'); g.font='600 16px '+col('--mono'); g.textAlign='center';
+  g.fillText('E = special subunit (seam) · does not translocate', ringCx, ringCy+R*0.42+64);
+
+  // ---- trace: one cycle, packaged bp vs time ----
+  const tx=W*0.53, tw=W-tx-64, ty=96, th=Hh-236;
+  g.strokeStyle=col('--line'); g.lineWidth=2; g.strokeRect(tx,ty,tw,th);
+  g.fillStyle=col('--dim'); g.font='600 19px '+col('--mono'); g.textAlign='left';
+  g.fillText('one cycle · packaged bp', tx, ty-14);
+  const Y=v=> ty+th-(v/11)*th;                     // 0..~11 bp
+  g.strokeStyle='rgba(120,150,180,.14)'; g.lineWidth=1; g.font='500 14px '+col('--mono'); g.fillStyle=col('--dim');
+  for(let v=0;v<=10;v+=2){ g.beginPath();g.moveTo(tx,Y(v));g.lineTo(tx+tw,Y(v));g.stroke(); g.fillText(v+'',tx+5,Y(v)-4); }
+  const dwellW=tw*0.30, burstW=tw-dwellW, x0=tx;
+  const xStep=k=> x0+dwellW + (burstW)*(k/4);       // start of step k region
+  function curve(arr,colr,dash,lw){
+    g.strokeStyle=colr; g.lineWidth=lw; g.setLineDash(dash?[7,6]:[]); g.beginPath();
+    g.moveTo(x0,Y(0)); g.lineTo(x0+dwellW,Y(0));      // dwell flat at 0
+    let y=0; for(let k=0;k<4;k++){ y+=arr[k]; g.lineTo(xStep(k),Y(y-arr[k])); g.lineTo(xStep(k),Y(y)); g.lineTo(xStep(k+1),Y(y)); }
+    g.stroke(); g.setLineDash([]);
+  }
+  curve(BOOK,'rgba(142,166,190,.55)',true,2);
+  curve(OURS,col('--amber'),false,3.4);
+  // live marker on the active model
+  let mx,my; const act=useOurs?OURS:BOOK;
+  if(phase==='dwell'){ mx=x0+dwellW*Math.min(1,tt/Td); my=Y(0); }
+  else{ const k=Math.min(4,fired.reduce((a,b)=>a+b,0)); mx=xStep(k); my=Y(cum(useOurs?OURS:BOOK,k)); }
+  g.beginPath();g.arc(mx,my,7,0,7);g.fillStyle=useOurs?col('--amber'):'#c9d6e4';g.fill();
+  g.beginPath();g.arc(mx,my,13,0,7);g.strokeStyle=useOurs?'rgba(242,177,60,.5)':'rgba(201,214,228,.4)';g.lineWidth=2;g.stroke();
+  // region labels + legend
+  g.fillStyle=col('--dim'); g.font='600 15px '+col('--mono'); g.textAlign='center';
+  g.fillText('dwell', x0+dwellW/2, ty+th+22); g.fillText('burst (4 strokes)', x0+dwellW+burstW/2, ty+th+22);
+  g.textAlign='left'; g.font='600 15px '+col('--mono');
+  g.fillStyle=col('--amber'); g.fillText('■ our data (unequal)', tx+tw-208, ty+22);
+  g.fillStyle='rgba(142,166,190,.85)'; g.fillText('▨ textbook 4×2.5', tx+tw-208, ty+44);
+
+  document.getElementById('rPhase').textContent=phase;
+  document.getElementById('rFire').textContent=(phase==='burst'&&fireIdx>=0)?NAME[fireIdx]:'–';
+  document.getElementById('rBp').textContent=bp.toFixed(1);
+  document.getElementById('rBurst').textContent=burstBp.toFixed(1);
+}
+document.getElementById('play').onclick=e=>{playing=!playing;e.target.textContent=playing?'⏸ Pause':'▶ Play';};
+document.getElementById('slow').onclick=()=>{speed = speed<=0.4?1.2 : speed*0.55;};
+function setModel(o){useOurs=o;steps=o?OURS:BOOK;
+  document.getElementById('mOurs').classList.toggle('on',o); document.getElementById('mBook').classList.toggle('on',!o);}
+document.getElementById('mOurs').onclick=()=>setModel(true);
+document.getElementById('mBook').onclick=()=>setModel(false);
+if(matchMedia('(prefers-reduced-motion: reduce)').matches){playing=false;document.getElementById('play').textContent='▶ Play';}
+requestAnimationFrame(loop);
+</script>
