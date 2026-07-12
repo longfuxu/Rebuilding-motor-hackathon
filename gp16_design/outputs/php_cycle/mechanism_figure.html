@@ -1,0 +1,143 @@
+<title>φ29 gp16 — refined P→H→P mechanism figure</title>
+<style>
+:root{
+ --paper:#ffffff; --ink:#16202b; --dim:#5c6b7a; --line:#d7dee6; --rule:#b9c4cf;
+ --amber:#d98a1f; --book:#9aa8b6; --cyan:#1f8aa0; --seam:#c0455a;
+ --s1:#d1495b;--s2:#e8933a;--s3:#2f9e63;--s4:#2f74b8;--s5:#8a5cc7;
+ --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+ --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root{--paper:#0f151b;--ink:#e7edf3;--dim:#93a2b2;--line:#26313d;--rule:#33414f}}
+:root[data-theme="light"]{--paper:#fff;--ink:#16202b;--dim:#5c6b7a;--line:#d7dee6;--rule:#b9c4cf}
+:root[data-theme="dark"]{--paper:#0f151b;--ink:#e7edf3;--dim:#93a2b2;--line:#26313d;--rule:#33414f}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1000px;margin:0 auto;padding:32px 20px 60px}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--cyan);margin:0 0 8px}
+h1{font-size:24px;line-height:1.2;margin:0 0 6px;font-weight:640;letter-spacing:-.01em}
+.sub{color:var(--dim);font-size:14.5px;margin:0 0 20px;max-width:70ch}
+.fig{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:6px}
+svg{width:100%;height:auto;display:block}
+.cap{font-size:13px;color:var(--dim);line-height:1.6;margin:18px 4px 0;max-width:80ch}
+.cap b{color:var(--ink)} .cap .k{font-family:var(--mono);color:var(--amber)}
+text{font-family:var(--sans)} .mono{font-family:var(--mono)}
+</style>
+<div class="wrap">
+ <p class="eyebrow">φ29 gp16 packaging motor · refined model</p>
+ <h1>A two-half-stroke P→H→P cycle with a descending staircase of four <span style="color:var(--amber)">unequal</span> substeps</h1>
+ <p class="sub">Dwell = ascend (P→H, ATP loading); burst = descend (H→P, Pi-release power strokes). The four workers step back to planar one at a time; because the staircase treads are uneven, the four substeps differ (avg 2.5 bp). One special subunit anchors DNA and does not translocate.</p>
+ <div class="fig"><svg id="fig" viewBox="0 0 980 860" role="img" aria-label="refined gp16 mechanism figure"></svg></div>
+ <p class="cap"><b>A.</b> The cycle. A planar ring (P) loads ATP and rises into a helical staircase (H, lock-washer) during the <b>dwell</b>; Pi release drives it back to planar (P) during the <b>burst</b>, translocating ~10 bp. <b>B.</b> The burst as a <b>descending staircase</b>: the four worker subunits step down to planar in sequence, each driving DNA by its own tread height. Treads are <b>unequal</b> (illustrative <span class="k">2.8 / 1.4 / 1.7 / 4.1 bp</span>, from our ENM staircase, normalized to sum 10) — not four identical 2.5-bp steps. The special subunit (E) is the non-translocating anchor. <b>C.</b> Packaged-bp vs time for one cycle: our uneven staircase (solid) vs the textbook 4×2.5 (dashed). <b>Falsifiable:</b> 3D-MINFLUX per-subunit z(t) resolves equal vs graded, position-dependent substeps. <i>Corrections folded in: the 8.3 Å ring "seam" is just the staircase span (max−min), not a physical hinge; Liu-2014's 10→8.9 bp change is a slow capsid-filling/pressure effect, separate from the within-burst inequality.</i></p>
+</div>
+<script>
+const NS="http://www.w3.org/2000/svg", svg=document.getElementById("fig");
+const cs=getComputedStyle(document.documentElement), C=n=>cs.getPropertyValue(n).trim();
+const SC=[C('--s1'),C('--s2'),C('--s3'),C('--s4'),C('--seam')], NM='ABCDE';
+function el(t,a){const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);return e;}
+function add(t,a,parent){const e=el(t,a);(parent||svg).appendChild(e);return e;}
+function txt(x,y,s,o={}){const e=add('text',{x,y,'text-anchor':o.a||'start','font-size':o.fs||14,
+ 'font-weight':o.fw||500,fill:o.fill||C('--ink'),'font-family':o.mono?C('--mono'):C('--sans')});e.textContent=s;
+ if(o.ls)e.setAttribute('letter-spacing',o.ls);return e;}
+const H=[-1.5,-0.3,1.1,4.5,-3.8];          // ring order A..E, heights (Å)
+const STEP=[2.8,1.4,1.7,4.1], BOOK=[2.5,2.5,2.5,2.5];
+
+// ---------- panel label helper ----------
+function plabel(x,y,s){txt(x,y,s,{fs:17,fw:700});}
+
+// ===== Panel A: the cycle (3 ring glyphs + arrows) =====
+plabel(24,44,'A');
+txt(150,44,'the P→H→P cycle',{fs:13,fill:C('--dim'),mono:true});
+function ring(cx,cy,helical){
+ // planar: top-down 5 nodes; helical: tilted staircase
+ const g=add('g',{});
+ for(let i=0;i<5;i++){const a=-Math.PI/2+i*2*Math.PI/5;
+   const h=helical?H[i]*4.4:0;
+   const x=cx+Math.cos(a)*46, y=cy+Math.sin(a)*(helical?20:46)-h;
+   add('circle',{cx:x,cy:y,r:16,fill:SC[i],stroke:i===4?C('--seam'):'#0000',
+     'stroke-width':i===4?3:0},g);
+   const tt=add('text',{x,y:y+5,'text-anchor':'middle','font-size':13,'font-weight':700,fill:'#fff'},g);
+   tt.textContent=NM[i];
+ }
+ return g;
+}
+ring(150,175,false); txt(150,250,'P · planar',{a:'middle',fs:13,fill:C('--dim')});
+ring(500,175,true);  txt(500,250,'H · helical staircase',{a:'middle',fs:13,fill:C('--dim')});
+ring(830,175,false); txt(830,250,'P · planar',{a:'middle',fs:13,fill:C('--dim')});
+// arrows
+add('defs',{}).appendChild(el('marker',{id:'ah',markerWidth:9,markerHeight:9,refX:6,refY:3,orient:'auto'}))
+ .appendChild(el('path',{d:'M0,0 L6,3 L0,6 Z',fill:C('--ink')}));
+function arrow(x1,x2,y,lab1,lab2,col){
+ add('path',{d:`M${x1},${y} L${x2},${y}`,stroke:col,'stroke-width':2.4,fill:'none','marker-end':'url(#ah)'});
+ txt((x1+x2)/2,y-14,lab1,{a:'middle',fs:12.5,fw:700,fill:col});
+ txt((x1+x2)/2,y+22,lab2,{a:'middle',fs:11.5,fill:C('--dim'),mono:true});
+}
+arrow(215,435,150,'DWELL  ·  P→H','ATP loads · ascend',C('--cyan'));
+arrow(565,765,150,'BURST  ·  H→P','Pi release · descend · +10 bp',C('--amber'));
+// return arc
+add('path',{d:'M830,258 C830,320 150,320 150,258',stroke:C('--rule'),'stroke-width':1.6,fill:'none',
+ 'stroke-dasharray':'5 5','marker-end':'url(#ah)'});
+txt(490,332,'one dwell–burst cycle  ≈  10 bp',{a:'middle',fs:11.5,fill:C('--dim'),mono:true});
+
+// separator
+add('line',{x1:24,y1:360,x2:956,y2:360,stroke:C('--line'),'stroke-width':1});
+
+// ===== Panel B: descending staircase (side view) =====
+plabel(24,398,'B');
+txt(150,398,'the burst = a descending staircase',{fs:13,fill:C('--dim'),mono:true});
+const bx=70, by=760, bw=360, hsc=34;           // baseline y, scale
+add('line',{x1:bx-10,y1:by,x2:bx+bw,y2:by,stroke:C('--rule'),'stroke-width':1.5});
+txt(bx-10,by+22,'planar',{fs:11,fill:C('--dim'),mono:true});
+// order workers by height ascending E<A<B<C<D ; draw as steps left->right (descend order D..A) with E anchor
+const order=[3,2,1,0,4];                        // D,C,B,A,E by descending height for the visual
+const disp=[4.5,1.1,-0.3,-1.5,-3.8];            // their heights
+let sx=bx+34;
+for(let s=0;s<5;s++){
+ const i=order[s], h=disp[s], y=by-(h+3.8)*hsc*0.7- 6;   // shift so lowest sits near baseline
+ const anchor=i===4;
+ add('circle',{cx:sx,cy:y,r:17,fill:SC[i],stroke:anchor?C('--seam'):'#0000','stroke-width':anchor?3:0});
+ add('text',{x:sx,y:y+5,'text-anchor':'middle','font-size':13,'font-weight':700,fill:'#fff'}).textContent=NM[i];
+ // tread bracket to next
+ if(s<4){const i2=order[s+1],h2=disp[s+1],y2=by-(h2+3.8)*hsc*0.7-6;
+   add('path',{d:`M${sx},${y+18} L${sx},${y2} L${sx+64},${y2}`,stroke:C('--dim'),'stroke-width':1.4,fill:'none','stroke-dasharray':'3 3'});
+   const bp=[4.1,1.7,1.4,2.8][s];               // tread size in descend order (D->C->B->A)
+   txt(sx+30,(y+y2)/2+2,bp.toFixed(1)+' bp',{a:'middle',fs:11.5,fw:700,fill:C('--amber'),mono:true});
+ }
+ sx+=72;
+}
+txt(bx+34,by-235,'worker descents (unequal treads)',{fs:11.5,fill:C('--dim')});
+txt(bx+bw-6,by-6,'E = anchor',{a:'end',fs:11,fill:C('--seam'),mono:true});
+// DNA arrow
+add('path',{d:`M${bx+bw+8},${by-190} L${bx+bw+8},${by}`,stroke:C('--cyan'),'stroke-width':3,'marker-end':'url(#ah)'});
+txt(bx+bw+16,by-95,'DNA',{fs:11,fill:C('--cyan'),mono:true});
+
+// ===== Panel C: bp vs time trace =====
+plabel(512,398,'C');
+txt(636,398,'packaged bp vs time (one cycle)',{fs:13,fill:C('--dim'),mono:true});
+const tx=560,ty=430,tw=380,th=300;
+add('rect',{x:tx,y:ty,width:tw,height:th,fill:'none',stroke:C('--line'),'stroke-width':1.4});
+const Y=v=>ty+th-(v/11)*th;
+for(let v=0;v<=10;v+=2){add('line',{x1:tx,y1:Y(v),x2:tx+tw,y2:Y(v),stroke:C('--line'),'stroke-width':.8,opacity:.6});
+ txt(tx+5,Y(v)-4,v+'',{fs:11,fill:C('--dim'),mono:true});}
+txt(tx-6,ty-8,'bp',{fs:11,fill:C('--dim'),mono:true});
+const dwellW=tw*0.3, x0=tx, burstW=tw-dwellW, xk=k=>x0+dwellW+burstW*(k/4);
+function stair(arr,col,dash,lw){
+ let dd=`M${x0},${Y(0)} L${x0+dwellW},${Y(0)}`, y=0;
+ for(let k=0;k<4;k++){y+=arr[k]; dd+=` L${xk(k)},${Y(y)} L${xk(k+1)},${Y(y)}`;}
+ add('path',{d:dd,fill:'none',stroke:col,'stroke-width':lw,'stroke-dasharray':dash||'none','stroke-linejoin':'round'});
+}
+stair(BOOK,C('--book'),'6 5',2);
+stair(STEP,C('--amber'),null,3.2);
+txt(x0+dwellW/2,ty+th+20,'dwell',{a:'middle',fs:11.5,fill:C('--dim'),mono:true});
+txt(x0+dwellW+burstW/2,ty+th+20,'burst (4 strokes)',{a:'middle',fs:11.5,fill:C('--dim'),mono:true});
+add('line',{x1:x0+dwellW,y1:ty,x2:x0+dwellW,y2:ty+th,stroke:C('--rule'),'stroke-width':1,'stroke-dasharray':'3 4'});
+// legend
+add('rect',{x:tx+tw-176,y:ty+10,width:166,height:52,fill:C('--paper'),stroke:C('--line'),'stroke-width':1,rx:6});
+add('line',{x1:tx+tw-166,y1:ty+28,x2:tx+tw-140,y2:ty+28,stroke:C('--amber'),'stroke-width':3.2});
+txt(tx+tw-134,ty+32,'our data (unequal)',{fs:11.5,fill:C('--ink')});
+add('line',{x1:tx+tw-166,y1:ty+48,x2:tx+tw-140,y2:ty+48,stroke:C('--book'),'stroke-width':2,'stroke-dasharray':'6 5'});
+txt(tx+tw-134,ty+52,'textbook 4×2.5',{fs:11.5,fill:C('--ink')});
+// prediction strip
+add('rect',{x:512,y:756,width:444,height:60,rx:8,fill:'none',stroke:C('--line'),'stroke-width':1});
+txt(524,780,'FALSIFIABLE',{fs:10.5,fw:700,fill:C('--cyan'),ls:'0.12em',mono:true});
+txt(524,800,'3D-MINFLUX per-subunit z(t): equal vs graded, position-dependent substeps.',{fs:12,fill:C('--dim')});
+</script>
