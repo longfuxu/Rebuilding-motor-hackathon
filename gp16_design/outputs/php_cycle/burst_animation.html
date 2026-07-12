@@ -41,7 +41,7 @@ td:first-child,th:first-child{text-align:left}
 <div class="wrap">
  <p class="eyebrow">φ29 gp16 packaging motor · dwell–burst cycle</p>
  <h1>Four <span class="u">unequal</span> power strokes, not four identical 2.5-bp steps?</h1>
- <p class="lead">The textbook burst is <b>4 × 2.5 bp</b>. But our lock-washer analysis says the helical staircase is <b>uneven</b> — one big seam (the special subunit) plus graded steps — so the four worker power strokes should be <b>different sizes that average 2.5 bp</b>. Toggle the two models and watch the DNA trace change. <b>3D-MINFLUX (per-subunit z) is what tells them apart.</b></p>
+ <p class="lead">The textbook burst is <b>4 × 2.5 bp</b>. But our lock-washer analysis says the helical staircase has <b>uneven, graded treads</b>, so the burst (H→P) is a <b>descending staircase of four different-sized power strokes that average 2.5 bp</b>. Toggle the two models and watch the DNA trace change. <b>3D-MINFLUX (per-subunit z) is what tells them apart.</b></p>
 
  <div class="stage"><canvas id="c" width="1920" height="820" aria-label="animation of the gp16 dwell-burst cycle"></canvas></div>
  <div class="controls">
@@ -57,23 +57,23 @@ td:first-child,th:first-child{text-align:left}
  <div class="grid">
   <div class="card">
    <h2>Where the unequal steps come from</h2>
-   <p>Per-subunit axial height in the helical staircase (our ENM, apo→7JQQ). The 5th subunit (<span class="hl">E, the seam</span>) doesn't translocate — it holds the regulatory contact. The four gaps between workers are the four (unequal) strokes.</p>
+   <p>Per-subunit axial height in the helical staircase (our ENM, apo→7JQQ). The 5th subunit (<span class="hl">E, the anchor</span>) doesn't translocate — it holds the regulatory contact. The four workers' descents (their tread heights) are the four (unequal) substeps.</p>
    <table>
     <tr><th>subunit</th><th>axial h (Å)</th><th>role</th><th>stroke (bp)*</th></tr>
     <tr><td><span class="dot" style="background:var(--s1)"></span>A</td><td>−1.5</td><td>worker</td><td>2.8</td></tr>
     <tr><td><span class="dot" style="background:var(--s2)"></span>B</td><td>−0.3</td><td>worker</td><td>1.4</td></tr>
     <tr><td><span class="dot" style="background:var(--s3)"></span>C</td><td>+1.1</td><td>worker</td><td>1.7</td></tr>
     <tr><td><span class="dot" style="background:var(--s4)"></span>D</td><td>+4.5</td><td>worker</td><td>4.1</td></tr>
-    <tr><td><span class="dot" style="background:var(--seam)"></span>E</td><td>−3.8</td><td><span class="hl">special / seam</span></td><td>—</td></tr>
+    <tr><td><span class="dot" style="background:var(--seam)"></span>E</td><td>−3.8</td><td><span class="hl">special / anchor</span></td><td>—</td></tr>
    </table>
    <p class="note">*illustrative: stroke ∝ the staircase gap, normalized so the four sum to 10 bp. Not a rigorous bp calc (no DNA-coupled model yet).</p>
   </div>
   <div class="card">
    <h2>What our data actually supports</h2>
-   <p><b>Uneven lock-washer.</b> One dominant seam (D–E, 8.3 Å) + graded steps (1.2–3.4 Å) — <b>not five symmetric hinges</b>.</p>
+   <p><b>Uneven, graded treads.</b> The four worker heights differ, so their four descents differ — <b>not four identical 2.5 bp</b>. <i>(The 8.3 Å is just the staircase span, max−min — a closure artifact, not a physical hinge.)</i></p>
    <p><b>Multi-mode (33%).</b> A rigid 5-fold screw gives equal steps; a soft <b>multi-mode</b> deformation gives <b>unequal</b> ones.</p>
-   <p><b>Step size isn't fixed.</b> Liu 2014 showed the motor changes step (10→8.9 bp) mid-task — 2.5 bp is the <b>average</b>, not every step.</p>
    <p><b>The model predicts it.</b> P→H→P's own "position-dependent amplitude (0→35 Å)" <b>is</b> the statement that different subunits give different-sized strokes.</p>
+   <p><b>Separate, slow effect:</b> as the head fills, internal pressure shrinks the <i>overall</i> step (10→8.9 bp, Liu 2014) — a modulation over thousands of bp, <b>not</b> the within-burst inequality.</p>
   </div>
  </div>
  <p class="note">Cartoon for intuition, grounded in our ENM staircase (<span class="hl">outputs/php_cycle/C2_enm</span>) + the Bustamante review. Falsifiable test: 3D-MINFLUX on one labeled gp16 subunit resolves whether the four strokes are equal or a graded, position-dependent set.</p>
@@ -136,9 +136,8 @@ function draw(){
     nodes.push({x:ringCx+Math.cos(a)*R, y:ringCy+Math.sin(a)*R*0.42 - h*hs, i});
   }
   for(let i=0;i<5;i++){ const A=nodes[i],B=nodes[(i+1)%5];
-    const seam=(A.i===3&&B.i===4)||(A.i===4&&B.i===3);
     g.beginPath();g.moveTo(A.x,A.y);g.lineTo(B.x,B.y);
-    g.strokeStyle=seam?'rgba(224,90,107,.9)':'rgba(120,150,180,.32)'; g.lineWidth=seam?7:3; g.stroke(); }
+    g.strokeStyle='rgba(120,150,180,.34)'; g.lineWidth=3; g.stroke(); }
   for(const n of nodes){
     const active=phase==='burst'&&fireIdx===n.i&&n.i<4, special=n.i===4, spent=n.i<4&&fired[n.i]&&phase==='burst';
     if(active){ g.beginPath();g.arc(n.x,n.y,46,0,7);g.strokeStyle='rgba(242,177,60,.5)';g.lineWidth=3;g.stroke(); }
@@ -149,9 +148,9 @@ function draw(){
   }
   g.textBaseline='alphabetic';
   g.fillStyle=phase==='dwell'?col('--cyan'):col('--amber'); g.font='700 21px '+col('--mono'); g.textAlign='center';
-  g.fillText(phase==='dwell'?'DWELL · ATP loads → helical staircase':'BURST · workers fire → DNA moves', ringCx, 44);
+  g.fillText(phase==='dwell'?'DWELL · P→H · ATP loads → ascend to staircase':'BURST · H→P · descend to planar (4 unequal treads)', ringCx, 44);
   g.fillStyle=col('--seam'); g.font='600 16px '+col('--mono'); g.textAlign='center';
-  g.fillText('E = special subunit (seam) · does not translocate', ringCx, ringCy+R*0.42+64);
+  g.fillText('E = special anchor · does not translocate', ringCx, ringCy+R*0.42+64);
 
   // ---- trace: one cycle, packaged bp vs time ----
   const tx=W*0.53, tw=W-tx-64, ty=96, th=Hh-236;
