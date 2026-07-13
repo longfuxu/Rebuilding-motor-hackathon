@@ -73,15 +73,26 @@ pathway / feasibility** questions.
   (no grip) does **not** translocate DNA.
 - **Ratchet (1f) is a HAND-OVER-HAND FIRING model**, NOT the helical↔planar model: subunits rest planar and bob
   on a per-subunit clock; it does not form a helical staircase. Its "sequential" is AAA+/rotary firing, a
-  *different axis* from helical↔planar. **We have NOT yet run the integrated model** (helical↔planar WITH a grip
-  active during the H→P descent) — that is the honest next step and the closest to the field's actual mechanism.
+  *different axis* from helical↔planar.
 
-## 3. What ties together (the story, as hypotheses)
-- Conformational cycling is **necessary but not sufficient** for translocation → the **grip/ratchet is the
-  load-bearing element** (1b/1d null vs 1f positive).
-- Efficient translocation needs **continuous grip** → favours sequential-like timing (1f).
-- The special subunit is **dynamic/timing**, not static-structure (1e) → candidate **phase-setter** for the
-  sequential wave (1e+1f).
+### 1g. INTEGRATED helical↔planar + descent-grip (the honest field-model test)  🔴→key insight
+- **Why:** put the grip into the ACTUAL helical↔planar model (not the bobbing ratchet); real DNA-contact-residue
+  grip active only during the H→P descent; 2 modes × 2 seeds (concerns ii+iv). `md/driven/tmd_integrated.py`.
+- **Result:** DNA net **concerted −2.46±0.20 Å, sequential −3.18±0.71 Å** — BOTH small (~0.25 bp/cycle),
+  concerted ≈ sequential (contrast: hand-over-hand ratchet gave −16 Å). Output `outputs/php_cycle/integrated/`.
+- **Key honest finding:** the **symmetric helical↔planar cycle does NOT efficiently translocate DNA even with a
+  physical grip** — the symmetric staircase (subunits ±) makes the descent-grip pull DNA both ways → cancellation.
+  ⇒ **translocation needs grip × a SYMMETRY-BREAKING/directional element** (the special subunit or a directional
+  wave). The helical↔planar cycle alone (even gripped) is not enough.
+
+## 3. What ties together (the story, as hypotheses) — refined by the integrated run
+The full arc: (i) helical↔planar with NO grip → DNA net ~0 (1b); (ii) helical↔planar WITH grip but SYMMETRIC →
+still small ~2.5–3 Å (1g); (iii) hand-over-hand, SYMMETRY-BROKEN → −16 Å (1f).
+- **Translocation = grip × broken symmetry.** Conformational cycling is necessary but not sufficient (need grip,
+  1b/1d); and grip is not sufficient either — the SYMMETRIC helical↔planar cycle cancels (1g). You need a
+  **directional / symmetry-breaking** element.
+- The special subunit is **dynamic/timing**, not static-structure (1e) → the natural **symmetry-breaker / phase-
+  setter** (a subunit that stays anchored, or starts the directional wave). Addressable on the single chain.
 - Single-molecule discriminator: per-subunit z(t) **travelling wave (sequential)** vs **in-phase (concerted)**,
   and DNA **substeps vs one-step** — MINFLUX + OT test it.
 

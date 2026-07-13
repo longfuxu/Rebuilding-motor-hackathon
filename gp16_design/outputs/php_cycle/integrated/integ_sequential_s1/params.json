@@ -1,0 +1,15 @@
+{
+ "input": "inputs/C_plus_dna_relaxed.pdb",
+ "out": "/home/longfu/out/integ_sequential_s1",
+ "mode": "sequential",
+ "ncycles": 4,
+ "cycle_ps": 400.0,
+ "kcv": 30000.0,
+ "kgrip": 12000.0,
+ "equil_ps": 50.0,
+ "report_ps": 8.0,
+ "timestep_fs": 3.0,
+ "gb_cutoff_nm": 2.0,
+ "platform": "auto",
+ "seed": 1
+}

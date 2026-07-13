@@ -1,0 +1,61 @@
+[03:50:47] grip anchors / subunit (real DNA-contact residues): [110, 226, 286, 127, 115] atoms
+[03:50:47] mode=concerted axis=[ 0.499 -0.304  0.811] z_stair_nm=[-0.238 -0.119  0.     0.119  0.238] x4 cyc
+[03:50:54] platform=OpenCL atoms=31578
+[03:51:51] integrated 4 cyc, 200 reports, mode=concerted
+[03:54:20]   cyc 0.38 dna_z +0.1A n_eng 5 plan 0.59
+[03:56:50]   cyc 0.78 dna_z -0.4A n_eng 5 plan 0.4
+[03:59:21]   cyc 1.18 dna_z -0.7A n_eng 5 plan 0.19
+[04:01:53]   cyc 1.58 dna_z -0.5A n_eng 5 plan 0.62
+[04:04:27]   cyc 1.98 dna_z -0.9A n_eng 4 plan 0.07
+[04:07:01]   cyc 2.38 dna_z -0.8A n_eng 4 plan 0.56
+[04:09:35]   cyc 2.78 dna_z -1.0A n_eng 5 plan 0.41
+[04:12:11]   cyc 3.18 dna_z -1.5A n_eng 4 plan 0.25
+[04:14:47]   cyc 3.58 dna_z -2.3A n_eng 5 plan 0.61
+[04:17:24]   cyc 3.98 dna_z -2.3A n_eng 4 plan 0.1
+[04:17:24] INTEGRATED_DONE mode=concerted DNA net -2.7A n_eng 5->4 (min 3)
+[04:17:27] grip anchors / subunit (real DNA-contact residues): [110, 226, 286, 127, 115] atoms
+[04:17:27] mode=concerted axis=[ 0.499 -0.304  0.811] z_stair_nm=[-0.238 -0.119  0.     0.119  0.238] x4 cyc
+[04:17:30] platform=OpenCL atoms=31578
+[04:18:25] integrated 4 cyc, 200 reports, mode=concerted
+[04:20:54]   cyc 0.38 dna_z +0.0A n_eng 5 plan 0.55
+[04:23:23]   cyc 0.78 dna_z -0.1A n_eng 5 plan 0.54
+[04:25:54]   cyc 1.18 dna_z +0.2A n_eng 5 plan 0.27
+[04:28:26]   cyc 1.58 dna_z +0.1A n_eng 5 plan 0.65
+[04:31:00]   cyc 1.98 dna_z -0.0A n_eng 5 plan 0.18
+[04:33:34]   cyc 2.38 dna_z -0.9A n_eng 4 plan 0.6
+[04:36:08]   cyc 2.78 dna_z -1.1A n_eng 4 plan 0.48
+[04:38:43]   cyc 3.18 dna_z -1.5A n_eng 4 plan 0.3
+[04:41:18]   cyc 3.58 dna_z -2.3A n_eng 4 plan 0.68
+[04:43:53]   cyc 3.98 dna_z -2.1A n_eng 4 plan 0.11
+[04:43:53] INTEGRATED_DONE mode=concerted DNA net -2.3A n_eng 5->4 (min 4)
+[04:43:56] grip anchors / subunit (real DNA-contact residues): [110, 226, 286, 127, 115] atoms
+[04:43:56] mode=sequential axis=[ 0.499 -0.304  0.811] z_stair_nm=[-0.238 -0.119  0.     0.119  0.238] x4 cyc
+[04:44:00] platform=OpenCL atoms=31578
+[04:44:56] integrated 4 cyc, 200 reports, mode=sequential
+[04:47:24]   cyc 0.38 dna_z +0.3A n_eng 5 plan 0.79
+[04:49:54]   cyc 0.78 dna_z -0.2A n_eng 5 plan 0.2
+[04:52:23]   cyc 1.18 dna_z -0.8A n_eng 5 plan 0.38
+[04:54:53]   cyc 1.58 dna_z -1.1A n_eng 5 plan 0.64
+[04:57:23]   cyc 1.98 dna_z -1.3A n_eng 5 plan 0.05
+[04:59:53]   cyc 2.38 dna_z -1.3A n_eng 5 plan 0.8
+[05:02:23]   cyc 2.78 dna_z -2.0A n_eng 5 plan 0.26
+[05:04:53]   cyc 3.18 dna_z -2.4A n_eng 5 plan 0.43
+[05:07:25]   cyc 3.58 dna_z -2.9A n_eng 5 plan 0.71
+[05:09:55]   cyc 3.98 dna_z -3.1A n_eng 5 plan 0.08
+[05:09:55] INTEGRATED_DONE mode=sequential DNA net -3.9A n_eng 5->5 (min 4)
+[05:09:59] grip anchors / subunit (real DNA-contact residues): [110, 226, 286, 127, 115] atoms
+[05:09:59] mode=sequential axis=[ 0.499 -0.304  0.811] z_stair_nm=[-0.238 -0.119  0.     0.119  0.238] x4 cyc
+[05:10:02] platform=OpenCL atoms=31578
+[05:10:58] integrated 4 cyc, 200 reports, mode=sequential
+[05:13:28]   cyc 0.38 dna_z -0.8A n_eng 5 plan 0.73
+[05:16:00]   cyc 0.78 dna_z -1.0A n_eng 5 plan 0.27
+[05:18:35]   cyc 1.18 dna_z -0.7A n_eng 5 plan 0.33
+[05:21:11]   cyc 1.58 dna_z -0.7A n_eng 5 plan 0.54
+[05:23:47]   cyc 1.98 dna_z -1.1A n_eng 5 plan 0.1
+[05:26:24]   cyc 2.38 dna_z -1.3A n_eng 5 plan 0.78
+[05:29:01]   cyc 2.78 dna_z -1.5A n_eng 5 plan 0.26
+[05:31:38]   cyc 3.18 dna_z -1.9A n_eng 5 plan 0.4
+[05:34:15]   cyc 3.58 dna_z -2.0A n_eng 5 plan 0.63
+[05:36:52]   cyc 3.98 dna_z -1.9A n_eng 5 plan 0.07
+[05:36:52] INTEGRATED_DONE mode=sequential DNA net -2.5A n_eng 5->5 (min 4)
+INTEGRATED_ALL_DONE

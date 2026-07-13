@@ -1,0 +1,22 @@
+{
+  "concerted": {
+    "n_seeds": 2,
+    "dna_net_mean": -2.46,
+    "dna_net_sd": 0.2,
+    "dna_net_vals": [
+      -2.66,
+      -2.27
+    ],
+    "n_eng_min": 3
+  },
+  "sequential": {
+    "n_seeds": 2,
+    "dna_net_mean": -3.18,
+    "dna_net_sd": 0.71,
+    "dna_net_vals": [
+      -3.89,
+      -2.47
+    ],
+    "n_eng_min": 4
+  }
+}
