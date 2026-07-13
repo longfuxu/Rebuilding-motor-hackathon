@@ -7,8 +7,6 @@ Design and computational evaluation of a **single-chain, genetically-addressable
 > **Companion showcase repo →** [**`Rebuilding-motor-hackathon`**](https://github.com/longfuxu/Rebuilding-motor-hackathon)
 > That repo is the narrated story (README + full report + figures). **This** repo is the engine room: the code that produced every result, the raw outputs, and the day-by-day commit history of how it was built.
 
-> **Everything here is computational** — folds cross-checked by ≥2 predictors (Boltz-2 / OpenFold3 / AlphaFold3) plus physics-based MD, reported with explicit reliability. Nothing is wet-lab-validated yet. Designs are judged on interface/channel **geometry, never global pTM**.
-
 ---
 
 ## What this repo is
