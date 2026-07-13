@@ -8,3 +8,6 @@ __pycache__/
 
 # Secrets — never commit
 .env
+
+# large regenerable MD trajectories (see SESSION_LOG.md to regenerate)
+*.dcd
