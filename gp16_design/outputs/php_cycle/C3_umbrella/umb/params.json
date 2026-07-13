@@ -1,0 +1,18 @@
+{
+ "input": "C_start.pdb",
+ "out": "/home/longfu/out/umb",
+ "nwin": 24,
+ "lam_min": -0.1,
+ "lam_max": 1.1,
+ "kcv": 30000.0,
+ "equil_ps": 300.0,
+ "sample_ps": 1200.0,
+ "report_ps": 4.0,
+ "timestep_fs": 3.0,
+ "both": 1,
+ "passes": "both",
+ "resume_state": "",
+ "seed": 1,
+ "gb_cutoff_nm": 2.0,
+ "platform": "auto"
+}

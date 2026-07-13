@@ -1,0 +1,16 @@
+{
+ "input": "inputs/C_plus_dna_relaxed.pdb",
+ "out": "/home/longfu/out/ratchet_concerted",
+ "mode": "concerted",
+ "ncycles": 4,
+ "cycle_ps": 300.0,
+ "step_A": 3.4,
+ "kcv": 30000.0,
+ "kgrip": 12000.0,
+ "equil_ps": 50.0,
+ "report_ps": 8.0,
+ "timestep_fs": 3.0,
+ "gb_cutoff_nm": 2.0,
+ "platform": "auto",
+ "seed": 1
+}

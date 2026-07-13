@@ -1,0 +1,109 @@
+[16:58:09] === TMD staircase planar->helical  out=/home/longfu/out/rev_s1 seed=1 kcv=30000.0 pull=500.0ps ===
+[16:58:12] axis=[ 0.499 -0.304  0.811]  start axial proj (A)=[-0.07  0.05 -0.01 -0.03  0.07]  target staircase (A)=[-2.38 -1.19  0.    1.19  2.38]
+[16:58:18] platform=OpenCL  atoms=31578
+[16:58:18] minimizing (lam=1.0)...
+[16:58:29] equilibrating 50.0 ps at lam=1.0...
+[16:59:38] steered pull 500.0 ps, lam 1.0->0.0, 250 reports
+[17:00:48]   50ps lam=0.90 plan=0.72A axspan=4.12A n_eng=5 W=-1.8kcal/mol
+[17:01:58]   100ps lam=0.80 plan=0.65A axspan=3.66A n_eng=5 W=-4.4kcal/mol
+[17:03:07]   150ps lam=0.70 plan=0.52A axspan=3.03A n_eng=5 W=-4.8kcal/mol
+[17:04:17]   200ps lam=0.60 plan=0.52A axspan=2.83A n_eng=4 W=-5.1kcal/mol
+[17:05:27]   250ps lam=0.50 plan=0.48A axspan=2.56A n_eng=4 W=-4.5kcal/mol
+[17:06:37]   300ps lam=0.40 plan=0.38A axspan=1.98A n_eng=4 W=-3.9kcal/mol
+[17:07:47]   350ps lam=0.30 plan=0.31A axspan=1.59A n_eng=4 W=-3.5kcal/mol
+[17:08:56]   400ps lam=0.20 plan=0.24A axspan=1.17A n_eng=4 W=-1.2kcal/mol
+[17:10:06]   450ps lam=0.10 plan=0.11A axspan=0.50A n_eng=4 W=1.7kcal/mol
+[17:11:16]   500ps lam=0.00 plan=0.05A axspan=0.15A n_eng=5 W=3.6kcal/mol
+[17:11:17] DONE W=3.6 kcal/mol  planarity 0.70->0.05A axspan 4.26->0.15A  n_eng 4->5  (13.1 min)
+RESULT_TMD seed=1 W_kcal=3.64 plan_final=0.05 axspan_final=0.15 n_eng 4->5
+[17:11:17] === TMD staircase planar->helical  out=/home/longfu/out/fwd_s1 seed=1 kcv=30000.0 pull=500.0ps ===
+[17:11:18] axis=[ 0.499 -0.304  0.811]  start axial proj (A)=[-0.07  0.05 -0.01 -0.03  0.07]  target staircase (A)=[-2.38 -1.19  0.    1.19  2.38]
+[17:11:22] platform=OpenCL  atoms=31578
+[17:11:22] minimizing (lam=0.0)...
+[17:11:29] equilibrating 50.0 ps at lam=0.0...
+[17:12:37] steered pull 500.0 ps, lam 0.0->1.0, 250 reports
+[17:13:46]   50ps lam=0.10 plan=0.10A axspan=0.52A n_eng=5 W=-0.7kcal/mol
+[17:14:56]   100ps lam=0.20 plan=0.20A axspan=0.98A n_eng=5 W=-0.4kcal/mol
+[17:16:05]   150ps lam=0.30 plan=0.24A axspan=1.25A n_eng=5 W=-0.8kcal/mol
+[17:17:15]   200ps lam=0.40 plan=0.35A axspan=1.86A n_eng=5 W=0.3kcal/mol
+[17:18:25]   250ps lam=0.50 plan=0.40A axspan=2.30A n_eng=5 W=2.0kcal/mol
+[17:19:34]   300ps lam=0.60 plan=0.48A axspan=2.63A n_eng=5 W=5.2kcal/mol
+[17:20:45]   350ps lam=0.70 plan=0.56A axspan=3.14A n_eng=5 W=9.7kcal/mol
+[17:21:55]   400ps lam=0.80 plan=0.60A axspan=3.54A n_eng=4 W=13.4kcal/mol
+[17:23:05]   450ps lam=0.90 plan=0.64A axspan=3.69A n_eng=5 W=18.2kcal/mol
+[17:24:15]   500ps lam=1.00 plan=0.81A axspan=4.40A n_eng=5 W=22.3kcal/mol
+[17:24:15] DONE W=22.3 kcal/mol  planarity 0.05->0.81A axspan 0.22->4.40A  n_eng 5->5  (13.0 min)
+RESULT_TMD seed=1 W_kcal=22.25 plan_final=0.81 axspan_final=4.40 n_eng 5->5
+[17:24:16] === TMD staircase planar->helical  out=/home/longfu/out/fwd_s2 seed=2 kcv=30000.0 pull=500.0ps ===
+[17:24:17] axis=[ 0.499 -0.304  0.811]  start axial proj (A)=[-0.07  0.05 -0.01 -0.03  0.07]  target staircase (A)=[-2.38 -1.19  0.    1.19  2.38]
+[17:24:21] platform=OpenCL  atoms=31578
+[17:24:21] minimizing (lam=0.0)...
+[17:24:27] equilibrating 50.0 ps at lam=0.0...
+[17:25:35] steered pull 500.0 ps, lam 0.0->1.0, 250 reports
+[17:26:44]   50ps lam=0.10 plan=0.13A axspan=0.55A n_eng=5 W=1.1kcal/mol
+[17:27:53]   100ps lam=0.20 plan=0.09A axspan=0.66A n_eng=5 W=3.9kcal/mol
+[17:29:03]   150ps lam=0.30 plan=0.21A axspan=1.27A n_eng=5 W=6.5kcal/mol
+[17:30:12]   200ps lam=0.40 plan=0.23A axspan=1.50A n_eng=5 W=8.8kcal/mol
+[17:31:22]   250ps lam=0.50 plan=0.39A axspan=2.24A n_eng=5 W=11.1kcal/mol
+[17:32:32]   300ps lam=0.60 plan=0.35A axspan=2.34A n_eng=5 W=15.7kcal/mol
+[17:33:43]   350ps lam=0.70 plan=0.55A axspan=3.15A n_eng=5 W=20.5kcal/mol
+[17:34:53]   400ps lam=0.80 plan=0.53A axspan=3.30A n_eng=5 W=25.8kcal/mol
+[17:36:04]   450ps lam=0.90 plan=0.61A axspan=3.80A n_eng=5 W=31.3kcal/mol
+[17:37:15]   500ps lam=1.00 plan=0.71A axspan=4.17A n_eng=5 W=36.5kcal/mol
+[17:37:15] DONE W=36.5 kcal/mol  planarity 0.01->0.71A axspan 0.08->4.17A  n_eng 5->5  (13.0 min)
+RESULT_TMD seed=2 W_kcal=36.47 plan_final=0.71 axspan_final=4.17 n_eng 5->5
+[17:37:16] === TMD staircase planar->helical  out=/home/longfu/out/fwd_s3 seed=3 kcv=30000.0 pull=500.0ps ===
+[17:37:17] axis=[ 0.499 -0.304  0.811]  start axial proj (A)=[-0.07  0.05 -0.01 -0.03  0.07]  target staircase (A)=[-2.38 -1.19  0.    1.19  2.38]
+[17:37:21] platform=OpenCL  atoms=31578
+[17:37:21] minimizing (lam=0.0)...
+[17:37:29] equilibrating 50.0 ps at lam=0.0...
+[17:38:37] steered pull 500.0 ps, lam 0.0->1.0, 250 reports
+[17:39:45]   50ps lam=0.10 plan=0.13A axspan=0.67A n_eng=4 W=0.6kcal/mol
+[17:40:54]   100ps lam=0.20 plan=0.16A axspan=0.78A n_eng=3 W=2.8kcal/mol
+[17:42:03]   150ps lam=0.30 plan=0.27A axspan=1.49A n_eng=4 W=2.9kcal/mol
+[17:43:13]   200ps lam=0.40 plan=0.29A axspan=1.72A n_eng=4 W=5.4kcal/mol
+[17:44:22]   250ps lam=0.50 plan=0.38A axspan=2.19A n_eng=5 W=7.9kcal/mol
+[17:45:32]   300ps lam=0.60 plan=0.44A axspan=2.48A n_eng=4 W=10.9kcal/mol
+[17:46:41]   350ps lam=0.70 plan=0.58A axspan=3.26A n_eng=4 W=14.0kcal/mol
+[17:47:51]   400ps lam=0.80 plan=0.69A axspan=3.77A n_eng=4 W=17.6kcal/mol
+[17:49:00]   450ps lam=0.90 plan=0.70A axspan=3.89A n_eng=4 W=21.9kcal/mol
+[17:50:10]   500ps lam=1.00 plan=0.75A axspan=4.33A n_eng=4 W=25.4kcal/mol
+[17:50:11] DONE W=25.4 kcal/mol  planarity 0.02->0.75A axspan 0.21->4.33A  n_eng 3->4  (12.9 min)
+RESULT_TMD seed=3 W_kcal=25.45 plan_final=0.75 axspan_final=4.33 n_eng 3->4
+[17:50:11] === TMD staircase planar->helical  out=/home/longfu/out/rev_s2 seed=2 kcv=30000.0 pull=500.0ps ===
+[17:50:14] axis=[ 0.499 -0.304  0.811]  start axial proj (A)=[-0.07  0.05 -0.01 -0.03  0.07]  target staircase (A)=[-2.38 -1.19  0.    1.19  2.38]
+[17:50:17] platform=OpenCL  atoms=31578
+[17:50:17] minimizing (lam=1.0)...
+[17:50:26] equilibrating 50.0 ps at lam=1.0...
+[17:51:34] steered pull 500.0 ps, lam 1.0->0.0, 250 reports
+[17:52:44]   50ps lam=0.90 plan=0.74A axspan=4.16A n_eng=5 W=-3.7kcal/mol
+[17:53:53]   100ps lam=0.80 plan=0.62A axspan=3.55A n_eng=5 W=-6.8kcal/mol
+[17:55:03]   150ps lam=0.70 plan=0.61A axspan=3.33A n_eng=5 W=-8.5kcal/mol
+[17:56:13]   200ps lam=0.60 plan=0.50A axspan=2.75A n_eng=5 W=-7.7kcal/mol
+[17:57:22]   250ps lam=0.50 plan=0.43A axspan=2.44A n_eng=5 W=-6.5kcal/mol
+[17:58:32]   300ps lam=0.40 plan=0.35A axspan=1.92A n_eng=5 W=-4.9kcal/mol
+[17:59:42]   350ps lam=0.30 plan=0.35A axspan=1.73A n_eng=4 W=-3.9kcal/mol
+[18:00:52]   400ps lam=0.20 plan=0.24A axspan=1.10A n_eng=5 W=-3.6kcal/mol
+[18:02:02]   450ps lam=0.10 plan=0.11A axspan=0.59A n_eng=4 W=-1.9kcal/mol
+[18:03:12]   500ps lam=0.00 plan=0.10A axspan=0.25A n_eng=5 W=0.4kcal/mol
+[18:03:12] DONE W=0.4 kcal/mol  planarity 0.78->0.10A axspan 4.47->0.25A  n_eng 5->5  (13.0 min)
+RESULT_TMD seed=2 W_kcal=0.37 plan_final=0.10 axspan_final=0.25 n_eng 5->5
+[18:03:13] === TMD staircase planar->helical  out=/home/longfu/out/rev_s3 seed=3 kcv=30000.0 pull=500.0ps ===
+[18:03:15] axis=[ 0.499 -0.304  0.811]  start axial proj (A)=[-0.07  0.05 -0.01 -0.03  0.07]  target staircase (A)=[-2.38 -1.19  0.    1.19  2.38]
+[18:03:19] platform=OpenCL  atoms=31578
+[18:03:19] minimizing (lam=1.0)...
+[18:03:29] equilibrating 50.0 ps at lam=1.0...
+[18:04:38] steered pull 500.0 ps, lam 1.0->0.0, 250 reports
+[18:05:47]   50ps lam=0.90 plan=0.72A axspan=4.18A n_eng=4 W=-3.4kcal/mol
+[18:06:57]   100ps lam=0.80 plan=0.62A axspan=3.59A n_eng=5 W=-5.9kcal/mol
+[18:08:07]   150ps lam=0.70 plan=0.59A axspan=3.37A n_eng=5 W=-6.4kcal/mol
+[18:09:16]   200ps lam=0.60 plan=0.51A axspan=2.86A n_eng=5 W=-7.5kcal/mol
+[18:10:26]   250ps lam=0.50 plan=0.48A axspan=2.55A n_eng=5 W=-6.4kcal/mol
+[18:11:36]   300ps lam=0.40 plan=0.38A axspan=1.97A n_eng=5 W=-4.8kcal/mol
+[18:12:45]   350ps lam=0.30 plan=0.33A axspan=1.67A n_eng=5 W=-3.3kcal/mol
+[18:13:55]   400ps lam=0.20 plan=0.29A axspan=1.33A n_eng=5 W=-1.3kcal/mol
+[18:15:05]   450ps lam=0.10 plan=0.16A axspan=0.66A n_eng=5 W=0.9kcal/mol
+[18:16:15]   500ps lam=0.00 plan=0.11A axspan=0.34A n_eng=5 W=4.7kcal/mol
+[18:16:15] DONE W=4.7 kcal/mol  planarity 0.76->0.11A axspan 4.35->0.34A  n_eng 4->5  (13.0 min)
+RESULT_TMD seed=3 W_kcal=4.68 plan_final=0.11 axspan_final=0.34 n_eng 4->5
+CAMPAIGN_DONE

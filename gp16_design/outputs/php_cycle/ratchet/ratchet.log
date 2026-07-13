@@ -1,0 +1,29 @@
+[01:21:55] mode=concerted axis=[ 0.499 -0.304  0.811] rest=planar step=3.4A x 4 cycles
+[01:22:02] platform=OpenCL atoms=31578
+[01:22:58] ratchet 4 cycles, 150 reports
+[01:24:50]   cyc 0.37 dna_z +0.4A n_eng 5 plan 0.02
+[01:26:42]   cyc 0.77 dna_z +0.3A n_eng 5 plan 0.04
+[01:28:36]   cyc 1.17 dna_z +0.8A n_eng 5 plan 0.07
+[01:30:29]   cyc 1.57 dna_z +0.6A n_eng 5 plan 0.04
+[01:32:23]   cyc 1.97 dna_z +0.4A n_eng 5 plan 0.04
+[01:34:17]   cyc 2.37 dna_z +0.4A n_eng 5 plan 0.02
+[01:36:10]   cyc 2.77 dna_z -0.1A n_eng 5 plan 0.13
+[01:38:05]   cyc 3.17 dna_z -0.1A n_eng 4 plan 0.09
+[01:40:00]   cyc 3.57 dna_z -0.3A n_eng 5 plan 0.06
+[01:41:56]   cyc 3.97 dna_z -1.2A n_eng 5 plan 0.05
+[01:41:56] RATCHET_DONE mode=concerted DNA net -1.6A (expect ~13.6 if it ratchets) n_eng 5->5 (min 4)
+[01:41:58] mode=sequential axis=[ 0.499 -0.304  0.811] rest=planar step=3.4A x 4 cycles
+[01:42:01] platform=OpenCL atoms=31578
+[01:42:54] ratchet 4 cycles, 150 reports
+[01:44:46]   cyc 0.37 dna_z -0.1A n_eng 5 plan 0.02
+[01:46:39]   cyc 0.77 dna_z -2.1A n_eng 5 plan 0.09
+[01:48:32]   cyc 1.17 dna_z -4.0A n_eng 5 plan 0.12
+[01:50:26]   cyc 1.57 dna_z -5.9A n_eng 5 plan 0.07
+[01:52:22]   cyc 1.97 dna_z -7.5A n_eng 5 plan 0.07
+[01:54:17]   cyc 2.37 dna_z -8.9A n_eng 5 plan 0.1
+[01:56:12]   cyc 2.77 dna_z -10.8A n_eng 5 plan 0.21
+[01:58:07]   cyc 3.17 dna_z -12.5A n_eng 5 plan 0.19
+[02:00:03]   cyc 3.57 dna_z -14.3A n_eng 5 plan 0.06
+[02:01:58]   cyc 3.97 dna_z -15.6A n_eng 5 plan 0.08
+[02:01:58] RATCHET_DONE mode=sequential DNA net -16.1A (expect ~13.6 if it ratchets) n_eng 5->5 (min 4)
+RATCHET_ALL_DONE

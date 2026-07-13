@@ -1,0 +1,18 @@
+[16:09:36] === TMD staircase planar->helical  out=/home/longfu/out/dna_anim seed=1 kcv=30000.0 pull=200.0ps ===
+[16:09:37] axis=[ 0.499 -0.304  0.811]  start axial proj (A)=[-0.07  0.05 -0.01 -0.03  0.07]  target staircase (A)=[-2.38 -1.19  0.    1.19  2.38]
+[16:09:43] platform=OpenCL  atoms=31578
+[16:09:43] minimizing (lam=0)...
+[16:09:53] equilibrating 50.0 ps at lam=0...
+[16:11:01] steered pull 200.0 ps, lam 0->1, 100 reports
+[16:11:29]   20ps lam=0.10 plan=0.04A axspan=0.29A n_eng=4 W=1.5kcal/mol
+[16:11:57]   40ps lam=0.20 plan=0.10A axspan=0.60A n_eng=5 W=4.4kcal/mol
+[16:12:24]   60ps lam=0.30 plan=0.14A axspan=1.04A n_eng=5 W=5.7kcal/mol
+[16:12:52]   80ps lam=0.40 plan=0.19A axspan=1.38A n_eng=5 W=11.3kcal/mol
+[16:13:20]   100ps lam=0.50 plan=0.35A axspan=2.04A n_eng=5 W=17.2kcal/mol
+[16:13:48]   120ps lam=0.60 plan=0.47A axspan=2.62A n_eng=5 W=21.6kcal/mol
+[16:14:15]   140ps lam=0.70 plan=0.55A axspan=3.08A n_eng=4 W=25.3kcal/mol
+[16:14:43]   160ps lam=0.80 plan=0.61A axspan=3.37A n_eng=4 W=30.4kcal/mol
+[16:15:11]   180ps lam=0.90 plan=0.65A axspan=3.79A n_eng=5 W=34.2kcal/mol
+[16:15:39]   200ps lam=1.00 plan=0.74A axspan=4.27A n_eng=5 W=40.9kcal/mol
+[16:15:39] DONE W=40.9 kcal/mol  planarity 0.08->0.74A axspan 0.23->4.27A  n_eng 5->5  (6.1 min)
+RESULT_TMD seed=1 W_kcal=40.92 plan_final=0.74 axspan_final=4.27 n_eng 5->5

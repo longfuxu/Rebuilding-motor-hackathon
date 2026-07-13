@@ -1,0 +1,10 @@
+{
+  "concerted": {
+    "dna_net_A": -1.63,
+    "n_eng_min": 4
+  },
+  "sequential": {
+    "dna_net_A": -16.15,
+    "n_eng_min": 4
+  }
+}
