@@ -1,13 +1,60 @@
-# macOS
-.DS_Store
+# ============================================================
+#  .gitignore — protect privacy / unpublished work / secrets
+# ============================================================
 
-# Python (for local ringperm-gp16 workspaces if created inside the repo)
-.venv/
-__pycache__/
-*.pyc
-
-# Secrets — never commit
+# ── secrets / credentials — NEVER commit ──────────────────
 .env
+**/.env
+*.pem
+*_secret*
+*api_key*
 
-# large regenerable MD trajectories (see SESSION_LOG.md to regenerate)
+# ── unpublished / personal — NEVER publish ────────────────
+paper/
+**/paper/
+follow-on/
+**/follow-on/
+K99_*
+**/K99_*
+*[Ss]pecific_[Aa]ims*
+DESIGN_NOTES.md
+**/DESIGN_NOTES.md
+03_SYNTHESIZED_aims_FINAL.md
+*Research proposal*.pdf
+*RESEARCH STRATEGY*.pdf
+*Research_Description*.pdf
+*MINFLUX*
+*.docx
+
+# ── personal voice recordings (your own voice) ────────────
+**/voice/*.wav
+**/voice/*.mp3
+**/voice/_wav/
+**/voice_reference*
+**/ref_*.wav
+
+# ── large / regenerable outputs (regenerate via SESSION_LOG.md) ──
 *.dcd
+*.xtc
+*.trr
+*.h5
+outputs/**/*.cif
+outputs/**/*.pdb
+**/trajectories/
+
+# ── generated audio/video (large, regenerable) ────────────
+**/audio/*.mp3
+**/audio/*.aiff
+**/video/*.mp4
+**/video/_clips*/
+**/voice_xtts/
+**/voice_eleven/
+
+# ── system / python ───────────────────────────────────────
+.DS_Store
+**/.DS_Store
+__pycache__/
+**/__pycache__/
+*.pyc
+.venv/
+*.sb-*/
