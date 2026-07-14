@@ -12,8 +12,8 @@ This README is the guide to the whole submission: where the idea came from, what
 ## ▶ Start here
 | | | |
 |---|---|---|
-| **Demo video** (3 min, narrated) | the whole story, start to finish | [**▶ Watch on YouTube**](https://youtu.be/ZxMc6qudB5Q) · in repo: [`gp16_demo.mp4`](gp16_demo.mp4) |
-| **Deck** (10 slides, animated) | the same story as slides | [`gp16_deck.pptx`](gp16_deck.pptx) |
+| **Demo video** (3 min, narrated) | the whole story, start to finish | [**▶ Watch on YouTube**](https://youtu.be/ZxMc6qudB5Q) · [download mp4](https://github.com/longfuxu/Rebuilding-motor-hackathon/raw/master/gp16_demo.mp4) |
+| **Deck** (10 slides, animated) | the same story as slides | [**⬇ gp16_deck.pptx**](https://github.com/longfuxu/Rebuilding-motor-hackathon/raw/master/gp16_deck.pptx) |
 | **Full report** (13 pp, rigorous) | every claim, with figures and honest bounds | [`report.pdf`](report.pdf) |
 
 ---
@@ -46,8 +46,8 @@ Along the way we did far more than a single design: we screened **20 circular-pe
 
 | Item | What it is | Where |
 |---|---|---|
-| **Demo video** | 3-min narrated walkthrough | [▶ YouTube](https://youtu.be/ZxMc6qudB5Q) · [`gp16_demo.mp4`](gp16_demo.mp4) |
-| **Deck** | 10-slide animated deck | [`gp16_deck.pptx`](gp16_deck.pptx) |
+| **Demo video** | 3-min narrated walkthrough | [▶ YouTube](https://youtu.be/ZxMc6qudB5Q) · [download](https://github.com/longfuxu/Rebuilding-motor-hackathon/raw/master/gp16_demo.mp4) |
+| **Deck** | 10-slide animated deck | [⬇ gp16_deck.pptx](https://github.com/longfuxu/Rebuilding-motor-hackathon/raw/master/gp16_deck.pptx) |
 | **Report** | 13-page rigorous report (figures + honest bounds) | [`report.pdf`](report.pdf) |
 | **Figures** | the 8 figures used across deck and report | [`figs/`](figs/) |
 | **Result records** | cycle campaign · ratchet · per-position scan · session log | [`results/`](results/) |
